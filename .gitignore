@@ -1,0 +1,75 @@
+# === Data & Model artifacts (git管理外) ===
+datasets/
+dataset/
+models/
+results/
+*results/
+outputs/
+output/
+
+# === Binary / Large files ===
+*.pth
+*.pt
+*.ckpt
+*.onnx
+*.pkl
+*.npy
+*.npz
+*.zip
+*.sif
+*.jpg
+*.png
+*.mp4
+
+# Allow images in markdown report folders
+!workspace/*/images_for_md/*.jpg
+!workspace/*/images_for_md/*.png
+
+# === Python ===
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+*.egg-info/
+*.egg
+dist/
+build/
+.eggs/
+
+# === Environments ===
+.env
+.venv
+env/
+venv/
+ENV/
+
+# === Jupyter ===
+.ipynb_checkpoints/
+
+# === IDE ===
+.idea/
+.vscode/
+
+# === Claude Code (local only) ===
+.claude/*.local.*
+CLAUDE.local.md
+
+# === Logs ===
+*.log
+lightning_logs/
+mlruns/
+*events.*
+
+# === OS ===
+.DS_Store
+Thumbs.db
+
+# === Misc ===
+slack_webhook_url.txt
+envs/
+.local/
+
+# === Reference files (not part of project) ===
+gpt.txt
+tmp.txt
+xxxx_kaggle_starterRepository-main/

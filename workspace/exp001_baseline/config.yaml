@@ -1,0 +1,26 @@
+experiment:
+  name: exp001_baseline
+  description: "ベースラインモデルの構築"
+
+lineage:
+  parent: null
+  status: active
+  diff_summary: "初回実験"
+
+# === 以下、実験開始時に記入 ===
+# model:
+#   name:
+#   params: {}
+#
+# training:
+#   seed: 42
+#   n_folds: 5
+#   epochs: 10
+#   batch_size: 32
+#   lr: 1e-3
+#   amp: true
+#   resume_from: null
+#
+# data:
+#   train_path: "../../datasets/raw/"
+#   features: []

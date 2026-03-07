@@ -3,8 +3,10 @@
 ## コンペ概要
 
 - **コンペ名**: 
+Deep Past Challenge - Translate Akkadian to English
 
 - **コンペURL**: 
+https://www.kaggle.com/competitions/deep-past-initiative-machine-translation
 
 ## 実行環境
 

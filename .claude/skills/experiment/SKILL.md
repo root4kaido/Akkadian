@@ -94,7 +94,7 @@ lineage:
 - **チェックポイント再開は必須**（PCが途中で止まることがある）
 - **シード固定**（全実験で同じseedを使い、validation splitを統一する。splitが変わるとスコア比較ができない）
 - ハイパーパラメータはすべてconfig.yamlで管理（ハードコーディング禁止）
-- 学習ログ（loss, metric, lr）を記録し、学習曲線を可視化して `results/` に保存
+- 学習ログ（loss, metric, lr）を記録し、`results/` に保存してください。pytorchの場合は、pytorch lightning(import lightning as L以降のバージョン)と、wandbを積極的に使ってください。ただし、言語モデルなどでtransformersのTrainerの方が適していると判断される場合、そちらを使ってください。。
 - **validationの予測結果を `results/` に保存する**（後のアンサンブルや分析に必要）。ただし保存サイズが巨大になる場合（目安: 100GB超）は省略可
 - **print文ではなくloggingを使い、ログをファイルに残す**（`results/` にログファイルを出力。後から全出力を参照できるようにする）
 

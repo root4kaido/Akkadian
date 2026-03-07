@@ -1,0 +1,147 @@
+{
+  "date": "2026-03-06T15:04:30.586653",
+  "competition": "deep-past-initiative-machine-translation",
+  "total_topics": 20,
+  "discussions": [
+    {
+      "id": "678899",
+      "title": "push_pinA Stitch in Time Saves NineAdam Anderson · Last comment 3d ago by Kh0a",
+      "url": "https://www.kaggle.com/competitions/deep-past-initiative-machine-translation/discussion/678899",
+      "comments": "64",
+      "votes": ""
+    },
+    {
+      "id": "674136",
+      "title": "push_pinDataset Update - Mind the GapsRyan Holbrook · Last comment 14h ago by Hafiz Atif Ali",
+      "url": "https://www.kaggle.com/competitions/deep-past-initiative-machine-translation/discussion/674136",
+      "comments": "44",
+      "votes": ""
+    },
+    {
+      "id": "665209",
+      "title": "push_pinTwo practical stumbling blocks in Akkadian → English MT (and how to address them)Adam Anderson · Last comment 6h ago by Angantyr",
+      "url": "https://www.kaggle.com/competitions/deep-past-initiative-machine-translation/discussion/665209",
+      "comments": "52",
+      "votes": ""
+    },
+    {
+      "id": "663210",
+      "title": "push_pinWelcome to the Deep Past Initiative Machine Translation Challenge!Adam Anderson · Last comment 3d ago by AK",
+      "url": "https://www.kaggle.com/competitions/deep-past-initiative-machine-translation/discussion/663210",
+      "comments": "16",
+      "votes": ""
+    },
+    {
+      "id": "668485",
+      "title": "push_pinOld Assyrian dataset updatesAdam Anderson · Last comment 1mo ago by Oleg Yaroshevskiy",
+      "url": "https://www.kaggle.com/competitions/deep-past-initiative-machine-translation/discussion/668485",
+      "comments": "4",
+      "votes": ""
+    },
+    {
+      "id": "664177",
+      "title": "push_pinData UpdateRyan Holbrook · Last comment 2mo ago by Khushi Yadav",
+      "url": "https://www.kaggle.com/competitions/deep-past-initiative-machine-translation/discussion/664177",
+      "comments": "33",
+      "votes": ""
+    },
+    {
+      "id": "663183",
+      "title": "push_pinHow to get started + Competition's Official DiscordMaría Cruz · Last comment 2mo ago by Dheeraj Kashalkar",
+      "url": "https://www.kaggle.com/competitions/deep-past-initiative-machine-translation/discussion/663183",
+      "comments": "2",
+      "votes": ""
+    },
+    {
+      "id": "679830",
+      "title": "Question about the actual Team Merger Deadline: 3/10 or 3/16?Ruize Zhao · Last comment 14h ago by Muhamamd Naveed",
+      "url": "https://www.kaggle.com/competitions/deep-past-initiative-machine-translation/discussion/679830",
+      "comments": "4",
+      "votes": ""
+    },
+    {
+      "id": "678974",
+      "title": "Mid-competition updates have now become a trend in Kaggle competitions.heng · Last comment 3d ago by Cody_Null",
+      "url": "https://www.kaggle.com/competitions/deep-past-initiative-machine-translation/discussion/678974",
+      "comments": "6",
+      "votes": ""
+    },
+    {
+      "id": "679336",
+      "title": "Massive bot attackYurnero · Last comment 4d ago by Ryan Holbrook",
+      "url": "https://www.kaggle.com/competitions/deep-past-initiative-machine-translation/discussion/679336",
+      "comments": "17",
+      "votes": ""
+    },
+    {
+      "id": "680041",
+      "title": "0.78% Train Transliterations Found in eBL_Dictionary?El Conde de Ñáñaño · Last comment 16h ago by tennogh",
+      "url": "https://www.kaggle.com/competitions/deep-past-initiative-machine-translation/discussion/680041",
+      "comments": "2",
+      "votes": ""
+    },
+    {
+      "id": "679766",
+      "title": "Old Assyrian TokensDavid Ochoa Corrales · Last comment 3d ago by David Ochoa Corrales",
+      "url": "https://www.kaggle.com/competitions/deep-past-initiative-machine-translation/discussion/679766",
+      "comments": "1",
+      "votes": ""
+    },
+    {
+      "id": "680173",
+      "title": "Issue with submittingJulian Go · Last comment 4h ago by Nguyên Nguyên",
+      "url": "https://www.kaggle.com/competitions/deep-past-initiative-machine-translation/discussion/680173",
+      "comments": "1",
+      "votes": ""
+    },
+    {
+      "id": "679867",
+      "title": "BLEU and ChrF scores along with GMKishoreKashyap · Posted 2d ago",
+      "url": "https://www.kaggle.com/competitions/deep-past-initiative-machine-translation/discussion/679867",
+      "comments": "",
+      "votes": ""
+    },
+    {
+      "id": "679497",
+      "title": "Lora on ByT5 largePUN · Last comment 2d ago by Adarsh Kumar",
+      "url": "https://www.kaggle.com/competitions/deep-past-initiative-machine-translation/discussion/679497",
+      "comments": "1",
+      "votes": ""
+    },
+    {
+      "id": "679714",
+      "title": "Low LB scoreDavit Khantadze · Last comment 1d ago by tennogh",
+      "url": "https://www.kaggle.com/competitions/deep-past-initiative-machine-translation/discussion/679714",
+      "comments": "2",
+      "votes": ""
+    },
+    {
+      "id": "673904",
+      "title": "Insights from the Akkademia Codebase & PNAS Paper for the Deep Past ChallengeJames McGuigan · Last comment 6h ago by Angantyr",
+      "url": "https://www.kaggle.com/competitions/deep-past-initiative-machine-translation/discussion/673904",
+      "comments": "5",
+      "votes": ""
+    },
+    {
+      "id": "679878",
+      "title": "Question about Score Discrepanciesforever young · Last comment 2d ago by hongan",
+      "url": "https://www.kaggle.com/competitions/deep-past-initiative-machine-translation/discussion/679878",
+      "comments": "1",
+      "votes": ""
+    },
+    {
+      "id": "678836",
+      "title": "Is this competition becoming a 'Regex Guessing Game'?DaylightH · Last comment 8d ago by epikt",
+      "url": "https://www.kaggle.com/competitions/deep-past-initiative-machine-translation/discussion/678836",
+      "comments": "6",
+      "votes": ""
+    },
+    {
+      "id": "679641",
+      "title": "GPU for Local TrainingDerya Umut Kulalı · Last comment 3d ago by Derya Umut Kulalı",
+      "url": "https://www.kaggle.com/competitions/deep-past-initiative-machine-translation/discussion/679641",
+      "comments": "2",
+      "votes": ""
+    }
+  ]
+}

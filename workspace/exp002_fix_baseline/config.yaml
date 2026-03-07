@@ -1,17 +1,16 @@
 experiment:
-  name: exp001_baseline
-  description: "ByT5-small ベースライン: 文アライメント + 双方向学習"
+  name: exp002_fix_baseline
+  description: "exp001のバグ修正: 動的パディング化 + 正規化無効化でStarter相当の~30を再現"
 
 lineage:
-  parent: null
+  parent: exp001_baseline
   status: active
-  diff_summary: "初回実験"
+  diff_summary: "padding=max_length→動的パディング、normalize_text無効化、双方向学習OFF"
 
 model:
   name: google/byt5-small
   max_length: 512
   prefix: "translate Akkadian to English: "
-  prefix_reverse: "translate English to Akkadian: "
 
 training:
   epochs: 20
@@ -34,5 +33,4 @@ inference:
 data:
   train_path: ../../datasets/raw/train.csv
   test_path: ../../datasets/raw/test.csv
-  use_sentence_alignment: true
-  use_bidirectional: true
+  use_bidirectional: false

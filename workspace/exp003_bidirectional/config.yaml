@@ -1,0 +1,37 @@
+experiment:
+  name: exp003_bidirectional
+  description: "Starter完全再現: 動的padding + 正規化なし + 双方向学習ON + 最終epochモデル使用"
+
+lineage:
+  parent: exp002_fix_baseline
+  status: active
+  diff_summary: "双方向学習ON + save_total_limit=1 + load_best_model_at_end=false"
+
+model:
+  name: google/byt5-small
+  max_length: 512
+  prefix: "translate Akkadian to English: "
+  prefix_reverse: "translate English to Akkadian: "
+
+training:
+  epochs: 20
+  learning_rate: 1.0e-4
+  optimizer: adafactor
+  label_smoothing: 0.2
+  batch_size: 1
+  gradient_accumulation_steps: 8
+  weight_decay: 0.01
+  fp16: false
+  seed: 42
+  val_ratio: 0.1
+
+inference:
+  num_beams: 4
+  max_length: 512
+  early_stopping: true
+  batch_size: 16
+
+data:
+  train_path: ../../datasets/raw/train.csv
+  test_path: ../../datasets/raw/test.csv
+  use_bidirectional: true

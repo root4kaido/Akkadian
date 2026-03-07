@@ -1,0 +1,38 @@
+experiment:
+  name: exp004_longer_context
+  description: "max_length拡大(入力1024/出力2048) + best model選択 + wandb"
+
+lineage:
+  parent: exp003_bidirectional
+  status: active
+  diff_summary: "encoder_max_length=1024, decoder_max_length=2048, load_best_model_at_end=True, wandb導入"
+
+model:
+  name: google/byt5-small
+  encoder_max_length: 1024
+  decoder_max_length: 2048
+  prefix: "translate Akkadian to English: "
+  prefix_reverse: "translate English to Akkadian: "
+
+training:
+  epochs: 20
+  learning_rate: 1.0e-4
+  optimizer: adafactor
+  label_smoothing: 0.2
+  batch_size: 1
+  gradient_accumulation_steps: 8
+  weight_decay: 0.01
+  fp16: false
+  seed: 42
+  val_ratio: 0.1
+
+inference:
+  num_beams: 1
+  max_length: 2048
+  early_stopping: true
+  batch_size: 8
+
+data:
+  train_path: ../../datasets/raw/train.csv
+  test_path: ../../datasets/raw/test.csv
+  use_bidirectional: true

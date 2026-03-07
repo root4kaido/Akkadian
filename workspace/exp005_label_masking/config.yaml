@@ -1,0 +1,38 @@
+experiment:
+  name: exp005_label_masking
+  description: "英語ラベル文末マスキング + 逆方向encoder拡大(1024)"
+
+lineage:
+  parent: exp003_bidirectional
+  status: active
+  diff_summary: "順方向: encoder=512/decoder=512 + 英語ラベル文末マスキング, 逆方向: encoder=1024/decoder=512, load_best_model, wandb"
+
+model:
+  name: google/byt5-small
+  max_length: 512
+  reverse_encoder_max_length: 1024
+  prefix: "translate Akkadian to English: "
+  prefix_reverse: "translate English to Akkadian: "
+
+training:
+  epochs: 20
+  learning_rate: 1.0e-4
+  optimizer: adafactor
+  label_smoothing: 0.2
+  batch_size: 1
+  gradient_accumulation_steps: 8
+  weight_decay: 0.01
+  fp16: false
+  seed: 42
+  val_ratio: 0.1
+
+inference:
+  num_beams: 1
+  max_length: 512
+  early_stopping: true
+  batch_size: 8
+
+data:
+  train_path: ../../datasets/raw/train.csv
+  test_path: ../../datasets/raw/test.csv
+  use_bidirectional: true

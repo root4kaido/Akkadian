@@ -1,0 +1,17 @@
+component,doc_geo_mean,doc_diff,sent_geo_mean,sent_diff
+00_raw (cleanup only),18.28,0.0,27.03,0.0
+01_only_special_chars,18.28,0.0,27.03,0.0
+01_only_gap_normalization,18.28,0.0,27.04,0.01
+01_only_annotation_removal,18.28,0.0,27.03,0.0
+01_only_forbidden_chars,18.02,-0.26,26.8,-0.23
+01_only_fraction_conversion,18.13,-0.15,26.76,-0.27
+01_only_repeated_removal,17.52,-0.76,27.73,0.7
+01_only_punctuation_fixes,18.28,0.0,27.03,0.0
+02_all,17.1,-1.18,27.22,0.19
+03_without_special_chars,17.1,-1.18,27.22,0.19
+03_without_gap_normalization,17.1,-1.18,27.21,0.18
+03_without_annotation_removal,17.1,-1.18,27.22,0.19
+03_without_forbidden_chars,17.37,-0.91,27.45,0.42
+03_without_fraction_conversion,17.25,-1.03,27.5,0.47
+03_without_repeated_removal,17.86,-0.42,26.53,-0.5
+03_without_punctuation_fixes,17.1,-1.18,27.22,0.19

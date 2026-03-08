@@ -1,12 +1,24 @@
 # ディスカッション活動サマリー
 
-> 最終更新: 2026/03/06（初回スナップショット）
+> 最終更新: 2026/03/08（2回目スナップショット）
 
 ## 概要
 
 - トピック数: 20（うち pinned: 7）
 - 最もコメントの多いトピック: "A Stitch in Time Saves Nine"（64 comments）
 - 活発なトピック: "Two practical stumbling blocks"（52 comments）、"Dataset Update - Mind the Gaps"（44 comments）
+
+## 3/8 新規トピック（3/6以降）
+
+### eBL text divergence（1 comment, David Ochoa Corrales）
+- **eBL→OARE Mimation Restorer**: Standard Babylonian語形→Old Assyrian語形変換スクリプト
+- Old AssyrianはMimation（語末"-m"）を保持、SBは失っている
+- 例: eBL `šakānu I` → OARE `šakānum`
+- **585ペアの検証で92.8%精度**
+- **重要度**: 中 — eBL_Dictionaryの活用可能性を大幅改善
+
+### Notebook Submission not throwing errors（0 comments, The Swimmer）
+- 投稿不具合の質問。技術的価値なし
 
 ---
 

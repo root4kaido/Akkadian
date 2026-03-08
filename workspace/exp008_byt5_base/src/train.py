@@ -1,9 +1,12 @@
 """
-ByT5-small 学習スクリプト (exp006)
-変更点:
-- 外れ値データ除去（preprocess側で実施）
-- logging force=True修正
-- その他はexp005と同一
+ByT5-base 学習スクリプト (exp008)
+変更点 (from exp005):
+- モデル: ByT5-small → ByT5-base
+- BF16有効化（RTX4090対応）
+- cosine scheduler + warmup_ratio
+- batch_size=4, grad_accum=4 (effective=16)
+- lr=5e-5（ByT5-baseは低めのlrが安定）
+- チェックポイント再開対応
 """
 import os
 
@@ -43,7 +46,7 @@ logging.basicConfig(
 )
 logger = logging.getLogger(__name__)
 
-# transformersのloggerはpropagate=False & level=WARNINGなので、直接設定
+# transformersのloggerにもFileHandlerを追加（propagate=False & level=WARNINGのため）
 _tf_logger = logging.getLogger("transformers")
 _tf_logger.setLevel(logging.INFO)
 _file_handler = logging.FileHandler(log_file)
@@ -84,7 +87,10 @@ def load_config():
 
 
 def tokenize_fn(examples, tokenizer, max_length, reverse_encoder_max_length):
-    """方向別のmax_lengthでトークナイズ。"""
+    """方向別のmax_lengthでトークナイズ。
+    - forward: encoder=max_length(512), decoder=max_length(512)
+    - reverse: encoder=reverse_encoder_max_length(1024), decoder=max_length(512)
+    """
     input_texts = examples["input_text"]
     target_texts = examples["target_text"]
     directions = examples["direction"]
@@ -196,31 +202,42 @@ def main():
     output_dir = os.path.join(EXP_DIR, "results", "model")
     tc = config["training"]
 
-    args = Seq2SeqTrainingArguments(
-        output_dir=output_dir,
-        eval_strategy="epoch",
-        save_strategy="epoch",
-        learning_rate=tc["learning_rate"],
-        optim=tc["optimizer"],
-        label_smoothing_factor=tc["label_smoothing"],
-        fp16=tc["fp16"],
-        per_device_train_batch_size=tc["batch_size"],
-        per_device_eval_batch_size=config["inference"]["batch_size"],
-        gradient_accumulation_steps=tc["gradient_accumulation_steps"],
-        weight_decay=tc["weight_decay"],
-        save_total_limit=2,
-        load_best_model_at_end=True,
-        metric_for_best_model="geo_mean",
-        greater_is_better=True,
-        num_train_epochs=tc["epochs"],
-        predict_with_generate=True,
-        generation_max_length=max_length,
-        logging_steps=50,
-        report_to="wandb",
-        run_name=config["experiment"]["name"],
-        seed=seed,
-        dataloader_num_workers=2,
-    )
+    training_args = {
+        "output_dir": output_dir,
+        "eval_strategy": "epoch",
+        "save_strategy": "epoch",
+        "learning_rate": tc["learning_rate"],
+        "optim": tc["optimizer"],
+        "label_smoothing_factor": tc["label_smoothing"],
+        "fp16": tc.get("fp16", False),
+        "bf16": tc.get("bf16", False),
+        "per_device_train_batch_size": tc["batch_size"],
+        "per_device_eval_batch_size": config["inference"]["batch_size"],
+        "gradient_accumulation_steps": tc["gradient_accumulation_steps"],
+        "weight_decay": tc["weight_decay"],
+        "save_total_limit": 2,
+        "load_best_model_at_end": True,
+        "metric_for_best_model": "geo_mean",
+        "greater_is_better": True,
+        "num_train_epochs": tc["epochs"],
+        "predict_with_generate": True,
+        "generation_max_length": max_length,
+        "logging_steps": 50,
+        "report_to": "wandb",
+        "run_name": config["experiment"]["name"],
+        "seed": seed,
+        "dataloader_num_workers": 2,
+    }
+
+    # Cosine scheduler
+    scheduler = tc.get("scheduler", "linear")
+    if scheduler == "cosine":
+        training_args["lr_scheduler_type"] = "cosine"
+        warmup_ratio = tc.get("warmup_ratio", 0.1)
+        training_args["warmup_ratio"] = warmup_ratio
+        logger.info(f"Scheduler: cosine, warmup_ratio={warmup_ratio}")
+
+    args = Seq2SeqTrainingArguments(**training_args)
 
     trainer = Seq2SeqTrainer(
         model=model,
@@ -233,8 +250,22 @@ def main():
         callbacks=[metrics_logger],
     )
 
-    logger.info("Starting training...")
-    trainer.train()
+    # チェックポイント再開
+    resume_from = tc.get("resume_from")
+    if resume_from and os.path.isdir(resume_from):
+        logger.info(f"Resuming from checkpoint: {resume_from}")
+        trainer.train(resume_from_checkpoint=resume_from)
+    else:
+        # output_dir内に既存checkpointがあれば自動再開
+        checkpoints = [d for d in os.listdir(output_dir) if d.startswith("checkpoint-")] if os.path.isdir(output_dir) else []
+        if checkpoints:
+            latest = sorted(checkpoints, key=lambda x: int(x.split("-")[1]))[-1]
+            ckpt_path = os.path.join(output_dir, latest)
+            logger.info(f"Auto-resuming from latest checkpoint: {ckpt_path}")
+            trainer.train(resume_from_checkpoint=ckpt_path)
+        else:
+            logger.info("Starting training from scratch...")
+            trainer.train()
 
     # ベストモデル保存
     best_dir = os.path.join(EXP_DIR, "results", "best_model")

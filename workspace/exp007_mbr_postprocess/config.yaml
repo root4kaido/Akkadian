@@ -1,0 +1,54 @@
+experiment:
+  name: exp007_mbr_postprocess
+  description: "MBRデコーディング + OA_Lexicon後処理 + repeated_removal。exp005のモデルを使い推論パイプラインのみ改善"
+
+lineage:
+  parent: exp005_label_masking
+  status: active
+  diff_summary: "学習なし。推論をgreedy→MBR(beam+sampling候補からchrF++選択)に変更。OA_Lexicon後処理追加。repeated_removal追加"
+
+model:
+  name: google/byt5-small
+  checkpoint: ../../workspace/exp005_label_masking/results/best_model
+  params:
+    max_input_length: 512
+    max_output_length: 512
+
+inference:
+  # MBR decoding
+  mbr:
+    enabled: true
+    num_beams: 4
+    num_sampling: 2
+    sampling_temperature: 1.0
+    sampling_top_p: 0.95
+    metric: chrf++  # sacrebleu CHRF with word_order=2
+    repetition_penalty: 1.2
+    length_penalty: 1.0
+
+  # Greedy baseline (for comparison)
+  greedy:
+    enabled: true
+
+  # Beam search baseline (for comparison)
+  beam:
+    enabled: true
+    num_beams: 4
+
+postprocess:
+  repeated_removal: true
+  oa_lexicon:
+    enabled: true
+    path: ../../datasets/raw/OA_Lexicon_eBL.csv
+    threshold: 0.92
+    use_train_surface: true
+    train_path: ../../datasets/raw/train.csv
+  translation_memory:
+    enabled: true
+    train_path: ../../datasets/raw/train.csv
+
+data:
+  train_path: ../../datasets/raw/train.csv
+  test_path: ../../datasets/raw/test.csv
+  val_ratio: 0.1
+  seed: 42

@@ -40,8 +40,16 @@ logging.basicConfig(
     level=logging.INFO,
     format="%(asctime)s [%(levelname)s] %(message)s",
     handlers=log_handlers,
+    force=True,
 )
 logger = logging.getLogger(__name__)
+
+# transformersのloggerはpropagate=False & level=WARNINGなので、直接設定
+_tf_logger = logging.getLogger("transformers")
+_tf_logger.setLevel(logging.INFO)
+_file_handler = logging.FileHandler(log_file)
+_file_handler.setFormatter(logging.Formatter("%(asctime)s [%(levelname)s] %(message)s"))
+_tf_logger.addHandler(_file_handler)
 
 PROJECT_ROOT = os.path.abspath(os.path.join(EXP_DIR, "../.."))
 

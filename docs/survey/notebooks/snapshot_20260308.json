@@ -1,0 +1,208 @@
+{
+  "competition": "deep-past-initiative-machine-translation",
+  "scraped_at": "2026-03-08T03:46:12.740244",
+  "sort": "voteCount",
+  "total_notebooks": 25,
+  "notebooks": [
+    {
+      "title": "Takamichi Toda",
+      "url": "https://www.kaggle.com/code/takamichitoda/dpc-starter-infer",
+      "author": "takamichitoda",
+      "slug": "dpc-starter-infer",
+      "kaggle_ref": "takamichitoda/dpc-starter-infer",
+      "votes": 582
+    },
+    {
+      "title": "3 comments",
+      "url": "https://www.kaggle.com/code/qifeihhh666/dpc-starter-infer-add-sentencealign/comments",
+      "author": "qifeihhh666",
+      "slug": "dpc-starter-infer-add-sentencealign",
+      "kaggle_ref": "qifeihhh666/dpc-starter-infer-add-sentencealign",
+      "votes": 582
+    },
+    {
+      "title": "5 comments",
+      "url": "https://www.kaggle.com/code/takamichitoda/dpc-starter-train/comments",
+      "author": "takamichitoda",
+      "slug": "dpc-starter-train",
+      "kaggle_ref": "takamichitoda/dpc-starter-train",
+      "votes": 418
+    },
+    {
+      "title": "1 comment",
+      "url": "https://www.kaggle.com/code/jiexusheng20bz/byt-ensemble/comments",
+      "author": "jiexusheng20bz",
+      "slug": "byt-ensemble",
+      "kaggle_ref": "jiexusheng20bz/byt-ensemble",
+      "votes": 381
+    },
+    {
+      "title": "Mattia Angeli",
+      "url": "https://www.kaggle.com/code/mattiaangeli/deep-pasta-mbr",
+      "author": "mattiaangeli",
+      "slug": "deep-pasta-mbr",
+      "kaggle_ref": "mattiaangeli/deep-pasta-mbr",
+      "votes": 379
+    },
+    {
+      "title": "5 comments",
+      "url": "https://www.kaggle.com/code/lgregory/akkadiam-exemple/comments",
+      "author": "lgregory",
+      "slug": "akkadiam-exemple",
+      "kaggle_ref": "lgregory/akkadiam-exemple",
+      "votes": 379
+    },
+    {
+      "title": "3 comments",
+      "url": "https://www.kaggle.com/code/mattiaangeli/deep-pasta-mbr/comments",
+      "author": "mattiaangeli",
+      "slug": "deep-pasta-mbr",
+      "kaggle_ref": "mattiaangeli/deep-pasta-mbr",
+      "votes": 361
+    },
+    {
+      "title": "Goge052215",
+      "url": "https://www.kaggle.com/code/jiexusheng20bz/byt-ensemble",
+      "author": "jiexusheng20bz",
+      "slug": "byt-ensemble",
+      "kaggle_ref": "jiexusheng20bz/byt-ensemble",
+      "votes": 354
+    },
+    {
+      "title": "1 comment",
+      "url": "https://www.kaggle.com/code/anthonytherrien/byt-ensemble-script/comments",
+      "author": "anthonytherrien",
+      "slug": "byt-ensemble-script",
+      "kaggle_ref": "anthonytherrien/byt-ensemble-script",
+      "votes": 354
+    },
+    {
+      "title": "0 comments",
+      "url": "https://www.kaggle.com/code/takamichitoda/dpc-starter-infer/comments",
+      "author": "takamichitoda",
+      "slug": "dpc-starter-infer",
+      "kaggle_ref": "takamichitoda/dpc-starter-infer",
+      "votes": 280
+    },
+    {
+      "title": "Prayag Patel",
+      "url": "https://www.kaggle.com/code/prayagp1/adaptive-beams-test-v1",
+      "author": "prayagp1",
+      "slug": "adaptive-beams-test-v1",
+      "kaggle_ref": "prayagp1/adaptive-beams-test-v1",
+      "votes": 242
+    },
+    {
+      "title": "2 comments",
+      "url": "https://www.kaggle.com/code/baidalinadilzhan/lb-35-2-ensemble/comments",
+      "author": "baidalinadilzhan",
+      "slug": "lb-35-2-ensemble",
+      "kaggle_ref": "baidalinadilzhan/lb-35-2-ensemble",
+      "votes": 242
+    },
+    {
+      "title": "0 comments",
+      "url": "https://www.kaggle.com/code/nikitagajbhiye30/deep-past000/comments",
+      "author": "nikitagajbhiye30",
+      "slug": "deep-past000",
+      "kaggle_ref": "nikitagajbhiye30/deep-past000",
+      "votes": 218
+    },
+    {
+      "title": "1 comment",
+      "url": "https://www.kaggle.com/code/takamichitoda/dpc-infer-with-post-processing-by-llm/comments",
+      "author": "takamichitoda",
+      "slug": "dpc-infer-with-post-processing-by-llm",
+      "kaggle_ref": "takamichitoda/dpc-infer-with-post-processing-by-llm",
+      "votes": 193
+    },
+    {
+      "title": "5 comments",
+      "url": "https://www.kaggle.com/code/kkashyap14/akkadian2eng-v1/comments",
+      "author": "kkashyap14",
+      "slug": "akkadian2eng-v1",
+      "kaggle_ref": "kkashyap14/akkadian2eng-v1",
+      "votes": 190
+    },
+    {
+      "title": "0 comments",
+      "url": "https://www.kaggle.com/code/meenalsinha/hybrid-best-akkadian/comments",
+      "author": "meenalsinha",
+      "slug": "hybrid-best-akkadian",
+      "kaggle_ref": "meenalsinha/hybrid-best-akkadian",
+      "votes": 187
+    },
+    {
+      "title": "4 comments",
+      "url": "https://www.kaggle.com/code/assiaben/akkadian-english-inference-byt5-optimized-34x/comments",
+      "author": "assiaben",
+      "slug": "akkadian-english-inference-byt5-optimized-34x",
+      "kaggle_ref": "assiaben/akkadian-english-inference-byt5-optimized-34x",
+      "votes": 174
+    },
+    {
+      "title": "Assia Benkedia",
+      "url": "https://www.kaggle.com/code/assiaben/akkadian-english-inference-byt5-optimized-34x",
+      "author": "assiaben",
+      "slug": "akkadian-english-inference-byt5-optimized-34x",
+      "kaggle_ref": "assiaben/akkadian-english-inference-byt5-optimized-34x",
+      "votes": 159
+    },
+    {
+      "title": "5 comments",
+      "url": "https://www.kaggle.com/code/serariagomes/akkadian-english-byt5-optimized-again/comments",
+      "author": "serariagomes",
+      "slug": "akkadian-english-byt5-optimized-again",
+      "kaggle_ref": "serariagomes/akkadian-english-byt5-optimized-again",
+      "votes": 159
+    },
+    {
+      "title": "1 comment",
+      "url": "https://www.kaggle.com/code/yongsukprasertsuk/deep-past-challenge-byt5-optimized/comments",
+      "author": "yongsukprasertsuk",
+      "slug": "deep-past-challenge-byt5-optimized",
+      "kaggle_ref": "yongsukprasertsuk/deep-past-challenge-byt5-optimized",
+      "votes": 156
+    },
+    {
+      "title": "0 comments",
+      "url": "https://www.kaggle.com/code/mattiaangeli/deep-pasta-mbr-v2/comments",
+      "author": "mattiaangeli",
+      "slug": "deep-pasta-mbr-v2",
+      "kaggle_ref": "mattiaangeli/deep-pasta-mbr-v2",
+      "votes": 144
+    },
+    {
+      "title": "0 comments",
+      "url": "https://www.kaggle.com/code/ngyzly/lb-35-1-ensembling-post-processing-baseline/comments",
+      "author": "ngyzly",
+      "slug": "lb-35-1-ensembling-post-processing-baseline",
+      "kaggle_ref": "ngyzly/lb-35-1-ensembling-post-processing-baseline",
+      "votes": 142
+    },
+    {
+      "title": "2 comments",
+      "url": "https://www.kaggle.com/code/jackcerion/byt5-seq2seq-infer/comments",
+      "author": "jackcerion",
+      "slug": "byt5-seq2seq-infer",
+      "kaggle_ref": "jackcerion/byt5-seq2seq-infer",
+      "votes": 136
+    },
+    {
+      "title": "1 comment",
+      "url": "https://www.kaggle.com/code/loopassembly/score-35-3-byt5-mbr-pipeline/comments",
+      "author": "loopassembly",
+      "slug": "score-35-3-byt5-mbr-pipeline",
+      "kaggle_ref": "loopassembly/score-35-3-byt5-mbr-pipeline",
+      "votes": 129
+    },
+    {
+      "title": "6 comments",
+      "url": "https://www.kaggle.com/code/qifeihhh666/deep-past-challenge-byt5-base-inference/comments",
+      "author": "qifeihhh666",
+      "slug": "deep-past-challenge-byt5-base-inference",
+      "kaggle_ref": "qifeihhh666/deep-past-challenge-byt5-base-inference",
+      "votes": 127
+    }
+  ]
+}

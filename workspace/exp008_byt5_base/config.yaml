@@ -1,0 +1,41 @@
+experiment:
+  name: exp008_byt5_base
+  description: "ByT5-small→ByT5-baseにスケールアップ。cosine scheduler導入。exp005の学習設定をベースに"
+
+lineage:
+  parent: exp005_label_masking
+  status: active
+  diff_summary: "モデルをByT5-small→ByT5-baseに変更。lr schedulerをcosineに変更。BF16有効化。batch_size調整"
+
+model:
+  name: google/byt5-base
+  max_length: 512
+  reverse_encoder_max_length: 1024
+  prefix: "translate Akkadian to English: "
+  prefix_reverse: "translate English to Akkadian: "
+
+training:
+  epochs: 20
+  learning_rate: 5.0e-5
+  optimizer: adafactor
+  scheduler: cosine
+  warmup_ratio: 0.1
+  label_smoothing: 0.2
+  batch_size: 1
+  gradient_accumulation_steps: 16
+  weight_decay: 0.01
+  fp16: false
+  bf16: true
+  seed: 42
+  val_ratio: 0.1
+
+inference:
+  num_beams: 1
+  max_length: 512
+  early_stopping: true
+  batch_size: 2
+
+data:
+  train_path: ../../datasets/raw/train.csv
+  test_path: ../../datasets/raw/test.csv
+  use_bidirectional: true

@@ -82,7 +82,7 @@ lineage:
 \```
 
 ## 次のステップ
-- [ ] TODO
+<!-- 結果を受けて、次の実験の候補や残課題など -->
 ```
 
 6. `workspace/experiment_summary.md` の実験一覧表と系譜図に新実験を追加

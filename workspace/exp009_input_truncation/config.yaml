@@ -1,0 +1,47 @@
+experiment:
+  name: exp009_input_truncation
+  description: "入力側の文レベルaugmentation。各エポックで50%の確率でAkkadian入力を先頭200バイトに切り詰め、テスト条件（文レベル入力）に適応させる"
+
+lineage:
+  parent: exp008_byt5_base
+  status: active
+  diff_summary: "入力truncation augmentationを追加。確率的に全文/先頭200Bを切り替え。逆変換も対称的にsent版を適用"
+
+model:
+  name: google/byt5-base
+  max_length: 512
+  reverse_encoder_max_length: 1024
+  prefix: "translate Akkadian to English: "
+  prefix_reverse: "translate English to Akkadian: "
+
+training:
+  epochs: 20
+  learning_rate: 5.0e-5
+  optimizer: adafactor
+  scheduler: cosine
+  warmup_ratio: 0.1
+  label_smoothing: 0.2
+  batch_size: 1
+  gradient_accumulation_steps: 16
+  weight_decay: 0.01
+  fp16: false
+  bf16: true
+  seed: 42
+  val_ratio: 0.1
+
+augmentation:
+  input_truncation:
+    enabled: true
+    prob: 0.5
+    max_bytes: 200
+
+inference:
+  num_beams: 1
+  max_length: 512
+  early_stopping: true
+  batch_size: 2
+
+data:
+  train_path: ../../datasets/raw/train.csv
+  test_path: ../../datasets/raw/test.csv
+  use_bidirectional: true

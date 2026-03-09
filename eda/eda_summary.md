@@ -170,6 +170,39 @@
 
 詳細: `eda/eda010_bpe_analysis/report.md`
 
+## eda011: UUID Matching Investigation（2026/03/08）
+
+| 日付 | EDA | 発見内容 | 影響度 |
+|------|-----|----------|--------|
+| 2026/03/08 | eda011 | **train↔Sentences_Oare の253/1561マッチは、異なるサブセットが原因**（IDフォーマット問題ではない） | 高 |
+| 2026/03/08 | eda011 | train 1,561件は published_texts に100%存在。Sentences_Oare 1,700件中1,417件がpublished_textsに存在 | 中 |
+| 2026/03/08 | eda011 | 253件のUUIDマッチでも翻訳テキスト類似度は平均0.544 — 異なるアノテーションパイプライン由来 | 高 |
+| 2026/03/08 | eda011 | **高品質マッチ（UUID一致+2文以上+類似度>=0.5）はわずか123件** | 高 |
+| 2026/03/08 | eda011 | テキスト内容ベースのマッチングは追加1-2件のみ — 根本的にカバレッジが異なる | 中 |
+| 2026/03/08 | eda011 | 1文のみのSentences_Oareエントリ(55件)は平均類似度0.282 — 断片的翻訳 | 中 |
+
+詳細: `eda/eda011_uuid_matching/report.md`
+
+## eda012: Sentences_Oare + published_texts 結合の実現可能性調査（2026/03/09）
+
+| 日付 | EDA | 発見内容 | 影響度 |
+|------|-----|----------|--------|
+| 2026/03/09 | eda012 | **UUID結合で1,166件の新規doc-levelペア構築可能** — train+74.7%の増加 | 極高 |
+| 2026/03/09 | eda012 | 新規文書の100%にtransliterationが存在 — 欠損なし | 高 |
+| 2026/03/09 | eda012 | 1文文書は146件のみ、多くがSeal/Witness等の断片的テキスト — 品質にばらつき | 中 |
+| 2026/03/09 | eda012 | 文レベル分割は困難 — アッカド語翻字に文区切りがなく、line_number情報だけでは不十分 | 高 |
+| 2026/03/09 | eda012 | AICC機械翻訳: train外で6,141件あり（Sentences_Oare外含む）— noisy labelとして別途検討 | 中 |
+| 2026/03/09 | eda012 | **doc-levelで追加し、既存のlabel maskingで対応するのが現実的** | 高 |
+
+### eda012のアイデア追加
+
+| アイデア | 根拠 | 試した? | 結果 |
+|----------|------|---------|------|
+| Sentences_Oare + published_textsでdoc-level追加データ(+1,166件) | eda012: UUID結合100%成功 | - | - |
+| AICC機械翻訳6,141件をnoisy labelとして追加 | eda012: train外で大量に存在 | - | - |
+
+詳細: `eda/eda012_sentences_oare_feasibility/report.md`
+
 ## データに関する重要な注意点
 
 - **Train = ドキュメントレベル、Test = 文レベル** → trainをsentence分割して学習する必要がある

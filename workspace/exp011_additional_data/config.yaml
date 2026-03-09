@@ -1,0 +1,51 @@
+experiment:
+  name: exp011_additional_data
+  description: "Sentences_Oare + published_textsで追加doc-levelペア(+1,166件)をtrain.csvに結合して学習"
+
+lineage:
+  parent: exp010_pn_gn_tagging
+  status: active
+  diff_summary: "eda012で発見した追加データ1,166件をtrainに結合。PN/GNタグ付加はexp010を継承"
+
+model:
+  name: google/byt5-base
+  max_length: 512
+  reverse_encoder_max_length: 1024
+  prefix: "translate Akkadian to English: "
+  prefix_reverse: "translate English to Akkadian: "
+
+training:
+  epochs: 20
+  learning_rate: 5.0e-5
+  optimizer: adafactor
+  scheduler: cosine
+  warmup_ratio: 0.1
+  label_smoothing: 0.2
+  batch_size: 1
+  gradient_accumulation_steps: 16
+  weight_decay: 0.01
+  fp16: false
+  bf16: true
+  seed: 42
+  val_ratio: 0.1
+
+tagging:
+  lexicon_path: ../../datasets/raw/OA_Lexicon_eBL.csv
+  tag_types: ["PN", "GN"]
+  ambiguous_strategy: "skip"
+
+additional_data:
+  sentences_oare_path: ../../datasets/raw/Sentences_Oare_FirstWord_LinNum.csv
+  published_texts_path: ../../datasets/raw/published_texts.csv
+  use_additional: true
+
+inference:
+  num_beams: 1
+  max_length: 512
+  early_stopping: true
+  batch_size: 2
+
+data:
+  train_path: ../../datasets/raw/train.csv
+  test_path: ../../datasets/raw/test.csv
+  use_bidirectional: true

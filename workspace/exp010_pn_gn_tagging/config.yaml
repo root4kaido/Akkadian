@@ -1,0 +1,46 @@
+experiment:
+  name: exp010_pn_gn_tagging
+  description: "OA_Lexiconを用いてAkkadian翻字のPN/GNトークンにタグを付加し、固有名詞認識を補助する"
+
+lineage:
+  parent: exp008_byt5_base
+  status: active
+  diff_summary: "入力のPN/GNトークンに[PN]/[GN]タグを付加。OA_Lexicon_eBL.csvのform→type辞書を使用"
+
+model:
+  name: google/byt5-base
+  max_length: 512
+  reverse_encoder_max_length: 1024
+  prefix: "translate Akkadian to English: "
+  prefix_reverse: "translate English to Akkadian: "
+
+training:
+  epochs: 20
+  learning_rate: 5.0e-5
+  optimizer: adafactor
+  scheduler: cosine
+  warmup_ratio: 0.1
+  label_smoothing: 0.2
+  batch_size: 1
+  gradient_accumulation_steps: 16
+  weight_decay: 0.01
+  fp16: false
+  bf16: true
+  seed: 42
+  val_ratio: 0.1
+
+tagging:
+  lexicon_path: ../../datasets/raw/OA_Lexicon_eBL.csv
+  tag_types: ["PN", "GN"]
+  ambiguous_strategy: "skip"  # PN+word等の曖昧なformはタグ付加しない
+
+inference:
+  num_beams: 1
+  max_length: 512
+  early_stopping: true
+  batch_size: 2
+
+data:
+  train_path: ../../datasets/raw/train.csv
+  test_path: ../../datasets/raw/test.csv
+  use_bidirectional: true

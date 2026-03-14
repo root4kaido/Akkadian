@@ -18,6 +18,7 @@ output/
 *.pkl
 *.npy
 *.npz
+*.csv
 *.zip
 *.sif
 *.jpg

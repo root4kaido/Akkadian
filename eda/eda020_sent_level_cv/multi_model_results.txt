@@ -1,0 +1,4 @@
+exp015	chrF++=47.20	BLEU=30.42	geo=37.89	rep=12.7%
+exp016	chrF++=47.83	BLEU=28.54	geo=36.95	rep=14.3%
+exp017	chrF++=43.00	BLEU=22.73	geo=31.27	rep=13.2%
+exp018	chrF++=47.59	BLEU=28.34	geo=36.72	rep=15.3%

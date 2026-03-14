@@ -1,0 +1,8 @@
+{
+  "n_multi_sent_docs": 1191,
+  "n_analyzed": 50,
+  "chrf_roundtrip_mean": 74.59597182468778,
+  "chrf_roundtrip_median": 74.94492191849,
+  "diagonal_alignment_rate": 0.547244094488189,
+  "alignment_chrf_mean": 50.0077244678323
+}

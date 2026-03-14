@@ -1,0 +1,8 @@
+experiment:
+  name: exp024_pn_gn_tagging
+  description: "exp023(全前処理) + PN/GNタグ付加で固有名詞認識を強化"
+
+lineage:
+  parent: exp023_full_preprocessing
+  status: active
+  diff_summary: "exp023にOA_LexiconベースのPN/GNタグ付加を追加。exp010のタグ手法をByT5-base+全前処理に再適用"

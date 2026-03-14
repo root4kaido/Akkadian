@@ -1,0 +1,53 @@
+experiment:
+  name: exp012_weighted_mbr
+  description: "Weighted MBR (chrF++ + BLEU + Jaccard + length bonus)。exp011モデルを流用し推論パイプラインのみ変更"
+
+lineage:
+  parent: exp011_additional_data
+  status: active
+  diff_summary: "MBRスコアリングをchrF++単体から複合スコア(chrF++ + BLEU + Jaccard + length bonus)に変更。候補プールも拡張(beam4 + multi-temp sampling)"
+
+model:
+  name: google/byt5-base
+  max_length: 512
+  prefix: "translate Akkadian to English: "
+  # exp011のbest_modelを使用
+  checkpoint: workspace/exp011_additional_data/results/best_model
+
+training:
+  seed: 42
+  val_ratio: 0.1
+
+tagging:
+  lexicon_path: ../../datasets/raw/OA_Lexicon_eBL.csv
+  tag_types: ["PN", "GN"]
+  ambiguous_strategy: "skip"
+
+inference:
+  max_length: 512
+  batch_size: 2
+  repetition_penalty: 1.2
+
+  # Candidate generation
+  candidates:
+    num_beam_cands: 4
+    num_beams: 8
+    length_penalty: 1.3
+    early_stopping: true
+
+    use_sampling: true
+    sample_temperatures: [0.6, 0.8, 1.05]
+    num_sample_per_temp: 2
+    sampling_top_p: 0.92
+
+  # MBR selection
+  mbr:
+    pool_cap: 32
+    w_chrf: 0.55
+    w_bleu: 0.25
+    w_jaccard: 0.20
+    w_length: 0.10
+
+data:
+  train_path: ../../datasets/raw/train.csv
+  test_path: ../../datasets/raw/test.csv

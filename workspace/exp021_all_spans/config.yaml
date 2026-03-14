@@ -1,0 +1,23 @@
+experiment: exp021_all_spans
+base: exp016 (ByT5-base)
+description: "元doc-levelデータ + 全連続部分列をdoc-levelで追加"
+
+model:
+  name: google/byt5-base
+  max_length: 512
+
+training:
+  epochs: 20
+  learning_rate: 2e-4
+  optimizer: adafactor
+  batch_size: 4
+  gradient_accumulation_steps: 2
+  bf16: true
+  weight_decay: 0.01
+
+data:
+  source: train.csv + sentence_aligned.csv (all contiguous spans)
+  val_split: 0.1
+  val_seed: 42
+  additional_data: "全連続部分列 (i,j) for 0<=i<=j<n, 全文スパン除く"
+  bidirectional: true

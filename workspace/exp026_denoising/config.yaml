@@ -1,0 +1,24 @@
+experiment:
+  name: exp026_denoising
+  description: "ソース側ノイズ注入で表層パターンへの過適合を抑制"
+
+lineage:
+  parent: exp023
+  status: active
+  diff_summary: "翻字入力にランダムノイズ(drop/swap/insert)を確率的に適用"
+
+model:
+  name: google/byt5-base
+  params:
+    max_length: 512
+
+training:
+  seed: 42
+  n_folds: 5
+  epochs: 20
+  batch_size: 4
+  gradient_accumulation_steps: 2
+  lr: 2e-4
+  amp: true
+  noise_prob: 0.1
+  noise_target_ratio: 0.5  # 50%のforward方向サンプルにノイズ適用

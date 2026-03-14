@@ -1,0 +1,32 @@
+experiment:
+  name: exp013_starter_repro
+  description: "Starter notebook完全再現（LB=26確認済み）。推論もstarter-inferと同一設定。今後のアブレーションのベースライン。"
+
+lineage:
+  parent: null  # starterノートブックから直接再現
+  status: active
+  diff_summary: "starterと完全同一の学習・推論。インフラのみ改善（wandb, best/last保存, generation_max_length修正）"
+
+model:
+  name: google/byt5-small
+  params:
+    max_length: 512
+
+training:
+  seed: 42
+  epochs: 20
+  batch_size: 2  # per_device (RTX4090余裕あり)
+  gradient_accumulation_steps: 4  # effective batch = 8 (starterと同一)
+  lr: 1.0e-4
+  optimizer: adafactor
+  label_smoothing: 0.2
+  weight_decay: 0.01
+  fp16: false  # FP32 (starterと同一)
+  bidirectional: true
+  data: train.csv only (no additional data, no tags)
+
+inference:
+  num_beams: 4
+  max_length: 512
+  early_stopping: true
+  batch_size: 16

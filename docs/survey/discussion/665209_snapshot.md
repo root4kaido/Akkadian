@@ -1,0 +1,1015 @@
+- generic [ref=e2]:
+  - navigation "Main Kaggle page navigation" [ref=e3]:
+    - generic [ref=e5]:
+      - button "Navigation menu" [ref=e7] [cursor=pointer]: menu
+      - link "Skip to content" [ref=e8] [cursor=pointer]:
+        - /url: "#site-content"
+        - text: Skip to
+        - text: content
+      - link "Return to Kaggle home page" [ref=e10] [cursor=pointer]:
+        - /url: /
+        - img "Kaggle" [ref=e11]
+    - button "Create" [ref=e13] [cursor=pointer]:
+      - img [ref=e14]
+      - generic [ref=e19]: Create
+    - generic [ref=e20]:
+      - generic [ref=e22]:
+        - list [ref=e23]:
+          - listitem "Home List Item" [ref=e24]:
+            - link "Home" [ref=e26] [cursor=pointer]:
+              - /url: /
+              - generic [ref=e27]:
+                - generic [ref=e30]: explore
+                - paragraph [ref=e32]: Home
+          - listitem "Competitions List Item" [ref=e33]:
+            - link "Competitions" [ref=e35] [cursor=pointer]:
+              - /url: /competitions
+              - generic [ref=e36]:
+                - generic [ref=e39]: emoji_events
+                - paragraph [ref=e41]: Competitions
+          - listitem "Datasets List Item" [ref=e43]:
+            - link "Datasets" [ref=e45] [cursor=pointer]:
+              - /url: /datasets
+              - generic [ref=e46]:
+                - generic [ref=e49]: table_chart
+                - paragraph [ref=e51]: Datasets
+          - listitem "Models List Item" [ref=e52]:
+            - link "Models" [ref=e54] [cursor=pointer]:
+              - /url: /models
+              - generic [ref=e55]:
+                - generic [ref=e58]: tenancy
+                - paragraph [ref=e60]: Models
+          - listitem "Benchmarks List Item" [ref=e61]:
+            - link "Benchmarks" [ref=e63] [cursor=pointer]:
+              - /url: /benchmarks
+              - generic [ref=e64]:
+                - generic [ref=e67]: leaderboard
+                - paragraph [ref=e69]: Benchmarks
+          - listitem "Game Arena List Item" [ref=e70]:
+            - link "Game Arena" [ref=e72] [cursor=pointer]:
+              - /url: /game-arena
+              - generic [ref=e73]:
+                - generic [ref=e76]: smart_toy
+                - paragraph [ref=e78]: Game Arena
+          - listitem "Code List Item" [ref=e79]:
+            - link "Code" [ref=e81] [cursor=pointer]:
+              - /url: /code
+              - generic [ref=e82]:
+                - generic [ref=e85]: code
+                - paragraph [ref=e87]: Code
+          - listitem "Discussions List Item" [ref=e88]:
+            - link "Discussions" [ref=e90] [cursor=pointer]:
+              - /url: /discussions
+              - generic [ref=e91]:
+                - generic [ref=e94]: comment
+                - paragraph [ref=e96]: Discussions
+          - listitem "Kaggle Learn List Item" [ref=e97]:
+            - link "Kaggle Learn" [ref=e99] [cursor=pointer]:
+              - /url: /learn
+              - generic [ref=e100]:
+                - generic [ref=e103]: school
+                - paragraph [ref=e105]: Learn
+        - list [ref=e106]:
+          - listitem "More on Kaggle List Item" [ref=e107]:
+            - link "More on Kaggle" [ref=e109] [cursor=pointer]:
+              - /url: "#"
+              - generic [ref=e110]:
+                - generic [ref=e113]: expand_more
+                - paragraph [ref=e115]: More
+      - button "View Active Events" [ref=e117] [cursor=pointer]:
+        - generic [ref=e119]: auto_awesome_motion
+        - paragraph [ref=e120]: View Active Events
+  - navigation "Main menu, search and your account" [ref=e121]:
+    - generic [ref=e122]:
+      - generic [ref=e126]:
+        - generic [ref=e127]: search
+        - textbox "Search" [ref=e128]
+        - group
+      - generic [ref=e130]:
+        - link "Sign In" [ref=e132] [cursor=pointer]:
+          - /url: /account/login?phase=startSignInTab&returnUrl=%2Fcompetitions%2Fdeep-past-initiative-machine-translation%2Fdiscussion%2F665209
+          - button "Sign In" [ref=e133]:
+            - generic [ref=e134]: Sign In
+        - link "Register" [ref=e136] [cursor=pointer]:
+          - /url: /account/login?phase=startRegisterTab&returnUrl=%2Fcompetitions%2Fdeep-past-initiative-machine-translation%2Fdiscussion%2F665209
+          - button "Register" [ref=e137]:
+            - generic [ref=e138]: Register
+  - main [ref=e139]:
+    - generic [ref=e141]:
+      - generic [ref=e142]: Kaggle uses cookies from Google to deliver and enhance the quality of its services and to analyze traffic.
+      - generic [ref=e143]:
+        - link "Learn more" [ref=e144] [cursor=pointer]:
+          - /url: /cookies
+          - generic [ref=e145]: Learn more
+        - generic [ref=e146] [cursor=pointer]: OK, Got it.
+    - generic [ref=e149]:
+      - generic [ref=e151]:
+        - generic [ref=e152]:
+          - link "Deep Past Initiative's profile" [ref=e153] [cursor=pointer]:
+            - /url: /organizations/deep-past-initiative
+            - generic "Deep Past Initiative" [ref=e154]
+            - img [ref=e155]
+          - generic [ref=e158]:
+            - generic [ref=e160]: Deep Past Initiative
+            - generic [ref=e161]: · Featured Code Competition · 12 days to go
+          - generic [ref=e162]:
+            - button "Join Competition" [ref=e164] [cursor=pointer]:
+              - generic [ref=e165]: Join Competition
+            - button "Competition options menu collapsed" [ref=e167] [cursor=pointer]: more_horiz
+        - generic [ref=e169]:
+          - heading "Deep Past Challenge - Translate Akkadian to English" [level=1] [ref=e170]
+          - paragraph [ref=e172]: Bringing Bronze Age Voices Back to Life – Machine Translation of Old Assyrian Cuneiform
+      - generic [ref=e174]:
+        - tablist [ref=e181]:
+          - tab "Overview, 1 of 7" [ref=e182] [cursor=pointer]:
+            - generic [ref=e183]: Overview
+          - tab "Data, 2 of 7" [ref=e184] [cursor=pointer]:
+            - generic [ref=e185]: Data
+          - tab "Code, 3 of 7" [ref=e186] [cursor=pointer]:
+            - generic [ref=e187]: Code
+          - tab "Models, 4 of 7" [ref=e188] [cursor=pointer]:
+            - generic [ref=e189]: Models
+          - tab "Discussion, 5 of 7" [selected] [ref=e190] [cursor=pointer]:
+            - generic [ref=e191]: Discussion
+          - tab "Leaderboard, 6 of 7" [ref=e192] [cursor=pointer]:
+            - generic [ref=e193]: Leaderboard
+          - tab "Rules, 7 of 7" [ref=e194] [cursor=pointer]:
+            - generic [ref=e195]: Rules
+        - separator [ref=e197]
+      - generic [ref=e201]:
+        - generic [ref=e202]:
+          - generic [ref=e203]:
+            - generic [ref=e204]:
+              - link "Adam Anderson's profile" [ref=e205] [cursor=pointer]:
+                - /url: /deeppast
+                - generic "Adam Anderson" [ref=e206]
+                - img [ref=e207]
+              - generic [ref=e210]:
+                - link "Adam Anderson" [ref=e211] [cursor=pointer]:
+                  - /url: /deeppast
+                - text: ·
+                - generic [ref=e212]: Posted 2 months ago
+              - text: ·
+              - generic [ref=e213]: Competition Host
+            - generic [ref=e214]:
+              - generic [ref=e215]:
+                - button "Upvote" [ref=e216] [cursor=pointer]:
+                  - generic [ref=e217]: arrow_drop_up
+                - button "71 votes" [ref=e218] [cursor=pointer]: "71"
+              - button "More Options for this Topic" [ref=e219] [cursor=pointer]: more_vert
+            - heading "Two practical stumbling blocks in Akkadian → English MT (and how to address them)" [level=3] [ref=e220]
+            - generic [ref=e223]:
+              - paragraph [ref=e224]:
+                - text: Based on recent experiments and discussions with several participants, I want to share a set of observations about what appear to be the
+                - emphasis [ref=e225]: primary bottlenecks
+                - text: in this competition. These are not model-architecture issues per se, but data- and representation-level issues that strongly affect downstream training, evaluation, and reinforcement learning.
+              - paragraph [ref=e226]: "After multiple iterations, debugging sessions, and failed-but-informative experiments, two main stumbling blocks consistently emerge:"
+              - paragraph [ref=e227]:
+                - strong [ref=e228]: (1) Named entities (personal names, place names, divine names)
+                - strong [ref=e229]: (2) Inconsistent ASCII / transliteration formats across Akkadian datasets
+              - paragraph [ref=e230]: Both issues disproportionately affect tokenization, alignment, and reward stability, and in practice they limit performance more than model size or optimizer choice.
+              - separator [ref=e231]
+              - heading "1. Named entities are a dominant source of error" [level=3] [ref=e232]
+              - paragraph [ref=e233]: "Personal names, geographic names, and divine names behave very differently from ordinary lexical items:"
+              - list [ref=e234]:
+                - listitem [ref=e235]: They are often transliterated inconsistently across editions.
+                - listitem [ref=e236]: They frequently preserve older orthographic conventions.
+                - listitem [ref=e237]: They are semantically opaque to the model unless explicitly supported.
+              - paragraph [ref=e238]: In experiments, many otherwise reasonable translations fail almost entirely because a name is mangled, dropped, or hallucinated. This affects not only final accuracy but also reward-based methods, where small orthographic deviations can collapse a sentence-level score.
+              - paragraph [ref=e239]:
+                - text: To address this, I have prepared an
+                - strong [ref=e240]: onomasticon
+                - text: "(a curated list of names and attested spellings), which I will share as supplemental data. Participants may find it useful to:"
+              - list [ref=e241]:
+                - listitem [ref=e242]: add it as a lookup or constraint layer,
+                - listitem [ref=e243]: bias decoding for known names,
+                - listitem [ref=e244]: or use it for post-generation repair.
+              - paragraph [ref=e245]: Even partial normalization of named entities tends to improve both perceived translation quality and metric stability.
+              - separator [ref=e246]
+              - heading "2. Transliteration format normalization is not optional" [level=3] [ref=e247]
+              - paragraph [ref=e248]:
+                - text: A second, and often underestimated, issue is
+                - strong [ref=e249]: ASCII-format variation in Akkadian transliteration
+                - text: . Different corpora encode the same underlying text using different conventions, many of which are
+                - emphasis [ref=e250]: not interchangeable
+                - text: without loss.
+              - paragraph [ref=e251]:
+                - text: A concrete example that came up in a private discussion illustrates the problem. One approach converted diacritics into ASCII sequences (e.g.,
+                - code [ref=e252]: š → sz
+                - text: ","
+                - code [ref=e253]: ú → u2
+                - text: ", etc.) before training. This is a reasonable instinct, but in this case it was done in the wrong direction: the"
+                - emphasis [ref=e254]: evaluation data already contains diacritics
+                - text: ", and reducing the alphabet removed distinctions that are semantically meaningful in Akkadian."
+              - paragraph [ref=e255]: "For example, the evaluation data expects forms like:"
+              - list [ref=e256]:
+                - listitem [ref=e257]:
+                  - code [ref=e258]: i-ṣí-ba-at
+                  - text: rather than
+                  - code [ref=e259]: i-Si₂-ba-at
+                - listitem [ref=e260]:
+                  - code [ref=e261]: KÙ-pì-a
+                  - text: rather than
+                  - code [ref=e262]: KU₃-pi₃-a
+                - listitem [ref=e263]:
+                  - code [ref=e264]: KIŠIB
+                  - text: rather than
+                  - code [ref=e265]: KISZIB
+              - paragraph [ref=e266]:
+                - text: The key takeaway is that
+                - strong [ref=e267]: the competition data uses an extended alphabet by design
+                - text: ", and collapsing it into ASCII can degrade both meaning and alignment. While this increases tokenization difficulty, preserving distinctions such as"
+                - code [ref=e268]: s / ṣ / š
+                - text: and
+                - code [ref=e269]: t / ṭ
+                - text: is preferable to losing them.
+              - paragraph [ref=e270]: "The recommended strategy is therefore:"
+              - list [ref=e271]:
+                - listitem [ref=e272]: keep diacritics,
+                - listitem [ref=e273]:
+                  - text: convert ASCII substitutes (e.g.,
+                  - code [ref=e274]: sz
+                  - text: )
+                  - emphasis [ref=e275]: into
+                  - text: diacritics,
+                - listitem [ref=e276]: and normalize everything toward the format used in the training and evaluation sets.
+              - separator [ref=e277]
+              - 'heading "Gaps, damage markers, and parallel alignment [update: 2/18/26]" [level=3] [ref=e278]'
+              - paragraph [ref=e279]: "Another recurring source of confusion concerns damaged text and gap markers in the data:"
+              - list [ref=e280]:
+                - listitem [ref=e281]:
+                  - code [ref=e282]: x
+                  - text: represents a single broken sign,
+                - listitem [ref=e283]:
+                  - text: sequences like
+                  - code [ref=e284]: x x x x
+                  - text: or
+                  - code [ref=e285]: ...
+                  - text: represent a larger lacuna.
+              - paragraph [ref=e286]:
+                - text: "For modeling purposes we reduced all breaks to a single marker:"
+                - code [ref=e287]: <gap>
+              - list [ref=e288]:
+                - listitem [ref=e289]:
+                  - text: we removed the tag for
+                  - code [ref=e290]: <big_gap>
+                  - text: from the train and test (and other transliterations). We also deduplicated instances multiple sequential gaps (e.g.
+                  - code [ref=e291]: <gap> <gap
+                  - text: ","
+                  - code [ref=e292]: <gap>-<gap>
+                  - text: ","
+                  - code [ref=e293]: <gap> <gap>
+                  - text: ","
+                  - code [ref=e294]: <gap>. <gap>
+                  - text: ", etc."
+              - paragraph [ref=e295]:
+                - text: Ideally, these gap markers would be
+                - strong [ref=e296]: parallelized between transliteration and translation whenever possible
+                - text: . However, this was not completely accomplished, as the translation we had access to did not pay strict attention to the gaps. This will be an aspect of the challenge in which a significant advantage will remain for those who have controlled for this data. If a large gap appears in one side but not the other, the model is forced to learn misalignment rather than translation.
+              - paragraph [ref=e297]:
+                - text: This also applies to edge cases such as
+                - code [ref=e298]: <gap>
+                - text: attached to a word (e.g.,
+                - code [ref=e299]: <gap>-A-šùr
+                - text: ), which should be preserved rather than blindly removed.
+              - separator [ref=e300]
+              - heading "Why this matters for training and RL-based methods" [level=3] [ref=e301]
+              - paragraph [ref=e302]:
+                - text: Many participants have observed that standard supervised fine-tuning produces reasonable loss curves, while reinforcement or preference-based methods fail to improve or show no reward signal. In nearly all cases examined so far, this traces back to
+                - strong [ref=e303]: output non-conformance
+                - text: caused by the issues above.
+              - paragraph [ref=e304]: "If the model is penalized for:"
+              - list [ref=e305]:
+                - listitem [ref=e306]: orthographic mismatches,
+                - listitem [ref=e307]: bracket artifacts,
+                - listitem [ref=e308]: inconsistent gap handling,
+                - listitem [ref=e309]: or malformed named entities,
+              - paragraph [ref=e310]: then reward functions cannot reliably distinguish “closer” from “farther” outputs. Addressing normalization and alignment first makes rewards smoother and learning signals usable.
+              - separator [ref=e311]
+              - heading "Closing note" [level=3] [ref=e312]
+              - paragraph [ref=e313]: None of this is meant as criticism of existing approaches; these are difficult problems, and much of the complexity comes from the philological nature of the data itself. The hope in sharing this publicly is to reduce duplicated effort and make preprocessing choices more transparent across submissions.
+              - paragraph [ref=e314]: I will continue to share supplemental resources (including the onomasticon) as they are finalized, and I’m happy to discuss normalization or alignment strategies further if helpful to others.
+            - generic [ref=e317]:
+              - generic [ref=e319]:
+                - img [ref=e321]
+                - generic [ref=e322]: "38"
+              - generic [ref=e324]:
+                - img [ref=e326]
+                - generic [ref=e327]: "1"
+          - separator [ref=e328]
+        - generic [ref=e329]:
+          - generic [ref=e330]:
+            - paragraph [ref=e333]:
+              - paragraph [ref=e334]:
+                - text: Please
+                - link "sign in opens in new window" [ref=e335] [cursor=pointer]:
+                  - /url: /account/login
+                  - text: sign in
+                - text: to reply to this topic.
+            - separator [ref=e336]
+          - generic [ref=e338]:
+            - generic [ref=e339]:
+              - generic [ref=e340]: comment
+              - heading "16 Comments" [level=2] [ref=e342]
+            - generic [ref=e345]:
+              - combobox "Select combobox. Hotness currently selected." [ref=e346] [cursor=pointer]:
+                - generic [ref=e348]: Hotness
+              - textbox: Hotness
+              - img
+          - generic [ref=e349]:
+            - generic [ref=e350]:
+              - generic [ref=e354]:
+                - link "Angantyr's profile" [ref=e355] [cursor=pointer]:
+                  - /url: /angantyr
+                  - generic "Angantyr" [ref=e356]
+                  - img [ref=e357]
+                - generic [ref=e362]:
+                  - link "Angantyr" [ref=e364] [cursor=pointer]:
+                    - /url: /angantyr
+                    - heading "Angantyr" [level=3] [ref=e365]
+                  - paragraph [ref=e367]: Posted 5 days ago
+                - generic [ref=e369]:
+                  - generic [ref=e370]:
+                    - button "Upvote" [ref=e371] [cursor=pointer]:
+                      - generic [ref=e372]: arrow_drop_up
+                    - button "1 votes" [ref=e373] [cursor=pointer]: "1"
+                  - button "More Options for this Comment" [ref=e374] [cursor=pointer]: more_vert
+                - generic [ref=e377]:
+                  - paragraph [ref=e378]:
+                    - link "@deeppast (opens in a new tab)" [ref=e379] [cursor=pointer]:
+                      - /url: https://www.kaggle.com/deeppast
+                      - text: "@deeppast"
+                    - text: Clarification needed.
+                  - paragraph [ref=e380]:
+                    - text: I'm going through the glossaries and find that in Summerian the nasal "ŋ" is used somewhat often. This appears, e.g., in the determinative for wood
+                    - code [ref=e381]: "{ŋeš}"
+                    - text: ", which for this competition is written as"
+                    - code [ref=e382]: "{geš}"
+                    - text: . Can we safely assume
+                    - code [ref=e383]: ŋ -> g
+                    - text: substitution as valid?
+                  - paragraph [ref=e384]:
+                    - text: Another question is about treating Summerian words from the ORACC glossary, e.g.,
+                    - code [ref=e385]: "{na₄}za-gin₃-ŋu₁₀"
+                    - text: ". Intuitively I would change that into:"
+                    - code [ref=e386]: NA₄.ZA.GÌN-gu₁₀
+                    - text: ", i.e.:"
+                  - list [ref=e387]:
+                    - listitem [ref=e388]:
+                      - text: treat the base as a summerogram -> uppercase, no
+                      - code [ref=e389]: "{}"
+                      - text: ","
+                      - code [ref=e390]: .
+                      - text: "-joined"
+                    - listitem [ref=e391]:
+                      - text: treat the rest as a
+                      - code [ref=e392]: "-"
+                      - text: "-joined suffix"
+                  - paragraph [ref=e393]:
+                    - text: What would be the approach to best match the data in
+                    - code [ref=e394]: train.csv
+                    - text: and other sources?
+              - separator [ref=e395]
+            - generic [ref=e396]:
+              - generic [ref=e400]:
+                - link "Souhardya's profile" [ref=e401] [cursor=pointer]:
+                  - /url: /souhardyatalukdar
+                  - generic "Souhardya" [ref=e402]
+                  - img [ref=e403]
+                - generic [ref=e408]:
+                  - link "Souhardya" [ref=e410] [cursor=pointer]:
+                    - /url: /souhardyatalukdar
+                    - heading "Souhardya" [level=3] [ref=e411]
+                  - generic [ref=e412]:
+                    - paragraph [ref=e413]: Posted 7 days ago
+                    - paragraph [ref=e415]: 188th in this Competition
+                - generic [ref=e417]:
+                  - generic [ref=e418]:
+                    - button "Upvote" [ref=e419] [cursor=pointer]:
+                      - generic [ref=e420]: arrow_drop_up
+                    - button "4 votes" [ref=e421] [cursor=pointer]: "4"
+                  - button "More Options for this Comment" [ref=e422] [cursor=pointer]: more_vert
+                - generic [ref=e425]:
+                  - paragraph [ref=e426]:
+                    - link "@deeppast (opens in a new tab)" [ref=e427] [cursor=pointer]:
+                      - /url: https://www.kaggle.com/deeppast
+                      - text: "@deeppast"
+                    - text: ", while going through your onomasticon and the train labels, i noticed that there are some differences in the naming convention."
+                  - paragraph [ref=e428]: "Example 1 — Different name entirely:"
+                  - paragraph [ref=e429]: "Akkadian token: šu-{d}EN.LÍL , Onomasticon canonical form: Šu-Enlil , Actual training label: Šu-Illil"
+                  - paragraph [ref=e430]: "Example 2 — Geminate consonant:"
+                  - paragraph [ref=e431]: "Akkadian token: šu-ku-tum , Onomasticon canonical form: Šukatum , Actual training label: Šukkutum"
+                  - paragraph [ref=e432]: (The onomasticon drops the geminate kk that the training labels preserve.)
+                  - paragraph [ref=e433]: "Example 3 — Long vowel:"
+                  - paragraph [ref=e434]: "Akkadian token: ṣí-lu-lu , Onomasticon canonical form: Ṣilulu , Actual training label: Ṣilūlu"
+                  - paragraph [ref=e435]: (The onomasticon omits the macron on the ū that the training labels include.)
+                  - paragraph [ref=e436]: these are some examples pointed out by claude. which convention do the test labels follow — the onomasticon's or the training data's?
+              - separator [ref=e437]
+            - generic [ref=e438]:
+              - generic [ref=e442]:
+                - link "Bilzard's profile" [ref=e443] [cursor=pointer]:
+                  - /url: /tatamikenn
+                  - generic "Bilzard" [ref=e444]
+                  - img [ref=e445]
+                - generic [ref=e450]:
+                  - link "Bilzard" [ref=e452] [cursor=pointer]:
+                    - /url: /tatamikenn
+                    - heading "Bilzard" [level=3] [ref=e453]
+                  - paragraph [ref=e455]: Posted a month ago
+                - generic [ref=e457]:
+                  - generic [ref=e458]:
+                    - button "Upvote" [ref=e459] [cursor=pointer]:
+                      - generic [ref=e460]: arrow_drop_up
+                    - button "12 votes" [ref=e461] [cursor=pointer]: "12"
+                  - button "More Options for this Comment" [ref=e462] [cursor=pointer]: more_vert
+                - generic [ref=e465]:
+                  - paragraph [ref=e466]:
+                    - link "@deeppast (opens in a new tab)" [ref=e467] [cursor=pointer]:
+                      - /url: https://www.kaggle.com/deeppast
+                      - text: "@deeppast"
+                    - text: Regarding normalization, could you clarify which of the following is true for the test set?
+                  - list [ref=e468]:
+                    - listitem [ref=e469]: Both transliterations and translations are already normalized (i.e., tokens like and are already present in both columns).
+                    - listitem [ref=e470]:
+                      - text: Only the translations are normalized. Participants must implement their own logic to convert
+                      - code [ref=e471]: x
+                      - text: or
+                      - code [ref=e472]: ...
+                      - text: into
+                      - code [ref=e473]: <gap>
+                      - text: or
+                      - code [ref=e474]: <big_gap>
+                      - text: for the test transliterations.
+                  - paragraph [ref=e475]: If Case 2 is true, the final scores will be highly sensitive to specific preprocessing choices. This could turn the competition into a "preprocessing lottery" and encourage over-fitting to the Public LB rather than improving the actual MT model.
+              - separator [ref=e476]
+            - generic [ref=e477]:
+              - generic [ref=e481]:
+                - link "Anil Ozturk's profile" [ref=e482] [cursor=pointer]:
+                  - /url: /nlztrk
+                  - generic "Anil Ozturk" [ref=e483]
+                  - img [ref=e484]
+                - generic [ref=e489]:
+                  - link "Anil Ozturk" [ref=e491] [cursor=pointer]:
+                    - /url: /nlztrk
+                    - heading "Anil Ozturk" [level=3] [ref=e492]
+                  - generic [ref=e493]:
+                    - paragraph [ref=e494]: Posted 2 months ago
+                    - paragraph [ref=e496]: 467th in this Competition
+                - generic [ref=e498]:
+                  - generic [ref=e499]:
+                    - button "Upvote" [ref=e500] [cursor=pointer]:
+                      - generic [ref=e501]: arrow_drop_up
+                    - button "8 votes" [ref=e502] [cursor=pointer]: "8"
+                  - button "More Options for this Comment" [ref=e503] [cursor=pointer]: more_vert
+                - generic [ref=e506]:
+                  - paragraph [ref=e507]: "I want to be sure on these cases:"
+                  - list [ref=e508]:
+                    - listitem [ref=e509]:
+                      - code [ref=e510]: <big_gap> <gap>
+                      - text: →
+                      - code [ref=e511]: <big_gap>
+                    - listitem [ref=e512]:
+                      - code [ref=e513]: <gap> <big_gap> <gap>
+                      - text: →
+                      - code [ref=e514]: <big_gap>
+                    - listitem [ref=e515]:
+                      - code [ref=e516]: <big_gap> <big_gap>
+                      - text: →
+                      - code [ref=e517]: <big_gap>
+                    - listitem [ref=e518]:
+                      - code [ref=e519]: <gap> <gap>
+                      - text: →
+                      - code [ref=e520]: <big_gap>
+                    - listitem [ref=e521]:
+                      - code [ref=e522]: someword-<gap> <gap>-someword
+                      - text: →
+                      - code [ref=e523]: someword-<gap> <gap>-someword
+                      - text: OR
+                      - code [ref=e524]: someword-<big_gap>-someword
+                      - text: "?"
+                    - listitem [ref=e525]:
+                      - code [ref=e526]: <big_gap> <gap>-A-šùr
+                      - text: →
+                      - code [ref=e527]: <big_gap> <gap>-A-šùr
+                    - listitem [ref=e528]:
+                      - code [ref=e529]: xxxx-kam
+                      - text: (train.csv line 43) →
+                      - code [ref=e530]: <big_gap>-kam
+                      - text: OR
+                      - code [ref=e531]: <big_gap> <gap>-kam
+                      - text: "?"
+                  - paragraph [ref=e532]: It would be good to take feedback on these from you.
+                  - paragraph [ref=e533]: I think that having to figure out the normalization logic you are using prevents us from focusing on the actual goal of the competition. There is some processing happening in the background that also affects the original “ground truth” translations you have, so instead of focusing on the machine learning part we end up spending our effort on reverse-engineering your normalization logic. Can't you share the transliteration-translation preprocessors you're using?
+                - generic [ref=e534]:
+                  - generic [ref=e539]:
+                    - link "MPWARE's profile" [ref=e540] [cursor=pointer]:
+                      - /url: /mpware
+                      - generic "MPWARE" [ref=e541]
+                      - img [ref=e542]
+                    - generic [ref=e547]:
+                      - link "MPWARE" [ref=e549] [cursor=pointer]:
+                        - /url: /mpware
+                        - heading "MPWARE" [level=3] [ref=e550]
+                      - generic [ref=e551]:
+                        - paragraph [ref=e552]: Posted 2 months ago
+                        - paragraph [ref=e554]: 290th in this Competition
+                    - generic [ref=e556]:
+                      - generic [ref=e557]:
+                        - button "Upvote" [ref=e558] [cursor=pointer]:
+                          - generic [ref=e559]: arrow_drop_up
+                        - button "1 votes" [ref=e560] [cursor=pointer]: "1"
+                      - button "More Options for this Comment" [ref=e561] [cursor=pointer]: more_vert
+                    - generic [ref=e564]:
+                      - paragraph [ref=e565]:
+                        - text: I'm wondering how to interpret this section that is unclear to me about "?", "!", and ":" for
+                        - strong [ref=e566]: translations
+                        - text: ":"
+                      - paragraph [ref=e567]:
+                        - link "https://www.kaggle.com/competitions/deep-past-initiative-machine-translation/overview/dataset-instructions (opens in a new tab)" [ref=e568] [cursor=pointer]:
+                          - /url: https://www.kaggle.com/competitions/deep-past-initiative-machine-translation/overview/dataset-instructions
+                          - text: https://www.kaggle.com/competitions/deep-past-initiative-machine-translation/overview/dataset-instructions
+                      - paragraph [ref=e569]:
+                        - strong [ref=e570]: Formatting Suggestions for Transliterations and Translations
+                        - text: ":"
+                      - paragraph [ref=e571]: "Remove (modern scribal notations):"
+                      - list [ref=e572]:
+                        - listitem [ref=e573]:
+                          - text: "! ("
+                          - emphasis [ref=e574]: certain reading
+                          - text: )
+                        - listitem [ref=e575]:
+                          - text: "? ("
+                          - emphasis [ref=e576]: questionable reading
+                          - text: )
+                        - listitem [ref=e577]:
+                          - text: / (line divider) - Now we now there is none of these according to
+                          - link "@deeppast (opens in a new tab)" [ref=e578] [cursor=pointer]:
+                            - /url: https://www.kaggle.com/deeppast
+                            - text: "@deeppast"
+                        - listitem [ref=e579]: ": OR . (word divider)"
+                      - paragraph [ref=e580]: "We've a lot of ?!: in training set translations. But do we have the same in test set?"
+                      - paragraph [ref=e581]: "Should we apply the suggestion above => Remove all !?: from translations in training set. Or only if they are enclosed with parenthesis."
+                      - paragraph [ref=e582]:
+                        - text: Some make sense to me with ":" usage for a rate and "?" for a question in translation. It does not look
+                        - emphasis [ref=e583]: questionable reading
+                        - text: for the question marks below.
+                      - blockquote [ref=e584]:
+                        - paragraph [ref=e585]: "ff9442fd-9e7d-449c-a2d6-0cc35921cd65: Šalim-Aššur answered: \"And what if I have tin and from my goods remaining in his possession? Will he pay me at the rate 6:1 for my tin and 15 shekels per in silver?\""
+                      - paragraph [ref=e586]: Here the ":" make sense too. If I remove ":" then I should remove ";" too here.
+                      - blockquote [ref=e587]:
+                        - paragraph [ref=e588]: "00f0d841-eb7a-46f8-86fc-bf9fd7d52cbf: From Šu-Tammuzī, Elaya, Ennam-Aššur and Lamassī to Ennam-Aššur and Ali-ahum: In accordance with your missive we have hired a attorney for you; Abiya son of Bebe is our attorney."
+                      - paragraph [ref=e589]:
+                        - text: "I would just remove things like:"
+                        - code [ref=e590]: "\"(?)\", \"(!)\", \"(fem. plur.)\", \"(fem.)\", \"(plur.)\", \"(pl.)\", \"(sing.)\", \"(plural)\""
+                      - paragraph [ref=e591]: Can't you share the transliteration and translation list of characters you're using / allowing?
+                    - generic [ref=e592]:
+                      - generic [ref=e597]:
+                        - link "Adam Anderson's profile" [ref=e598] [cursor=pointer]:
+                          - /url: /deeppast
+                          - generic "Adam Anderson" [ref=e599]
+                          - img [ref=e600]
+                        - generic [ref=e605]:
+                          - generic [ref=e606]:
+                            - link "Adam Anderson" [ref=e607] [cursor=pointer]:
+                              - /url: /deeppast
+                              - heading "Adam Anderson" [level=3] [ref=e608]
+                            - generic [ref=e610]: Competition Host
+                          - paragraph [ref=e612]: Posted 2 months ago
+                        - generic [ref=e614]:
+                          - generic [ref=e615]:
+                            - button "Upvote" [ref=e616] [cursor=pointer]:
+                              - generic [ref=e617]: arrow_drop_up
+                            - button "5 votes" [ref=e618] [cursor=pointer]: "5"
+                          - button "More Options for this Comment" [ref=e619] [cursor=pointer]: more_vert
+                        - generic [ref=e622]:
+                          - paragraph [ref=e623]: "Good questions, here's the character list for transliterations:"
+                          - paragraph [ref=e624]:
+                            - strong [ref=e625]: Transliterations Characters
+                          - list [ref=e626]:
+                            - listitem [ref=e627]: "-"
+                            - listitem [ref=e628]: a
+                            - listitem [ref=e629]: A
+                            - listitem [ref=e630]: i
+                            - listitem [ref=e631]: I
+                            - listitem [ref=e632]: u
+                            - listitem [ref=e633]: U
+                            - listitem [ref=e634]: m
+                            - listitem [ref=e635]: M
+                            - listitem [ref=e636]: š
+                            - listitem [ref=e637]: Š
+                            - listitem [ref=e638]: "n"
+                            - listitem [ref=e639]: "N"
+                            - listitem [ref=e640]: b
+                            - listitem [ref=e641]: B
+                            - listitem [ref=e642]: r
+                            - listitem [ref=e643]: R
+                            - listitem [ref=e644]: t
+                            - listitem [ref=e645]: T
+                            - listitem [ref=e646]: l
+                            - listitem [ref=e647]: L
+                            - listitem [ref=e648]: k
+                            - listitem [ref=e649]: K
+                            - listitem [ref=e650]: G
+                            - listitem [ref=e651]: g
+                            - listitem [ref=e652]: í
+                            - listitem [ref=e653]: Í
+                            - listitem [ref=e654]: D
+                            - listitem [ref=e655]: d
+                            - listitem [ref=e656]: Ù
+                            - listitem [ref=e657]: ù
+                            - listitem [ref=e658]: á
+                            - listitem [ref=e659]: Á
+                            - listitem [ref=e660]: .
+                            - listitem [ref=e661]: ú
+                            - listitem [ref=e662]: Ú
+                            - listitem [ref=e663]: p
+                            - listitem [ref=e664]: P
+                            - listitem [ref=e665]: e
+                            - listitem [ref=e666]: E
+                            - listitem [ref=e667]: h
+                            - listitem [ref=e668]: H
+                            - listitem [ref=e669]: q
+                            - listitem [ref=e670]: Q
+                            - listitem [ref=e671]: "1"
+                            - listitem [ref=e672]: ṣ
+                            - listitem [ref=e673]: Ṣ
+                            - listitem [ref=e674]: é
+                            - listitem [ref=e675]: É
+                            - listitem [ref=e676]: <
+                            - listitem [ref=e677]: ">"
+                            - listitem [ref=e678]: à
+                            - listitem [ref=e679]: À
+                            - listitem [ref=e680]: "4"
+                            - listitem [ref=e681]: z
+                            - listitem [ref=e682]: Z
+                            - listitem [ref=e683]: s
+                            - listitem [ref=e684]: S
+                            - listitem [ref=e685]: ì
+                            - listitem [ref=e686]: Ì
+                            - listitem [ref=e687]: "5"
+                            - listitem [ref=e688]: _
+                            - listitem [ref=e689]: "2"
+                            - listitem [ref=e690]: "0"
+                            - listitem [ref=e691]: ½
+                            - listitem [ref=e692]: w
+                            - listitem [ref=e693]: W
+                            - listitem [ref=e694]: "3"
+                            - listitem [ref=e695]: "{"
+                            - listitem [ref=e696]: "}"
+                            - listitem [ref=e697]: ṭ
+                            - listitem [ref=e698]: Ṭ
+                            - listitem [ref=e699]: "6"
+                            - listitem [ref=e700]: ⅓
+                            - listitem [ref=e701]: "8"
+                            - listitem [ref=e702]: ⅔
+                            - listitem [ref=e703]: "7"
+                            - listitem [ref=e704]: è
+                            - listitem [ref=e705]: È
+                            - listitem [ref=e706]: ⅚
+                            - listitem [ref=e707]: "9"
+                            - listitem [ref=e708]: ¼
+                            - listitem [ref=e709]: "!"
+                            - listitem [ref=e710]: +
+                            - listitem [ref=e711]: ⅙
+                            - listitem [ref=e712]: ı
+                            - listitem [ref=e713]: …
+                            - listitem [ref=e714]: ş
+                            - listitem [ref=e715]: İ
+                            - listitem [ref=e716]: ":"
+                          - paragraph [ref=e717]:
+                            - strong [ref=e718]: Translations Characters
+                          - list [ref=e719]:
+                            - listitem [ref=e720]: "'"
+                            - listitem [ref=e721]: "?"
+                            - listitem [ref=e722]: e
+                            - listitem [ref=e723]: E
+                            - listitem [ref=e724]: a
+                            - listitem [ref=e725]: A
+                            - listitem [ref=e726]: i
+                            - listitem [ref=e727]: I
+                            - listitem [ref=e728]: t
+                            - listitem [ref=e729]: T
+                            - listitem [ref=e730]: "n"
+                            - listitem [ref=e731]: "N"
+                            - listitem [ref=e732]: s
+                            - listitem [ref=e733]: S
+                            - listitem [ref=e734]: o
+                            - listitem [ref=e735]: O
+                            - listitem [ref=e736]: r
+                            - listitem [ref=e737]: R
+                            - listitem [ref=e738]: l
+                            - listitem [ref=e739]: L
+                            - listitem [ref=e740]: h
+                            - listitem [ref=e741]: H
+                            - listitem [ref=e742]: u
+                            - listitem [ref=e743]: U
+                            - listitem [ref=e744]: m
+                            - listitem [ref=e745]: M
+                            - listitem [ref=e746]: d
+                            - listitem [ref=e747]: D
+                            - listitem [ref=e748]: F
+                            - listitem [ref=e749]: f
+                            - listitem [ref=e750]: š
+                            - listitem [ref=e751]: Š
+                            - listitem [ref=e752]: "-"
+                            - listitem [ref=e753]: p
+                            - listitem [ref=e754]: P
+                            - listitem [ref=e755]: w
+                            - listitem [ref=e756]: W
+                            - listitem [ref=e757]: b
+                            - listitem [ref=e758]: B
+                            - listitem [ref=e759]: g
+                            - listitem [ref=e760]: G
+                            - listitem [ref=e761]: "y"
+                            - listitem [ref=e762]: "Y"
+                            - listitem [ref=e763]: .
+                            - listitem [ref=e764]: K
+                            - listitem [ref=e765]: k
+                            - listitem [ref=e766]: ","
+                            - listitem [ref=e767]: C
+                            - listitem [ref=e768]: c
+                            - listitem [ref=e769]: v
+                            - listitem [ref=e770]: ā
+                            - listitem [ref=e771]: "1"
+                            - listitem [ref=e772]: )
+                            - listitem [ref=e773]: (
+                            - listitem [ref=e774]: <
+                            - listitem [ref=e775]: ">"
+                            - listitem [ref=e776]: z
+                            - listitem [ref=e777]: Z
+                            - listitem [ref=e778]: _
+                            - listitem [ref=e779]: Q
+                            - listitem [ref=e780]: q
+                            - listitem [ref=e781]: "2"
+                            - listitem [ref=e782]: ī
+                            - listitem [ref=e783]: ṭ
+                            - listitem [ref=e784]: Ṭ
+                            - listitem [ref=e785]: "0"
+                            - listitem [ref=e786]: ":"
+                            - listitem [ref=e787]: "3"
+                            - listitem [ref=e788]: ½
+                            - listitem [ref=e789]: "5"
+                            - listitem [ref=e790]: ;
+                            - listitem [ref=e791]: x
+                            - listitem [ref=e792]: ē
+                            - listitem [ref=e793]: "4"
+                            - listitem [ref=e794]: ū
+                            - listitem [ref=e795]: "6"
+                            - listitem [ref=e796]: ṣ
+                            - listitem [ref=e797]: Ṣ
+                            - listitem [ref=e798]: ⅓
+                            - listitem [ref=e799]: "8"
+                            - listitem [ref=e800]: ’
+                            - listitem [ref=e801]: "!"
+                            - listitem [ref=e802]: "7"
+                            - listitem [ref=e803]: j
+                            - listitem [ref=e804]: J
+                            - listitem [ref=e805]: ⅔
+                            - listitem [ref=e806]: “
+                            - listitem [ref=e807]: ”
+                            - listitem [ref=e808]: "9"
+                            - listitem [ref=e809]: –
+                            - listitem [ref=e810]: ⅚
+                            - listitem [ref=e811]: ¼
+                            - listitem [ref=e812]: ⅙
+                            - listitem [ref=e813]: "\""
+                            - listitem [ref=e814]: ‘
+                            - listitem [ref=e815]: ı
+                            - listitem [ref=e816]: —
+                            - listitem [ref=e817]: "["
+                            - listitem [ref=e818]: "]"
+                            - listitem [ref=e819]: ğ
+                            - listitem [ref=e820]: â
+                            - listitem [ref=e821]: +
+                            - listitem [ref=e822]: à
+                            - listitem [ref=e823]: ş
+                      - generic [ref=e824]:
+                        - button "13 more replies" [ref=e825] [cursor=pointer]:
+                          - generic [ref=e826]: 13 more replies
+                          - generic [ref=e827]: arrow_drop_down
+                        - generic [ref=e828]:
+                          - img "Profile picture for steubk" [ref=e830]
+                          - img "Profile picture for Angantyr" [ref=e832]
+                          - img "Profile picture for 耶✌" [ref=e834]
+                          - img "Profile picture for MPWARE" [ref=e836]
+                        - generic [ref=e837]: "+5"
+                  - generic [ref=e838]:
+                    - button "3 more replies" [ref=e839] [cursor=pointer]:
+                      - generic [ref=e840]: 3 more replies
+                      - generic [ref=e841]: arrow_drop_down
+                    - generic [ref=e842]:
+                      - img "Profile picture for 耶✌" [ref=e844]
+                      - img "Profile picture for Adam Anderson" [ref=e846]
+                      - img "Profile picture for MPWARE" [ref=e848]
+              - separator [ref=e849]
+            - generic [ref=e850]:
+              - generic [ref=e854]:
+                - link "Lee Drake's profile" [ref=e855] [cursor=pointer]:
+                  - /url: /leedrake
+                  - generic "Lee Drake" [ref=e856]
+                  - img [ref=e857]
+                - generic [ref=e862]:
+                  - link "Lee Drake" [ref=e864] [cursor=pointer]:
+                    - /url: /leedrake
+                    - heading "Lee Drake" [level=3] [ref=e865]
+                  - generic [ref=e866]:
+                    - paragraph [ref=e867]: Posted 2 months ago
+                    - paragraph [ref=e869]: 1525th in this Competition
+                - generic [ref=e871]:
+                  - generic [ref=e872]:
+                    - button "Upvote" [ref=e873] [cursor=pointer]:
+                      - generic [ref=e874]: arrow_drop_up
+                    - button "4 votes" [ref=e875] [cursor=pointer]: "4"
+                  - button "More Options for this Comment" [ref=e876] [cursor=pointer]: more_vert
+                - paragraph [ref=e880]: This is my main worry about participating in this contest. I've been working on cuneiform LLMS for the past two years, and a good text pipeline has to standardize the presentation from multiple script types (on my end I'm also working with Elamite, Sumerian, and Hittite). Getting it to align with ASCII helps learnability tremendously if one wants to leverage pre-trained models like T5 or NLLB. But I don't know how we prepare the unknown text - can we write an input pipeline (and prompt structure) to take in the unknown data with a submission?
+              - separator [ref=e881]
+            - generic [ref=e882]:
+              - generic [ref=e886]:
+                - link "Yicong XIAO's profile" [ref=e887] [cursor=pointer]:
+                  - /url: /edwardxiao01
+                  - generic "Yicong XIAO" [ref=e888]
+                  - img [ref=e889]
+                - generic [ref=e894]:
+                  - link "Yicong XIAO" [ref=e896] [cursor=pointer]:
+                    - /url: /edwardxiao01
+                    - heading "Yicong XIAO" [level=3] [ref=e897]
+                  - paragraph [ref=e899]: Posted 2 months ago
+                - generic [ref=e901]:
+                  - generic [ref=e902]:
+                    - button "Upvote" [ref=e903] [cursor=pointer]:
+                      - generic [ref=e904]: arrow_drop_up
+                    - button "2 votes" [ref=e905] [cursor=pointer]: "2"
+                  - button "More Options for this Comment" [ref=e906] [cursor=pointer]: more_vert
+                - generic [ref=e909]:
+                  - paragraph [ref=e910]: For the subscripts used in the determinatives, do they also need to be transformed to either diacritics or plain numbers?
+                  - paragraph [ref=e911]: "e.g. should it be {tug₂} or {tug2} ?"
+                - generic [ref=e912]:
+                  - generic [ref=e917]:
+                    - link "Yicong XIAO's profile" [ref=e918] [cursor=pointer]:
+                      - /url: /edwardxiao01
+                      - generic "Yicong XIAO" [ref=e919]
+                      - img [ref=e920]
+                    - generic [ref=e925]:
+                      - link "Yicong XIAO" [ref=e927] [cursor=pointer]:
+                        - /url: /edwardxiao01
+                        - heading "Yicong XIAO" [level=3] [ref=e928]
+                      - paragraph [ref=e930]: Posted 2 months ago
+                    - generic [ref=e932]:
+                      - generic [ref=e933]:
+                        - button "Upvote" [ref=e934] [cursor=pointer]:
+                          - generic [ref=e935]: arrow_drop_up
+                        - button "1 votes" [ref=e936] [cursor=pointer]: "1"
+                      - button "More Options for this Comment" [ref=e937] [cursor=pointer]: more_vert
+                    - paragraph [ref=e941]: On second thought, since the determinatives appear only in the transliteration text, I can pick either scheme. Then, during inference, I can detect the determinatives in the test set input (should be fairly easy) and transform them according to the scheme I pick.
+                  - generic [ref=e946]:
+                    - link "Adam Anderson's profile" [ref=e947] [cursor=pointer]:
+                      - /url: /deeppast
+                      - generic "Adam Anderson" [ref=e948]
+                      - img [ref=e949]
+                    - generic [ref=e954]:
+                      - generic [ref=e955]:
+                        - link "Adam Anderson" [ref=e956] [cursor=pointer]:
+                          - /url: /deeppast
+                          - heading "Adam Anderson" [level=3] [ref=e957]
+                        - generic [ref=e959]: Competition Host
+                      - paragraph [ref=e961]: Posted 2 months ago
+                    - generic [ref=e963]:
+                      - generic [ref=e964]:
+                        - button "Upvote" [ref=e965] [cursor=pointer]:
+                          - generic [ref=e966]: arrow_drop_up
+                        - button "6 votes" [ref=e967] [cursor=pointer]: "6"
+                      - button "More Options for this Comment" [ref=e968] [cursor=pointer]: more_vert
+                    - generic [ref=e971]:
+                      - paragraph [ref=e972]: "The expected format for {tug₂} or {tug2} is actually {túg}"
+                      - paragraph [ref=e973]: "For background, in ASCII ATF (CDLI) they don't use diacritics for ú = u2, and ù = u3, and so on. Further, in Oracc these numbers become subscripts: ú = u₂, etc. That second comment was intended to indicate that for the readings with 2 or 3 this dataset used diacritics instead of numbers or subscripted numbers (i.e. á à é è í ì ú ù; NOT a2, a3, etc.; NOT a₂, etc.). However, sign values with 4, 5, 6, …, 10, 12, 13, etc. are found in the dataset (e.g., DU10). So aside from sign values with these readings á à é è í ì ú ù, this dataset uses integer numbers, not subscripted numbers."
+                    - generic [ref=e974]:
+                      - generic [ref=e979]:
+                        - link "Anil Ozturk's profile" [ref=e980] [cursor=pointer]:
+                          - /url: /nlztrk
+                          - generic "Anil Ozturk" [ref=e981]
+                          - img [ref=e982]
+                        - generic [ref=e987]:
+                          - link "Anil Ozturk" [ref=e989] [cursor=pointer]:
+                            - /url: /nlztrk
+                            - heading "Anil Ozturk" [level=3] [ref=e990]
+                          - generic [ref=e991]:
+                            - paragraph [ref=e992]: Posted 2 months ago
+                            - paragraph [ref=e994]: 467th in this Competition
+                        - generic [ref=e996]:
+                          - generic [ref=e997]:
+                            - button "Upvote" [ref=e998] [cursor=pointer]:
+                              - generic [ref=e999]: arrow_drop_up
+                            - button "4 votes" [ref=e1000] [cursor=pointer]: "4"
+                          - button "More Options for this Comment" [ref=e1001] [cursor=pointer]: more_vert
+                        - paragraph [ref=e1005]: "{túg} or {TÚG}? there is no lowercased {túg} in any guide you've shared. Please just give a reproducible normalization script or a very clear and strict conversion table. Most of your statements contradict each other."
+                      - generic [ref=e1006]:
+                        - button "5 more replies" [ref=e1007] [cursor=pointer]:
+                          - generic [ref=e1008]: 5 more replies
+                          - generic [ref=e1009]: arrow_drop_down
+                        - generic [ref=e1010]:
+                          - img "Profile picture for Jack" [ref=e1012]
+                          - img "Profile picture for Adam Anderson" [ref=e1014]
+                          - img "Profile picture for Anil Ozturk" [ref=e1016]
+              - separator [ref=e1017]
+            - generic [ref=e1018]:
+              - generic [ref=e1022]:
+                - link "Khushi Yadav's profile" [ref=e1023] [cursor=pointer]:
+                  - /url: /khushikyad001
+                  - generic "Khushi Yadav" [ref=e1024]
+                  - img [ref=e1025]
+                - generic [ref=e1030]:
+                  - link "Khushi Yadav" [ref=e1032] [cursor=pointer]:
+                    - /url: /khushikyad001
+                    - heading "Khushi Yadav" [level=3] [ref=e1033]
+                  - paragraph [ref=e1035]: Posted 2 months ago
+                - generic [ref=e1037]:
+                  - generic [ref=e1038]:
+                    - button "Upvote" [ref=e1039] [cursor=pointer]:
+                      - generic [ref=e1040]: arrow_drop_up
+                    - button "-9 votes" [ref=e1041] [cursor=pointer]: "-9"
+                  - button "More Options for this Comment" [ref=e1042] [cursor=pointer]: more_vert
+                - paragraph [ref=e1046]: Deep Past Challenge - Translate Akkadian to English
+              - separator [ref=e1047]
+            - generic [ref=e1048]:
+              - generic [ref=e1052]:
+                - link "Oscar Guarnizo's profile" [ref=e1053] [cursor=pointer]:
+                  - /url: /zosov07
+                  - generic "Oscar Guarnizo" [ref=e1054]
+                  - img [ref=e1055]
+                - generic [ref=e1060]:
+                  - link "Oscar Guarnizo" [ref=e1062] [cursor=pointer]:
+                    - /url: /zosov07
+                    - heading "Oscar Guarnizo" [level=3] [ref=e1063]
+                  - generic [ref=e1064]:
+                    - paragraph [ref=e1065]: Posted 18 days ago
+                    - paragraph [ref=e1067]: 1220th in this Competition
+                - generic [ref=e1069]:
+                  - generic [ref=e1070]:
+                    - button "Upvote" [ref=e1071] [cursor=pointer]:
+                      - generic [ref=e1072]: arrow_drop_up
+                    - button "0 votes" [ref=e1073] [cursor=pointer]: "0"
+                  - button "More Options for this Comment" [ref=e1074] [cursor=pointer]: more_vert
+                - paragraph [ref=e1078]:
+                  - link "@deeppast (opens in a new tab)" [ref=e1079] [cursor=pointer]:
+                    - /url: https://www.kaggle.com/deeppast
+                    - text: "@deeppast"
+                  - text: Hi, I was wondering where I can get the onomasticon (a curated list of names and attested spellings). Could you help me with that please?
+              - separator [ref=e1080]
+            - generic [ref=e1085]:
+              - link "ulasdesouza's profile" [ref=e1086] [cursor=pointer]:
+                - /url: /ulasdesouza
+                - generic "ulasdesouza" [ref=e1087]
+                - img [ref=e1088]
+              - generic [ref=e1093]:
+                - link "ulasdesouza" [ref=e1095] [cursor=pointer]:
+                  - /url: /ulasdesouza
+                  - heading "ulasdesouza" [level=3] [ref=e1096]
+                - generic [ref=e1097]:
+                  - paragraph [ref=e1098]: Posted 2 months ago
+                  - paragraph [ref=e1100]: 1088th in this Competition
+              - generic [ref=e1102]:
+                - generic [ref=e1103]:
+                  - button "Upvote" [ref=e1104] [cursor=pointer]:
+                    - generic [ref=e1105]: arrow_drop_up
+                  - button "0 votes" [ref=e1106] [cursor=pointer]: "0"
+                - button "More Options for this Comment" [ref=e1107] [cursor=pointer]: more_vert
+              - generic [ref=e1110]:
+                - paragraph [ref=e1111]: do not convert diacritics to ASCII (information loss!) do not remove subscripts (semantic meaning!) Evaluation data contains diacritics - be compatible with this
+                - paragraph [ref=e1112]: am i right?
+              - generic [ref=e1118]:
+                - link "Adam Anderson's profile" [ref=e1119] [cursor=pointer]:
+                  - /url: /deeppast
+                  - generic "Adam Anderson" [ref=e1120]
+                  - img [ref=e1121]
+                - generic [ref=e1126]:
+                  - generic [ref=e1127]:
+                    - link "Adam Anderson" [ref=e1128] [cursor=pointer]:
+                      - /url: /deeppast
+                      - heading "Adam Anderson" [level=3] [ref=e1129]
+                    - generic [ref=e1131]: Competition Host
+                  - paragraph [ref=e1133]: Posted 2 months ago
+                - generic [ref=e1135]:
+                  - generic [ref=e1136]:
+                    - button "Upvote" [ref=e1137] [cursor=pointer]:
+                      - generic [ref=e1138]: arrow_drop_up
+                    - button "4 votes" [ref=e1139] [cursor=pointer]: "4"
+                  - button "More Options for this Comment" [ref=e1140] [cursor=pointer]: more_vert
+                - generic [ref=e1143]:
+                  - paragraph [ref=e1144]: "Close, but let me be clear:"
+                  - list [ref=e1145]:
+                    - listitem [ref=e1146]: (1) with the exception of ḫ, the test data has diacritics (š ṣ ṭ ā á à ī í ì ū ú ù - and upper case versions). If you're obtaining data from CDLI or ORACC, you will need to convert their formatted transliterations to this diacritic style (conversions are listed in the overview) — note ā ī ū are in translations, not transliteration text.
+                    - listitem [ref=e1147]: (2) there are no subscripted numbers in the test data, so expect A-šùr-DU10 for example.
+                    - listitem [ref=e1148]: "(3) keep diacritics for transliterations, but normalize them for translations of named entities, for example: A-šùr-DU10 (transliteration) --> Aššur-ṭāb (translation)"
+                - generic [ref=e1149]:
+                  - paragraph [ref=e1156]: This comment has been deleted.
+                  - generic [ref=e1157]:
+                    - button "8 more replies" [ref=e1158] [cursor=pointer]:
+                      - generic [ref=e1159]: 8 more replies
+                      - generic [ref=e1160]: arrow_drop_down
+                    - generic [ref=e1161]:
+                      - img "Profile picture for QianYuu" [ref=e1163]
+                      - img "Profile picture for heng" [ref=e1165]
+                      - img "Profile picture for MPWARE" [ref=e1167]
+                      - img "Profile picture for Adam Anderson" [ref=e1169]
+                    - generic [ref=e1170]: "+1"
+  - alert [ref=e1173]

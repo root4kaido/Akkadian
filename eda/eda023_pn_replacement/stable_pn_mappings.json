@@ -1,0 +1,2420 @@
+{
+  "a-ta-a": {
+    "eng": "Ataya",
+    "count": 29,
+    "ratio": 0.896551724137931,
+    "sim": 0.75
+  },
+  "PUZUR₄-a-šur": {
+    "eng": "Puzur-Aššur",
+    "count": 55,
+    "ratio": 0.8909090909090909,
+    "sim": 0.5
+  },
+  "šu-ku-bi-im": {
+    "eng": "Šu-Kūbum",
+    "count": 44,
+    "ratio": 0.9090909090909091,
+    "sim": 0.42857142857142855
+  },
+  "ú-ku": {
+    "eng": "Uku",
+    "count": 14,
+    "ratio": 1.0,
+    "sim": 1.0
+  },
+  "ša-lim-a-šùr": {
+    "eng": "Šalim-Aššur",
+    "count": 132,
+    "ratio": 0.8560606060606061,
+    "sim": 0.7777777777777778
+  },
+  "šu-ku-tum-ma": {
+    "eng": "Šukkutum",
+    "count": 5,
+    "ratio": 1.0,
+    "sim": 0.375
+  },
+  "IŠTAR-lá-ma-sí": {
+    "eng": "Ištar-lamassī",
+    "count": 39,
+    "ratio": 0.9487179487179487,
+    "sim": 0.9090909090909091
+  },
+  "ni-ta-aḫ-šu-šar": {
+    "eng": "Nitahšušar",
+    "count": 2,
+    "ratio": 1.0,
+    "sim": 0.4
+  },
+  "tí-bu-lá": {
+    "eng": "Tibula",
+    "count": 3,
+    "ratio": 1.0,
+    "sim": 1.0
+  },
+  "šu-ta-mu-zi": {
+    "eng": "Šu-Tammuzi",
+    "count": 14,
+    "ratio": 0.8571428571428571,
+    "sim": 0.625
+  },
+  "e-lá-a": {
+    "eng": "Elaya",
+    "count": 12,
+    "ratio": 1.0,
+    "sim": 0.75
+  },
+  "lá-ma-sí-ma": {
+    "eng": "Lamassī",
+    "count": 5,
+    "ratio": 0.8,
+    "sim": 0.7142857142857143
+  },
+  "be-e-be": {
+    "eng": "Bebe",
+    "count": 2,
+    "ratio": 1.0,
+    "sim": 0.5
+  },
+  "a-bi₄-lá": {
+    "eng": "Abila",
+    "count": 2,
+    "ratio": 1.0,
+    "sim": 0.6
+  },
+  "a-mur-a-šùr": {
+    "eng": "Amur-Aššur",
+    "count": 17,
+    "ratio": 0.8235294117647058,
+    "sim": 0.75
+  },
+  "e-lá-ma": {
+    "eng": "Elamma",
+    "count": 133,
+    "ratio": 0.9548872180451128,
+    "sim": 0.8
+  },
+  "a-bu-ša-lim": {
+    "eng": "Abu-šalim",
+    "count": 63,
+    "ratio": 0.8253968253968254,
+    "sim": 1.0
+  },
+  "šu-be-lúm-ma": {
+    "eng": "Šu-Bēlum",
+    "count": 16,
+    "ratio": 1.0,
+    "sim": 0.42857142857142855
+  },
+  "ša-lim-a-šur": {
+    "eng": "Šalim-Aššur",
+    "count": 92,
+    "ratio": 0.8369565217391305,
+    "sim": 0.7777777777777778
+  },
+  "ša-lim-a-šur-ma": {
+    "eng": "Šalim-Aššur",
+    "count": 20,
+    "ratio": 1.0,
+    "sim": 0.7
+  },
+  "ú-ra-a": {
+    "eng": "Uraya",
+    "count": 20,
+    "ratio": 1.0,
+    "sim": 0.75
+  },
+  "šu-ku-tum": {
+    "eng": "Šukkutum",
+    "count": 4,
+    "ratio": 1.0,
+    "sim": 0.42857142857142855
+  },
+  "a-zu-ú": {
+    "eng": "Azu",
+    "count": 7,
+    "ratio": 1.0,
+    "sim": 1.0
+  },
+  "a-mur-IŠTAR": {
+    "eng": "Amur-Ištar",
+    "count": 145,
+    "ratio": 0.9172413793103448,
+    "sim": 1.0
+  },
+  "i-ku-pí-a": {
+    "eng": "Ikūn-pīya",
+    "count": 55,
+    "ratio": 0.8,
+    "sim": 0.3333333333333333
+  },
+  "i-na-aḫ-DINGIR": {
+    "eng": "Inah-ilī",
+    "count": 17,
+    "ratio": 0.9411764705882353,
+    "sim": 0.42857142857142855
+  },
+  "kur-ub-IŠTAR": {
+    "eng": "Kurub-Ištar",
+    "count": 40,
+    "ratio": 0.925,
+    "sim": 1.0
+  },
+  "a-mur-lu-ṣú": {
+    "eng": "Amur-luṣu",
+    "count": 3,
+    "ratio": 1.0,
+    "sim": 1.0
+  },
+  "a-šùr-e-mu-qí": {
+    "eng": "Aššurs",
+    "count": 3,
+    "ratio": 1.0,
+    "sim": 0.3333333333333333
+  },
+  "a-mur-a-šur": {
+    "eng": "Amur-Aššur",
+    "count": 47,
+    "ratio": 0.9574468085106383,
+    "sim": 0.75
+  },
+  "šu-IŠTAR": {
+    "eng": "Šu-Ištar",
+    "count": 149,
+    "ratio": 0.9865771812080537,
+    "sim": 1.0
+  },
+  "lá-dí-a": {
+    "eng": "Ladiya",
+    "count": 4,
+    "ratio": 1.0,
+    "sim": 0.8
+  },
+  "li-lá": {
+    "eng": "Lila",
+    "count": 3,
+    "ratio": 1.0,
+    "sim": 1.0
+  },
+  "ša-lim-ar-dí": {
+    "eng": "Šalim-wardī",
+    "count": 17,
+    "ratio": 0.9411764705882353,
+    "sim": 0.5555555555555556
+  },
+  "šu-nu-nu": {
+    "eng": "Šu-Nūnu",
+    "count": 37,
+    "ratio": 0.8648648648648649,
+    "sim": 0.5
+  },
+  "i-ku-nim": {
+    "eng": "Ikūnum",
+    "count": 29,
+    "ratio": 0.8620689655172413,
+    "sim": 0.3333333333333333
+  },
+  "sá-ma-a": {
+    "eng": "Samaya",
+    "count": 2,
+    "ratio": 1.0,
+    "sim": 0.8
+  },
+  "iš-me-DINGIR": {
+    "eng": "Išme-ilum",
+    "count": 4,
+    "ratio": 1.0,
+    "sim": 0.5
+  },
+  "PUZUR₄-a-šur-ma": {
+    "eng": "Puzur-Aššur",
+    "count": 19,
+    "ratio": 1.0,
+    "sim": 0.5
+  },
+  "ku-zi-a": {
+    "eng": "Kuziya",
+    "count": 5,
+    "ratio": 1.0,
+    "sim": 0.8
+  },
+  "ša-lim-wa-ar-dí": {
+    "eng": "Šalim-wardī",
+    "count": 15,
+    "ratio": 0.9333333333333333,
+    "sim": 0.7
+  },
+  "ša-lim-wa-ar-dim": {
+    "eng": "Šalim-wardī",
+    "count": 6,
+    "ratio": 1.0,
+    "sim": 0.7
+  },
+  "ku-li-a": {
+    "eng": "Kuliya",
+    "count": 74,
+    "ratio": 0.8648648648648649,
+    "sim": 0.8
+  },
+  "PUZUR₄-a-mur": {
+    "eng": "Puzur-Aššur",
+    "count": 2,
+    "ratio": 1.0,
+    "sim": 0.5
+  },
+  "en-nam-a-šur": {
+    "eng": "Ennam-Aššur",
+    "count": 127,
+    "ratio": 0.9921259842519685,
+    "sim": 0.7777777777777778
+  },
+  "a-ḫa-tim": {
+    "eng": "Ahātum",
+    "count": 4,
+    "ratio": 1.0,
+    "sim": 0.3333333333333333
+  },
+  "sú-e-a": {
+    "eng": "Sueyya",
+    "count": 3,
+    "ratio": 1.0,
+    "sim": 0.75
+  },
+  "a-ta-ta": {
+    "eng": "Atata",
+    "count": 21,
+    "ratio": 1.0,
+    "sim": 1.0
+  },
+  "du-dí-ki": {
+    "eng": "Dudiki",
+    "count": 9,
+    "ratio": 1.0,
+    "sim": 1.0
+  },
+  "am-ri-a": {
+    "eng": "Amriya",
+    "count": 15,
+    "ratio": 0.8,
+    "sim": 0.8
+  },
+  "šu-ku-bu-um": {
+    "eng": "Šu-Kūbum",
+    "count": 39,
+    "ratio": 0.9487179487179487,
+    "sim": 0.42857142857142855
+  },
+  "lá-ma-sí-tim": {
+    "eng": "Lamassutum",
+    "count": 4,
+    "ratio": 1.0,
+    "sim": 0.5555555555555556
+  },
+  "pí-la-aḫ-IŠTAR": {
+    "eng": "Pilah-Ištar",
+    "count": 5,
+    "ratio": 1.0,
+    "sim": 0.4
+  },
+  "a-lu-lá-a": {
+    "eng": "Alulaya",
+    "count": 25,
+    "ratio": 0.84,
+    "sim": 0.8333333333333334
+  },
+  "pí-lá-aḫ-IŠTAR-ma": {
+    "eng": "Pilah-Ištar",
+    "count": 4,
+    "ratio": 1.0,
+    "sim": 0.4
+  },
+  "a-mur-IŠTAR-ma": {
+    "eng": "Amur-Ištar",
+    "count": 29,
+    "ratio": 0.9655172413793104,
+    "sim": 1.0
+  },
+  "ma-ri-it-ḫi-im": {
+    "eng": "Marithum",
+    "count": 4,
+    "ratio": 1.0,
+    "sim": 0.5
+  },
+  "PUZUR₄-a-šùr-ma": {
+    "eng": "Puzur-Aššur",
+    "count": 5,
+    "ratio": 0.8,
+    "sim": 0.5
+  },
+  "áš-du": {
+    "eng": "Ašdus",
+    "count": 5,
+    "ratio": 0.8,
+    "sim": 1.0
+  },
+  "e-na-aḫ-DINGIR": {
+    "eng": "Enah-ilī",
+    "count": 16,
+    "ratio": 0.9375,
+    "sim": 0.42857142857142855
+  },
+  "me-ra-ni": {
+    "eng": "Merani",
+    "count": 2,
+    "ratio": 1.0,
+    "sim": 1.0
+  },
+  "šu-ku-bi₄-im": {
+    "eng": "Šu-Kūbum",
+    "count": 29,
+    "ratio": 0.8620689655172413,
+    "sim": 0.42857142857142855
+  },
+  "i-ba-a-a": {
+    "eng": "Ibaya",
+    "count": 8,
+    "ratio": 0.875,
+    "sim": 0.6
+  },
+  "ku-ku-wa": {
+    "eng": "Kukuwa",
+    "count": 10,
+    "ratio": 0.9,
+    "sim": 1.0
+  },
+  "a-dí-da": {
+    "eng": "Adida",
+    "count": 52,
+    "ratio": 1.0,
+    "sim": 1.0
+  },
+  "a-zu-za-a": {
+    "eng": "Azuzaya",
+    "count": 6,
+    "ratio": 0.8333333333333334,
+    "sim": 0.8333333333333334
+  },
+  "zu-ba": {
+    "eng": "Zuba",
+    "count": 19,
+    "ratio": 0.9473684210526315,
+    "sim": 1.0
+  },
+  "e-lá-li": {
+    "eng": "Elāli",
+    "count": 6,
+    "ratio": 0.8333333333333334,
+    "sim": 0.4
+  },
+  "ir-nu-id": {
+    "eng": "Irnuid",
+    "count": 6,
+    "ratio": 1.0,
+    "sim": 1.0
+  },
+  "zu-ku-a": {
+    "eng": "Zukuwa",
+    "count": 20,
+    "ratio": 0.85,
+    "sim": 0.8
+  },
+  "dam-qá-a": {
+    "eng": "Damqaya",
+    "count": 10,
+    "ratio": 1.0,
+    "sim": 0.8333333333333334
+  },
+  "a-ba-ba": {
+    "eng": "Ababa",
+    "count": 21,
+    "ratio": 0.9523809523809523,
+    "sim": 1.0
+  },
+  "a-ni-na": {
+    "eng": "Annina",
+    "count": 29,
+    "ratio": 0.9655172413793104,
+    "sim": 0.4
+  },
+  "ḫa-na-na": {
+    "eng": "Hanana",
+    "count": 7,
+    "ratio": 1.0,
+    "sim": 1.0
+  },
+  "na-ki-le-a-ad": {
+    "eng": "Nakilead",
+    "count": 2,
+    "ratio": 1.0,
+    "sim": 0.875
+  },
+  "šu-sú-in": {
+    "eng": "Šu-Suen",
+    "count": 32,
+    "ratio": 0.9375,
+    "sim": 0.6666666666666666
+  },
+  "a-da-da": {
+    "eng": "Adada",
+    "count": 12,
+    "ratio": 0.9166666666666666,
+    "sim": 1.0
+  },
+  "ku-ra-ra": {
+    "eng": "Kurara",
+    "count": 11,
+    "ratio": 0.8181818181818182,
+    "sim": 1.0
+  },
+  "da-dí-a": {
+    "eng": "Dadiya",
+    "count": 26,
+    "ratio": 0.9230769230769231,
+    "sim": 0.8
+  },
+  "šu-a-nim": {
+    "eng": "Šu-Anum",
+    "count": 37,
+    "ratio": 0.8648648648648649,
+    "sim": 0.6666666666666666
+  },
+  "dan-a-šùr": {
+    "eng": "Dan-Aššur",
+    "count": 17,
+    "ratio": 0.9411764705882353,
+    "sim": 0.7142857142857143
+  },
+  "ša-lim-a-ḫi-im": {
+    "eng": "Šalim-ahum",
+    "count": 8,
+    "ratio": 1.0,
+    "sim": 0.7777777777777778
+  },
+  "bu-da-tim": {
+    "eng": "Budātum",
+    "count": 2,
+    "ratio": 1.0,
+    "sim": 0.42857142857142855
+  },
+  "ku-zi-zi-a": {
+    "eng": "Kuziziya",
+    "count": 42,
+    "ratio": 0.8333333333333334,
+    "sim": 0.8571428571428571
+  },
+  "PUZUR₄-ma-lá-sú": {
+    "eng": "Puzur-malasu",
+    "count": 2,
+    "ratio": 1.0,
+    "sim": 0.45454545454545453
+  },
+  "a-ba-ba-a-ma": {
+    "eng": "Ababaya",
+    "count": 3,
+    "ratio": 1.0,
+    "sim": 0.7142857142857143
+  },
+  "e-ta-a": {
+    "eng": "Etaya",
+    "count": 5,
+    "ratio": 1.0,
+    "sim": 0.75
+  },
+  "i-lá-áš-ra-ni": {
+    "eng": "Il-ašrannī",
+    "count": 4,
+    "ratio": 1.0,
+    "sim": 0.3333333333333333
+  },
+  "a-lu-wa": {
+    "eng": "Aluwa",
+    "count": 41,
+    "ratio": 0.975609756097561,
+    "sim": 1.0
+  },
+  "e-ni-ša-ri-im": {
+    "eng": "Enišārum",
+    "count": 3,
+    "ratio": 1.0,
+    "sim": 0.5
+  },
+  "zu-ur-zu-ur": {
+    "eng": "Zurzur",
+    "count": 4,
+    "ratio": 1.0,
+    "sim": 0.3333333333333333
+  },
+  "i-sá-a": {
+    "eng": "Isaya",
+    "count": 2,
+    "ratio": 1.0,
+    "sim": 0.75
+  },
+  "lá-ma-sí": {
+    "eng": "Lamassī",
+    "count": 17,
+    "ratio": 1.0,
+    "sim": 0.8333333333333334
+  },
+  "ku-ta-a": {
+    "eng": "Kutaya",
+    "count": 7,
+    "ratio": 1.0,
+    "sim": 0.8
+  },
+  "ú-ṣur-ša-IŠTAR": {
+    "eng": "Uṣur-ša-Ištar",
+    "count": 8,
+    "ratio": 0.875,
+    "sim": 1.0
+  },
+  "ma-na-na": {
+    "eng": "Manana",
+    "count": 18,
+    "ratio": 1.0,
+    "sim": 1.0
+  },
+  "PUZUR₄-a-na": {
+    "eng": "Puzur-Anna",
+    "count": 32,
+    "ratio": 0.9375,
+    "sim": 0.5555555555555556
+  },
+  "la-ma-sí-ma": {
+    "eng": "Lamassī",
+    "count": 5,
+    "ratio": 1.0,
+    "sim": 0.7142857142857143
+  },
+  "ša-lim-bé-li": {
+    "eng": "Šalim-bēlī",
+    "count": 2,
+    "ratio": 1.0,
+    "sim": 0.6666666666666666
+  },
+  "ba-zi-a": {
+    "eng": "Baziya",
+    "count": 14,
+    "ratio": 1.0,
+    "sim": 0.8
+  },
+  "e-ša-ra": {
+    "eng": "Ešarra",
+    "count": 2,
+    "ratio": 1.0,
+    "sim": 0.8
+  },
+  "en-nam-a-šur-ma": {
+    "eng": "Ennam-Aššur",
+    "count": 13,
+    "ratio": 1.0,
+    "sim": 0.7
+  },
+  "áb-ša-lim": {
+    "eng": "Ab-šalim",
+    "count": 13,
+    "ratio": 1.0,
+    "sim": 1.0
+  },
+  "a-ba-ba-ma": {
+    "eng": "Ababa",
+    "count": 2,
+    "ratio": 1.0,
+    "sim": 1.0
+  },
+  "en-um-a-šùr": {
+    "eng": "Ennam",
+    "count": 3,
+    "ratio": 1.0,
+    "sim": 0.4
+  },
+  "ša-lim-a-šùr-ma": {
+    "eng": "Šalim-Aššur",
+    "count": 42,
+    "ratio": 0.9761904761904762,
+    "sim": 0.7
+  },
+  "i-ri-šum": {
+    "eng": "Irišum",
+    "count": 14,
+    "ratio": 1.0,
+    "sim": 1.0
+  },
+  "ša-lim-ma": {
+    "eng": "Šalimma",
+    "count": 9,
+    "ratio": 1.0,
+    "sim": 1.0
+  },
+  "ḫa-nu-nu": {
+    "eng": "Hanunu",
+    "count": 4,
+    "ratio": 1.0,
+    "sim": 1.0
+  },
+  "ú-ṣur-ša-a-šùr": {
+    "eng": "Uṣur-ša-Aššur",
+    "count": 5,
+    "ratio": 0.8,
+    "sim": 0.8
+  },
+  "šu-ma-bi-a": {
+    "eng": "Šumi-abiya",
+    "count": 5,
+    "ratio": 0.8,
+    "sim": 0.42857142857142855
+  },
+  "i-bi₄-sú-a": {
+    "eng": "Ibisua",
+    "count": 2,
+    "ratio": 1.0,
+    "sim": 0.5
+  },
+  "sú-kà-lí-a": {
+    "eng": "Sukkalliya",
+    "count": 12,
+    "ratio": 1.0,
+    "sim": 0.42857142857142855
+  },
+  "šu-ku-tim": {
+    "eng": "Šukkutum",
+    "count": 3,
+    "ratio": 1.0,
+    "sim": 0.42857142857142855
+  },
+  "aḫ-ša-lim": {
+    "eng": "Ah-šalim",
+    "count": 30,
+    "ratio": 1.0,
+    "sim": 1.0
+  },
+  "šu-bé-lim": {
+    "eng": "Šu-Bēlum",
+    "count": 12,
+    "ratio": 0.9166666666666666,
+    "sim": 0.42857142857142855
+  },
+  "a-mur-i-a": {
+    "eng": "Amur-Ištar",
+    "count": 2,
+    "ratio": 1.0,
+    "sim": 0.8333333333333334
+  },
+  "šu-bé-lúm": {
+    "eng": "Šu-Bēlum",
+    "count": 13,
+    "ratio": 1.0,
+    "sim": 0.42857142857142855
+  },
+  "a-lu-a": {
+    "eng": "Aluwa",
+    "count": 16,
+    "ratio": 0.875,
+    "sim": 0.75
+  },
+  "a-lu-wa-ma": {
+    "eng": "Aluwa",
+    "count": 2,
+    "ratio": 1.0,
+    "sim": 1.0
+  },
+  "e-na-aḫ-DINGIR-ma": {
+    "eng": "Enah-ilī",
+    "count": 2,
+    "ratio": 1.0,
+    "sim": 0.42857142857142855
+  },
+  "a-ba-a": {
+    "eng": "Abaya",
+    "count": 7,
+    "ratio": 1.0,
+    "sim": 0.75
+  },
+  "šu-be-lúm": {
+    "eng": "Šu-Bēlum",
+    "count": 30,
+    "ratio": 1.0,
+    "sim": 0.42857142857142855
+  },
+  "a-nu-pì-IŠTAR": {
+    "eng": "Anu-pī-Ištar",
+    "count": 2,
+    "ratio": 1.0,
+    "sim": 0.4
+  },
+  "pí-lá-aḫ-IŠTAR": {
+    "eng": "Pilah-Ištar",
+    "count": 26,
+    "ratio": 0.8846153846153846,
+    "sim": 0.4
+  },
+  "ú-ṣú-ra-nim": {
+    "eng": "Uṣurānum",
+    "count": 7,
+    "ratio": 0.8571428571428571,
+    "sim": 0.5
+  },
+  "a-na-na": {
+    "eng": "Anna-anna",
+    "count": 15,
+    "ratio": 0.8,
+    "sim": 0.4
+  },
+  "ḫa-nu": {
+    "eng": "Hanu",
+    "count": 2,
+    "ratio": 1.0,
+    "sim": 1.0
+  },
+  "a-na-lí": {
+    "eng": "Annali",
+    "count": 2,
+    "ratio": 1.0,
+    "sim": 0.4
+  },
+  "bu-zu-ta-a": {
+    "eng": "Buzutaya",
+    "count": 11,
+    "ratio": 0.9090909090909091,
+    "sim": 0.8571428571428571
+  },
+  "e-la-ma": {
+    "eng": "Elamma",
+    "count": 33,
+    "ratio": 1.0,
+    "sim": 0.8
+  },
+  "im-dí-lim": {
+    "eng": "IX",
+    "count": 7,
+    "ratio": 0.8571428571428571,
+    "sim": 0.5
+  },
+  "šu-iš-ḫa-ra": {
+    "eng": "Šu-Išhara",
+    "count": 7,
+    "ratio": 0.8571428571428571,
+    "sim": 1.0
+  },
+  "šu-be-lim": {
+    "eng": "Šu-Bēlum",
+    "count": 46,
+    "ratio": 0.8913043478260869,
+    "sim": 0.42857142857142855
+  },
+  "e-wa-ri-mu-ša": {
+    "eng": "Ewarimuša",
+    "count": 10,
+    "ratio": 1.0,
+    "sim": 1.0
+  },
+  "en-nam-a-šùr": {
+    "eng": "Ennam-Aššur",
+    "count": 51,
+    "ratio": 0.9803921568627451,
+    "sim": 0.7777777777777778
+  },
+  "ša-mu-ḫa": {
+    "eng": "Šamuha",
+    "count": 4,
+    "ratio": 1.0,
+    "sim": 1.0
+  },
+  "a-bu-ša-lim-ma": {
+    "eng": "Abu-šalim",
+    "count": 5,
+    "ratio": 1.0,
+    "sim": 1.0
+  },
+  "IŠTAR-pì-lá-aḫ": {
+    "eng": "Ištar-pilah",
+    "count": 5,
+    "ratio": 1.0,
+    "sim": 0.6
+  },
+  "šu-a-šùr": {
+    "eng": "Šu-Aššur",
+    "count": 12,
+    "ratio": 0.9166666666666666,
+    "sim": 0.6666666666666666
+  },
+  "e-la-ma-ma": {
+    "eng": "Elamma",
+    "count": 9,
+    "ratio": 1.0,
+    "sim": 0.6666666666666666
+  },
+  "en-nam-a-a": {
+    "eng": "Ennamaya",
+    "count": 2,
+    "ratio": 1.0,
+    "sim": 0.8571428571428571
+  },
+  "a-ku-za": {
+    "eng": "Akuza",
+    "count": 27,
+    "ratio": 1.0,
+    "sim": 1.0
+  },
+  "a-mur-ša-ra-sà": {
+    "eng": "Amur-šarrassa",
+    "count": 9,
+    "ratio": 1.0,
+    "sim": 0.7
+  },
+  "uš-ḫa-ta": {
+    "eng": "Ušhatas",
+    "count": 4,
+    "ratio": 1.0,
+    "sim": 1.0
+  },
+  "pu-qí-dí": {
+    "eng": "Puqidi",
+    "count": 2,
+    "ratio": 1.0,
+    "sim": 1.0
+  },
+  "kur-ub-IŠTAR-ma": {
+    "eng": "Kurub-Ištar",
+    "count": 2,
+    "ratio": 1.0,
+    "sim": 1.0
+  },
+  "e-lá-ma-ma": {
+    "eng": "Elamma",
+    "count": 14,
+    "ratio": 1.0,
+    "sim": 0.6666666666666666
+  },
+  "a-mur-a-šur-ma": {
+    "eng": "Amur-Aššur",
+    "count": 8,
+    "ratio": 1.0,
+    "sim": 0.6666666666666666
+  },
+  "ṣí-li-a": {
+    "eng": "Ṣilliya",
+    "count": 15,
+    "ratio": 0.9333333333333333,
+    "sim": 0.6
+  },
+  "zi-ki-ki": {
+    "eng": "Zikiki",
+    "count": 8,
+    "ratio": 1.0,
+    "sim": 1.0
+  },
+  "šu-ki-tim": {
+    "eng": "Šukkutum",
+    "count": 30,
+    "ratio": 0.9,
+    "sim": 0.42857142857142855
+  },
+  "šu-IŠTAR-ma": {
+    "eng": "Šu-Ištar",
+    "count": 17,
+    "ratio": 1.0,
+    "sim": 1.0
+  },
+  "bu-ṣú-a": {
+    "eng": "Buṣua",
+    "count": 2,
+    "ratio": 1.0,
+    "sim": 1.0
+  },
+  "PUZUR₄-a-bé-eḫ": {
+    "eng": "Puzur-Abeh",
+    "count": 2,
+    "ratio": 1.0,
+    "sim": 0.5555555555555556
+  },
+  "PUZUR₄-a-be-eḫ": {
+    "eng": "Puzur-Abeh",
+    "count": 7,
+    "ratio": 1.0,
+    "sim": 0.5555555555555556
+  },
+  "ḫi-ta-ni": {
+    "eng": "Hitani",
+    "count": 2,
+    "ratio": 1.0,
+    "sim": 1.0
+  },
+  "zu-zu": {
+    "eng": "Zuzu",
+    "count": 4,
+    "ratio": 1.0,
+    "sim": 1.0
+  },
+  "i-ri-šu-um": {
+    "eng": "Irišum",
+    "count": 3,
+    "ratio": 1.0,
+    "sim": 0.8333333333333334
+  },
+  "ší-li-ú-ma-an": {
+    "eng": "Šiliuman",
+    "count": 2,
+    "ratio": 1.0,
+    "sim": 0.875
+  },
+  "PUZUR₄-a-šùr": {
+    "eng": "Puzur-Aššur",
+    "count": 27,
+    "ratio": 0.9259259259259259,
+    "sim": 0.5
+  },
+  "šu-mì-a-bi-a": {
+    "eng": "Šumi-abiya",
+    "count": 4,
+    "ratio": 1.0,
+    "sim": 0.375
+  },
+  "a-ta-a-a": {
+    "eng": "Ataya",
+    "count": 12,
+    "ratio": 0.9166666666666666,
+    "sim": 0.6
+  },
+  "lu-zi-na": {
+    "eng": "Luzina",
+    "count": 9,
+    "ratio": 0.8888888888888888,
+    "sim": 1.0
+  },
+  "pé-ru-wa": {
+    "eng": "Peruwa",
+    "count": 5,
+    "ratio": 1.0,
+    "sim": 1.0
+  },
+  "lá-ma-sà-tum": {
+    "eng": "Lamassutum",
+    "count": 10,
+    "ratio": 1.0,
+    "sim": 0.5555555555555556
+  },
+  "ar-ší-aḫ": {
+    "eng": "Arši-ah",
+    "count": 2,
+    "ratio": 1.0,
+    "sim": 1.0
+  },
+  "uš-ma-a": {
+    "eng": "Ušmaya",
+    "count": 3,
+    "ratio": 1.0,
+    "sim": 0.8
+  },
+  "a-ki-a": {
+    "eng": "Akiya",
+    "count": 6,
+    "ratio": 1.0,
+    "sim": 0.75
+  },
+  "la-ma-sà-tum": {
+    "eng": "Lamassutum",
+    "count": 2,
+    "ratio": 1.0,
+    "sim": 0.5555555555555556
+  },
+  "a-bu-a": {
+    "eng": "Abuwa",
+    "count": 7,
+    "ratio": 0.8571428571428571,
+    "sim": 0.75
+  },
+  "lu-zi": {
+    "eng": "Luzi",
+    "count": 9,
+    "ratio": 1.0,
+    "sim": 1.0
+  },
+  "IŠTAR-ra-bi₄-at-ma": {
+    "eng": "Ištar-rabiʾat",
+    "count": 2,
+    "ratio": 1.0,
+    "sim": 0.75
+  },
+  "a-zu-za": {
+    "eng": "Azuza",
+    "count": 5,
+    "ratio": 0.8,
+    "sim": 1.0
+  },
+  "i-dí-lim": {
+    "eng": "Iddin-ilum",
+    "count": 4,
+    "ratio": 1.0,
+    "sim": 0.3333333333333333
+  },
+  "kur-ub-a-šur": {
+    "eng": "Kurub-Aššur",
+    "count": 2,
+    "ratio": 1.0,
+    "sim": 0.7777777777777778
+  },
+  "a-mu-ra-a": {
+    "eng": "Amuraya",
+    "count": 4,
+    "ratio": 1.0,
+    "sim": 0.8333333333333334
+  },
+  "i-šu-ḫi-im": {
+    "eng": "Išuhum",
+    "count": 2,
+    "ratio": 1.0,
+    "sim": 0.6666666666666666
+  },
+  "šu-sú-en₆": {
+    "eng": "Šu-Suen",
+    "count": 2,
+    "ratio": 1.0,
+    "sim": 1.0
+  },
+  "i-dí-ba-ni": {
+    "eng": "Idi-bāni",
+    "count": 4,
+    "ratio": 1.0,
+    "sim": 0.5714285714285714
+  },
+  "ku-la": {
+    "eng": "Kula",
+    "count": 3,
+    "ratio": 1.0,
+    "sim": 1.0
+  },
+  "a-mur-DINGIR": {
+    "eng": "Amur-ilī",
+    "count": 11,
+    "ratio": 0.8181818181818182,
+    "sim": 0.5714285714285714
+  },
+  "ku-lá": {
+    "eng": "Kula",
+    "count": 3,
+    "ratio": 1.0,
+    "sim": 1.0
+  },
+  "a-šur-i-dí": {
+    "eng": "Aššurs",
+    "count": 11,
+    "ratio": 1.0,
+    "sim": 0.3333333333333333
+  },
+  "la-qé-ep": {
+    "eng": "La-qēp",
+    "count": 2,
+    "ratio": 1.0,
+    "sim": 0.6
+  },
+  "en-nam-a-šùr-ma": {
+    "eng": "Ennam-Aššur",
+    "count": 7,
+    "ratio": 1.0,
+    "sim": 0.7
+  },
+  "a-šùr-DU₁₀-ma": {
+    "eng": "Aššurs",
+    "count": 4,
+    "ratio": 1.0,
+    "sim": 0.3333333333333333
+  },
+  "i-na-ar": {
+    "eng": "Inar",
+    "count": 3,
+    "ratio": 1.0,
+    "sim": 0.75
+  },
+  "en-na-a-šur": {
+    "eng": "Ennam-Aššur",
+    "count": 2,
+    "ratio": 1.0,
+    "sim": 0.5
+  },
+  "a-nu-li": {
+    "eng": "Anuli",
+    "count": 5,
+    "ratio": 1.0,
+    "sim": 1.0
+  },
+  "e-ra-dí": {
+    "eng": "Erradi",
+    "count": 5,
+    "ratio": 0.8,
+    "sim": 0.4
+  },
+  "PUZUR₄.IŠTAR": {
+    "eng": "Puzur-Ištar",
+    "count": 42,
+    "ratio": 0.9047619047619048,
+    "sim": 0.5
+  },
+  "qá-a-tim": {
+    "eng": "Qaatum",
+    "count": 6,
+    "ratio": 0.8333333333333334,
+    "sim": 0.6666666666666666
+  },
+  "bu-zu-li-a": {
+    "eng": "Buzuliya",
+    "count": 2,
+    "ratio": 1.0,
+    "sim": 0.8571428571428571
+  },
+  "zu-ku-a-ma": {
+    "eng": "Zukuwa",
+    "count": 13,
+    "ratio": 1.0,
+    "sim": 0.6666666666666666
+  },
+  "wa-ší-ib-ru-ba-ni": {
+    "eng": "Wašibru-bāni",
+    "count": 2,
+    "ratio": 1.0,
+    "sim": 0.36363636363636365
+  },
+  "ki-ta-a": {
+    "eng": "Kitaya",
+    "count": 6,
+    "ratio": 1.0,
+    "sim": 0.8
+  },
+  "šu-li": {
+    "eng": "Šuli",
+    "count": 7,
+    "ratio": 1.0,
+    "sim": 1.0
+  },
+  "i-ku-mì-šar": {
+    "eng": "IV",
+    "count": 2,
+    "ratio": 1.0,
+    "sim": 0.5
+  },
+  "ip-ḫu-ru-um": {
+    "eng": "Iphurum",
+    "count": 3,
+    "ratio": 1.0,
+    "sim": 0.8571428571428571
+  },
+  "gal-da-a": {
+    "eng": "Galdaya",
+    "count": 9,
+    "ratio": 1.0,
+    "sim": 0.8333333333333334
+  },
+  "ma-ṣí-ì-lí": {
+    "eng": "Maṣi-ilī",
+    "count": 9,
+    "ratio": 1.0,
+    "sim": 0.5714285714285714
+  },
+  "bu-zu-zi-im": {
+    "eng": "Buzuzum",
+    "count": 3,
+    "ratio": 1.0,
+    "sim": 0.7142857142857143
+  },
+  "ni-mar-IŠTAR": {
+    "eng": "Nimar-Ištar",
+    "count": 9,
+    "ratio": 1.0,
+    "sim": 1.0
+  },
+  "da-la-áš": {
+    "eng": "Dalaš",
+    "count": 4,
+    "ratio": 1.0,
+    "sim": 0.8
+  },
+  "du-ùḫ-ni-iš": {
+    "eng": "Duhniš",
+    "count": 2,
+    "ratio": 1.0,
+    "sim": 0.3333333333333333
+  },
+  "bu-zi": {
+    "eng": "Buzi",
+    "count": 4,
+    "ratio": 1.0,
+    "sim": 1.0
+  },
+  "wa-li-a": {
+    "eng": "Waliya",
+    "count": 2,
+    "ratio": 1.0,
+    "sim": 0.8
+  },
+  "a-ḫu-wa-qar": {
+    "eng": "Ahu-waqar",
+    "count": 20,
+    "ratio": 1.0,
+    "sim": 1.0
+  },
+  "qar-da-a": {
+    "eng": "Qardaya",
+    "count": 3,
+    "ratio": 1.0,
+    "sim": 0.8333333333333334
+  },
+  "PUZUR₄-tí-a-am-tim": {
+    "eng": "Puzur-Tiamtum",
+    "count": 6,
+    "ratio": 1.0,
+    "sim": 0.4166666666666667
+  },
+  "sá-da-a": {
+    "eng": "Sadaya",
+    "count": 8,
+    "ratio": 1.0,
+    "sim": 0.8
+  },
+  "du-šu-ba": {
+    "eng": "Dušuba",
+    "count": 3,
+    "ratio": 1.0,
+    "sim": 1.0
+  },
+  "šu-ni-il₅-ga": {
+    "eng": "Šunilga",
+    "count": 3,
+    "ratio": 1.0,
+    "sim": 0.5714285714285714
+  },
+  "ku-zi-zi": {
+    "eng": "Kuzizi",
+    "count": 3,
+    "ratio": 1.0,
+    "sim": 1.0
+  },
+  "a-nu-pí-a-ma": {
+    "eng": "Anupiya",
+    "count": 4,
+    "ratio": 1.0,
+    "sim": 0.7142857142857143
+  },
+  "e-ni-iš-ta-ru-um": {
+    "eng": "Eništārum",
+    "count": 3,
+    "ratio": 1.0,
+    "sim": 0.3333333333333333
+  },
+  "da-ra-áš": {
+    "eng": "Daraš",
+    "count": 7,
+    "ratio": 1.0,
+    "sim": 0.8
+  },
+  "a-da-a": {
+    "eng": "Adaya",
+    "count": 6,
+    "ratio": 1.0,
+    "sim": 0.75
+  },
+  "šu-bé-lam": {
+    "eng": "Šu-Bēlum",
+    "count": 3,
+    "ratio": 1.0,
+    "sim": 0.42857142857142855
+  },
+  "en-nu-um-DINGIR": {
+    "eng": "Ennam-ilī",
+    "count": 2,
+    "ratio": 1.0,
+    "sim": 0.375
+  },
+  "zu-ú": {
+    "eng": "Zuu",
+    "count": 2,
+    "ratio": 1.0,
+    "sim": 1.0
+  },
+  "a-gi-a": {
+    "eng": "Agiya",
+    "count": 9,
+    "ratio": 1.0,
+    "sim": 0.75
+  },
+  "e-me-me": {
+    "eng": "Ememe",
+    "count": 5,
+    "ratio": 0.8,
+    "sim": 1.0
+  },
+  "ú-ṣa-ri-a": {
+    "eng": "Uṣāriyas",
+    "count": 2,
+    "ratio": 1.0,
+    "sim": 0.3333333333333333
+  },
+  "MAR.TU-ba-ni": {
+    "eng": "Manana",
+    "count": 3,
+    "ratio": 1.0,
+    "sim": 0.3333333333333333
+  },
+  "a-mur-na-ḫu-uš": {
+    "eng": "Amur-Nahuš",
+    "count": 2,
+    "ratio": 1.0,
+    "sim": 0.8888888888888888
+  },
+  "ú-sà-ri-a": {
+    "eng": "Uṣāriya",
+    "count": 3,
+    "ratio": 1.0,
+    "sim": 0.3333333333333333
+  },
+  "ša-ba-ḫa-nim": {
+    "eng": "Šabahānum",
+    "count": 3,
+    "ratio": 1.0,
+    "sim": 0.5555555555555556
+  },
+  "LUGAL-sú-in": {
+    "eng": "Lulu",
+    "count": 2,
+    "ratio": 1.0,
+    "sim": 0.5
+  },
+  "a-na-a-na": {
+    "eng": "Anna-anna",
+    "count": 12,
+    "ratio": 1.0,
+    "sim": 0.3333333333333333
+  },
+  "a-ta-tí-a": {
+    "eng": "Atatiya",
+    "count": 3,
+    "ratio": 1.0,
+    "sim": 0.8333333333333334
+  },
+  "mu-za": {
+    "eng": "Muza",
+    "count": 4,
+    "ratio": 1.0,
+    "sim": 1.0
+  },
+  "a-bu-um-DINGIR": {
+    "eng": "Abum-ilī",
+    "count": 3,
+    "ratio": 1.0,
+    "sim": 0.42857142857142855
+  },
+  "ku-lu-ma-a": {
+    "eng": "Kulumaya",
+    "count": 11,
+    "ratio": 0.8181818181818182,
+    "sim": 0.8571428571428571
+  },
+  "a-ta-a-ma": {
+    "eng": "Ataya",
+    "count": 3,
+    "ratio": 1.0,
+    "sim": 0.6
+  },
+  "a-ba-ta-na-nim": {
+    "eng": "Abatanānum",
+    "count": 3,
+    "ratio": 1.0,
+    "sim": 0.6
+  },
+  "šu-a-šur": {
+    "eng": "Šu-Aššur",
+    "count": 30,
+    "ratio": 0.9666666666666667,
+    "sim": 0.6666666666666666
+  },
+  "PÚZUR-a-šùr-ma": {
+    "eng": "Puzur-Aššur",
+    "count": 3,
+    "ratio": 1.0,
+    "sim": 0.7
+  },
+  "da-da-a": {
+    "eng": "Dadaya",
+    "count": 13,
+    "ratio": 1.0,
+    "sim": 0.8
+  },
+  "mu-ta-lim": {
+    "eng": "Mutalum",
+    "count": 2,
+    "ratio": 1.0,
+    "sim": 0.7142857142857143
+  },
+  "e-ri-ší-im": {
+    "eng": "Erišum",
+    "count": 6,
+    "ratio": 1.0,
+    "sim": 0.6666666666666666
+  },
+  "a-lá-ḫu-um-ma": {
+    "eng": "Aluwa",
+    "count": 2,
+    "ratio": 1.0,
+    "sim": 0.4
+  },
+  "ša-lim-ÌR-dí": {
+    "eng": "Šalim-wardī",
+    "count": 3,
+    "ratio": 1.0,
+    "sim": 0.5555555555555556
+  },
+  "bu-zu-a": {
+    "eng": "Buzuwa",
+    "count": 8,
+    "ratio": 1.0,
+    "sim": 0.8
+  },
+  "er-nu-id": {
+    "eng": "Ernuid",
+    "count": 3,
+    "ratio": 1.0,
+    "sim": 1.0
+  },
+  "PUZUR₄-a-mu-ri-im": {
+    "eng": "Puzur-Amurrum",
+    "count": 2,
+    "ratio": 1.0,
+    "sim": 0.4166666666666667
+  },
+  "ba-bi-lim": {
+    "eng": "Babilum",
+    "count": 2,
+    "ratio": 1.0,
+    "sim": 0.7142857142857143
+  },
+  "bu-zu-zu": {
+    "eng": "Buzuzu",
+    "count": 2,
+    "ratio": 1.0,
+    "sim": 1.0
+  },
+  "pí-lá-aḫ-a-šur": {
+    "eng": "Pilah-Aššur",
+    "count": 3,
+    "ratio": 1.0,
+    "sim": 0.4
+  },
+  "sú-e-ta-ta": {
+    "eng": "Suettata",
+    "count": 4,
+    "ratio": 1.0,
+    "sim": 0.5714285714285714
+  },
+  "šu-ma-li-ib-ší": {
+    "eng": "Šuma-libši",
+    "count": 2,
+    "ratio": 1.0,
+    "sim": 0.6666666666666666
+  },
+  "a-ší-it": {
+    "eng": "Ašet",
+    "count": 2,
+    "ratio": 1.0,
+    "sim": 0.5
+  },
+  "ili₅-pì-ú-ṣur": {
+    "eng": "IX",
+    "count": 2,
+    "ratio": 1.0,
+    "sim": 0.5
+  },
+  "šu-kà-tám": {
+    "eng": "Šukkutum",
+    "count": 3,
+    "ratio": 1.0,
+    "sim": 0.42857142857142855
+  },
+  "me-na-a": {
+    "eng": "Menaya",
+    "count": 7,
+    "ratio": 1.0,
+    "sim": 0.8
+  },
+  "lá-li-im": {
+    "eng": "Lalum",
+    "count": 5,
+    "ratio": 0.8,
+    "sim": 0.6
+  },
+  "a-ší-a-at": {
+    "eng": "Ašiat",
+    "count": 3,
+    "ratio": 1.0,
+    "sim": 0.8
+  },
+  "ku-uk-ra": {
+    "eng": "Kukra",
+    "count": 4,
+    "ratio": 1.0,
+    "sim": 0.4
+  },
+  "a-šur-lá-ma-sí": {
+    "eng": "Assur",
+    "count": 5,
+    "ratio": 0.8,
+    "sim": 0.4
+  },
+  "iṣ-mì-dí-lim": {
+    "eng": "Iṣmid-ilum",
+    "count": 3,
+    "ratio": 1.0,
+    "sim": 0.3333333333333333
+  },
+  "da-nu-um-ì-lí": {
+    "eng": "Dannum-ilī",
+    "count": 2,
+    "ratio": 1.0,
+    "sim": 0.3333333333333333
+  },
+  "ú-ku-ú": {
+    "eng": "Uku",
+    "count": 7,
+    "ratio": 1.0,
+    "sim": 1.0
+  },
+  "en-num-a-šur": {
+    "eng": "Ennam-Aššur",
+    "count": 6,
+    "ratio": 1.0,
+    "sim": 0.3333333333333333
+  },
+  "a-sà-num-ma": {
+    "eng": "Asānum",
+    "count": 2,
+    "ratio": 1.0,
+    "sim": 0.3333333333333333
+  },
+  "ša-lim-a-ḫu-um": {
+    "eng": "Šalim-ahum",
+    "count": 2,
+    "ratio": 1.0,
+    "sim": 0.8888888888888888
+  },
+  "bu-zi-a": {
+    "eng": "Buziya",
+    "count": 5,
+    "ratio": 0.8,
+    "sim": 0.8
+  },
+  "šu-pì-aḫ-šu": {
+    "eng": "Šuppiahšu",
+    "count": 4,
+    "ratio": 1.0,
+    "sim": 0.375
+  },
+  "ba-ba-ší-ba": {
+    "eng": "Babašiba",
+    "count": 3,
+    "ratio": 1.0,
+    "sim": 1.0
+  },
+  "ša-lim-IŠTAR": {
+    "eng": "Šalim-Ištar",
+    "count": 4,
+    "ratio": 1.0,
+    "sim": 1.0
+  },
+  "a-gu-a": {
+    "eng": "Aguwa",
+    "count": 7,
+    "ratio": 0.8571428571428571,
+    "sim": 0.75
+  },
+  "bu-li-na": {
+    "eng": "Bulina",
+    "count": 2,
+    "ratio": 1.0,
+    "sim": 1.0
+  },
+  "a-ra-wa": {
+    "eng": "Arawa",
+    "count": 2,
+    "ratio": 1.0,
+    "sim": 1.0
+  },
+  "ku-da-tum": {
+    "eng": "Kudātum",
+    "count": 3,
+    "ratio": 1.0,
+    "sim": 0.42857142857142855
+  },
+  "da-ra-ší": {
+    "eng": "Daraši",
+    "count": 3,
+    "ratio": 1.0,
+    "sim": 1.0
+  },
+  "a-bi₄-ba-áš-tí": {
+    "eng": "Ababa",
+    "count": 2,
+    "ratio": 1.0,
+    "sim": 0.4
+  },
+  "a-bi-ba-áš-tí": {
+    "eng": "Ababa",
+    "count": 2,
+    "ratio": 1.0,
+    "sim": 0.4
+  },
+  "pí-lá-aḫ-a-šùr-ma": {
+    "eng": "Pilah-Aššur",
+    "count": 2,
+    "ratio": 1.0,
+    "sim": 0.4
+  },
+  "pí-lá-aḫ-a-šur-ma": {
+    "eng": "Pilah-Aššur",
+    "count": 3,
+    "ratio": 1.0,
+    "sim": 0.4
+  },
+  "šu-da-ga-an": {
+    "eng": "Šu-Dagan",
+    "count": 2,
+    "ratio": 1.0,
+    "sim": 0.8571428571428571
+  },
+  "ki-li-a": {
+    "eng": "Kiliya",
+    "count": 3,
+    "ratio": 1.0,
+    "sim": 0.8
+  },
+  "PUZUR₄-a-na-ma": {
+    "eng": "Puzur-Anna",
+    "count": 4,
+    "ratio": 1.0,
+    "sim": 0.5555555555555556
+  },
+  "da-mu-ma": {
+    "eng": "Damuma",
+    "count": 3,
+    "ratio": 1.0,
+    "sim": 1.0
+  },
+  "a-lu-la-a": {
+    "eng": "Alulaya",
+    "count": 2,
+    "ratio": 1.0,
+    "sim": 0.8333333333333334
+  },
+  "da-dí-a-ma": {
+    "eng": "Dadiya",
+    "count": 5,
+    "ratio": 1.0,
+    "sim": 0.6666666666666666
+  },
+  "ú-ṣú-ur-ša-a-šur": {
+    "eng": "Uku",
+    "count": 2,
+    "ratio": 1.0,
+    "sim": 0.3333333333333333
+  },
+  "ú-ṣú-ur-ša-a-šùr": {
+    "eng": "Uku",
+    "count": 2,
+    "ratio": 1.0,
+    "sim": 0.3333333333333333
+  },
+  "ma-nu-kà-bi₄-a": {
+    "eng": "Make",
+    "count": 2,
+    "ratio": 1.0,
+    "sim": 0.5
+  },
+  "lá-ma-sà-tim": {
+    "eng": "Lamassutum",
+    "count": 10,
+    "ratio": 0.9,
+    "sim": 0.5555555555555556
+  },
+  "ki-kà-ar-ša-an": {
+    "eng": "Kikaršan",
+    "count": 3,
+    "ratio": 1.0,
+    "sim": 0.375
+  },
+  "a-zu-a": {
+    "eng": "Azua",
+    "count": 5,
+    "ratio": 1.0,
+    "sim": 1.0
+  },
+  "en-na-ni-a": {
+    "eng": "Ennam-Aššur",
+    "count": 2,
+    "ratio": 1.0,
+    "sim": 0.5714285714285714
+  },
+  "lu-zi-i": {
+    "eng": "Luzi",
+    "count": 2,
+    "ratio": 1.0,
+    "sim": 1.0
+  },
+  "i-ku-num": {
+    "eng": "Ikūnum",
+    "count": 2,
+    "ratio": 1.0,
+    "sim": 0.3333333333333333
+  },
+  "ḫa-ar-ša": {
+    "eng": "Harša",
+    "count": 2,
+    "ratio": 1.0,
+    "sim": 0.4
+  },
+  "a-šu-wa-an": {
+    "eng": "Ašuwan",
+    "count": 4,
+    "ratio": 1.0,
+    "sim": 0.8333333333333334
+  },
+  "wa-li-iš-ra": {
+    "eng": "Wališra",
+    "count": 2,
+    "ratio": 1.0,
+    "sim": 0.5714285714285714
+  },
+  "IŠTAR-pá-li-il₅": {
+    "eng": "Ištar-pālil",
+    "count": 11,
+    "ratio": 1.0,
+    "sim": 0.6
+  },
+  "ḫa-dí-tim": {
+    "eng": "Hadītum",
+    "count": 2,
+    "ratio": 1.0,
+    "sim": 0.42857142857142855
+  },
+  "ku-ku-a": {
+    "eng": "Kukuwa",
+    "count": 8,
+    "ratio": 0.875,
+    "sim": 0.8
+  },
+  "šu-bé-lúm-ma": {
+    "eng": "Šu-Bēlum",
+    "count": 6,
+    "ratio": 1.0,
+    "sim": 0.42857142857142855
+  },
+  "pá-na-kà": {
+    "eng": "Panaka",
+    "count": 7,
+    "ratio": 0.8571428571428571,
+    "sim": 0.8333333333333334
+  },
+  "mu-šu-e-ni": {
+    "eng": "Mušueni",
+    "count": 2,
+    "ratio": 1.0,
+    "sim": 1.0
+  },
+  "kur-ub-sú-in": {
+    "eng": "Kurub-Suen",
+    "count": 4,
+    "ratio": 1.0,
+    "sim": 0.7777777777777778
+  },
+  "a-šur-DÙL": {
+    "eng": "Aššurs",
+    "count": 2,
+    "ratio": 1.0,
+    "sim": 0.3333333333333333
+  },
+  "šu-ra-ma": {
+    "eng": "Šu-rama",
+    "count": 2,
+    "ratio": 1.0,
+    "sim": 1.0
+  },
+  "be-lúm-ba-ni": {
+    "eng": "Belum-bani",
+    "count": 4,
+    "ratio": 1.0,
+    "sim": 1.0
+  },
+  "a-šur-e-mu-qí-ma": {
+    "eng": "Aššurs",
+    "count": 3,
+    "ratio": 1.0,
+    "sim": 0.3333333333333333
+  },
+  "bi-ta-a": {
+    "eng": "Bitaya",
+    "count": 2,
+    "ratio": 1.0,
+    "sim": 0.8
+  },
+  "a-šùr-i-dí": {
+    "eng": "Aššurs",
+    "count": 2,
+    "ratio": 1.0,
+    "sim": 0.3333333333333333
+  },
+  "MAN.IŠTAR": {
+    "eng": "Mannum-kī-iliya",
+    "count": 2,
+    "ratio": 1.0,
+    "sim": 0.3333333333333333
+  },
+  "šu-lí": {
+    "eng": "Šuli",
+    "count": 10,
+    "ratio": 1.0,
+    "sim": 1.0
+  },
+  "PÚZUR-a-na": {
+    "eng": "Puzur-Anna",
+    "count": 2,
+    "ratio": 1.0,
+    "sim": 0.875
+  },
+  "ku-da-dim": {
+    "eng": "Kudādum",
+    "count": 3,
+    "ratio": 1.0,
+    "sim": 0.42857142857142855
+  },
+  "zu-zu-a": {
+    "eng": "Zuzuwa",
+    "count": 4,
+    "ratio": 1.0,
+    "sim": 0.8
+  },
+  "ša-lim-bé-lí": {
+    "eng": "Šalim-bēlī",
+    "count": 4,
+    "ratio": 1.0,
+    "sim": 0.6666666666666666
+  },
+  "i-lá-li-iš-kán": {
+    "eng": "Ilališkan",
+    "count": 3,
+    "ratio": 1.0,
+    "sim": 0.5555555555555556
+  },
+  "a-du-da": {
+    "eng": "Aduda",
+    "count": 6,
+    "ratio": 1.0,
+    "sim": 1.0
+  },
+  "im-dí-dan": {
+    "eng": "Imdī-dans",
+    "count": 2,
+    "ratio": 1.0,
+    "sim": 0.42857142857142855
+  },
+  "ḫa-dí-a-šu": {
+    "eng": "Hadiaššu",
+    "count": 2,
+    "ratio": 1.0,
+    "sim": 0.8571428571428571
+  },
+  "iš-ma-a-šur": {
+    "eng": "Išme-Aššur",
+    "count": 2,
+    "ratio": 1.0,
+    "sim": 0.375
+  },
+  "dan-a-šur-ma": {
+    "eng": "Dan-Aššur",
+    "count": 2,
+    "ratio": 1.0,
+    "sim": 0.625
+  },
+  "ma-lá-ba": {
+    "eng": "Malaba",
+    "count": 3,
+    "ratio": 1.0,
+    "sim": 1.0
+  },
+  "ba-ba-lá-nim": {
+    "eng": "Babalānum",
+    "count": 3,
+    "ratio": 1.0,
+    "sim": 0.5555555555555556
+  },
+  "da-da-a-a": {
+    "eng": "Dadaya",
+    "count": 2,
+    "ratio": 1.0,
+    "sim": 0.6666666666666666
+  },
+  "im-dí-DINGIR": {
+    "eng": "Imdī-ilum",
+    "count": 10,
+    "ratio": 0.8,
+    "sim": 0.375
+  },
+  "a-mur-ZU": {
+    "eng": "Amur-Suen",
+    "count": 2,
+    "ratio": 1.0,
+    "sim": 0.6666666666666666
+  },
+  "šu-a-num": {
+    "eng": "Šu-Anum",
+    "count": 2,
+    "ratio": 1.0,
+    "sim": 1.0
+  },
+  "a-na-aḫ-IŠTAR-ma": {
+    "eng": "Anah-Ištar",
+    "count": 2,
+    "ratio": 1.0,
+    "sim": 0.3333333333333333
+  },
+  "a-šùr-ták-lá-ku": {
+    "eng": "Aššurs",
+    "count": 2,
+    "ratio": 1.0,
+    "sim": 0.3333333333333333
+  },
+  "a-nu-pì-a": {
+    "eng": "Anupiya",
+    "count": 2,
+    "ratio": 1.0,
+    "sim": 0.6666666666666666
+  },
+  "i-sú-SUD": {
+    "eng": "Issu-arik",
+    "count": 2,
+    "ratio": 1.0,
+    "sim": 0.3333333333333333
+  },
+  "a-bu-SILIM": {
+    "eng": "Abu-šalims",
+    "count": 6,
+    "ratio": 0.8333333333333334,
+    "sim": 0.5
+  },
+  "ší-ša-ra": {
+    "eng": "Šišara",
+    "count": 3,
+    "ratio": 1.0,
+    "sim": 1.0
+  },
+  "e-na-num": {
+    "eng": "Ennānum",
+    "count": 2,
+    "ratio": 1.0,
+    "sim": 0.3333333333333333
+  },
+  "ta-ri-ku-da": {
+    "eng": "Tarikuda",
+    "count": 2,
+    "ratio": 1.0,
+    "sim": 1.0
+  },
+  "a-ni-na-a": {
+    "eng": "Aninaya",
+    "count": 2,
+    "ratio": 1.0,
+    "sim": 0.8333333333333334
+  },
+  "ku-na-na-a": {
+    "eng": "Kunnanaya",
+    "count": 2,
+    "ratio": 1.0,
+    "sim": 0.42857142857142855
+  },
+  "bé-lúm-ba-ni": {
+    "eng": "Belum-bani",
+    "count": 5,
+    "ratio": 1.0,
+    "sim": 1.0
+  },
+  "IŠTAR-il₅-šu": {
+    "eng": "Ištar-ilšu",
+    "count": 4,
+    "ratio": 1.0,
+    "sim": 0.7777777777777778
+  },
+  "šu-be-lim-ma": {
+    "eng": "Šu-Bēlum",
+    "count": 3,
+    "ratio": 1.0,
+    "sim": 0.42857142857142855
+  },
+  "na-zi": {
+    "eng": "Nazi",
+    "count": 3,
+    "ratio": 1.0,
+    "sim": 1.0
+  },
+  "en-nu-um-a-šur": {
+    "eng": "Ennānum",
+    "count": 2,
+    "ratio": 1.0,
+    "sim": 0.42857142857142855
+  },
+  "šu-nu-nu-ma": {
+    "eng": "Šu-Nūnu",
+    "count": 3,
+    "ratio": 1.0,
+    "sim": 0.5
+  },
+  "i-dí-da": {
+    "eng": "Idida",
+    "count": 2,
+    "ratio": 1.0,
+    "sim": 1.0
+  },
+  "iš-ta-aḫ-šu": {
+    "eng": "Ištahšu",
+    "count": 2,
+    "ratio": 1.0,
+    "sim": 0.5714285714285714
+  },
+  "ba-ba-zu-a": {
+    "eng": "Babazua",
+    "count": 2,
+    "ratio": 1.0,
+    "sim": 1.0
+  },
+  "ḫa-pu-a-lá": {
+    "eng": "Happuala",
+    "count": 2,
+    "ratio": 1.0,
+    "sim": 0.42857142857142855
+  },
+  "a-lá-a-ma": {
+    "eng": "Alaya",
+    "count": 2,
+    "ratio": 1.0,
+    "sim": 0.6
+  },
+  "ba-la": {
+    "eng": "Bala",
+    "count": 3,
+    "ratio": 1.0,
+    "sim": 1.0
+  },
+  "ga-zi-a": {
+    "eng": "Gaziya",
+    "count": 2,
+    "ratio": 1.0,
+    "sim": 0.8
+  },
+  "um-ma-za": {
+    "eng": "Ummaza",
+    "count": 3,
+    "ratio": 1.0,
+    "sim": 1.0
+  },
+  "sá-sí-a": {
+    "eng": "Sasiya",
+    "count": 2,
+    "ratio": 1.0,
+    "sim": 0.8
+  },
+  "ku-ur-zi-a": {
+    "eng": "Kura",
+    "count": 2,
+    "ratio": 1.0,
+    "sim": 0.5
+  },
+  "šu-ni-sà-ba": {
+    "eng": "Šu-Nisaba",
+    "count": 2,
+    "ratio": 1.0,
+    "sim": 0.625
+  },
+  "up-ḫa-qí-im": {
+    "eng": "Uphāqum",
+    "count": 3,
+    "ratio": 1.0,
+    "sim": 0.42857142857142855
+  },
+  "en-nam-ì-lí": {
+    "eng": "Ennam-ilī",
+    "count": 2,
+    "ratio": 1.0,
+    "sim": 0.625
+  },
+  "i-ku-pí-a-šùr": {
+    "eng": "Ikuppi-Aššur",
+    "count": 2,
+    "ratio": 1.0,
+    "sim": 0.4444444444444444
+  },
+  "šu-pu-na-aḫ-šu": {
+    "eng": "Šupun-ahšu",
+    "count": 2,
+    "ratio": 1.0,
+    "sim": 0.6666666666666666
+  },
+  "i-ri-ší-im": {
+    "eng": "Irišum",
+    "count": 11,
+    "ratio": 0.9090909090909091,
+    "sim": 0.6666666666666666
+  },
+  "a-šu-ú-ma-an": {
+    "eng": "Ašu-uman",
+    "count": 2,
+    "ratio": 1.0,
+    "sim": 0.8571428571428571
+  },
+  "i-na-aḫ-DINGIR-ma": {
+    "eng": "Inah-ilī",
+    "count": 4,
+    "ratio": 1.0,
+    "sim": 0.42857142857142855
+  },
+  "a-ta-a-a-ma": {
+    "eng": "Ataya",
+    "count": 2,
+    "ratio": 1.0,
+    "sim": 0.6
+  },
+  "a-zi-da": {
+    "eng": "Azida",
+    "count": 2,
+    "ratio": 1.0,
+    "sim": 1.0
+  },
+  "ur-ší-ší": {
+    "eng": "Uršiši",
+    "count": 2,
+    "ratio": 1.0,
+    "sim": 1.0
+  },
+  "ur-ší-ší-ma": {
+    "eng": "Uršiši",
+    "count": 2,
+    "ratio": 1.0,
+    "sim": 1.0
+  },
+  "be-kà-a": {
+    "eng": "Bekaya",
+    "count": 2,
+    "ratio": 1.0,
+    "sim": 0.6
+  },
+  "am-ma": {
+    "eng": "Amur-Ištar",
+    "count": 2,
+    "ratio": 1.0,
+    "sim": 0.5
+  },
+  "a-šur-na-da-ma": {
+    "eng": "Aššurs",
+    "count": 2,
+    "ratio": 1.0,
+    "sim": 0.3333333333333333
+  },
+  "ma-lá-kà-a": {
+    "eng": "Malakaya",
+    "count": 2,
+    "ratio": 1.0,
+    "sim": 0.7142857142857143
+  },
+  "a-nu-nu-a": {
+    "eng": "Anunuwa",
+    "count": 2,
+    "ratio": 1.0,
+    "sim": 0.8333333333333334
+  },
+  "en-nu-a-šur": {
+    "eng": "Ennam-Aššur",
+    "count": 6,
+    "ratio": 1.0,
+    "sim": 0.375
+  },
+  "sú-en₆-na-da": {
+    "eng": "Suen-nādā",
+    "count": 2,
+    "ratio": 1.0,
+    "sim": 0.5
+  },
+  "ir-ma-a-šùr-ma": {
+    "eng": "Irma-Aššur",
+    "count": 2,
+    "ratio": 1.0,
+    "sim": 0.6666666666666666
+  },
+  "PUZUR₄.IŠTAR-ma": {
+    "eng": "Puzur-Ištar",
+    "count": 4,
+    "ratio": 1.0,
+    "sim": 0.5
+  },
+  "a-šur-ták-lá-ku": {
+    "eng": "Aššurs",
+    "count": 2,
+    "ratio": 1.0,
+    "sim": 0.3333333333333333
+  },
+  "a-lu-ta-ni": {
+    "eng": "Alutani",
+    "count": 2,
+    "ratio": 1.0,
+    "sim": 1.0
+  },
+  "ḫu-ša-na-lim": {
+    "eng": "Husanalum",
+    "count": 2,
+    "ratio": 1.0,
+    "sim": 0.7777777777777778
+  },
+  "ḫu-na-da-du-a": {
+    "eng": "Hunadadua",
+    "count": 4,
+    "ratio": 1.0,
+    "sim": 1.0
+  },
+  "ba-za-za-a": {
+    "eng": "Bazazaya",
+    "count": 4,
+    "ratio": 1.0,
+    "sim": 0.8571428571428571
+  },
+  "du-du": {
+    "eng": "Dudu",
+    "count": 4,
+    "ratio": 1.0,
+    "sim": 1.0
+  },
+  "šu-ḫu-bu-ur": {
+    "eng": "Šu-hubur",
+    "count": 7,
+    "ratio": 1.0,
+    "sim": 0.8571428571428571
+  },
+  "a-li-a-ma": {
+    "eng": "Ali-ahum",
+    "count": 2,
+    "ratio": 1.0,
+    "sim": 0.6666666666666666
+  },
+  "lá-ta-a": {
+    "eng": "Lataya",
+    "count": 4,
+    "ratio": 1.0,
+    "sim": 0.8
+  },
+  "e-me-ni": {
+    "eng": "Emeni",
+    "count": 2,
+    "ratio": 1.0,
+    "sim": 1.0
+  },
+  "dan-a-šùr-ma": {
+    "eng": "Dan-Aššur",
+    "count": 2,
+    "ratio": 1.0,
+    "sim": 0.625
+  },
+  "a-gi-a-ma": {
+    "eng": "Agiya",
+    "count": 2,
+    "ratio": 1.0,
+    "sim": 0.6
+  },
+  "šu-a-nu-um": {
+    "eng": "Šu-Anum",
+    "count": 3,
+    "ratio": 1.0,
+    "sim": 0.8333333333333334
+  },
+  "ki-ba-al": {
+    "eng": "Kibal",
+    "count": 3,
+    "ratio": 1.0,
+    "sim": 0.8
+  },
+  "ba-ri-me-a": {
+    "eng": "Barimea",
+    "count": 2,
+    "ratio": 1.0,
+    "sim": 1.0
+  },
+  "a-sá-num": {
+    "eng": "Asānum",
+    "count": 2,
+    "ratio": 1.0,
+    "sim": 0.3333333333333333
+  },
+  "ú-nu-ba": {
+    "eng": "Unuba",
+    "count": 2,
+    "ratio": 1.0,
+    "sim": 1.0
+  },
+  "i-ri-šu-ma": {
+    "eng": "Irišum",
+    "count": 2,
+    "ratio": 1.0,
+    "sim": 1.0
+  },
+  "ša-ta-áš-me-tim-ma": {
+    "eng": "Say",
+    "count": 2,
+    "ratio": 1.0,
+    "sim": 0.6666666666666666
+  },
+  "e-ni-iš-ta-ra-am": {
+    "eng": "Eništārum",
+    "count": 2,
+    "ratio": 1.0,
+    "sim": 0.3333333333333333
+  },
+  "du-ma-na": {
+    "eng": "Dumana",
+    "count": 3,
+    "ratio": 1.0,
+    "sim": 1.0
+  },
+  "na-ni-a": {
+    "eng": "Naniya",
+    "count": 2,
+    "ratio": 1.0,
+    "sim": 0.8
+  },
+  "i-lí-a": {
+    "eng": "Iliya",
+    "count": 3,
+    "ratio": 1.0,
+    "sim": 0.75
+  },
+  "a-šùr-UTU-ši-ma": {
+    "eng": "Aššurs",
+    "count": 3,
+    "ratio": 1.0,
+    "sim": 0.3333333333333333
+  },
+  "šu-mì-a-ar": {
+    "eng": "Šumiar",
+    "count": 2,
+    "ratio": 1.0,
+    "sim": 0.5
+  },
+  "i-ri-šum-ma": {
+    "eng": "Irišum",
+    "count": 2,
+    "ratio": 1.0,
+    "sim": 1.0
+  },
+  "šu-ma-a-bi₄-a": {
+    "eng": "Šumi-abiya",
+    "count": 2,
+    "ratio": 1.0,
+    "sim": 0.3333333333333333
+  },
+  "li-bi-IŠTAR": {
+    "eng": "Libbi-Ištar",
+    "count": 2,
+    "ratio": 1.0,
+    "sim": 0.3333333333333333
+  }
+}

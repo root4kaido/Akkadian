@@ -1,0 +1,2243 @@
+- generic [ref=e2]:
+  - navigation "Main Kaggle page navigation" [ref=e3]:
+    - generic [ref=e5]:
+      - button "Navigation menu" [ref=e7] [cursor=pointer]: menu
+      - link "Skip to content" [ref=e8] [cursor=pointer]:
+        - /url: "#site-content"
+        - text: Skip to
+        - text: content
+      - link "Return to Kaggle home page" [ref=e10] [cursor=pointer]:
+        - /url: /
+        - img "Kaggle" [ref=e11]
+    - button "Create" [ref=e13] [cursor=pointer]:
+      - img [ref=e14]
+      - generic [ref=e19]: Create
+    - generic [ref=e20]:
+      - generic [ref=e22]:
+        - list [ref=e23]:
+          - listitem "Home List Item" [ref=e24]:
+            - link "Home" [ref=e26] [cursor=pointer]:
+              - /url: /
+              - generic [ref=e27]:
+                - generic [ref=e30]: explore
+                - paragraph [ref=e32]: Home
+          - listitem "Competitions List Item" [ref=e33]:
+            - link "Competitions" [ref=e35] [cursor=pointer]:
+              - /url: /competitions
+              - generic [ref=e36]:
+                - generic [ref=e39]: emoji_events
+                - paragraph [ref=e41]: Competitions
+          - listitem "Datasets List Item" [ref=e43]:
+            - link "Datasets" [ref=e45] [cursor=pointer]:
+              - /url: /datasets
+              - generic [ref=e46]:
+                - generic [ref=e49]: table_chart
+                - paragraph [ref=e51]: Datasets
+          - listitem "Models List Item" [ref=e52]:
+            - link "Models" [ref=e54] [cursor=pointer]:
+              - /url: /models
+              - generic [ref=e55]:
+                - generic [ref=e58]: tenancy
+                - paragraph [ref=e60]: Models
+          - listitem "Benchmarks List Item" [ref=e61]:
+            - link "Benchmarks" [ref=e63] [cursor=pointer]:
+              - /url: /benchmarks
+              - generic [ref=e64]:
+                - generic [ref=e67]: leaderboard
+                - paragraph [ref=e69]: Benchmarks
+          - listitem "Game Arena List Item" [ref=e70]:
+            - link "Game Arena" [ref=e72] [cursor=pointer]:
+              - /url: /game-arena
+              - generic [ref=e73]:
+                - generic [ref=e76]: smart_toy
+                - paragraph [ref=e78]: Game Arena
+          - listitem "Code List Item" [ref=e79]:
+            - link "Code" [ref=e81] [cursor=pointer]:
+              - /url: /code
+              - generic [ref=e82]:
+                - generic [ref=e85]: code
+                - paragraph [ref=e87]: Code
+          - listitem "Discussions List Item" [ref=e88]:
+            - link "Discussions" [ref=e90] [cursor=pointer]:
+              - /url: /discussions
+              - generic [ref=e91]:
+                - generic [ref=e94]: comment
+                - paragraph [ref=e96]: Discussions
+          - listitem "Kaggle Learn List Item" [ref=e97]:
+            - link "Kaggle Learn" [ref=e99] [cursor=pointer]:
+              - /url: /learn
+              - generic [ref=e100]:
+                - generic [ref=e103]: school
+                - paragraph [ref=e105]: Learn
+        - list [ref=e106]:
+          - listitem "More on Kaggle List Item" [ref=e107]:
+            - link "More on Kaggle" [ref=e109] [cursor=pointer]:
+              - /url: "#"
+              - generic [ref=e110]:
+                - generic [ref=e113]: expand_more
+                - paragraph [ref=e115]: More
+      - button "View Active Events" [ref=e117] [cursor=pointer]:
+        - generic [ref=e119]: auto_awesome_motion
+        - paragraph [ref=e120]: View Active Events
+  - navigation "Main menu, search and your account" [ref=e121]:
+    - generic [ref=e122]:
+      - generic [ref=e126]:
+        - generic [ref=e127]: search
+        - textbox "Search" [ref=e128]
+        - group
+      - generic [ref=e130]:
+        - link "Sign In" [ref=e132] [cursor=pointer]:
+          - /url: /account/login?phase=startSignInTab&returnUrl=%2Fcompetitions%2Fdeep-past-initiative-machine-translation%2Fdiscussion%2F678899
+          - button "Sign In" [ref=e133]:
+            - generic [ref=e134]: Sign In
+        - link "Register" [ref=e136] [cursor=pointer]:
+          - /url: /account/login?phase=startRegisterTab&returnUrl=%2Fcompetitions%2Fdeep-past-initiative-machine-translation%2Fdiscussion%2F678899
+          - button "Register" [ref=e137]:
+            - generic [ref=e138]: Register
+  - main [ref=e139]:
+    - generic [ref=e141]:
+      - generic [ref=e142]: Kaggle uses cookies from Google to deliver and enhance the quality of its services and to analyze traffic.
+      - generic [ref=e143]:
+        - link "Learn more" [ref=e144] [cursor=pointer]:
+          - /url: /cookies
+          - generic [ref=e145]: Learn more
+        - generic [ref=e146] [cursor=pointer]: OK, Got it.
+    - generic [ref=e149]:
+      - generic [ref=e151]:
+        - generic [ref=e152]:
+          - link "Deep Past Initiative's profile" [ref=e153] [cursor=pointer]:
+            - /url: /organizations/deep-past-initiative
+            - generic "Deep Past Initiative" [ref=e154]
+            - img [ref=e155]
+          - generic [ref=e158]:
+            - generic [ref=e160]: Deep Past Initiative
+            - generic [ref=e161]: · Featured Code Competition · 12 days to go
+          - generic [ref=e162]:
+            - button "Join Competition" [ref=e164] [cursor=pointer]:
+              - generic [ref=e165]: Join Competition
+            - button "Competition options menu collapsed" [ref=e167] [cursor=pointer]: more_horiz
+        - generic [ref=e169]:
+          - heading "Deep Past Challenge - Translate Akkadian to English" [level=1] [ref=e170]
+          - paragraph [ref=e172]: Bringing Bronze Age Voices Back to Life – Machine Translation of Old Assyrian Cuneiform
+      - generic [ref=e174]:
+        - tablist [ref=e181]:
+          - tab "Overview, 1 of 7" [ref=e182] [cursor=pointer]:
+            - generic [ref=e183]: Overview
+          - tab "Data, 2 of 7" [ref=e184] [cursor=pointer]:
+            - generic [ref=e185]: Data
+          - tab "Code, 3 of 7" [ref=e186] [cursor=pointer]:
+            - generic [ref=e187]: Code
+          - tab "Models, 4 of 7" [ref=e188] [cursor=pointer]:
+            - generic [ref=e189]: Models
+          - tab "Discussion, 5 of 7" [selected] [ref=e190] [cursor=pointer]:
+            - generic [ref=e191]: Discussion
+          - tab "Leaderboard, 6 of 7" [ref=e192] [cursor=pointer]:
+            - generic [ref=e193]: Leaderboard
+          - tab "Rules, 7 of 7" [ref=e194] [cursor=pointer]:
+            - generic [ref=e195]: Rules
+        - separator [ref=e197]
+      - generic [ref=e201]:
+        - generic [ref=e202]:
+          - generic [ref=e203]:
+            - generic [ref=e204]:
+              - link "Adam Anderson's profile" [ref=e205] [cursor=pointer]:
+                - /url: /deeppast
+                - generic "Adam Anderson" [ref=e206]
+                - img [ref=e207]
+              - generic [ref=e210]:
+                - link "Adam Anderson" [ref=e211] [cursor=pointer]:
+                  - /url: /deeppast
+                - text: ·
+                - generic [ref=e212]: Posted 14 days ago
+              - text: ·
+              - generic [ref=e213]: Competition Host
+            - generic [ref=e214]:
+              - generic [ref=e215]:
+                - button "Upvote" [ref=e216] [cursor=pointer]:
+                  - generic [ref=e217]: arrow_drop_up
+                - button "33 votes" [ref=e218] [cursor=pointer]: "33"
+              - button "More Options for this Topic" [ref=e219] [cursor=pointer]: more_vert
+            - heading "A Stitch in Time Saves Nine" [level=3] [ref=e220]
+            - generic [ref=e223]:
+              - paragraph [ref=e224]: If only the ancients who wrote these texts could imagine how difficult it would be to train computers to translate their work! Working with data from 1950-1750 BCE is not for the faint of heart. From 1927 CE until today, modern scholars have been working with the editing and publication of these ca. 8,000 documents in many different languages, and despite (or because of) almost 100 years of scholarly scrutiny, the datasets are more complicated and in a more convoluted format, than what the ancients originally wrote. These editions were migrated into a database, which became the foundation of the data we used for the training and supplemental data for this challenge. Unbeknownst to them, we are now re-purposing their editions for training ML models, and the messiness of the data is palpable for all to see. That said, this is the first benchmark for a significant ML application with the Old Assyrian data, so with great struggle comes greater pioneering outcomes.
+              - paragraph [ref=e225]: The purpose of this final update is to level the number of markers for gaps from two to one. The hope is that by making some small, but significant adjustments, this will improve the scores for everyone. What we refrained from doing was making any additional changes which could introduce new inconsistencies if not done uniformly. So for the final month of the competition, we will include a clear and concise list of recommendations for the training dataset for alignment with the test data.
+              - paragraph [ref=e226]:
+                - strong [ref=e227]:
+                  - text: "Gap Change: Replaced all the following with a single"
+                  - code [ref=e228]: <gap>
+              - list [ref=e229]:
+                - listitem [ref=e230]:
+                  - code [ref=e231]: x
+                  - text: —>
+                  - code [ref=e232]: <gap>
+                - listitem [ref=e233]:
+                  - code [ref=e234]: "[x]"
+                  - text: —>
+                  - code [ref=e235]: <gap>
+                - listitem [ref=e236]:
+                  - code [ref=e237]: …
+                  - text: —>
+                  - code [ref=e238]: <gap>
+                - listitem [ref=e239]:
+                  - code [ref=e240]: (break)
+                  - text: —>
+                  - code [ref=e241]: <gap>
+                - listitem [ref=e242]:
+                  - code [ref=e243]: (large break)
+                  - text: —>
+                  - code [ref=e244]: <gap>
+                - listitem [ref=e245]:
+                  - code [ref=e246]: (n broken lines)
+                  - text: —>
+                  - code [ref=e247]: <gap>
+                - listitem [ref=e248]:
+                  - code [ref=e249]: <gap>
+                  - code [ref=e250]: <gap>
+                  - text: —>
+                  - code [ref=e251]: <gap>
+              - paragraph [ref=e252]:
+                - strong [ref=e253]:
+                  - text: "Results of these changes: no more"
+                  - code [ref=e254]: <big_gap>
+                  - text: and no more duplicates for
+                  - code [ref=e255]: <gap>
+                - text: Before the change took place, these types of gaps were found in the test and training data. This recent change reduced all these duplicates to a single
+                - code [ref=e256]: <gap>
+                - text: .
+              - table [ref=e257]:
+                - rowgroup [ref=e258]:
+                  - row "Gap Count" [ref=e259]:
+                    - columnheader "Gap" [ref=e260]
+                    - columnheader "Count" [ref=e261]
+                - rowgroup [ref=e262]:
+                  - row "<gap> <gap> 30" [ref=e263]:
+                    - cell "<gap> <gap>" [ref=e264]:
+                      - code [ref=e265]: <gap> <gap>
+                    - cell "30" [ref=e266]
+                  - row "-<gap> <gap> 9" [ref=e267]:
+                    - cell "-<gap> <gap>" [ref=e268]:
+                      - code [ref=e269]: "-<gap> <gap>"
+                    - cell "9" [ref=e270]
+                  - row "-<gap>-<gap> 1" [ref=e271]:
+                    - cell "-<gap>-<gap>" [ref=e272]:
+                      - code [ref=e273]: "-<gap>-<gap>"
+                    - cell "1" [ref=e274]
+                  - row "<gap> <gap>- 15" [ref=e275]:
+                    - cell "<gap> <gap>-" [ref=e276]:
+                      - code [ref=e277]: <gap> <gap>-
+                    - cell "15" [ref=e278]
+                  - row "<gap> <big_gap> 6" [ref=e279]:
+                    - cell "<gap> <big_gap>" [ref=e280]:
+                      - code [ref=e281]: <gap> <big_gap>
+                    - cell "6" [ref=e282]
+                  - row "<gap> <gap> <gap> 2" [ref=e283]:
+                    - cell "<gap> <gap> <gap>" [ref=e284]:
+                      - code [ref=e285]: <gap> <gap> <gap>
+                    - cell "2" [ref=e286]
+                  - row "<gap> <big_gap> <gap> 1" [ref=e287]:
+                    - cell "<gap> <big_gap> <gap>" [ref=e288]:
+                      - code [ref=e289]: <gap> <big_gap> <gap>
+                    - cell "1" [ref=e290]
+                  - row "-<big_gap> <gap>- 4" [ref=e291]:
+                    - cell "-<big_gap> <gap>-" [ref=e292]:
+                      - code [ref=e293]: "-<big_gap> <gap>-"
+                    - cell "4" [ref=e294]
+                  - row "-<big_gap> <big_gap> 13" [ref=e295]:
+                    - cell "-<big_gap> <big_gap>" [ref=e296]:
+                      - code [ref=e297]: "-<big_gap> <big_gap>"
+                    - cell "13" [ref=e298]
+                  - row "<big_gap> <big_gap> 15" [ref=e299]:
+                    - cell "<big_gap> <big_gap>" [ref=e300]:
+                      - code [ref=e301]: <big_gap> <big_gap>
+                    - cell "15" [ref=e302]
+                  - row "<big_gap> <big_gap>- 12" [ref=e303]:
+                    - cell "<big_gap> <big_gap>-" [ref=e304]:
+                      - code [ref=e305]: <big_gap> <big_gap>-
+                    - cell "12" [ref=e306]
+                  - row "<big_gap> <gap> <big_gap> 2" [ref=e307]:
+                    - cell "<big_gap> <gap> <big_gap>" [ref=e308]:
+                      - code [ref=e309]: <big_gap> <gap> <big_gap>
+                    - cell "2" [ref=e310]
+                  - row "<big_gap> <big_gap> <big_gap> <big_gap>- 3" [ref=e311]:
+                    - cell "<big_gap> <big_gap> <big_gap> <big_gap>-" [ref=e312]:
+                      - code [ref=e313]: <big_gap> <big_gap> <big_gap> <big_gap>-
+                    - cell "3" [ref=e314]
+                  - row "<big_gap> <big_gap> <big_gap> <gap> <gap> 1" [ref=e315]:
+                    - cell "<big_gap> <big_gap> <big_gap> <gap> <gap>" [ref=e316]:
+                      - code [ref=e317]: <big_gap> <big_gap> <big_gap> <gap> <gap>
+                    - cell "1" [ref=e318]
+                  - row "-<big_gap> <big_gap> <gap> <big_gap> <big_gap>- 1" [ref=e319]:
+                    - cell "-<big_gap> <big_gap> <gap> <big_gap> <big_gap>-" [ref=e320]:
+                      - code [ref=e321]: "-<big_gap> <big_gap> <gap> <big_gap> <big_gap>-"
+                    - cell "1" [ref=e322]
+              - paragraph [ref=e323]:
+                - strong [ref=e324]: "Alignment of Determinatives to match test data:"
+              - list [ref=e325]:
+                - listitem [ref=e326]:
+                  - code [ref=e327]: (d)
+                  - text: —>
+                  - code [ref=e328]: "{d}"
+                - listitem [ref=e329]:
+                  - code [ref=e330]: (ki)
+                  - text: —>
+                  - code [ref=e331]: "{ki}"
+                - listitem [ref=e332]:
+                  - code [ref=e333]: (TÚG)
+                  - text: —>
+                  - code [ref=e334]: TÚG
+              - paragraph [ref=e335]:
+                - strong [ref=e336]: Shortening of long floats to four places after the decimal
+              - list [ref=e337]:
+                - listitem [ref=e338]:
+                  - code [ref=e339]: "1.3333300000000001"
+                  - text: —>
+                  - code [ref=e340]: "1.3333"
+                - listitem [ref=e341]:
+                  - code [ref=e342]: "2.6666600000000003"
+                  - text: —>
+                  - code [ref=e343]: "2.6666"
+              - paragraph [ref=e344]:
+                - strong [ref=e345]: "The rest is up to you. Here are some recommendations, but there's no guarantee that these will improve your score on the leader board:"
+              - paragraph [ref=e346]:
+                - text: Some of the transliteration text in the training data is missing, which is unfortunate, but fixable. You can find what is missing from the training data by matching the unique
+                - code [ref=e347]: OARE_Text_ID
+                - text: with the equivalent OARE IDs in the
+                - code [ref=e348]: published_texts.csv
+                - text: dataset. Do this by matching the unique IDs in the training data to the OARE IDs and find the publication (e.g. AKT 8, 130 = AKT volume 8, text number 130). The PDFs have also been provided, if you find there are missing elements in the translations (
+                - link "https://www.kaggle.com/datasets/deeppast/old-assyrian-kltepe-tablets-in-pdf/data) (opens in a new tab)" [ref=e349] [cursor=pointer]:
+                  - /url: https://www.kaggle.com/datasets/deeppast/old-assyrian-kltepe-tablets-in-pdf/data)
+                  - text: https://www.kaggle.com/datasets/deeppast/old-assyrian-kltepe-tablets-in-pdf/data)
+                - text: .
+              - paragraph [ref=e350]:
+                - strong [ref=e351]: "Here are some recommended options for changes to the training data:"
+              - paragraph [ref=e352]:
+                - strong [ref=e353]: "Remove from translations:"
+              - list [ref=e354]:
+                - listitem [ref=e355]:
+                  - code [ref=e356]: fem.
+                - listitem [ref=e357]:
+                  - code [ref=e358]: sing.
+                - listitem [ref=e359]:
+                  - code [ref=e360]: pl.
+                - listitem [ref=e361]:
+                  - code [ref=e362]: plural
+                - listitem [ref=e363]:
+                  - code [ref=e364]: (?)
+                - listitem [ref=e365]:
+                  - text: any stray marks you find (e.g.,
+                  - code [ref=e366]: ..
+                  - text: ","
+                  - code [ref=e367]: "?"
+                  - text: ","
+                  - code [ref=e368]: x
+                  - text: ","
+                  - code [ref=e369]: xx
+                  - text: ","
+                  - code [ref=e370]: << >>
+                  - text: ","
+                  - code [ref=e371]: < >
+                  - text: except around
+                  - code [ref=e372]: <gap>
+                  - text: of course)
+                - listitem [ref=e373]:
+                  - text: some of the translations equivocate two optional translations using
+                  - code [ref=e374]: /
+                  - text: ", it might be better to choose one or the other options provided, rather than including both with a"
+                  - code [ref=e375]: /
+                  - text: (e.g. "you / she brought" —> "you brought" ).
+              - paragraph [ref=e376]:
+                - strong [ref=e377]: "Do not remove from translations (as these are in the test too):"
+              - list [ref=e378]:
+                - listitem [ref=e379]:
+                  - text: quotation marks
+                  - code [ref=e380]: "\" \""
+                - listitem [ref=e381]:
+                  - text: apostrophes
+                  - code [ref=e382]: "'"
+                - listitem [ref=e383]:
+                  - text: meaningful question marks
+                  - code [ref=e384]: "?"
+                  - text: or exclamation marks
+                  - code [ref=e385]: "!"
+              - paragraph [ref=e386]:
+                - strong [ref=e387]: "Replace in translations:"
+              - list [ref=e388]:
+                - listitem [ref=e389]:
+                  - code [ref=e390]: PN
+                  - text: —>
+                  - code [ref=e391]: <gap>
+                - listitem [ref=e392]:
+                  - code [ref=e393]: "-gold"
+                  - text: —>
+                  - code [ref=e394]: pašallum gold
+                - listitem [ref=e395]:
+                  - code [ref=e396]: "-tax"
+                  - text: —>
+                  - code [ref=e397]: šadduātum tax
+                - listitem [ref=e398]:
+                  - code [ref=e399]: "-textiles"
+                  - text: —>
+                  - code [ref=e400]: kutānum textiles
+                - listitem [ref=e401]:
+                  - code [ref=e402]: 1 / 12 (shekel)
+                  - text: —>
+                  - code [ref=e403]: 15 grains
+                - listitem [ref=e404]:
+                  - code [ref=e405]: 5 / 12 shekel
+                  - text: —>
+                  - code [ref=e406]: ⅓ shekel 15 grains
+                - listitem [ref=e407]:
+                  - code [ref=e408]: 5 11 / 12 shekels
+                  - text: —>
+                  - code [ref=e409]: 6 shekels less 15 grains
+                - listitem [ref=e410]:
+                  - code [ref=e411]: 7 / 12 shekel
+                  - text: —>
+                  - code [ref=e412]: ½ shekel 15 grains
+              - paragraph [ref=e413]:
+                - strong [ref=e414]: "Decimals to Fractions:"
+              - list [ref=e415]:
+                - listitem [ref=e416]:
+                  - code [ref=e417]: "0.5"
+                  - text: —>
+                  - code [ref=e418]: ½
+                - listitem [ref=e419]:
+                  - code [ref=e420]: "0.25"
+                  - text: —>
+                  - code [ref=e421]: ¼
+                - listitem [ref=e422]:
+                  - code [ref=e423]: "0.3333"
+                  - text: —>
+                  - code [ref=e424]: ⅓
+                - listitem [ref=e425]:
+                  - code [ref=e426]: "0.8333"
+                  - text: —>
+                  - code [ref=e427]: ⅚
+                - listitem [ref=e428]:
+                  - code [ref=e429]: "0.625"
+                  - text: —>
+                  - code [ref=e430]: ⅝
+                - listitem [ref=e431]:
+                  - code [ref=e432]: "0.6666"
+                  - text: —>
+                  - code [ref=e433]: ⅔
+                - listitem [ref=e434]:
+                  - code [ref=e435]: "0.75"
+                  - text: —>
+                  - code [ref=e436]: ¾
+                - listitem [ref=e437]:
+                  - code [ref=e438]: "0.1666"
+                  - text: —>
+                  - code [ref=e439]: ⅙
+              - paragraph [ref=e440]:
+                - strong [ref=e441]: "Change Roman numerals to integer numbers for months: e.g., month V —> month 5"
+              - table [ref=e442]:
+                - rowgroup [ref=e443]:
+                  - row "Month Roman MN forms AKA" [ref=e444]:
+                    - columnheader "Month" [ref=e445]
+                    - columnheader "Roman" [ref=e446]
+                    - columnheader "MN" [ref=e447]
+                    - columnheader "forms" [ref=e448]
+                    - columnheader "AKA" [ref=e449]
+                - rowgroup [ref=e450]:
+                  - row "Month 1 I Bēlat ekallem be-el-tí-É.GAL-lim; be-el-té-kà-lim Bēlat-ekallim" [ref=e451]:
+                    - cell "Month 1" [ref=e452]
+                    - cell "I" [ref=e453]
+                    - cell "Bēlat ekallem" [ref=e454]
+                    - cell "be-el-tí-É.GAL-lim; be-el-té-kà-lim" [ref=e455]
+                    - cell "Bēlat-ekallim" [ref=e456]
+                  - row "Month 2 II ša-sarratim ša sá-ra-tim" [ref=e457]:
+                    - cell "Month 2" [ref=e458]
+                    - cell "II" [ref=e459]
+                    - cell "ša-sarratim" [ref=e460]
+                    - cell "ša sá-ra-tim" [ref=e461]
+                    - cell [ref=e462]
+                  - row "Month 3 III Kenātim ke-na-tim ša kēnātim" [ref=e463]:
+                    - cell "Month 3" [ref=e464]
+                    - cell "III" [ref=e465]
+                    - cell "Kenātim" [ref=e466]
+                    - cell "ke-na-tim" [ref=e467]
+                    - cell "ša kēnātim" [ref=e468]
+                  - row "Month 4 IV Mahur-ilī Ma-hu-ur-DINGIR; ma-ḫu-ur-ì-lí" [ref=e469]:
+                    - cell "Month 4" [ref=e470]
+                    - cell "IV" [ref=e471]
+                    - cell "Mahur-ilī" [ref=e472]
+                    - cell "Ma-hu-ur-DINGIR; ma-ḫu-ur-ì-lí" [ref=e473]
+                    - cell [ref=e474]
+                  - row "Month 5 V Abšarrani áb-ša-ra-ni; áb ša-ra-ni; áb-ša-ra-nu ab šarrāni; abšarrani" [ref=e475]:
+                    - cell "Month 5" [ref=e476]
+                    - cell "V" [ref=e477]
+                    - cell "Abšarrani" [ref=e478]
+                    - cell "áb-ša-ra-ni; áb ša-ra-ni; áb-ša-ra-nu" [ref=e479]
+                    - cell "ab šarrāni; abšarrani" [ref=e480]
+                  - row "Month 6 VI Hubur Hu-bu-ur" [ref=e481]:
+                    - cell "Month 6" [ref=e482]
+                    - cell "VI" [ref=e483]
+                    - cell "Hubur" [ref=e484]
+                    - cell "Hu-bu-ur" [ref=e485]
+                    - cell [ref=e486]
+                  - row "Month 7 VII Ṣip'um ṣí-ip-im ṣipum" [ref=e487]:
+                    - cell "Month 7" [ref=e488]
+                    - cell "VII" [ref=e489]
+                    - cell "Ṣip'um" [ref=e490]
+                    - cell "ṣí-ip-im" [ref=e491]
+                    - cell "ṣipum" [ref=e492]
+                  - row "Month 8 VIII Qarrātum qá-ra-a-tí; qá-ra-a-tim" [ref=e493]:
+                    - cell "Month 8" [ref=e494]
+                    - cell "VIII" [ref=e495]
+                    - cell "Qarrātum" [ref=e496]
+                    - cell "qá-ra-a-tí; qá-ra-a-tim" [ref=e497]
+                    - cell [ref=e498]
+                  - row "Month 9 IX Kanwarta kán-bar-ta; Kà-an-ma-ar-ta Kanmarta" [ref=e499]:
+                    - cell "Month 9" [ref=e500]
+                    - cell "IX" [ref=e501]
+                    - cell "Kanwarta" [ref=e502]
+                    - cell "kán-bar-ta; Kà-an-ma-ar-ta" [ref=e503]
+                    - cell "Kanmarta" [ref=e504]
+                  - row "Month 10 X Te’inātum té-i-na-tim" [ref=e505]:
+                    - cell "Month 10" [ref=e506]
+                    - cell "X" [ref=e507]
+                    - cell "Te’inātum" [ref=e508]
+                    - cell "té-i-na-tim" [ref=e509]
+                    - cell [ref=e510]
+                  - row "Month 11 XI Kuzallum ku-zal-li; ku-zal-lu" [ref=e511]:
+                    - cell "Month 11" [ref=e512]
+                    - cell "XI" [ref=e513]
+                    - cell "Kuzallum" [ref=e514]
+                    - cell "ku-zal-li; ku-zal-lu" [ref=e515]
+                    - cell [ref=e516]
+                  - row "Month 12 XII Allanātum a-lá-na-tum; a-lá-na-tim" [ref=e517]:
+                    - cell "Month 12" [ref=e518]
+                    - cell "XII" [ref=e519]
+                    - cell "Allanātum" [ref=e520]
+                    - cell "a-lá-na-tum; a-lá-na-tim" [ref=e521]
+                    - cell [ref=e522]
+              - paragraph [ref=e523]:
+                - strong [ref=e524]: "Optional changes in transliterations:"
+              - list [ref=e525]:
+                - listitem [ref=e526]:
+                  - code [ref=e527]: Ḫ
+                  - text: →
+                  - code [ref=e528]: H
+                - listitem [ref=e529]:
+                  - code [ref=e530]: ḫ
+                  - text: →
+                  - code [ref=e531]: h
+                - listitem [ref=e532]:
+                  - code [ref=e533]: KÙ.B.
+                  - text: —>
+                  - code [ref=e534]: KÙ.BABBAR
+              - paragraph [ref=e535]:
+                - strong [ref=e536]: "Change unicode subscript numbers to normal integers in transliterations:"
+              - list [ref=e537]:
+                - listitem [ref=e538]:
+                  - code [ref=e539]: ₀
+                  - text: →
+                  - code [ref=e540]: "0"
+                - listitem [ref=e541]:
+                  - code [ref=e542]: ₁
+                  - text: →
+                  - code [ref=e543]: "1"
+                - listitem [ref=e544]:
+                  - code [ref=e545]: ₂
+                  - text: →
+                  - code [ref=e546]: "2"
+                - listitem [ref=e547]:
+                  - code [ref=e548]: ₃
+                  - text: →
+                  - code [ref=e549]: "3"
+                - listitem [ref=e550]:
+                  - code [ref=e551]: ₄
+                  - text: →
+                  - code [ref=e552]: "4"
+                - listitem [ref=e553]:
+                  - code [ref=e554]: ₅
+                  - text: →
+                  - code [ref=e555]: "5"
+                - listitem [ref=e556]:
+                  - code [ref=e557]: ₆
+                  - text: →
+                  - code [ref=e558]: "6"
+                - listitem [ref=e559]:
+                  - code [ref=e560]: ₇
+                  - text: →
+                  - code [ref=e561]: "7"
+                - listitem [ref=e562]:
+                  - code [ref=e563]: ₈
+                  - text: →
+                  - code [ref=e564]: "8"
+                - listitem [ref=e565]:
+                  - code [ref=e566]: ₉
+                  - text: →
+                  - code [ref=e567]: "9"
+              - paragraph [ref=e568]:
+                - strong [ref=e569]: "Decimals to Fractions for transliterations:"
+              - list [ref=e570]:
+                - listitem [ref=e571]:
+                  - code [ref=e572]: "0.5"
+                  - text: —>
+                  - code [ref=e573]: ½
+                - listitem [ref=e574]:
+                  - code [ref=e575]: "0.25"
+                  - text: —>
+                  - code [ref=e576]: ¼
+                - listitem [ref=e577]:
+                  - code [ref=e578]: "0.3333"
+                  - text: —>
+                  - code [ref=e579]: ⅓
+                - listitem [ref=e580]:
+                  - code [ref=e581]: "0.8333"
+                  - text: —>
+                  - code [ref=e582]: ⅚
+                - listitem [ref=e583]:
+                  - code [ref=e584]: "0.625"
+                  - text: —>
+                  - code [ref=e585]: ⅝
+                - listitem [ref=e586]:
+                  - code [ref=e587]: "0.6666"
+                  - text: —>
+                  - code [ref=e588]: ⅔
+                - listitem [ref=e589]:
+                  - code [ref=e590]: "0.75"
+                  - text: —>
+                  - code [ref=e591]: ¾
+                - listitem [ref=e592]:
+                  - code [ref=e593]: "0.1666"
+                  - text: —>
+                  - code [ref=e594]: ⅙
+              - paragraph [ref=e595]:
+                - strong [ref=e596]: Examples of the Outcomes for Test
+              - table [ref=e597]:
+                - rowgroup [ref=e598]:
+                  - row "Transliteration Translation" [ref=e599]:
+                    - columnheader "Transliteration" [ref=e600]
+                    - columnheader "Translation" [ref=e601]
+                - rowgroup [ref=e602]:
+                  - row "1 e-ma-ar-šu <gap> 1 donkey of his <gap>" [ref=e603]:
+                    - cell "1 e-ma-ar-šu <gap>" [ref=e604]:
+                      - code [ref=e605]: 1 e-ma-ar-šu <gap>
+                    - cell "1 donkey of his <gap>" [ref=e606]:
+                      - code [ref=e607]: 1 donkey of his <gap>
+                  - row "<gap> a-na Ú-<gap> a-dí-in <gap> I gave it to U-<gap>." [ref=e608]:
+                    - cell "<gap> a-na Ú-<gap> a-dí-in" [ref=e609]:
+                      - code [ref=e610]: <gap> a-na Ú-<gap> a-dí-in
+                    - cell "<gap> I gave it to U-<gap>." [ref=e611]:
+                      - code [ref=e612]: <gap> I gave it to U-<gap>.
+                  - row "<gap> ⅓ ma-na a-na En-na-nim DUMU Am-ri-a áš-qúl I paid <gap> ⅓ mina (silver) to Ennānum, son of Amriya." [ref=e613]:
+                    - cell "<gap> ⅓ ma-na a-na En-na-nim DUMU Am-ri-a áš-qúl" [ref=e614]:
+                      - code [ref=e615]: <gap> ⅓ ma-na a-na En-na-nim DUMU Am-ri-a áš-qúl
+                    - cell "I paid <gap> ⅓ mina (silver) to Ennānum, son of Amriya." [ref=e616]:
+                      - code [ref=e617]: I paid <gap> ⅓ mina (silver) to Ennānum, son of Amriya.
+              - paragraph [ref=e618]:
+                - strong [ref=e619]: Examples of the Optimal Outcomes for Train
+              - table [ref=e620]:
+                - rowgroup [ref=e621]:
+                  - row "Transliteration Translation" [ref=e622]:
+                    - columnheader "Transliteration" [ref=e623]
+                    - columnheader "Translation" [ref=e624]
+                - rowgroup [ref=e625]:
+                  - row "<gap> ma-na KÙ.BABBAR ṣa-ru-pá-am <gap> GÍN KÙ.GI pá-ša-lam <gap> minas of refined silver, <gap> shekels of pašallum gold" [ref=e626]:
+                    - cell "<gap> ma-na KÙ.BABBAR ṣa-ru-pá-am <gap> GÍN KÙ.GI pá-ša-lam" [ref=e627]:
+                      - code [ref=e628]: <gap> ma-na KÙ.BABBAR ṣa-ru-pá-am <gap> GÍN KÙ.GI pá-ša-lam
+                    - cell "<gap> minas of refined silver, <gap> shekels of pašallum gold" [ref=e629]:
+                      - code [ref=e630]: <gap> minas of refined silver, <gap> shekels of pašallum gold
+                  - row "<gap> GÚ SÍG.HI.A <gap> 5 maš-ku <gap> 22 na-ru-qá-tum 4 ANŠE ṣa-la-mu <gap> talents of wool, <gap> 5 hides, <gap> 22 sacks, 4 black donkeys" [ref=e631]:
+                    - cell "<gap> GÚ SÍG.HI.A <gap> 5 maš-ku <gap> 22 na-ru-qá-tum 4 ANŠE ṣa-la-mu" [ref=e632]:
+                      - code [ref=e633]: <gap> GÚ SÍG.HI.A <gap> 5 maš-ku <gap> 22 na-ru-qá-tum 4 ANŠE ṣa-la-mu
+                    - cell "<gap> talents of wool, <gap> 5 hides, <gap> 22 sacks, 4 black donkeys" [ref=e634]:
+                      - code [ref=e635]: <gap> talents of wool, <gap> 5 hides, <gap> 22 sacks, 4 black donkeys
+                  - row "⅓ ma-na 2 ½ GÍN KÙ.BABBAR 20 NINDA i-ṣé-er tù-wa-ra-a-ah-šu a-lá-hu-um i-šu Tuwar-ahšu owes ⅓ mina 2 ½ shekels of silver (and) 20 loaves of bread to Ali-ahum." [ref=e636]:
+                    - cell "⅓ ma-na 2 ½ GÍN KÙ.BABBAR 20 NINDA i-ṣé-er tù-wa-ra-a-ah-šu a-lá-hu-um i-šu" [ref=e637]:
+                      - code [ref=e638]: ⅓ ma-na 2 ½ GÍN KÙ.BABBAR 20 NINDA i-ṣé-er tù-wa-ra-a-ah-šu a-lá-hu-um i-šu
+                    - cell "Tuwar-ahšu owes ⅓ mina 2 ½ shekels of silver (and) 20 loaves of bread to Ali-ahum." [ref=e639]:
+                      - code [ref=e640]: Tuwar-ahšu owes ⅓ mina 2 ½ shekels of silver (and) 20 loaves of bread to Ali-ahum.
+            - generic [ref=e645]:
+              - img [ref=e647]
+              - generic [ref=e648]: "13"
+          - separator [ref=e649]
+        - generic [ref=e650]:
+          - generic [ref=e651]:
+            - paragraph [ref=e654]:
+              - paragraph [ref=e655]:
+                - text: Please
+                - link "sign in opens in new window" [ref=e656] [cursor=pointer]:
+                  - /url: /account/login
+                  - text: sign in
+                - text: to reply to this topic.
+            - separator [ref=e657]
+          - generic [ref=e659]:
+            - generic [ref=e660]:
+              - generic [ref=e661]: comment
+              - heading "45 Comments" [level=2] [ref=e663]
+            - generic [ref=e666]:
+              - combobox "Select combobox. Hotness currently selected." [ref=e667] [cursor=pointer]:
+                - generic [ref=e669]: Hotness
+              - textbox: Hotness
+              - img
+          - generic [ref=e670]:
+            - heading "Pinned comments" [level=3] [ref=e671]
+            - generic [ref=e676]:
+              - link "Ryan Holbrook's profile" [ref=e677] [cursor=pointer]:
+                - /url: /ryanholbrook
+                - generic "Ryan Holbrook" [ref=e678]
+                - img [ref=e679]
+                - generic [ref=e683]: push_pin
+              - generic [ref=e686]:
+                - generic [ref=e687]:
+                  - link "Ryan Holbrook" [ref=e688] [cursor=pointer]:
+                    - /url: /ryanholbrook
+                    - heading "Ryan Holbrook" [level=3] [ref=e689]
+                  - generic [ref=e691]: Kaggle Staff
+                - paragraph [ref=e693]: Posted 14 days ago
+              - generic [ref=e695]:
+                - generic [ref=e696]:
+                  - button "Upvote" [ref=e697] [cursor=pointer]:
+                    - generic [ref=e698]: arrow_drop_up
+                  - button "2 votes" [ref=e699] [cursor=pointer]: "2"
+                - button "More Options for this Comment" [ref=e700] [cursor=pointer]: more_vert
+              - generic [ref=e703]:
+                - paragraph [ref=e704]: The updated data is now live on the site. I will commence the rescore of existing submissions shortly.
+                - paragraph [ref=e705]: "UPDATE 02/26/2026: The rescore is now complete. Please let us know if you have any questions or concerns."
+              - generic [ref=e706]:
+                - generic [ref=e711]:
+                  - link "Jack's profile" [ref=e712] [cursor=pointer]:
+                    - /url: /jackvd
+                    - generic "Jack" [ref=e713]
+                    - img [ref=e714]
+                  - generic [ref=e719]:
+                    - link "Jack" [ref=e721] [cursor=pointer]:
+                      - /url: /jackvd
+                      - heading "Jack" [level=3] [ref=e722]
+                    - generic [ref=e723]:
+                      - paragraph [ref=e724]: Posted 14 days ago
+                      - paragraph [ref=e726]: 8th in this Competition
+                  - generic [ref=e728]:
+                    - generic [ref=e729]:
+                      - button "Upvote" [ref=e730] [cursor=pointer]:
+                        - generic [ref=e731]: arrow_drop_up
+                      - button "2 votes" [ref=e732] [cursor=pointer]: "2"
+                    - button "More Options for this Comment" [ref=e733] [cursor=pointer]: more_vert
+                  - paragraph [ref=e737]: rip scores
+                - generic [ref=e742]:
+                  - link "Anil Ozturk's profile" [ref=e743] [cursor=pointer]:
+                    - /url: /nlztrk
+                    - generic "Anil Ozturk" [ref=e744]
+                    - img [ref=e745]
+                  - generic [ref=e750]:
+                    - link "Anil Ozturk" [ref=e752] [cursor=pointer]:
+                      - /url: /nlztrk
+                      - heading "Anil Ozturk" [level=3] [ref=e753]
+                    - generic [ref=e754]:
+                      - paragraph [ref=e755]: Posted 13 days ago
+                      - paragraph [ref=e757]: 459th in this Competition
+                  - generic [ref=e759]:
+                    - generic [ref=e760]:
+                      - button "Upvote" [ref=e761] [cursor=pointer]:
+                        - generic [ref=e762]: arrow_drop_up
+                      - button "1 votes" [ref=e763] [cursor=pointer]: "1"
+                    - button "More Options for this Comment" [ref=e764] [cursor=pointer]: more_vert
+                  - paragraph [ref=e768]: Our score on LB is 34.1 but the best scoring sub in our sub history seems to be 33.5. I don't understand. 😅
+                  - generic [ref=e769]:
+                    - generic [ref=e774]:
+                      - link "Ryan Holbrook's profile" [ref=e775] [cursor=pointer]:
+                        - /url: /ryanholbrook
+                        - generic "Ryan Holbrook" [ref=e776]
+                        - img [ref=e777]
+                      - generic [ref=e782]:
+                        - generic [ref=e783]:
+                          - link "Ryan Holbrook" [ref=e784] [cursor=pointer]:
+                            - /url: /ryanholbrook
+                            - heading "Ryan Holbrook" [level=3] [ref=e785]
+                          - generic [ref=e787]: Kaggle Staff
+                        - paragraph [ref=e789]: Posted 13 days ago
+                      - generic [ref=e791]:
+                        - generic [ref=e792]:
+                          - button "Upvote" [ref=e793] [cursor=pointer]:
+                            - generic [ref=e794]: arrow_drop_up
+                          - button "4 votes" [ref=e795] [cursor=pointer]: "4"
+                        - button "More Options for this Comment" [ref=e796] [cursor=pointer]: more_vert
+                      - generic [ref=e799]:
+                        - paragraph [ref=e800]:
+                          - text: Hi
+                          - link "@nlztrk (opens in a new tab)" [ref=e801] [cursor=pointer]:
+                            - /url: https://www.kaggle.com/nlztrk
+                            - text: "@nlztrk"
+                          - text: ","
+                        - paragraph [ref=e802]: Something seems to have gone wrong with the LB update. We are investigating.
+                    - generic [ref=e803]:
+                      - button "5 more replies" [ref=e804] [cursor=pointer]:
+                        - generic [ref=e805]: 5 more replies
+                        - generic [ref=e806]: arrow_drop_down
+                      - generic [ref=e807]:
+                        - img "Profile picture for Mattia Angeli" [ref=e809]
+                        - img "Profile picture for guoqin gu" [ref=e811]
+                        - img "Profile picture for Jack" [ref=e813]
+                        - img "Profile picture for Ryan Holbrook" [ref=e815]
+                - generic [ref=e820]:
+                  - link "chenwenqiang_001's profile" [ref=e821] [cursor=pointer]:
+                    - /url: /chenwenqiang001
+                    - generic "chenwenqiang_001" [ref=e822]
+                    - img [ref=e823]
+                  - generic [ref=e828]:
+                    - link "chenwenqiang_001" [ref=e830] [cursor=pointer]:
+                      - /url: /chenwenqiang001
+                      - heading "chenwenqiang_001" [level=3] [ref=e831]
+                    - generic [ref=e832]:
+                      - paragraph [ref=e833]: Posted 13 days ago
+                      - paragraph [ref=e835]: 39th in this Competition
+                  - generic [ref=e837]:
+                    - generic [ref=e838]:
+                      - button "Upvote" [ref=e839] [cursor=pointer]:
+                        - generic [ref=e840]: arrow_drop_up
+                      - button "0 votes" [ref=e841] [cursor=pointer]: "0"
+                    - button "More Options for this Comment" [ref=e842] [cursor=pointer]: more_vert
+                  - paragraph [ref=e846]: "transliteration:2- translation: 2+ or 2- translation of test is 2- or 2+ or 2(+gap) ??? please let me know.thank you"
+            - heading "All other comments" [level=3] [ref=e847]
+            - generic [ref=e848]:
+              - generic [ref=e852]:
+                - link "Geremie Yeo's profile" [ref=e853] [cursor=pointer]:
+                  - /url: /yeoyunsianggeremie
+                  - generic "Geremie Yeo" [ref=e854]
+                  - img [ref=e855]
+                - generic [ref=e860]:
+                  - link "Geremie Yeo" [ref=e862] [cursor=pointer]:
+                    - /url: /yeoyunsianggeremie
+                    - heading "Geremie Yeo" [level=3] [ref=e863]
+                  - generic [ref=e864]:
+                    - paragraph [ref=e865]: Posted 2 days ago
+                    - paragraph [ref=e867]: 35th in this Competition
+                - generic [ref=e869]:
+                  - generic [ref=e870]:
+                    - button "Upvote" [ref=e871] [cursor=pointer]:
+                      - generic [ref=e872]: arrow_drop_up
+                    - button "3 votes" [ref=e873] [cursor=pointer]: "3"
+                  - button "More Options for this Comment" [ref=e874] [cursor=pointer]: more_vert
+                - generic [ref=e877]:
+                  - paragraph [ref=e878]: Sorry if I am being dumb here
+                  - code [ref=e880]: "The rest is up to you. Here are some recommendations, but there's no guarantee that these will improve your score on the leader board:"
+                  - paragraph [ref=e881]: why is it “no guarantee”? IMO these are deterministic postprocessing, so if the test set conforms to this, the score will 100% improve. Does this mean only some texts were changed in this manner while the others are left as it is?
+                - generic [ref=e887]:
+                  - link "tennogh's profile" [ref=e888] [cursor=pointer]:
+                    - /url: /tennogh
+                    - generic "tennogh" [ref=e889]
+                    - img [ref=e890]
+                  - generic [ref=e895]:
+                    - link "tennogh" [ref=e897] [cursor=pointer]:
+                      - /url: /tennogh
+                      - heading "tennogh" [level=3] [ref=e898]
+                    - generic [ref=e899]:
+                      - paragraph [ref=e900]: Posted 2 days ago
+                      - paragraph [ref=e902]: 1713th in this Competition
+                  - generic [ref=e904]:
+                    - generic [ref=e905]:
+                      - button "Upvote" [ref=e906] [cursor=pointer]:
+                        - generic [ref=e907]: arrow_drop_up
+                      - button "3 votes" [ref=e908] [cursor=pointer]: "3"
+                    - button "More Options for this Comment" [ref=e909] [cursor=pointer]: more_vert
+                  - paragraph [ref=e913]: Others have pointed that some of those recommendations decrease LB score. I'm guessing either the test set is inconsistent, or it doens't respect those guidelines at all.
+              - separator [ref=e914]
+            - generic [ref=e915]:
+              - generic [ref=e919]:
+                - link "Ricardo Pérez's profile" [ref=e920] [cursor=pointer]:
+                  - /url: /engricardoperez
+                  - generic "Ricardo Pérez" [ref=e921]
+                  - img [ref=e922]
+                - generic [ref=e927]:
+                  - link "Ricardo Pérez" [ref=e929] [cursor=pointer]:
+                    - /url: /engricardoperez
+                    - heading "Ricardo Pérez" [level=3] [ref=e930]
+                  - paragraph [ref=e932]: Posted 10 days ago
+                - generic [ref=e934]:
+                  - generic [ref=e935]:
+                    - button "Upvote" [ref=e936] [cursor=pointer]:
+                      - generic [ref=e937]: arrow_drop_up
+                    - button "6 votes" [ref=e938] [cursor=pointer]: "6"
+                  - button "More Options for this Comment" [ref=e939] [cursor=pointer]: more_vert
+                - generic [ref=e942]:
+                  - paragraph [ref=e943]: "Thanks for the comprehensive update and all the clarifications in the comments. After applying the v3 changes, a few things that helped on my end:"
+                  - paragraph [ref=e944]: "Recovering truncated transliterations: Confirmed that ~10% are affected. Matching oare_id against published_texts.csv and cross-referencing with the AKT PDFs recovered most of them. Be careful, though, some entries aren't just truncated; the translation doesn't match the transliteration at all (as MPWARE pointed out for AKT 8, 55), so it's worth doing a length-ratio sanity check before blindly patching."
+                  - paragraph [ref=e945]:
+                    - text: "The -textiles / -gold / -tax replacements: Based on the host's clarification, these only apply when preceded by a space (i.e., -textiles to kutānum textiles), not in the middle of a word, like import-tax or kutānu-textiles. A naive"
+                    - emphasis [ref=e946]: str.replace
+                    - text: will break things, regex with word boundaries or explicit space matching is safer here.
+                  - paragraph [ref=e947]: "Straight quotes: Curly quotes to straight quotes for both \" and '. Small thing, but easy to miss if your text editor or PDF extraction reintroduces curly ones."
+                  - paragraph [ref=e948]: Still working through the fraction conversions and subscript normalization. Good luck to everyone in the final stretch!
+              - separator [ref=e949]
+            - generic [ref=e950]:
+              - generic [ref=e954]:
+                - link "Kh0a's profile" [ref=e955] [cursor=pointer]:
+                  - /url: /llkh0a
+                  - generic "Kh0a" [ref=e956]
+                  - img [ref=e957]
+                  - generic [ref=e961]: emoji_people
+                - generic [ref=e964]:
+                  - link "Kh0a" [ref=e966] [cursor=pointer]:
+                    - /url: /llkh0a
+                    - heading "Kh0a" [level=3] [ref=e967]
+                  - generic [ref=e968]:
+                    - paragraph [ref=e969]: Posted 8 days ago
+                    - paragraph [ref=e971]: 43rd in this Competition
+                - generic [ref=e973]:
+                  - generic [ref=e974]:
+                    - button "Upvote" [ref=e975] [cursor=pointer]:
+                      - generic [ref=e976]: arrow_drop_up
+                    - button "1 votes" [ref=e977] [cursor=pointer]: "1"
+                  - button "More Options for this Comment" [ref=e978] [cursor=pointer]: more_vert
+                - generic [ref=e981]:
+                  - paragraph [ref=e982]: question about (n broken lines), do the lines between "Nimar-Istar." and "When he returns from Mamma he will bring it to me" counts as n broken lines?
+                  - paragraph [ref=e983]: "If I understand correctly, the translation should be:"
+                  - paragraph [ref=e984]: I furthermore gave 1 mina of good, native copper for an allu’āru-container of sweet wine from Mamma to Puzur-Amurrum son of Nimar-Ištar. <gap> When he returns from Mamma he will bring it to me. (This was) apart from the 4 allu’āru-containers, the proceeds from the silver and washed copper that they have received (previously). Witnessed by Šu-Bēlum son of Kuzizia.
+                  - paragraph [ref=e985]
+                - generic [ref=e991]:
+                  - link "tennogh's profile" [ref=e992] [cursor=pointer]:
+                    - /url: /tennogh
+                    - generic "tennogh" [ref=e993]
+                    - img [ref=e994]
+                  - generic [ref=e999]:
+                    - link "tennogh" [ref=e1001] [cursor=pointer]:
+                      - /url: /tennogh
+                      - heading "tennogh" [level=3] [ref=e1002]
+                    - generic [ref=e1003]:
+                      - paragraph [ref=e1004]: Posted a day ago
+                      - paragraph [ref=e1006]: 1713th in this Competition
+                  - generic [ref=e1008]:
+                    - generic [ref=e1009]:
+                      - button "Upvote" [ref=e1010] [cursor=pointer]:
+                        - generic [ref=e1011]: arrow_drop_up
+                      - button "1 votes" [ref=e1012] [cursor=pointer]: "1"
+                    - button "More Options for this Comment" [ref=e1013] [cursor=pointer]: more_vert
+                  - paragraph [ref=e1017]: I think in this case there is no gap in the translation, it just appears that way because of the alignment.
+              - separator [ref=e1018]
+            - generic [ref=e1019]:
+              - generic [ref=e1023]:
+                - link "MPWARE's profile" [ref=e1024] [cursor=pointer]:
+                  - /url: /mpware
+                  - generic "MPWARE" [ref=e1025]
+                  - img [ref=e1026]
+                - generic [ref=e1031]:
+                  - link "MPWARE" [ref=e1033] [cursor=pointer]:
+                    - /url: /mpware
+                    - heading "MPWARE" [level=3] [ref=e1034]
+                  - generic [ref=e1035]:
+                    - paragraph [ref=e1036]: Posted 14 days ago
+                    - paragraph [ref=e1038]: 281st in this Competition
+                - generic [ref=e1040]:
+                  - generic [ref=e1041]:
+                    - button "Upvote" [ref=e1042] [cursor=pointer]:
+                      - generic [ref=e1043]: arrow_drop_up
+                    - button "12 votes" [ref=e1044] [cursor=pointer]: "12"
+                  - button "More Options for this Comment" [ref=e1045] [cursor=pointer]: more_vert
+                - generic [ref=e1048]:
+                  - paragraph [ref=e1049]:
+                    - link "@deeppast (opens in a new tab)" [ref=e1050] [cursor=pointer]:
+                      - /url: https://www.kaggle.com/deeppast
+                      - text: "@deeppast"
+                    - text: "Thanks for the update. Some clarification to be 101% sure:"
+                  - paragraph [ref=e1051]:
+                    - strong [ref=e1052]: "About double quotes:"
+                  - blockquote [ref=e1053]:
+                    - paragraph [ref=e1054]: "Do not remove from translations (as these are in the test too):"
+                    - paragraph [ref=e1055]: quotation marks " "
+                  - paragraph [ref=e1056]: "In the previous update:"
+                  - blockquote [ref=e1057]:
+                    - paragraph [ref=e1058]: quotations " “= removed
+                  - paragraph [ref=e1059]: The final rule is keep all quotation marks, correct? And for curly double quotes, we have to convert them to plain double quotes or not?
+                  - paragraph [ref=e1060]:
+                    - strong [ref=e1061]: "About parentheses:"
+                  - paragraph [ref=e1062]: "In the previous update:"
+                  - blockquote [ref=e1063]:
+                    - paragraph [ref=e1064]: parentheses ( )= removed
+                  - paragraph [ref=e1065]: Now, we need to keep parenthesis as for the examples outcomes you've provided, right?
+                  - paragraph [ref=e1066]:
+                    - text: "For instance:"
+                    - code [ref=e1067]: 0faa50f7-b86c-466c-a8ab-3a6f48fcb00a
+                  - paragraph [ref=e1068]:
+                    - text: "\"at 52.5 grains (of silver) each, 0.5 shekel\" we must keep the parenthesis around"
+                    - code [ref=e1069]: of silver
+                    - text: ", right?"
+                  - paragraph [ref=e1070]: "We must not do: \"at 52.5 grains of silver each, 0.5 shekel\""
+                  - paragraph [ref=e1071]:
+                    - strong [ref=e1072]: "About replacements:"
+                  - blockquote [ref=e1073]:
+                    - paragraph [ref=e1074]: "-tax —> šadduātum tax"
+                    - paragraph [ref=e1075]: "-gold —> pašallum gold"
+                    - paragraph [ref=e1076]: textiles —> kutānum textiles (are you sure it's not -textiles —> kutānum textiles )?
+                  - paragraph [ref=e1077]:
+                    - text: And it's
+                    - code [ref=e1078]: textiles
+                    - text: and
+                    - code [ref=e1079]: "-tax"
+                    - text: and
+                    - code [ref=e1080]: "-gold"
+                    - text: surrounded by spaces? If not then in
+                    - code [ref=e1081]: 198e428d-f51b-40d1-96d8-aee4bfa60d8d
+                    - text: ":"
+                  - paragraph [ref=e1082]:
+                    - text: "\"of Ennam-Suen, 8 textiles as"
+                    - strong [ref=e1083]: import-tax,
+                    - text: 10 textiles are pre-emption"
+                  - paragraph [ref=e1084]: "would become:"
+                  - paragraph [ref=e1085]:
+                    - text: "\"of Ennam-Suen, 8 kutānum textiles as"
+                    - strong [ref=e1086]: importšadduātum tax
+                    - text: ", 10 kutānum textiles are pre-emption\"."
+                  - paragraph [ref=e1087]: "and it 229be03b-c772-4a6c-8792-c3f80948a97d:"
+                  - paragraph [ref=e1088]: "\"received 28 kutānu-textiles and 1 black donkey\""
+                  - paragraph [ref=e1089]: "would become:"
+                  - paragraph [ref=e1090]:
+                    - text: "\"received 28"
+                    - strong [ref=e1091]: kutānu-kutānum textiles
+                    - text: and 1 black donkey"
+                  - paragraph [ref=e1092]: Which would look weird, please confirm.
+                  - paragraph [ref=e1093]:
+                    - strong [ref=e1094]:
+                      - text: About
+                      - code [ref=e1095]: <gap>
+                      - text: ":"
+                  - paragraph [ref=e1096]: "In previous update:"
+                  - blockquote [ref=e1097]:
+                    - paragraph [ref=e1098]: added space around gap in translations (not transliterations)
+                  - paragraph [ref=e1099]:
+                    - text: Is it still true? Do we need to add space around
+                    - code [ref=e1100]: <gap>
+                    - text: except if glued with a dash?
+                - generic [ref=e1101]:
+                  - generic [ref=e1106]:
+                    - link "Oleg Yaroshevskiy's profile" [ref=e1107] [cursor=pointer]:
+                      - /url: /yaroshevskiy
+                      - generic "Oleg Yaroshevskiy" [ref=e1108]
+                      - img [ref=e1109]
+                    - generic [ref=e1114]:
+                      - link "Oleg Yaroshevskiy" [ref=e1116] [cursor=pointer]:
+                        - /url: /yaroshevskiy
+                        - heading "Oleg Yaroshevskiy" [level=3] [ref=e1117]
+                      - generic [ref=e1118]:
+                        - paragraph [ref=e1119]: Posted 12 days ago
+                        - paragraph [ref=e1121]: 52nd in this Competition
+                    - generic [ref=e1123]:
+                      - generic [ref=e1124]:
+                        - button "Upvote" [ref=e1125] [cursor=pointer]:
+                          - generic [ref=e1126]: arrow_drop_up
+                        - button "3 votes" [ref=e1127] [cursor=pointer]: "3"
+                      - button "More Options for this Comment" [ref=e1128] [cursor=pointer]: more_vert
+                    - paragraph [ref=e1132]: the questions about quotes and parentheses are extremely important
+                  - generic [ref=e1137]:
+                    - link "Adam Anderson's profile" [ref=e1138] [cursor=pointer]:
+                      - /url: /deeppast
+                      - generic "Adam Anderson" [ref=e1139]
+                      - img [ref=e1140]
+                    - generic [ref=e1145]:
+                      - generic [ref=e1146]:
+                        - link "Adam Anderson" [ref=e1147] [cursor=pointer]:
+                          - /url: /deeppast
+                          - heading "Adam Anderson" [level=3] [ref=e1148]
+                        - generic [ref=e1150]: Competition Host
+                      - paragraph [ref=e1152]: Posted 12 days ago
+                    - generic [ref=e1154]:
+                      - generic [ref=e1155]:
+                        - button "Upvote" [ref=e1156] [cursor=pointer]:
+                          - generic [ref=e1157]: arrow_drop_up
+                        - button "4 votes" [ref=e1158] [cursor=pointer]: "4"
+                      - button "More Options for this Comment" [ref=e1159] [cursor=pointer]: more_vert
+                    - generic [ref=e1162]:
+                      - paragraph [ref=e1163]: Yes, keep parentheses and quotations should be dead quotes, no curl, same for apostrophes / scare quotes.
+                      - blockquote [ref=e1164]:
+                        - paragraph [ref=e1165]:
+                          - text: "Do not remove from translations (as these are in the test too): quotation marks"
+                          - code [ref=e1166]: "\" \""
+                          - text: apostrophes
+                          - code [ref=e1167]: "'"
+                          - text: meaningful question marks
+                          - code [ref=e1168]: "?"
+                          - text: or exclamation marks
+                          - code [ref=e1169]: "!"
+                      - paragraph [ref=e1170]:
+                        - text: As for the words which begin with
+                        - code [ref=e1171]: "-"
+                        - text: ": words which appear with an initial hyphen have a space before them, rather than those words which are joined to another word with a hyphen. These suggestions are meant to provide some context for the missing words, but the only way to know for sure is to check in the PDFs, which is why they were not replaced in v3. These missing parts were removed in the OARE database, and should be replaced in an ideal situation by checking the PDFs."
+                      - list [ref=e1172]:
+                        - listitem [ref=e1173]:
+                          - code [ref=e1174]: "-gold"
+                          - text: —>
+                          - code [ref=e1175]: pašallum gold
+                        - listitem [ref=e1176]:
+                          - code [ref=e1177]: "-tax"
+                          - text: —>
+                          - code [ref=e1178]: šadduātum tax
+                        - listitem [ref=e1179]:
+                          - code [ref=e1180]: "-textiles"
+                          - text: —>
+                          - code [ref=e1181]: kutānum textiles
+              - separator [ref=e1182]
+            - generic [ref=e1183]:
+              - generic [ref=e1187]:
+                - link "FX-6300's profile" [ref=e1188] [cursor=pointer]:
+                  - /url: /fx6300
+                  - generic "FX-6300" [ref=e1189]
+                  - img [ref=e1190]
+                - generic [ref=e1195]:
+                  - link "FX-6300" [ref=e1197] [cursor=pointer]:
+                    - /url: /fx6300
+                    - heading "FX-6300" [level=3] [ref=e1198]
+                  - generic [ref=e1199]:
+                    - paragraph [ref=e1200]: Posted 11 days ago
+                    - paragraph [ref=e1202]: 40th in this Competition
+                - generic [ref=e1204]:
+                  - generic [ref=e1205]:
+                    - button "Upvote" [ref=e1206] [cursor=pointer]:
+                      - generic [ref=e1207]: arrow_drop_up
+                    - button "3 votes" [ref=e1208] [cursor=pointer]: "3"
+                  - button "More Options for this Comment" [ref=e1209] [cursor=pointer]: more_vert
+                - generic [ref=e1212]:
+                  - paragraph [ref=e1213]: "It looks like the “Change Roman numerals to integer numbers for months” table is misaligned/broken: Month 2 is labeled as Roman III, and III appears twice."
+                  - paragraph [ref=e1214]: According to Kouwenberg (Introduction to Old Assyrian, p. 182), the Old Assyrian calendar starts with Month 1 = I (Bēlat ekallem/Bēltekallem), followed by Month 2 = II (ša sarrātim) and Month 3 = III (ša kēnātim). Could you add Month 1 and shift/correct the Roman numerals accordingly?
+              - separator [ref=e1215]
+            - generic [ref=e1216]:
+              - generic [ref=e1220]:
+                - link "chenwenqiang_001's profile" [ref=e1221] [cursor=pointer]:
+                  - /url: /chenwenqiang001
+                  - generic "chenwenqiang_001" [ref=e1222]
+                  - img [ref=e1223]
+                - generic [ref=e1228]:
+                  - link "chenwenqiang_001" [ref=e1230] [cursor=pointer]:
+                    - /url: /chenwenqiang001
+                    - heading "chenwenqiang_001" [level=3] [ref=e1231]
+                  - generic [ref=e1232]:
+                    - paragraph [ref=e1233]: Posted 13 days ago
+                    - paragraph [ref=e1235]: 39th in this Competition
+                - generic [ref=e1237]:
+                  - generic [ref=e1238]:
+                    - button "Upvote" [ref=e1239] [cursor=pointer]:
+                      - generic [ref=e1240]: arrow_drop_up
+                    - button "7 votes" [ref=e1241] [cursor=pointer]: "7"
+                  - button "More Options for this Comment" [ref=e1242] [cursor=pointer]: more_vert
+                - paragraph [ref=e1246]: I think you should update these data from the beginning.Some samples from train.csv were aligned by hand. To revise these one more is really a challenging work.
+                - generic [ref=e1252]:
+                  - link "Adam Anderson's profile" [ref=e1253] [cursor=pointer]:
+                    - /url: /deeppast
+                    - generic "Adam Anderson" [ref=e1254]
+                    - img [ref=e1255]
+                  - generic [ref=e1260]:
+                    - generic [ref=e1261]:
+                      - link "Adam Anderson" [ref=e1262] [cursor=pointer]:
+                        - /url: /deeppast
+                        - heading "Adam Anderson" [level=3] [ref=e1263]
+                      - generic [ref=e1265]: Competition Host
+                    - paragraph [ref=e1267]: Posted 12 days ago
+                  - generic [ref=e1269]:
+                    - generic [ref=e1270]:
+                      - button "Upvote" [ref=e1271] [cursor=pointer]:
+                        - generic [ref=e1272]: arrow_drop_up
+                      - button "2 votes" [ref=e1273] [cursor=pointer]: "2"
+                    - button "More Options for this Comment" [ref=e1274] [cursor=pointer]: more_vert
+                  - paragraph [ref=e1278]: There will be no further updates, I'm sorry.
+              - separator [ref=e1279]
+            - generic [ref=e1280]:
+              - generic [ref=e1284]:
+                - link "Yicong XIAO's profile" [ref=e1285] [cursor=pointer]:
+                  - /url: /edwardxiao01
+                  - generic "Yicong XIAO" [ref=e1286]
+                  - img [ref=e1287]
+                - generic [ref=e1292]:
+                  - link "Yicong XIAO" [ref=e1294] [cursor=pointer]:
+                    - /url: /edwardxiao01
+                    - heading "Yicong XIAO" [level=3] [ref=e1295]
+                  - paragraph [ref=e1297]: Posted 13 days ago
+                - generic [ref=e1299]:
+                  - generic [ref=e1300]:
+                    - button "Upvote" [ref=e1301] [cursor=pointer]:
+                      - generic [ref=e1302]: arrow_drop_up
+                    - button "6 votes" [ref=e1303] [cursor=pointer]: "6"
+                  - button "More Options for this Comment" [ref=e1304] [cursor=pointer]: more_vert
+                - generic [ref=e1307]:
+                  - paragraph [ref=e1308]:
+                    - link "@deeppast (opens in a new tab)" [ref=e1309] [cursor=pointer]:
+                      - /url: https://www.kaggle.com/deeppast
+                      - text: "@deeppast"
+                    - text: hihi,
+                  - paragraph [ref=e1310]: Regarding the unit conversions that you mentioned below, I suspect that the right-hand-side of the first two rows should be interchanged
+                  - code [ref=e1312]: 1 / 12 (shekel) —> ⅔ shekel 15 grains 5 / 12 shekel —> 15 grains 5 11 / 12 shekels —> 6 shekels less 15 grains 7 / 12 shekel —> ½ shekel 15 grains
+                  - paragraph [ref=e1313]:
+                    - text: Is it that
+                    - code [ref=e1314]: 1/12 shekel == 15 grains
+                    - text: "?"
+                  - paragraph [ref=e1315]: if so, then the conversions should instead be
+                  - code [ref=e1317]: 1 / 12 (shekel) —> 15 grains 5 / 12 shekel —> ⅔ shekel 15 grains 5 11 / 12 shekels —> 6 shekels less 15 grains 7 / 12 shekel —> ½ shekel 15 grains
+                  - paragraph [ref=e1318]: is it?
+                - generic [ref=e1319]:
+                  - generic [ref=e1324]:
+                    - link "Adam Anderson's profile" [ref=e1325] [cursor=pointer]:
+                      - /url: /deeppast
+                      - generic "Adam Anderson" [ref=e1326]
+                      - img [ref=e1327]
+                    - generic [ref=e1332]:
+                      - generic [ref=e1333]:
+                        - link "Adam Anderson" [ref=e1334] [cursor=pointer]:
+                          - /url: /deeppast
+                          - heading "Adam Anderson" [level=3] [ref=e1335]
+                        - generic [ref=e1337]: Competition Host
+                      - paragraph [ref=e1339]: Posted 12 days ago
+                    - generic [ref=e1341]:
+                      - generic [ref=e1342]:
+                        - button "Upvote" [ref=e1343] [cursor=pointer]:
+                          - generic [ref=e1344]: arrow_drop_up
+                        - button "2 votes" [ref=e1345] [cursor=pointer]: "2"
+                      - button "More Options for this Comment" [ref=e1346] [cursor=pointer]: more_vert
+                    - paragraph [ref=e1350]: close, 5 / 12 --> ⅓ shekel 15 grains
+                  - generic [ref=e1355]:
+                    - link "esprit's profile" [ref=e1356] [cursor=pointer]:
+                      - /url: /takuji
+                      - generic "esprit" [ref=e1357]
+                      - img [ref=e1358]
+                    - generic [ref=e1363]:
+                      - link "esprit" [ref=e1365] [cursor=pointer]:
+                        - /url: /takuji
+                        - heading "esprit" [level=3] [ref=e1366]
+                      - generic [ref=e1367]:
+                        - paragraph [ref=e1368]: Posted 12 days ago
+                        - paragraph [ref=e1370]: 456th in this Competition
+                    - generic [ref=e1372]:
+                      - generic [ref=e1373]:
+                        - button "Upvote" [ref=e1374] [cursor=pointer]:
+                          - generic [ref=e1375]: arrow_drop_up
+                        - button "0 votes" [ref=e1376] [cursor=pointer]: "0"
+                      - button "More Options for this Comment" [ref=e1377] [cursor=pointer]: more_vert
+                    - generic [ref=e1380]:
+                      - paragraph [ref=e1381]:
+                        - text: Isn't it
+                        - code [ref=e1382]: 5 / 12 shekel —> ⅓ shekel 15 grains
+                        - text: instead of
+                        - code [ref=e1383]: 5 / 12 shekel —> ⅔ shekel 15 grains
+                        - text: "?"
+                      - paragraph [ref=e1384]: There are probably many similar mistakes in the test data.
+                    - generic [ref=e1390]:
+                      - link "Yicong XIAO's profile" [ref=e1391] [cursor=pointer]:
+                        - /url: /edwardxiao01
+                        - generic "Yicong XIAO" [ref=e1392]
+                        - img [ref=e1393]
+                      - generic [ref=e1398]:
+                        - link "Yicong XIAO" [ref=e1400] [cursor=pointer]:
+                          - /url: /edwardxiao01
+                          - heading "Yicong XIAO" [level=3] [ref=e1401]
+                        - paragraph [ref=e1403]: Posted 11 days ago
+                      - generic [ref=e1405]:
+                        - generic [ref=e1406]:
+                          - button "Upvote" [ref=e1407] [cursor=pointer]:
+                            - generic [ref=e1408]: arrow_drop_up
+                          - button "0 votes" [ref=e1409] [cursor=pointer]: "0"
+                        - button "More Options for this Comment" [ref=e1410] [cursor=pointer]: more_vert
+                      - paragraph [ref=e1414]: oops nice catch you are right
+              - separator [ref=e1415]
+            - generic [ref=e1416]:
+              - generic [ref=e1420]:
+                - link "epikt's profile" [ref=e1421] [cursor=pointer]:
+                  - /url: /epiktistes
+                  - generic "epikt" [ref=e1422]
+                  - img [ref=e1423]
+                - generic [ref=e1428]:
+                  - link "epikt" [ref=e1430] [cursor=pointer]:
+                    - /url: /epiktistes
+                    - heading "epikt" [level=3] [ref=e1431]
+                  - generic [ref=e1432]:
+                    - paragraph [ref=e1433]: Posted 14 days ago
+                    - paragraph [ref=e1435]: 32nd in this Competition
+                - generic [ref=e1437]:
+                  - generic [ref=e1438]:
+                    - button "Upvote" [ref=e1439] [cursor=pointer]:
+                      - generic [ref=e1440]: arrow_drop_up
+                    - button "6 votes" [ref=e1441] [cursor=pointer]: "6"
+                  - button "More Options for this Comment" [ref=e1442] [cursor=pointer]: more_vert
+                - generic [ref=e1445]:
+                  - paragraph [ref=e1446]:
+                    - text: "I am a bit confused about the table that follows 'Results of these changes: no more"
+                    - code [ref=e1447]: <big_gap>
+                    - text: "'. That table still says"
+                    - code [ref=e1448]: "<gap> <gap>: 30"
+                    - text: ","
+                    - code [ref=e1449]: "<gap> <big_gap>: 6"
+                    - text: ", etc. Does this mean that there's till 30 occurrences of"
+                    - code [ref=e1450]: <gap> <gap>
+                    - text: ", 6 occurrences of"
+                    - code [ref=e1451]: <gap> <big_gap>
+                    - text: ", etc. in the test set?"
+                  - paragraph [ref=e1452]:
+                    - text: I thought I had understood that all of the
+                    - code [ref=e1453]: <big_gap>
+                    - text: had been replaced by
+                    - code [ref=e1454]: <gap>
+                    - text: and neighboring gaps had been merged together, but I'm less certain I understand right now.
+                  - paragraph [ref=e1455]:
+                    - text: "Edit: it seems that some time since this post"
+                    - code [ref=e1456]: "Results of these changes: no more <big_gap>"
+                    - text: was changed to
+                    - code [ref=e1457]: "Results of these changes: no more <big_gap> and no more duplicates for <gap> Before the change took place, these types of gaps were found in the test and training data. This recent change reduced all these duplicates to a single <gap>."
+                    - text: so it's now clearer. Thank you for the clarification!
+                - generic [ref=e1463]:
+                  - link "hongan's profile" [ref=e1464] [cursor=pointer]:
+                    - /url: /honganzhu
+                    - generic "hongan" [ref=e1465]
+                    - img [ref=e1466]
+                    - generic [ref=e1470]: emoji_people
+                  - generic [ref=e1473]:
+                    - link "hongan" [ref=e1475] [cursor=pointer]:
+                      - /url: /honganzhu
+                      - heading "hongan" [level=3] [ref=e1476]
+                    - generic [ref=e1477]:
+                      - paragraph [ref=e1478]: Posted 14 days ago
+                      - paragraph [ref=e1480]: 38th in this Competition
+                  - generic [ref=e1482]:
+                    - generic [ref=e1483]:
+                      - button "Upvote" [ref=e1484] [cursor=pointer]:
+                        - generic [ref=e1485]: arrow_drop_up
+                      - button "0 votes" [ref=e1486] [cursor=pointer]: "0"
+                    - button "More Options for this Comment" [ref=e1487] [cursor=pointer]: more_vert
+                  - paragraph [ref=e1491]: In this very post, i can't find any info about merging gap…
+                  - generic [ref=e1492]:
+                    - generic [ref=e1497]:
+                      - link "epikt's profile" [ref=e1498] [cursor=pointer]:
+                        - /url: /epiktistes
+                        - generic "epikt" [ref=e1499]
+                        - img [ref=e1500]
+                      - generic [ref=e1505]:
+                        - link "epikt" [ref=e1507] [cursor=pointer]:
+                          - /url: /epiktistes
+                          - heading "epikt" [level=3] [ref=e1508]
+                        - generic [ref=e1509]:
+                          - paragraph [ref=e1510]: Posted 14 days ago
+                          - paragraph [ref=e1512]: 32nd in this Competition
+                      - generic [ref=e1514]:
+                        - generic [ref=e1515]:
+                          - button "Upvote" [ref=e1516] [cursor=pointer]:
+                            - generic [ref=e1517]: arrow_drop_up
+                          - button "0 votes" [ref=e1518] [cursor=pointer]: "0"
+                        - button "More Options for this Comment" [ref=e1519] [cursor=pointer]: more_vert
+                      - generic [ref=e1522]:
+                        - paragraph [ref=e1523]: "That's what had been mentioned in last week's update:"
+                        - code [ref=e1525]: "Gaps, damage markers, and parallel alignment [update: 2/18/26] Another recurring source of confusion concerns damaged text and gap markers in the data: x represents a single broken sign, sequences like x x x x or ... represent a larger lacuna. For modeling purposes we reduced all breaks to a single marker: <gap> we removed the tag for <big_gap> from the train and test (and other transliterations). We also deduplicated instances multiple sequential gaps (e.g. <gap> <gap, <gap>-<gap>, <gap> <gap>, <gap>. <gap>, etc."
+                        - paragraph [ref=e1526]:
+                          - text: "Source:"
+                          - link "https://www.kaggle.com/competitions/deep-past-initiative-machine-translation/discussion/665209 (opens in a new tab)" [ref=e1527] [cursor=pointer]:
+                            - /url: https://www.kaggle.com/competitions/deep-past-initiative-machine-translation/discussion/665209
+                            - text: https://www.kaggle.com/competitions/deep-past-initiative-machine-translation/discussion/665209
+                    - generic [ref=e1532]:
+                      - link "hongan's profile" [ref=e1533] [cursor=pointer]:
+                        - /url: /honganzhu
+                        - generic "hongan" [ref=e1534]
+                        - img [ref=e1535]
+                        - generic [ref=e1539]: emoji_people
+                      - generic [ref=e1542]:
+                        - link "hongan" [ref=e1544] [cursor=pointer]:
+                          - /url: /honganzhu
+                          - heading "hongan" [level=3] [ref=e1545]
+                        - generic [ref=e1546]:
+                          - paragraph [ref=e1547]: Posted 14 days ago
+                          - paragraph [ref=e1549]: 38th in this Competition
+                      - generic [ref=e1551]:
+                        - generic [ref=e1552]:
+                          - button "Upvote" [ref=e1553] [cursor=pointer]:
+                            - generic [ref=e1554]: arrow_drop_up
+                          - button "2 votes" [ref=e1555] [cursor=pointer]: "2"
+                        - button "More Options for this Comment" [ref=e1556] [cursor=pointer]: more_vert
+                      - paragraph [ref=e1560]: thanks, i'm aware, just thought this post is a comprehensive summary of all the changes, which apparently is not…
+              - separator [ref=e1561]
+            - generic [ref=e1562]:
+              - generic [ref=e1566]:
+                - link "Steve Roberts's profile" [ref=e1567] [cursor=pointer]:
+                  - /url: /steveroberts
+                  - generic "Steve Roberts" [ref=e1568]
+                  - img [ref=e1569]
+                - generic [ref=e1574]:
+                  - link "Steve Roberts" [ref=e1576] [cursor=pointer]:
+                    - /url: /steveroberts
+                    - heading "Steve Roberts" [level=3] [ref=e1577]
+                  - generic [ref=e1578]:
+                    - paragraph [ref=e1579]: Posted 13 days ago
+                    - paragraph [ref=e1581]: 384th in this Competition
+                - generic [ref=e1583]:
+                  - generic [ref=e1584]:
+                    - button "Upvote" [ref=e1585] [cursor=pointer]:
+                      - generic [ref=e1586]: arrow_drop_up
+                    - button "3 votes" [ref=e1587] [cursor=pointer]: "3"
+                  - button "More Options for this Comment" [ref=e1588] [cursor=pointer]: more_vert
+                - generic [ref=e1591]:
+                  - paragraph [ref=e1592]: "The new update seems to have truncated the longer transliteration strings. The previous training data had the following long training entries:"
+                  - table [ref=e1593]:
+                    - rowgroup [ref=e1594]:
+                      - row "index oare_id transliteration_length translation_length" [ref=e1595]:
+                        - columnheader "index" [ref=e1596]
+                        - columnheader "oare_id" [ref=e1597]
+                        - columnheader "transliteration_length" [ref=e1598]
+                        - columnheader "translation_length" [ref=e1599]
+                    - rowgroup [ref=e1600]:
+                      - row "177 1c428f5b-15b5-463a-8e27-f9b2f0d858fc 592 746" [ref=e1601]:
+                        - cell "177" [ref=e1602]
+                        - cell "1c428f5b-15b5-463a-8e27-f9b2f0d858fc" [ref=e1603]
+                        - cell "592" [ref=e1604]
+                        - cell "746" [ref=e1605]
+                      - row "647 64f3382c-cb81-41af-99c9-36854585b747 338 588" [ref=e1606]:
+                        - cell "647" [ref=e1607]
+                        - cell "64f3382c-cb81-41af-99c9-36854585b747" [ref=e1608]
+                        - cell "338" [ref=e1609]
+                        - cell "588" [ref=e1610]
+                      - row "927 937e71fb-57c8-46c0-afbc-48f9429886e4 343 537" [ref=e1611]:
+                        - cell "927" [ref=e1612]
+                        - cell "937e71fb-57c8-46c0-afbc-48f9429886e4" [ref=e1613]
+                        - cell "343" [ref=e1614]
+                        - cell "537" [ref=e1615]
+                      - row "968 991eef40-f139-4206-90ed-7fb45648b197 408 593" [ref=e1616]:
+                        - cell "968" [ref=e1617]
+                        - cell "991eef40-f139-4206-90ed-7fb45648b197" [ref=e1618]
+                        - cell "408" [ref=e1619]
+                        - cell "593" [ref=e1620]
+                      - row "1090 adb0573b-20fb-469d-8343-0ace8e2489e0 357 626" [ref=e1621]:
+                        - cell "1090" [ref=e1622]
+                        - cell "adb0573b-20fb-469d-8343-0ace8e2489e0" [ref=e1623]
+                        - cell "357" [ref=e1624]
+                        - cell "626" [ref=e1625]
+                      - row "1260 c97bb594-a5a1-4674-9496-48496e91c2ee 29 602" [ref=e1626]:
+                        - cell "1260" [ref=e1627]
+                        - cell "c97bb594-a5a1-4674-9496-48496e91c2ee" [ref=e1628]
+                        - cell "29" [ref=e1629]
+                        - cell "602" [ref=e1630]
+                      - row "1378 dff850c8-ccd4-44a9-9994-2834ca832a6d 379 603" [ref=e1631]:
+                        - cell "1378" [ref=e1632]
+                        - cell "dff850c8-ccd4-44a9-9994-2834ca832a6d" [ref=e1633]
+                        - cell "379" [ref=e1634]
+                        - cell "603" [ref=e1635]
+                  - paragraph [ref=e1636]:
+                    - strong [ref=e1638]: "The new data has truncated these to be:"
+                  - table [ref=e1639]:
+                    - rowgroup [ref=e1640]:
+                      - row "index oare_id transliteration_length translation_length" [ref=e1641]:
+                        - columnheader "index" [ref=e1642]
+                        - columnheader "oare_id" [ref=e1643]
+                        - columnheader "transliteration_length" [ref=e1644]
+                        - columnheader "translation_length" [ref=e1645]
+                    - rowgroup [ref=e1646]:
+                      - row "177 1c428f5b-15b5-463a-8e27-f9b2f0d858fc 138 739" [ref=e1647]:
+                        - cell "177" [ref=e1648]
+                        - cell "1c428f5b-15b5-463a-8e27-f9b2f0d858fc" [ref=e1649]
+                        - cell "138" [ref=e1650]
+                        - cell "739" [ref=e1651]
+                      - row "647 64f3382c-cb81-41af-99c9-36854585b747 107 587" [ref=e1652]:
+                        - cell "647" [ref=e1653]
+                        - cell "64f3382c-cb81-41af-99c9-36854585b747" [ref=e1654]
+                        - cell "107" [ref=e1655]
+                        - cell "587" [ref=e1656]
+                      - row "927 937e71fb-57c8-46c0-afbc-48f9429886e4 114 537" [ref=e1657]:
+                        - cell "927" [ref=e1658]
+                        - cell "937e71fb-57c8-46c0-afbc-48f9429886e4" [ref=e1659]
+                        - cell "114" [ref=e1660]
+                        - cell "537" [ref=e1661]
+                      - row "968 991eef40-f139-4206-90ed-7fb45648b197 108 593" [ref=e1662]:
+                        - cell "968" [ref=e1663]
+                        - cell "991eef40-f139-4206-90ed-7fb45648b197" [ref=e1664]
+                        - cell "108" [ref=e1665]
+                        - cell "593" [ref=e1666]
+                      - row "1090 adb0573b-20fb-469d-8343-0ace8e2489e0 107 625" [ref=e1667]:
+                        - cell "1090" [ref=e1668]
+                        - cell "adb0573b-20fb-469d-8343-0ace8e2489e0" [ref=e1669]
+                        - cell "107" [ref=e1670]
+                        - cell "625" [ref=e1671]
+                      - row "1377 dff850c8-ccd4-44a9-9994-2834ca832a6d 120 585" [ref=e1672]:
+                        - cell "1377" [ref=e1673]
+                        - cell "dff850c8-ccd4-44a9-9994-2834ca832a6d" [ref=e1674]
+                        - cell "120" [ref=e1675]
+                        - cell "585" [ref=e1676]
+                  - paragraph [ref=e1677]: I'm not sure if this applies to the other rows too, but it certainly seems to have lost a lot of data.
+                - generic [ref=e1679]:
+                  - generic [ref=e1684]:
+                    - link "MPWARE's profile" [ref=e1685] [cursor=pointer]:
+                      - /url: /mpware
+                      - generic "MPWARE" [ref=e1686]
+                      - img [ref=e1687]
+                    - generic [ref=e1692]:
+                      - link "MPWARE" [ref=e1694] [cursor=pointer]:
+                        - /url: /mpware
+                        - heading "MPWARE" [level=3] [ref=e1695]
+                      - generic [ref=e1696]:
+                        - paragraph [ref=e1697]: Posted 13 days ago
+                        - paragraph [ref=e1699]: 281st in this Competition
+                    - generic [ref=e1701]:
+                      - generic [ref=e1702]:
+                        - button "Upvote" [ref=e1703] [cursor=pointer]:
+                          - generic [ref=e1704]: arrow_drop_up
+                        - button "1 votes" [ref=e1705] [cursor=pointer]: "1"
+                      - button "More Options for this Comment" [ref=e1706] [cursor=pointer]: more_vert
+                    - paragraph [ref=e1710]: Around 10% of transliterations are truncated. We've to fix that ourself according to the instructions.
+                    - generic [ref=e1711]:
+                      - generic [ref=e1716]:
+                        - link "steubk's profile" [ref=e1717] [cursor=pointer]:
+                          - /url: /steubk
+                          - generic "steubk" [ref=e1718]
+                          - img [ref=e1719]
+                        - generic [ref=e1724]:
+                          - link "steubk" [ref=e1726] [cursor=pointer]:
+                            - /url: /steubk
+                            - heading "steubk" [level=3] [ref=e1727]
+                          - generic [ref=e1728]:
+                            - paragraph [ref=e1729]: Posted 12 days ago
+                            - paragraph [ref=e1731]: 170th in this Competition
+                        - generic [ref=e1733]:
+                          - generic [ref=e1734]:
+                            - button "Upvote" [ref=e1735] [cursor=pointer]:
+                              - generic [ref=e1736]: arrow_drop_up
+                            - button "1 votes" [ref=e1737] [cursor=pointer]: "1"
+                          - button "More Options for this Comment" [ref=e1738] [cursor=pointer]: more_vert
+                        - paragraph [ref=e1742]: which instructions?
+                      - generic [ref=e1747]:
+                        - link "MPWARE's profile" [ref=e1748] [cursor=pointer]:
+                          - /url: /mpware
+                          - generic "MPWARE" [ref=e1749]
+                          - img [ref=e1750]
+                        - generic [ref=e1755]:
+                          - link "MPWARE" [ref=e1757] [cursor=pointer]:
+                            - /url: /mpware
+                            - heading "MPWARE" [level=3] [ref=e1758]
+                          - generic [ref=e1759]:
+                            - paragraph [ref=e1760]: Posted 12 days ago
+                            - paragraph [ref=e1762]: 281st in this Competition
+                        - generic [ref=e1764]:
+                          - generic [ref=e1765]:
+                            - button "Upvote" [ref=e1766] [cursor=pointer]:
+                              - generic [ref=e1767]: arrow_drop_up
+                            - button "1 votes" [ref=e1768] [cursor=pointer]: "1"
+                          - button "More Options for this Comment" [ref=e1769] [cursor=pointer]: more_vert
+                        - blockquote [ref=e1773]:
+                          - paragraph [ref=e1774]:
+                            - text: Some of the transliteration text in the training data is missing, which is unfortunate, but fixable. You can find what is missing from the training data by matching the unique OARE_Text_ID with the equivalent OARE IDs in the published_texts.csv dataset. Do this by matching the unique IDs in the training data to the OARE IDs and find the publication (e.g. AKT 8, 130 = AKT volume 8, text number 130). The PDFs have also been provided, if you find there are missing elements in the translations (
+                            - link "https://www.kaggle.com/datasets/deeppast/old-assyrian-kltepe-tablets-in-pdf/data) (opens in a new tab)" [ref=e1775] [cursor=pointer]:
+                              - /url: https://www.kaggle.com/datasets/deeppast/old-assyrian-kltepe-tablets-in-pdf/data)
+                              - text: https://www.kaggle.com/datasets/deeppast/old-assyrian-kltepe-tablets-in-pdf/data)
+                            - text: .
+                      - generic [ref=e1780]:
+                        - link "Steve Roberts's profile" [ref=e1781] [cursor=pointer]:
+                          - /url: /steveroberts
+                          - generic "Steve Roberts" [ref=e1782]
+                          - img [ref=e1783]
+                        - generic [ref=e1788]:
+                          - link "Steve Roberts" [ref=e1790] [cursor=pointer]:
+                            - /url: /steveroberts
+                            - heading "Steve Roberts" [level=3] [ref=e1791]
+                          - generic [ref=e1792]:
+                            - paragraph [ref=e1793]: Posted 12 days ago
+                            - paragraph [ref=e1795]: 384th in this Competition
+                        - generic [ref=e1797]:
+                          - generic [ref=e1798]:
+                            - button "Upvote" [ref=e1799] [cursor=pointer]:
+                              - generic [ref=e1800]: arrow_drop_up
+                            - button "4 votes" [ref=e1801] [cursor=pointer]: "4"
+                          - button "More Options for this Comment" [ref=e1802] [cursor=pointer]: more_vert
+                        - paragraph [ref=e1806]: It's a bit bad though that data that was there, and which I spent a large amount of time working out how to split, has now suddenly disappeared from the data set.
+                  - generic [ref=e1811]:
+                    - link "Yicong XIAO's profile" [ref=e1812] [cursor=pointer]:
+                      - /url: /edwardxiao01
+                      - generic "Yicong XIAO" [ref=e1813]
+                      - img [ref=e1814]
+                    - generic [ref=e1819]:
+                      - link "Yicong XIAO" [ref=e1821] [cursor=pointer]:
+                        - /url: /edwardxiao01
+                        - heading "Yicong XIAO" [level=3] [ref=e1822]
+                      - paragraph [ref=e1824]: Posted 11 days ago
+                    - generic [ref=e1826]:
+                      - generic [ref=e1827]:
+                        - button "Upvote" [ref=e1828] [cursor=pointer]:
+                          - generic [ref=e1829]: arrow_drop_up
+                        - button "0 votes" [ref=e1830] [cursor=pointer]: "0"
+                      - button "More Options for this Comment" [ref=e1831] [cursor=pointer]: more_vert
+                    - paragraph [ref=e1835]: A large number of data where the ratio between the lengths of transliteration and translation seem weird have wrong/truncated transliteration/translation, e.g. 8376cbda-b423-42d4-abb5-188d04896392. Can follow the instruction to find the raw pdf and amend these data case by case.
+              - separator [ref=e1836]
+            - generic [ref=e1837]:
+              - generic [ref=e1841]:
+                - link "MPWARE's profile" [ref=e1842] [cursor=pointer]:
+                  - /url: /mpware
+                  - generic "MPWARE" [ref=e1843]
+                  - img [ref=e1844]
+                - generic [ref=e1849]:
+                  - link "MPWARE" [ref=e1851] [cursor=pointer]:
+                    - /url: /mpware
+                    - heading "MPWARE" [level=3] [ref=e1852]
+                  - generic [ref=e1853]:
+                    - paragraph [ref=e1854]: Posted 11 days ago
+                    - paragraph [ref=e1856]: 281st in this Competition
+                - generic [ref=e1858]:
+                  - generic [ref=e1859]:
+                    - button "Upvote" [ref=e1860] [cursor=pointer]:
+                      - generic [ref=e1861]: arrow_drop_up
+                    - button "2 votes" [ref=e1862] [cursor=pointer]: "2"
+                  - button "More Options for this Comment" [ref=e1863] [cursor=pointer]: more_vert
+                - generic [ref=e1866]:
+                  - paragraph [ref=e1867]: "I'm trying to identify the mapping between oare_id in train.csv and the AKT PDF in order to complete broken sections, I've found 1561 matches:"
+                  - list [ref=e1868]:
+                    - listitem [ref=e1869]: AKT 5 = 77 oare_id
+                    - listitem [ref=e1870]: AKT 6a = 304 oare_id
+                    - listitem [ref=e1871]: AKT 6b = 222 oare_id
+                    - listitem [ref=e1872]: AKT 6c = 201 oare_id
+                    - listitem [ref=e1873]: AKT 6d = 139 oare_id
+                    - listitem [ref=e1874]: AKT 6e = 255 oare_id
+                    - listitem [ref=e1875]:
+                      - text: AKT 8 = 363 oare_id (e.g.
+                      - code [ref=e1876]: 0123a9b9-e81e-4d7a-a79b-10e7c0aacbb9
+                      - text: Kt 91/k 471, page 213)
+                  - paragraph [ref=e1877]:
+                    - text: Someone with similar results?
+                    - link "@jackvd (opens in a new tab)" [ref=e1878] [cursor=pointer]:
+                      - /url: https://www.kaggle.com/jackvd
+                      - text: "@jackvd"
+                    - text: You was saying around 400 items was broken?
+                - generic [ref=e1884]:
+                  - link "Angantyr's profile" [ref=e1885] [cursor=pointer]:
+                    - /url: /angantyr
+                    - generic "Angantyr" [ref=e1886]
+                    - img [ref=e1887]
+                  - generic [ref=e1892]:
+                    - link "Angantyr" [ref=e1894] [cursor=pointer]:
+                      - /url: /angantyr
+                      - heading "Angantyr" [level=3] [ref=e1895]
+                    - paragraph [ref=e1897]: Posted 11 days ago
+                  - generic [ref=e1899]:
+                    - generic [ref=e1900]:
+                      - button "Upvote" [ref=e1901] [cursor=pointer]:
+                        - generic [ref=e1902]: arrow_drop_up
+                      - button "6 votes" [ref=e1903] [cursor=pointer]: "6"
+                    - button "More Options for this Comment" [ref=e1904] [cursor=pointer]: more_vert
+                  - generic [ref=e1907]:
+                    - paragraph [ref=e1908]:
+                      - text: I have similar results with regard to AKT 5 and AKT 6a. I still have to verify a few ids to be sure but when I do I can post it in the updated
+                      - code [ref=e1909]: train.csv
+                      - text: dataset to make everyone lives a bit easier.
+                    - paragraph [ref=e1910]:
+                      - text: "Edit: The"
+                      - link "dataset with sources included (opens in a new tab)" [ref=e1911] [cursor=pointer]:
+                        - /url: https://www.kaggle.com/datasets/angantyr/updated-train-w-publication-source-96-7-cov/data
+                        - text: dataset with sources included
+                      - text: should be up and running.
+                    - table [ref=e1912]:
+                      - rowgroup [ref=e1913]:
+                        - row "Publication page" [ref=e1914]:
+                          - columnheader "Publication" [ref=e1915]
+                          - columnheader "page" [ref=e1916]
+                      - rowgroup [ref=e1917]:
+                        - row "AKT 5 76" [ref=e1918]:
+                          - cell "AKT 5" [ref=e1919]
+                          - cell "76" [ref=e1920]
+                        - row "AKT 6a 295" [ref=e1921]:
+                          - cell "AKT 6a" [ref=e1922]
+                          - cell "295" [ref=e1923]
+                        - row "AKT 6b 218" [ref=e1924]:
+                          - cell "AKT 6b" [ref=e1925]
+                          - cell "218" [ref=e1926]
+                        - row "AKT 6c 196" [ref=e1927]:
+                          - cell "AKT 6c" [ref=e1928]
+                          - cell "196" [ref=e1929]
+                        - row "AKT 6d 137" [ref=e1930]:
+                          - cell "AKT 6d" [ref=e1931]
+                          - cell "137" [ref=e1932]
+                        - row "AKT 6e 233" [ref=e1933]:
+                          - cell "AKT 6e" [ref=e1934]
+                          - cell "233" [ref=e1935]
+                        - row "AKT 8 355" [ref=e1936]:
+                          - cell "AKT 8" [ref=e1937]
+                          - cell "355" [ref=e1938]
+                  - generic [ref=e1939]:
+                    - generic [ref=e1944]:
+                      - link "MPWARE's profile" [ref=e1945] [cursor=pointer]:
+                        - /url: /mpware
+                        - generic "MPWARE" [ref=e1946]
+                        - img [ref=e1947]
+                      - generic [ref=e1952]:
+                        - link "MPWARE" [ref=e1954] [cursor=pointer]:
+                          - /url: /mpware
+                          - heading "MPWARE" [level=3] [ref=e1955]
+                        - generic [ref=e1956]:
+                          - paragraph [ref=e1957]: Posted 10 days ago
+                          - paragraph [ref=e1959]: 281st in this Competition
+                      - generic [ref=e1961]:
+                        - generic [ref=e1962]:
+                          - button "Upvote" [ref=e1963] [cursor=pointer]:
+                            - generic [ref=e1964]: arrow_drop_up
+                          - button "5 votes" [ref=e1965] [cursor=pointer]: "5"
+                        - button "More Options for this Comment" [ref=e1966] [cursor=pointer]: more_vert
+                      - generic [ref=e1969]:
+                        - paragraph [ref=e1970]: "I've updated my list:"
+                        - code [ref=e1972]:
+                          - text: pub_pd = pd.read_csv("data/published_texts.csv") train_df = pd.read_csv("data/train.csv") akt_pd = pub_pd
+                          - generic [ref=e1973]: "[(pub_pd['oare_id']"
+                          - text: .isin(train_df
+                          - generic [ref=e1974]: "[\"oare_id\"]"
+                          - text: .unique()))]
+                          - generic [ref=e1975]: "[[\"oare_id\", \"label\", \"excavation_no\", \"transliteration\"]"
+                          - text: "] akt_pd"
+                          - generic [ref=e1976]: "[\"pdf\"]"
+                          - text: = akt_pd
+                          - generic [ref=e1977]: "[\"label\"]"
+                          - text: .str.extract( r"\bAKT\s+(\d+[a-zA-Z]?)", expand=False )
+                        - code [ref=e1979]: pdf 5 77 6a 304 6b 222 6c 201 6d 139 6e 255 8 363
+                        - paragraph [ref=e1980]:
+                          - text: "Some rows in train.csv are more than broken, the translation just does not match the transliteration at all. For instance: AKT8, 55. Kt 91/k 304 (1-161-91) oare_id:"
+                          - code [ref=e1981]: 5f088d12-ed99-434a-a113-65deab7e1426
+                        - paragraph [ref=e1982]:
+                          - strong [ref=e1983]: "In the PDF:"
+                        - paragraph [ref=e1984]:
+                          - strong [ref=e1985]: "In train.csv:"
+                          - text: whatever v1,v2 or v3
+                        - paragraph [ref=e1986]:
+                          - strong [ref=e1987]: "After RE-OCR:"
+                        - paragraph [ref=e1988]: oare_ids from AKT 6e are one of the most broken.
+                        - paragraph [ref=e1989]: This competition is about normalization and cleaning.
+                    - generic [ref=e1994]:
+                      - link "Angantyr's profile" [ref=e1995] [cursor=pointer]:
+                        - /url: /angantyr
+                        - generic "Angantyr" [ref=e1996]
+                        - img [ref=e1997]
+                      - generic [ref=e2002]:
+                        - link "Angantyr" [ref=e2004] [cursor=pointer]:
+                          - /url: /angantyr
+                          - heading "Angantyr" [level=3] [ref=e2005]
+                        - paragraph [ref=e2007]: Posted 9 days ago
+                      - generic [ref=e2009]:
+                        - generic [ref=e2010]:
+                          - button "Upvote" [ref=e2011] [cursor=pointer]:
+                            - generic [ref=e2012]: arrow_drop_up
+                          - button "0 votes" [ref=e2013] [cursor=pointer]: "0"
+                        - button "More Options for this Comment" [ref=e2014] [cursor=pointer]: more_vert
+                      - generic [ref=e2017]:
+                        - paragraph [ref=e2018]: I wonder for how many of such cases we could employ a set match filtering, e.g., 'a-na'/'from', 'ku.babbar'/'silver', etc.
+                        - paragraph [ref=e2019]: It would not be a guarantee but a first stage flag to have a manual check and there are many words that have a 1:1 equivalent with English.
+              - separator [ref=e2020]
+            - generic [ref=e2021]:
+              - generic [ref=e2025]:
+                - link "tennogh's profile" [ref=e2026] [cursor=pointer]:
+                  - /url: /tennogh
+                  - generic "tennogh" [ref=e2027]
+                  - img [ref=e2028]
+                - generic [ref=e2033]:
+                  - link "tennogh" [ref=e2035] [cursor=pointer]:
+                    - /url: /tennogh
+                    - heading "tennogh" [level=3] [ref=e2036]
+                  - generic [ref=e2037]:
+                    - paragraph [ref=e2038]: Posted 12 days ago
+                    - paragraph [ref=e2040]: 1713th in this Competition
+                - generic [ref=e2042]:
+                  - generic [ref=e2043]:
+                    - button "Upvote" [ref=e2044] [cursor=pointer]:
+                      - generic [ref=e2045]: arrow_drop_up
+                    - button "1 votes" [ref=e2046] [cursor=pointer]: "1"
+                  - button "More Options for this Comment" [ref=e2047] [cursor=pointer]: more_vert
+                - paragraph [ref=e2051]: Regarding the terms "pašallum gold", "šadduātum tax", "kutānum textiles", those appear in different forms in the texts. Are those the forms that are expected from the test data (e.g. "kutanum-textile", "kutanu textile" -> "kutānum textiles")?
+                - generic [ref=e2057]:
+                  - link "耶✌'s profile" [ref=e2058] [cursor=pointer]:
+                    - /url: /qifeihhh666
+                    - generic "耶✌" [ref=e2059]
+                    - img [ref=e2060]
+                    - generic [ref=e2064]: emoji_people
+                  - generic [ref=e2067]:
+                    - link "耶✌" [ref=e2069] [cursor=pointer]:
+                      - /url: /qifeihhh666
+                      - heading "耶✌" [level=3] [ref=e2070]
+                    - generic [ref=e2071]:
+                      - paragraph [ref=e2072]: Posted 12 days ago
+                      - paragraph [ref=e2074]: 43rd in this Competition
+                  - generic [ref=e2076]:
+                    - generic [ref=e2077]:
+                      - button "Upvote" [ref=e2078] [cursor=pointer]:
+                        - generic [ref=e2079]: arrow_drop_up
+                      - button "3 votes" [ref=e2080] [cursor=pointer]: "3"
+                    - button "More Options for this Comment" [ref=e2081] [cursor=pointer]: more_vert
+                  - generic [ref=e2084]:
+                    - paragraph [ref=e2085]: I don’t think that’s the case.
+                    - paragraph [ref=e2086]: First, words like pašallum, šadduātum, and kutānum do not exist in train.csv at all.
+                    - paragraph [ref=e2087]: Second, submissions that do not include words such as pašallum, šadduātum, and kutānum have achieved higher scores.
+                    - paragraph [ref=e2088]: The host only seemed to suggest that we do this. :)
+                  - generic [ref=e2089]:
+                    - generic [ref=e2094]:
+                      - link "chenwenqiang_001's profile" [ref=e2095] [cursor=pointer]:
+                        - /url: /chenwenqiang001
+                        - generic "chenwenqiang_001" [ref=e2096]
+                        - img [ref=e2097]
+                      - generic [ref=e2102]:
+                        - link "chenwenqiang_001" [ref=e2104] [cursor=pointer]:
+                          - /url: /chenwenqiang001
+                          - heading "chenwenqiang_001" [level=3] [ref=e2105]
+                        - generic [ref=e2106]:
+                          - paragraph [ref=e2107]: Posted 12 days ago
+                          - paragraph [ref=e2109]: 39th in this Competition
+                      - generic [ref=e2111]:
+                        - generic [ref=e2112]:
+                          - button "Upvote" [ref=e2113] [cursor=pointer]:
+                            - generic [ref=e2114]: arrow_drop_up
+                          - button "1 votes" [ref=e2115] [cursor=pointer]: "1"
+                        - button "More Options for this Comment" [ref=e2116] [cursor=pointer]: more_vert
+                      - paragraph [ref=e2120]: when i drop the '[', ['] in the train, my scores would drop. Normally, if dropping the "[" and "]" , the scores would have been improved. I don't know why it is like this.
+                    - generic [ref=e2125]:
+                      - link "Jack's profile" [ref=e2126] [cursor=pointer]:
+                        - /url: /jackvd
+                        - generic "Jack" [ref=e2127]
+                        - img [ref=e2128]
+                      - generic [ref=e2133]:
+                        - link "Jack" [ref=e2135] [cursor=pointer]:
+                          - /url: /jackvd
+                          - heading "Jack" [level=3] [ref=e2136]
+                        - generic [ref=e2137]:
+                          - paragraph [ref=e2138]: Posted 11 days ago
+                          - paragraph [ref=e2140]: 8th in this Competition
+                      - generic [ref=e2142]:
+                        - generic [ref=e2143]:
+                          - button "Upvote" [ref=e2144] [cursor=pointer]:
+                            - generic [ref=e2145]: arrow_drop_up
+                          - button "0 votes" [ref=e2146] [cursor=pointer]: "0"
+                        - button "More Options for this Comment" [ref=e2147] [cursor=pointer]: more_vert
+                      - paragraph [ref=e2151]: In your transliterations or translations?
+              - separator [ref=e2152]
+            - generic [ref=e2153]:
+              - generic [ref=e2157]:
+                - link "steubk's profile" [ref=e2158] [cursor=pointer]:
+                  - /url: /steubk
+                  - generic "steubk" [ref=e2159]
+                  - img [ref=e2160]
+                - generic [ref=e2165]:
+                  - link "steubk" [ref=e2167] [cursor=pointer]:
+                    - /url: /steubk
+                    - heading "steubk" [level=3] [ref=e2168]
+                  - generic [ref=e2169]:
+                    - paragraph [ref=e2170]: Posted 13 days ago
+                    - paragraph [ref=e2172]: 170th in this Competition
+                - generic [ref=e2174]:
+                  - generic [ref=e2175]:
+                    - button "Upvote" [ref=e2176] [cursor=pointer]:
+                      - generic [ref=e2177]: arrow_drop_up
+                    - button "1 votes" [ref=e2178] [cursor=pointer]: "1"
+                  - button "More Options for this Comment" [ref=e2179] [cursor=pointer]: more_vert
+                - paragraph [ref=e2183]:
+                  - text: just for the record,
+                  - strong [ref=e2184]: this update does not include all the changes made in the previous update
+                  - text: "For example unicode subscript numbers are now present in the train transliteration:"
+                  - code [ref=e2187]: 0064939c-59b9-4448-a63d-34612af0a1b5 -> 1 TÚG ša qá-tim i-tur₄-DINGIR il₅-qé ...
+              - separator [ref=e2188]
+            - generic [ref=e2189]:
+              - generic [ref=e2193]:
+                - link "Oleg Yaroshevskiy's profile" [ref=e2194] [cursor=pointer]:
+                  - /url: /yaroshevskiy
+                  - generic "Oleg Yaroshevskiy" [ref=e2195]
+                  - img [ref=e2196]
+                - generic [ref=e2201]:
+                  - link "Oleg Yaroshevskiy" [ref=e2203] [cursor=pointer]:
+                    - /url: /yaroshevskiy
+                    - heading "Oleg Yaroshevskiy" [level=3] [ref=e2204]
+                  - generic [ref=e2205]:
+                    - paragraph [ref=e2206]: Posted 13 days ago
+                    - paragraph [ref=e2208]: 52nd in this Competition
+                - generic [ref=e2210]:
+                  - generic [ref=e2211]:
+                    - button "Upvote" [ref=e2212] [cursor=pointer]:
+                      - generic [ref=e2213]: arrow_drop_up
+                    - button "2 votes" [ref=e2214] [cursor=pointer]: "2"
+                  - button "More Options for this Comment" [ref=e2215] [cursor=pointer]: more_vert
+                - generic [ref=e2218]:
+                  - paragraph [ref=e2219]: Can't describe an amount of confusion when comparing a new train dropped last week and a new train from yesterday and now I'm trying do understand how to merge those two
+                  - paragraph [ref=e2220]: "upd: sorry, my humble verdict is that these updates last week made things worse…"
+                - generic [ref=e2226]:
+                  - link "Oleg Yaroshevskiy's profile" [ref=e2227] [cursor=pointer]:
+                    - /url: /yaroshevskiy
+                    - generic "Oleg Yaroshevskiy" [ref=e2228]
+                    - img [ref=e2229]
+                  - generic [ref=e2234]:
+                    - link "Oleg Yaroshevskiy" [ref=e2236] [cursor=pointer]:
+                      - /url: /yaroshevskiy
+                      - heading "Oleg Yaroshevskiy" [level=3] [ref=e2237]
+                    - generic [ref=e2238]:
+                      - paragraph [ref=e2239]: Posted 13 days ago
+                      - paragraph [ref=e2241]: 52nd in this Competition
+                  - generic [ref=e2243]:
+                    - generic [ref=e2244]:
+                      - button "Upvote" [ref=e2245] [cursor=pointer]:
+                        - generic [ref=e2246]: arrow_drop_up
+                      - button "0 votes" [ref=e2247] [cursor=pointer]: "0"
+                    - button "More Options for this Comment" [ref=e2248] [cursor=pointer]: more_vert
+                  - generic [ref=e2251]:
+                    - paragraph [ref=e2252]: "how to understand this:"
+                    - code [ref=e2254]: "before: 31 kutānu-textiles of Iddin-Suen, 30 kutānu-textiles of Ah-šalim, 46 kutānu-textiles of hinnāya and Uṣurānum, 21 kutānu-textiles of Aššur-rēī, 36 kutānu-textiles of Šu-Ištar, 28 kutānu-textiles of Ennam-Suen, 24 kutānu-textiles of Lā-qēp, 18 kutānu-textiles of the merchant, 7 kutānu-textiles without seals, 14 textiles import-tax, 17 textiles as pre-emption. after: 31 -textiles of Iddin-Suen, 30 -textiles of Ah-šalim, 46 -textiles of hinnāya and Uṣurānum, 21 -textiles of Aššur-rē'ī, 36 -textiles of Šu-Ištar, 28 -textiles of Ennam-Suen, 24 -textiles of Lā-qēp, 18 -textiles of the merchant, 7 -textiles without seals, 14 textiles import-tax, 17 textiles as pre-emption."
+                  - generic [ref=e2255]:
+                    - generic [ref=e2260]:
+                      - link "Adam Anderson's profile" [ref=e2261] [cursor=pointer]:
+                        - /url: /deeppast
+                        - generic "Adam Anderson" [ref=e2262]
+                        - img [ref=e2263]
+                      - generic [ref=e2268]:
+                        - generic [ref=e2269]:
+                          - link "Adam Anderson" [ref=e2270] [cursor=pointer]:
+                            - /url: /deeppast
+                            - heading "Adam Anderson" [level=3] [ref=e2271]
+                          - generic [ref=e2273]: Competition Host
+                        - paragraph [ref=e2275]: Posted 13 days ago
+                      - generic [ref=e2277]:
+                        - generic [ref=e2278]:
+                          - button "Upvote" [ref=e2279] [cursor=pointer]:
+                            - generic [ref=e2280]: arrow_drop_up
+                          - button "-1 votes" [ref=e2281] [cursor=pointer]: "-1"
+                        - button "More Options for this Comment" [ref=e2282] [cursor=pointer]: more_vert
+                      - paragraph [ref=e2286]:
+                        - text: Yes, you can see in the post above, I recommend making some small changes, egg.
+                        - code [ref=e2287]: "-textiles"
+                        - text: "-->"
+                        - code [ref=e2288]: kutānum textiles
+                        - text: ", but this should be checked with the AKT volumes in PDF to be certain. The interum data (v2) update did this, but it introduced new errors because of a simple search / replace. Those changes were rolled back in the lates update (v3), and instructions were provided how to deal with those (above)."
+                    - generic [ref=e2289]:
+                      - button "4 more replies" [ref=e2290] [cursor=pointer]:
+                        - generic [ref=e2291]: 4 more replies
+                        - generic [ref=e2292]: arrow_drop_down
+                      - generic [ref=e2293]:
+                        - img "Profile picture for Oleg Yaroshevskiy" [ref=e2295]
+                        - img "Profile picture for tennogh" [ref=e2297]
+                        - img "Profile picture for Adam Anderson" [ref=e2299]
+              - separator [ref=e2300]
+            - generic [ref=e2301]:
+              - generic [ref=e2305]:
+                - link "Anil Ozturk's profile" [ref=e2306] [cursor=pointer]:
+                  - /url: /nlztrk
+                  - generic "Anil Ozturk" [ref=e2307]
+                  - img [ref=e2308]
+                - generic [ref=e2313]:
+                  - link "Anil Ozturk" [ref=e2315] [cursor=pointer]:
+                    - /url: /nlztrk
+                    - heading "Anil Ozturk" [level=3] [ref=e2316]
+                  - generic [ref=e2317]:
+                    - paragraph [ref=e2318]: Posted 14 days ago
+                    - paragraph [ref=e2320]: 459th in this Competition
+                - generic [ref=e2322]:
+                  - generic [ref=e2323]:
+                    - button "Upvote" [ref=e2324] [cursor=pointer]:
+                      - generic [ref=e2325]: arrow_drop_up
+                    - button "1 votes" [ref=e2326] [cursor=pointer]: "1"
+                  - button "More Options for this Comment" [ref=e2327] [cursor=pointer]: more_vert
+                - paragraph [ref=e2331]: Thanks, these are some new changes. Do we expect another test set update?
+                - generic [ref=e2337]:
+                  - link "Adam Anderson's profile" [ref=e2338] [cursor=pointer]:
+                    - /url: /deeppast
+                    - generic "Adam Anderson" [ref=e2339]
+                    - img [ref=e2340]
+                  - generic [ref=e2345]:
+                    - generic [ref=e2346]:
+                      - link "Adam Anderson" [ref=e2347] [cursor=pointer]:
+                        - /url: /deeppast
+                        - heading "Adam Anderson" [level=3] [ref=e2348]
+                      - generic [ref=e2350]: Competition Host
+                    - paragraph [ref=e2352]: Posted 14 days ago
+                  - generic [ref=e2354]:
+                    - generic [ref=e2355]:
+                      - button "Upvote" [ref=e2356] [cursor=pointer]:
+                        - generic [ref=e2357]: arrow_drop_up
+                      - button "0 votes" [ref=e2358] [cursor=pointer]: "0"
+                    - button "More Options for this Comment" [ref=e2359] [cursor=pointer]: more_vert
+                  - paragraph [ref=e2363]: Yes, both test and train were updated (final update 2/26/26).
+              - separator [ref=e2364]
+            - generic [ref=e2365]:
+              - generic [ref=e2369]:
+                - link "annd's profile" [ref=e2370] [cursor=pointer]:
+                  - /url: /rejk11
+                  - generic "annd" [ref=e2371]
+                  - img [ref=e2372]
+                - generic [ref=e2377]:
+                  - link "annd" [ref=e2379] [cursor=pointer]:
+                    - /url: /rejk11
+                    - heading "annd" [level=3] [ref=e2380]
+                  - generic [ref=e2381]:
+                    - paragraph [ref=e2382]: Posted 13 days ago
+                    - paragraph [ref=e2384]: 984th in this Competition
+                - generic [ref=e2386]:
+                  - generic [ref=e2387]:
+                    - button "Upvote" [ref=e2388] [cursor=pointer]:
+                      - generic [ref=e2389]: arrow_drop_up
+                    - button "2 votes" [ref=e2390] [cursor=pointer]: "2"
+                  - button "More Options for this Comment" [ref=e2391] [cursor=pointer]: more_vert
+                - generic [ref=e2394]:
+                  - code [ref=e2396]: "Remove from translations: fem. sing. pl. plural (?) any stray marks you find (e.g., .., ?, x, xx, << >>, < > except around <gap> of course)"
+                  - paragraph [ref=e2397]: You recommend removing these words but would these words be included in the test set?
+                - generic [ref=e2403]:
+                  - link "Adam Anderson's profile" [ref=e2404] [cursor=pointer]:
+                    - /url: /deeppast
+                    - generic "Adam Anderson" [ref=e2405]
+                    - img [ref=e2406]
+                  - generic [ref=e2411]:
+                    - generic [ref=e2412]:
+                      - link "Adam Anderson" [ref=e2413] [cursor=pointer]:
+                        - /url: /deeppast
+                        - heading "Adam Anderson" [level=3] [ref=e2414]
+                      - generic [ref=e2416]: Competition Host
+                    - paragraph [ref=e2418]: Posted 9 days ago
+                  - generic [ref=e2420]:
+                    - generic [ref=e2421]:
+                      - button "Upvote" [ref=e2422] [cursor=pointer]:
+                        - generic [ref=e2423]: arrow_drop_up
+                      - button "0 votes" [ref=e2424] [cursor=pointer]: "0"
+                    - button "More Options for this Comment" [ref=e2425] [cursor=pointer]: more_vert
+                  - paragraph [ref=e2429]: no, they are not included in the test set
+              - separator [ref=e2430]
+            - generic [ref=e2431]:
+              - generic [ref=e2435]:
+                - link "MengYe's profile" [ref=e2436] [cursor=pointer]:
+                  - /url: /konohayui
+                  - generic "MengYe" [ref=e2437]
+                  - img [ref=e2438]
+                - generic [ref=e2443]:
+                  - link "MengYe" [ref=e2445] [cursor=pointer]:
+                    - /url: /konohayui
+                    - heading "MengYe" [level=3] [ref=e2446]
+                  - generic [ref=e2447]:
+                    - paragraph [ref=e2448]: Posted 11 days ago
+                    - paragraph [ref=e2450]: 63rd in this Competition
+                - generic [ref=e2452]:
+                  - generic [ref=e2453]:
+                    - button "Upvote" [ref=e2454] [cursor=pointer]:
+                      - generic [ref=e2455]: arrow_drop_up
+                    - button "0 votes" [ref=e2456] [cursor=pointer]: "0"
+                  - button "More Options for this Comment" [ref=e2457] [cursor=pointer]: more_vert
+                - generic [ref=e2460]:
+                  - paragraph [ref=e2461]: 1 / 12 (shekel) —> 15 grains
+                  - paragraph [ref=e2462]: what should we do with 1/4, 1/6, and 1/8
+                - generic [ref=e2468]:
+                  - link "Adam Anderson's profile" [ref=e2469] [cursor=pointer]:
+                    - /url: /deeppast
+                    - generic "Adam Anderson" [ref=e2470]
+                    - img [ref=e2471]
+                  - generic [ref=e2476]:
+                    - generic [ref=e2477]:
+                      - link "Adam Anderson" [ref=e2478] [cursor=pointer]:
+                        - /url: /deeppast
+                        - heading "Adam Anderson" [level=3] [ref=e2479]
+                      - generic [ref=e2481]: Competition Host
+                    - paragraph [ref=e2483]: Posted 9 days ago
+                  - generic [ref=e2485]:
+                    - generic [ref=e2486]:
+                      - button "Upvote" [ref=e2487] [cursor=pointer]:
+                        - generic [ref=e2488]: arrow_drop_up
+                      - button "1 votes" [ref=e2489] [cursor=pointer]: "1"
+                    - button "More Options for this Comment" [ref=e2490] [cursor=pointer]: more_vert
+                  - paragraph [ref=e2494]: "Those fractions are counted in terms of shekels: ¼ (shekel) ⅙ (shekel)"
+              - separator [ref=e2495]
+            - generic [ref=e2496]:
+              - generic [ref=e2500]:
+                - link "Yicong XIAO's profile" [ref=e2501] [cursor=pointer]:
+                  - /url: /edwardxiao01
+                  - generic "Yicong XIAO" [ref=e2502]
+                  - img [ref=e2503]
+                - generic [ref=e2508]:
+                  - link "Yicong XIAO" [ref=e2510] [cursor=pointer]:
+                    - /url: /edwardxiao01
+                    - heading "Yicong XIAO" [level=3] [ref=e2511]
+                  - paragraph [ref=e2513]: Posted 11 days ago
+                - generic [ref=e2515]:
+                  - generic [ref=e2516]:
+                    - button "Upvote" [ref=e2517] [cursor=pointer]:
+                      - generic [ref=e2518]: arrow_drop_up
+                    - button "0 votes" [ref=e2519] [cursor=pointer]: "0"
+                  - button "More Options for this Comment" [ref=e2520] [cursor=pointer]: more_vert
+                - generic [ref=e2523]:
+                  - paragraph [ref=e2524]:
+                    - link "@deeppast (opens in a new tab)" [ref=e2525] [cursor=pointer]:
+                      - /url: https://www.kaggle.com/deeppast
+                      - text: "@deeppast"
+                    - text: hi, just to be 100% clarified, is ḫ gonna be a valid character in the test set?
+                  - paragraph [ref=e2526]:
+                    - text: Asking this because in the "Examples of the Optimal Outcomes for Train" you mentioned, the proper noun "Tuwar-a
+                    - strong [ref=e2527]: ḫ
+                    - text: šu" is displayed as "Tuwar-a
+                    - strong [ref=e2528]: h
+                    - text: šu"
+                  - paragraph [ref=e2529]: thanks!
+                - generic [ref=e2535]:
+                  - link "Adam Anderson's profile" [ref=e2536] [cursor=pointer]:
+                    - /url: /deeppast
+                    - generic "Adam Anderson" [ref=e2537]
+                    - img [ref=e2538]
+                  - generic [ref=e2543]:
+                    - generic [ref=e2544]:
+                      - link "Adam Anderson" [ref=e2545] [cursor=pointer]:
+                        - /url: /deeppast
+                        - heading "Adam Anderson" [level=3] [ref=e2546]
+                      - generic [ref=e2548]: Competition Host
+                    - paragraph [ref=e2550]: Posted 9 days ago
+                  - generic [ref=e2552]:
+                    - generic [ref=e2553]:
+                      - button "Upvote" [ref=e2554] [cursor=pointer]:
+                        - generic [ref=e2555]: arrow_drop_up
+                      - button "0 votes" [ref=e2556] [cursor=pointer]: "0"
+                    - button "More Options for this Comment" [ref=e2557] [cursor=pointer]: more_vert
+                  - paragraph [ref=e2561]:
+                    - text: yes, neither
+                    - code [ref=e2562]: Ḫ
+                    - text: nor
+                    - code [ref=e2563]: ḫ
+                    - text: appear in the test set.
+              - separator [ref=e2564]
+            - generic [ref=e2565]:
+              - generic [ref=e2569]:
+                - link "Sasha Turutin's profile" [ref=e2570] [cursor=pointer]:
+                  - /url: /alturutin
+                  - generic "Sasha Turutin" [ref=e2571]
+                  - img [ref=e2572]
+                - generic [ref=e2577]:
+                  - link "Sasha Turutin" [ref=e2579] [cursor=pointer]:
+                    - /url: /alturutin
+                    - heading "Sasha Turutin" [level=3] [ref=e2580]
+                  - generic [ref=e2581]:
+                    - paragraph [ref=e2582]: Posted 13 days ago
+                    - paragraph [ref=e2584]: 427th in this Competition
+                - generic [ref=e2586]:
+                  - generic [ref=e2587]:
+                    - button "Upvote" [ref=e2588] [cursor=pointer]:
+                      - generic [ref=e2589]: arrow_drop_up
+                    - button "0 votes" [ref=e2590] [cursor=pointer]: "0"
+                  - button "More Options for this Comment" [ref=e2591] [cursor=pointer]: more_vert
+                - generic [ref=e2594]:
+                  - paragraph [ref=e2595]: "Hi! Can you clarify these examples in translation:"
+                  - code [ref=e2597]: I paid <gap> ⅓ mina (silver) to Ennānum, son of Amriya. Tuwar-ahšu owes ⅓ mina 2 ½ shekels of silver (and) 20 loaves of bread to Ali-ahum.
+                  - paragraph [ref=e2598]: Why are we using curved parenthesis? I looked at train.csv on datasets page and there are no examples of "(silver)". Or examples of parenthesis usage.
+                - generic [ref=e2604]:
+                  - link "Adam Anderson's profile" [ref=e2605] [cursor=pointer]:
+                    - /url: /deeppast
+                    - generic "Adam Anderson" [ref=e2606]
+                    - img [ref=e2607]
+                  - generic [ref=e2612]:
+                    - generic [ref=e2613]:
+                      - link "Adam Anderson" [ref=e2614] [cursor=pointer]:
+                        - /url: /deeppast
+                        - heading "Adam Anderson" [level=3] [ref=e2615]
+                      - generic [ref=e2617]: Competition Host
+                    - paragraph [ref=e2619]: Posted 13 days ago
+                  - generic [ref=e2621]:
+                    - generic [ref=e2622]:
+                      - button "Upvote" [ref=e2623] [cursor=pointer]:
+                        - generic [ref=e2624]: arrow_drop_up
+                      - button "2 votes" [ref=e2625] [cursor=pointer]: "2"
+                    - button "More Options for this Comment" [ref=e2626] [cursor=pointer]: more_vert
+                  - paragraph [ref=e2630]: The parentheses are used by translators to fill in words that are missing in the Akkadian transliteration, but which provides sometimes necessary context.
+              - separator [ref=e2631]
+            - generic [ref=e2632]:
+              - generic [ref=e2636]:
+                - link "Yicong XIAO's profile" [ref=e2637] [cursor=pointer]:
+                  - /url: /edwardxiao01
+                  - generic "Yicong XIAO" [ref=e2638]
+                  - img [ref=e2639]
+                - generic [ref=e2644]:
+                  - link "Yicong XIAO" [ref=e2646] [cursor=pointer]:
+                    - /url: /edwardxiao01
+                    - heading "Yicong XIAO" [level=3] [ref=e2647]
+                  - paragraph [ref=e2649]: Posted 14 days ago
+                - generic [ref=e2651]:
+                  - generic [ref=e2652]:
+                    - button "Upvote" [ref=e2653] [cursor=pointer]:
+                      - generic [ref=e2654]: arrow_drop_up
+                    - button "0 votes" [ref=e2655] [cursor=pointer]: "0"
+                  - button "More Options for this Comment" [ref=e2656] [cursor=pointer]: more_vert
+                - generic [ref=e2659]:
+                  - paragraph [ref=e2660]: Thanks for the update!
+                  - paragraph [ref=e2661]: "May I ask about a specific case: 33773ec0-e74f-41bf-b985-f3e35b0f26c9"
+                  - code [ref=e2663]: From what Amur-Aššur (owes?)
+                  - paragraph [ref=e2664]:
+                    - text: will such case of
+                    - code [ref=e2665]: (some word?)
+                    - text: appear in the test set?
+                - generic [ref=e2671]:
+                  - link "Adam Anderson's profile" [ref=e2672] [cursor=pointer]:
+                    - /url: /deeppast
+                    - generic "Adam Anderson" [ref=e2673]
+                    - img [ref=e2674]
+                  - generic [ref=e2679]:
+                    - generic [ref=e2680]:
+                      - link "Adam Anderson" [ref=e2681] [cursor=pointer]:
+                        - /url: /deeppast
+                        - heading "Adam Anderson" [level=3] [ref=e2682]
+                      - generic [ref=e2684]: Competition Host
+                    - paragraph [ref=e2686]: Posted 13 days ago
+                  - generic [ref=e2688]:
+                    - generic [ref=e2689]:
+                      - button "Upvote" [ref=e2690] [cursor=pointer]:
+                        - generic [ref=e2691]: arrow_drop_up
+                      - button "0 votes" [ref=e2692] [cursor=pointer]: "0"
+                    - button "More Options for this Comment" [ref=e2693] [cursor=pointer]: more_vert
+                  - paragraph [ref=e2697]: yes, unfortunately, that does exist.
+              - separator [ref=e2698]
+            - generic [ref=e2699]:
+              - generic [ref=e2703]:
+                - link "moth's profile" [ref=e2704] [cursor=pointer]:
+                  - /url: /alejopaullier
+                  - generic "moth" [ref=e2705]
+                  - img [ref=e2706]
+                - generic [ref=e2711]:
+                  - link "moth" [ref=e2713] [cursor=pointer]:
+                    - /url: /alejopaullier
+                    - heading "moth" [level=3] [ref=e2714]
+                  - generic [ref=e2715]:
+                    - paragraph [ref=e2716]: Posted 14 days ago
+                    - paragraph [ref=e2718]: 1184th in this Competition
+                - generic [ref=e2720]:
+                  - generic [ref=e2721]:
+                    - button "Upvote" [ref=e2722] [cursor=pointer]:
+                      - generic [ref=e2723]: arrow_drop_up
+                    - button "0 votes" [ref=e2724] [cursor=pointer]: "0"
+                  - button "More Options for this Comment" [ref=e2725] [cursor=pointer]: more_vert
+                - generic [ref=e2728]:
+                  - paragraph [ref=e2729]:
+                    - text: Thanks
+                    - link "@deeppast (opens in a new tab)" [ref=e2730] [cursor=pointer]:
+                      - /url: https://www.kaggle.com/deeppast
+                      - text: "@deeppast"
+                    - text: for your ongoing efforts. What does this exactly mean?
+                  - blockquote [ref=e2731]:
+                    - paragraph [ref=e2732]: PN —> < gap >
+                  - paragraph [ref=e2733]:
+                    - text: Does this mean that every personal name to be found must be replaced by a gap tag? Or just the literal
+                    - code [ref=e2734]: PN
+                    - text: "?"
+                  - paragraph [ref=e2735]: Also,
+                  - blockquote [ref=e2736]:
+                    - paragraph [ref=e2737]: Shortening of long floats to four places after the decimal
+                  - paragraph [ref=e2738]: I am a bit confused by this since later you suggest converting them to unicode fractions. Does the hidden test set (both translations and transliterations) contain floating point numbers or only unicode fractions?
+                  - paragraph [ref=e2739]: Thanks in advance
+                - generic [ref=e2745]:
+                  - link "Adam Anderson's profile" [ref=e2746] [cursor=pointer]:
+                    - /url: /deeppast
+                    - generic "Adam Anderson" [ref=e2747]
+                    - img [ref=e2748]
+                  - generic [ref=e2753]:
+                    - generic [ref=e2754]:
+                      - link "Adam Anderson" [ref=e2755] [cursor=pointer]:
+                        - /url: /deeppast
+                        - heading "Adam Anderson" [level=3] [ref=e2756]
+                      - generic [ref=e2758]: Competition Host
+                    - paragraph [ref=e2760]: Posted 14 days ago
+                  - generic [ref=e2762]:
+                    - generic [ref=e2763]:
+                      - button "Upvote" [ref=e2764] [cursor=pointer]:
+                        - generic [ref=e2765]: arrow_drop_up
+                      - button "3 votes" [ref=e2766] [cursor=pointer]: "3"
+                    - button "More Options for this Comment" [ref=e2767] [cursor=pointer]: more_vert
+                  - generic [ref=e2770]:
+                    - paragraph [ref=e2771]:
+                      - text: That's a literal
+                      - code [ref=e2772]: PN
+                      - text: token, there are some of these in Veenhof's translations from AKT 8.
+                    - paragraph [ref=e2773]: I already shortened the floats, so that the conversion to fractions will be easier for you, if you choose to do so. As seen in the example at the end, the test contains only unicode fractions (no decimals at all).
+                  - generic [ref=e2779]:
+                    - link "moth's profile" [ref=e2780] [cursor=pointer]:
+                      - /url: /alejopaullier
+                      - generic "moth" [ref=e2781]
+                      - img [ref=e2782]
+                    - generic [ref=e2787]:
+                      - link "moth" [ref=e2789] [cursor=pointer]:
+                        - /url: /alejopaullier
+                        - heading "moth" [level=3] [ref=e2790]
+                      - generic [ref=e2791]:
+                        - paragraph [ref=e2792]: Posted 14 days ago
+                        - paragraph [ref=e2794]: 1184th in this Competition
+                    - generic [ref=e2796]:
+                      - generic [ref=e2797]:
+                        - button "Upvote" [ref=e2798] [cursor=pointer]:
+                          - generic [ref=e2799]: arrow_drop_up
+                        - button "0 votes" [ref=e2800] [cursor=pointer]: "0"
+                      - button "More Options for this Comment" [ref=e2801] [cursor=pointer]: more_vert
+                    - paragraph [ref=e2805]: Perfect, thanks a lot!
+              - separator [ref=e2806]
+            - paragraph [ref=e2813]: This comment has been deleted.
+  - alert [ref=e2816]

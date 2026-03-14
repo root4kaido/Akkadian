@@ -1,0 +1,1048 @@
+- generic [ref=e2]:
+  - navigation "Main Kaggle page navigation" [ref=e3]:
+    - generic [ref=e5]:
+      - button "Navigation menu" [ref=e7] [cursor=pointer]: menu
+      - link "Skip to content" [ref=e8] [cursor=pointer]:
+        - /url: "#site-content"
+        - text: Skip to
+        - text: content
+      - link "Return to Kaggle home page" [ref=e10] [cursor=pointer]:
+        - /url: /
+        - img "Kaggle" [ref=e11]
+    - button "Create" [ref=e13] [cursor=pointer]:
+      - img [ref=e14]
+      - generic [ref=e19]: Create
+    - generic [ref=e20]:
+      - generic [ref=e22]:
+        - list [ref=e23]:
+          - listitem "Home List Item" [ref=e24]:
+            - link "Home" [ref=e26] [cursor=pointer]:
+              - /url: /
+              - generic [ref=e27]:
+                - generic [ref=e30]: explore
+                - paragraph [ref=e32]: Home
+          - listitem "Competitions List Item" [ref=e33]:
+            - link "Competitions" [ref=e35] [cursor=pointer]:
+              - /url: /competitions
+              - generic [ref=e36]:
+                - generic [ref=e39]: emoji_events
+                - paragraph [ref=e41]: Competitions
+          - listitem "Datasets List Item" [ref=e43]:
+            - link "Datasets" [ref=e45] [cursor=pointer]:
+              - /url: /datasets
+              - generic [ref=e46]:
+                - generic [ref=e49]: table_chart
+                - paragraph [ref=e51]: Datasets
+          - listitem "Models List Item" [ref=e52]:
+            - link "Models" [ref=e54] [cursor=pointer]:
+              - /url: /models
+              - generic [ref=e55]:
+                - generic [ref=e58]: tenancy
+                - paragraph [ref=e60]: Models
+          - listitem "Benchmarks List Item" [ref=e61]:
+            - link "Benchmarks" [ref=e63] [cursor=pointer]:
+              - /url: /benchmarks
+              - generic [ref=e64]:
+                - generic [ref=e67]: leaderboard
+                - paragraph [ref=e69]: Benchmarks
+          - listitem "Game Arena List Item" [ref=e70]:
+            - link "Game Arena" [ref=e72] [cursor=pointer]:
+              - /url: /game-arena
+              - generic [ref=e73]:
+                - generic [ref=e76]: smart_toy
+                - paragraph [ref=e78]: Game Arena
+          - listitem "Code List Item" [ref=e79]:
+            - link "Code" [ref=e81] [cursor=pointer]:
+              - /url: /code
+              - generic [ref=e82]:
+                - generic [ref=e85]: code
+                - paragraph [ref=e87]: Code
+          - listitem "Discussions List Item" [ref=e88]:
+            - link "Discussions" [ref=e90] [cursor=pointer]:
+              - /url: /discussions
+              - generic [ref=e91]:
+                - generic [ref=e94]: comment
+                - paragraph [ref=e96]: Discussions
+          - listitem "Kaggle Learn List Item" [ref=e97]:
+            - link "Kaggle Learn" [ref=e99] [cursor=pointer]:
+              - /url: /learn
+              - generic [ref=e100]:
+                - generic [ref=e103]: school
+                - paragraph [ref=e105]: Learn
+        - list [ref=e106]:
+          - listitem "More on Kaggle List Item" [ref=e107]:
+            - link "More on Kaggle" [ref=e109] [cursor=pointer]:
+              - /url: "#"
+              - generic [ref=e110]:
+                - generic [ref=e113]: expand_more
+                - paragraph [ref=e115]: More
+      - button "View Active Events" [ref=e117] [cursor=pointer]:
+        - generic [ref=e119]: auto_awesome_motion
+        - paragraph [ref=e120]: View Active Events
+  - navigation "Main menu, search and your account" [ref=e121]:
+    - generic [ref=e122]:
+      - generic [ref=e126]:
+        - generic [ref=e127]: search
+        - textbox "Search" [ref=e128]
+        - group
+      - generic [ref=e130]:
+        - link "Sign In" [ref=e132] [cursor=pointer]:
+          - /url: /account/login?phase=startSignInTab&returnUrl=%2Fcompetitions%2Fdeep-past-initiative-machine-translation%2Fdiscussion%2F674136
+          - button "Sign In" [ref=e133]:
+            - generic [ref=e134]: Sign In
+        - link "Register" [ref=e136] [cursor=pointer]:
+          - /url: /account/login?phase=startRegisterTab&returnUrl=%2Fcompetitions%2Fdeep-past-initiative-machine-translation%2Fdiscussion%2F674136
+          - button "Register" [ref=e137]:
+            - generic [ref=e138]: Register
+  - main [ref=e139]:
+    - generic [ref=e141]:
+      - generic [ref=e142]: Kaggle uses cookies from Google to deliver and enhance the quality of its services and to analyze traffic.
+      - generic [ref=e143]:
+        - link "Learn more" [ref=e144] [cursor=pointer]:
+          - /url: /cookies
+          - generic [ref=e145]: Learn more
+        - generic [ref=e146] [cursor=pointer]: OK, Got it.
+    - generic [ref=e149]:
+      - generic [ref=e151]:
+        - generic [ref=e152]:
+          - link "Deep Past Initiative's profile" [ref=e153] [cursor=pointer]:
+            - /url: /organizations/deep-past-initiative
+            - generic "Deep Past Initiative" [ref=e154]
+            - img [ref=e155]
+          - generic [ref=e158]:
+            - generic [ref=e160]: Deep Past Initiative
+            - generic [ref=e161]: · Featured Code Competition · 12 days to go
+          - generic [ref=e162]:
+            - button "Join Competition" [ref=e164] [cursor=pointer]:
+              - generic [ref=e165]: Join Competition
+            - button "Competition options menu collapsed" [ref=e167] [cursor=pointer]: more_horiz
+        - generic [ref=e169]:
+          - heading "Deep Past Challenge - Translate Akkadian to English" [level=1] [ref=e170]
+          - paragraph [ref=e172]: Bringing Bronze Age Voices Back to Life – Machine Translation of Old Assyrian Cuneiform
+      - generic [ref=e174]:
+        - tablist [ref=e181]:
+          - tab "Overview, 1 of 7" [ref=e182] [cursor=pointer]:
+            - generic [ref=e183]: Overview
+          - tab "Data, 2 of 7" [ref=e184] [cursor=pointer]:
+            - generic [ref=e185]: Data
+          - tab "Code, 3 of 7" [ref=e186] [cursor=pointer]:
+            - generic [ref=e187]: Code
+          - tab "Models, 4 of 7" [ref=e188] [cursor=pointer]:
+            - generic [ref=e189]: Models
+          - tab "Discussion, 5 of 7" [selected] [ref=e190] [cursor=pointer]:
+            - generic [ref=e191]: Discussion
+          - tab "Leaderboard, 6 of 7" [ref=e192] [cursor=pointer]:
+            - generic [ref=e193]: Leaderboard
+          - tab "Rules, 7 of 7" [ref=e194] [cursor=pointer]:
+            - generic [ref=e195]: Rules
+        - separator [ref=e197]
+      - generic [ref=e201]:
+        - generic [ref=e202]:
+          - generic [ref=e203]:
+            - generic [ref=e204]:
+              - link "Ryan Holbrook's profile" [ref=e205] [cursor=pointer]:
+                - /url: /ryanholbrook
+                - generic "Ryan Holbrook" [ref=e206]
+                - img [ref=e207]
+              - generic [ref=e210]:
+                - link "Ryan Holbrook" [ref=e211] [cursor=pointer]:
+                  - /url: /ryanholbrook
+                - text: ·
+                - generic [ref=e212]: Posted 21 days ago
+              - text: ·
+              - generic [ref=e213]: Kaggle Staff
+            - generic [ref=e214]:
+              - generic [ref=e215]:
+                - button "Upvote" [ref=e216] [cursor=pointer]:
+                  - generic [ref=e217]: arrow_drop_up
+                - button "24 votes" [ref=e218] [cursor=pointer]: "24"
+              - button "More Options for this Topic" [ref=e219] [cursor=pointer]: more_vert
+            - heading "Dataset Update - Mind the Gaps" [level=3] [ref=e220]
+            - generic [ref=e223]:
+              - paragraph [ref=e224]: Hi everyone,
+              - paragraph [ref=e225]:
+                - text: I just posted an update to the dataset that regularizes
+                - code [ref=e226]: <gap>
+                - text: conventions. The
+                - code [ref=e227]: train.csv
+                - text: ","
+                - code [ref=e228]: published.csv
+                - text: ", the (hidden)"
+                - code [ref=e229]: test.csv
+                - text: ", and the test set labels have all been updated. The competition host will follow up soon with more details."
+              - paragraph [ref=e230]: I will also be initiating a rescore of all current submissions tomorrow. I will keep you updated as this progresses. All new submissions will be scored against the updated labels.
+              - paragraph [ref=e231]: "UPDATE 02/20/2026: We are working on another (hopefully final) update that should address some of the issues raised here. I hope to have it out soon, likely Monday. We will delay the rescore until then."
+            - generic [ref=e234]:
+              - generic [ref=e236]:
+                - img [ref=e238]
+                - generic [ref=e239]: "9"
+              - generic [ref=e241]:
+                - img [ref=e243]
+                - generic [ref=e244]: "5"
+          - separator [ref=e245]
+        - generic [ref=e246]:
+          - generic [ref=e247]:
+            - paragraph [ref=e250]:
+              - paragraph [ref=e251]:
+                - text: Please
+                - link "sign in opens in new window" [ref=e252] [cursor=pointer]:
+                  - /url: /account/login
+                  - text: sign in
+                - text: to reply to this topic.
+            - separator [ref=e253]
+          - generic [ref=e255]:
+            - generic [ref=e256]:
+              - generic [ref=e257]: comment
+              - heading "26 Comments" [level=2] [ref=e259]
+            - generic [ref=e262]:
+              - combobox "Select combobox. Hotness currently selected." [ref=e263] [cursor=pointer]:
+                - generic [ref=e265]: Hotness
+              - textbox: Hotness
+              - img
+          - generic [ref=e266]:
+            - heading "Pinned comments" [level=3] [ref=e267]
+            - generic [ref=e272]:
+              - paragraph [ref=e274]: This comment has been deleted.
+              - generic [ref=e275]:
+                - generic [ref=e280]:
+                  - link "steubk's profile" [ref=e281] [cursor=pointer]:
+                    - /url: /steubk
+                    - generic "steubk" [ref=e282]
+                    - img [ref=e283]
+                  - generic [ref=e288]:
+                    - link "steubk" [ref=e290] [cursor=pointer]:
+                      - /url: /steubk
+                      - heading "steubk" [level=3] [ref=e291]
+                    - generic [ref=e292]:
+                      - paragraph [ref=e293]: Posted 19 days ago
+                      - paragraph [ref=e295]: 177th in this Competition
+                  - generic [ref=e297]:
+                    - generic [ref=e298]:
+                      - button "Upvote" [ref=e299] [cursor=pointer]:
+                        - generic [ref=e300]: arrow_drop_up
+                      - button "7 votes" [ref=e301] [cursor=pointer]: "7"
+                    - button "More Options for this Comment" [ref=e302] [cursor=pointer]: more_vert
+                  - generic [ref=e305]:
+                    - paragraph [ref=e306]:
+                      - link "@deeppast (opens in a new tab)" [ref=e307] [cursor=pointer]:
+                        - /url: https://www.kaggle.com/deeppast
+                        - text: "@deeppast"
+                      - text: "Thanks for clarifying the updates to the train set translations. I have a few questions:"
+                    - list [ref=e308]:
+                      - listitem [ref=e309]: Were the same updates applied to the test set?
+                      - listitem [ref=e310]: How are fractions represented in the test set—decimals (e.g., 0.5) or Unicode characters (e.g., ½)?
+                      - listitem [ref=e311]:
+                        - text: What does
+                        - code [ref=e312]: PN = <gap>
+                        - text: mean? Was the literal string “PN” replaced with
+                        - code [ref=e313]: <gap>
+                        - text: ", or were all personal names replaced with"
+                        - code [ref=e314]: <gap>
+                        - text: "?"
+                - generic [ref=e319]:
+                  - link "Vishal Kishore's profile" [ref=e320] [cursor=pointer]:
+                    - /url: /kishorevishal
+                    - generic "Vishal Kishore" [ref=e321]
+                    - img [ref=e322]
+                  - generic [ref=e327]:
+                    - link "Vishal Kishore" [ref=e329] [cursor=pointer]:
+                      - /url: /kishorevishal
+                      - heading "Vishal Kishore" [level=3] [ref=e330]
+                    - generic [ref=e331]:
+                      - paragraph [ref=e332]: Posted 19 days ago
+                      - paragraph [ref=e334]: 47th in this Competition
+                  - generic [ref=e336]:
+                    - generic [ref=e337]:
+                      - button "Upvote" [ref=e338] [cursor=pointer]:
+                        - generic [ref=e339]: arrow_drop_up
+                      - button "1 votes" [ref=e340] [cursor=pointer]: "1"
+                    - button "More Options for this Comment" [ref=e341] [cursor=pointer]: more_vert
+                  - generic [ref=e344]:
+                    - paragraph [ref=e345]:
+                      - text: Just checking, is the data section updated? I can still see
+                      - code [ref=e346]: fem.
+                      - code [ref=e347]: sing.
+                      - code [ref=e348]: pl.
+                      - text: in translations
+                    - paragraph [ref=e349]: Edit - I noticed the apostrophe was removed, but I think it’s important for translation quality. ref- The current train.csv has "Šāt-Annas representative", but the previous version had "Šāt-Anna's representative".
+            - heading "All other comments" [level=3] [ref=e350]
+            - generic [ref=e351]:
+              - generic [ref=e355]:
+                - link "KishoreKashyap's profile" [ref=e356] [cursor=pointer]:
+                  - /url: /kkashyap14
+                  - generic "KishoreKashyap" [ref=e357]
+                  - img [ref=e358]
+                - generic [ref=e363]:
+                  - link "KishoreKashyap" [ref=e365] [cursor=pointer]:
+                    - /url: /kkashyap14
+                    - heading "KishoreKashyap" [level=3] [ref=e366]
+                  - generic [ref=e367]:
+                    - paragraph [ref=e368]: Posted 6 days ago
+                    - paragraph [ref=e370]: 444th in this Competition
+                - generic [ref=e372]:
+                  - generic [ref=e373]:
+                    - button "Upvote" [ref=e374] [cursor=pointer]:
+                      - generic [ref=e375]: arrow_drop_up
+                    - button "1 votes" [ref=e376] [cursor=pointer]: "1"
+                  - button "More Options for this Comment" [ref=e377] [cursor=pointer]: more_vert
+                - paragraph [ref=e381]: Dear Ryan Holbrook, can we have BLEU and ChrF scores along with GM? This will greatly help us to see our model's performance in a transparent manner and thereby help us to diagnose our models well. You can keep GM as the final LB scoring mechanism. Thank you.
+              - separator [ref=e382]
+            - generic [ref=e383]:
+              - generic [ref=e387]:
+                - link "MPWARE's profile" [ref=e388] [cursor=pointer]:
+                  - /url: /mpware
+                  - generic "MPWARE" [ref=e389]
+                  - img [ref=e390]
+                - generic [ref=e395]:
+                  - link "MPWARE" [ref=e397] [cursor=pointer]:
+                    - /url: /mpware
+                    - heading "MPWARE" [level=3] [ref=e398]
+                  - generic [ref=e399]:
+                    - paragraph [ref=e400]: Posted 20 days ago
+                    - paragraph [ref=e402]: 290th in this Competition
+                - generic [ref=e404]:
+                  - generic [ref=e405]:
+                    - button "Upvote" [ref=e406] [cursor=pointer]:
+                      - generic [ref=e407]: arrow_drop_up
+                    - button "15 votes" [ref=e408] [cursor=pointer]: "15"
+                  - button "More Options for this Comment" [ref=e409] [cursor=pointer]: more_vert
+                - generic [ref=e412]:
+                  - paragraph [ref=e413]: First, thank you for providing the updated, cleaner dataset - it’s clear that a lot of effort went into improving data quality, and it will ultimately benefit the challenge.
+                  - paragraph [ref=e414]: "I do have a couple of concerns I’d like to share:"
+                  - list [ref=e415]:
+                    - listitem [ref=e416]:
+                      - paragraph [ref=e417]: "Mid-competition changes: Updating the data and rules partway through the competition can be challenging for participants who have been working since the start of the Deep Past Challenge. Many of us invested significant time normalizing and adapting to the original data, and these efforts may no longer be applicable. While I understand the intent to improve the dataset, this kind of change can feel discouraging from a fairness standpoint."
+                    - listitem [ref=e418]:
+                      - paragraph [ref=e419]: "Information consistency across platforms: Some important clarifications appear to be shared on Discord but not reflected in the official Kaggle discussion or data description. For participants who rely solely on the Kaggle platform, this creates an uneven playing field. It would be very helpful if all critical information were consolidated in the official documentation."
+                  - paragraph [ref=e420]: That said, I’m still enjoying the challenge and plan to continue participating.
+                  - paragraph [ref=e421]:
+                    - text: To help avoid further rework, especially for normalizing re-OCR data such as Larsen,
+                    - strong [ref=e422]: could you please provide a detailed list of the normalization changes that were applied
+                    - text: "? A quick diff of train.csv suggests that, beyond replacing with , there were also changes such as quote removal, number fractions, Hh, subscripts, and possibly other text adjustments. Having a clear summary would help participants align their preprocessing steps with the updated data. Could you provide"
+                    - strong [ref=e423]: the updated list of characters allowed in transliteration and translation
+                    - text: "?"
+                  - paragraph [ref=e424]: "Finally:"
+                  - list [ref=e425]:
+                    - listitem [ref=e426]: "\"Dataset instructions\" had not been updated and still ask us to use big_gap."
+                    - listitem [ref=e427]: fem. plur. are still here but you recommended to remove them
+                - generic [ref=e428]:
+                  - generic [ref=e433]:
+                    - link "Yurnero's profile" [ref=e434] [cursor=pointer]:
+                      - /url: /samson8
+                      - generic "Yurnero" [ref=e435]
+                      - img [ref=e436]
+                    - generic [ref=e441]:
+                      - link "Yurnero" [ref=e443] [cursor=pointer]:
+                        - /url: /samson8
+                        - heading "Yurnero" [level=3] [ref=e444]
+                      - generic [ref=e445]:
+                        - paragraph [ref=e446]: Posted 19 days ago
+                        - paragraph [ref=e448]: 5th in this Competition
+                    - generic [ref=e450]:
+                      - generic [ref=e451]:
+                        - button "Upvote" [ref=e452] [cursor=pointer]:
+                          - generic [ref=e453]: arrow_drop_up
+                        - button "4 votes" [ref=e454] [cursor=pointer]: "4"
+                      - button "More Options for this Comment" [ref=e455] [cursor=pointer]: more_vert
+                    - generic [ref=e458]:
+                      - paragraph [ref=e459]: The thing is. This is obviously a good change that eliminates 2-token preprocessing gamble and should have been done in the first week. I'm sure Adam is a professional and knows his domain perfectly. Just sometimes people are unfamiliar with how many GPU/human hours could be burnt by solving a problem within a particular setting and that changing this setting could be a bit painful.
+                      - paragraph [ref=e460]: Nevertheless, I'm sure that 'transitivity' of a translation quality still holds (in general) for the new test. Let's just hope that it is the last change~~
+                    - generic [ref=e461]:
+                      - generic [ref=e466]:
+                        - link "Jack's profile" [ref=e467] [cursor=pointer]:
+                          - /url: /jackvd
+                          - generic "Jack" [ref=e468]
+                          - img [ref=e469]
+                        - generic [ref=e474]:
+                          - link "Jack" [ref=e476] [cursor=pointer]:
+                            - /url: /jackvd
+                            - heading "Jack" [level=3] [ref=e477]
+                          - generic [ref=e478]:
+                            - paragraph [ref=e479]: Posted 19 days ago
+                            - paragraph [ref=e481]: 8th in this Competition
+                        - generic [ref=e483]:
+                          - generic [ref=e484]:
+                            - button "Upvote" [ref=e485] [cursor=pointer]:
+                              - generic [ref=e486]: arrow_drop_up
+                            - button "4 votes" [ref=e487] [cursor=pointer]: "4"
+                          - button "More Options for this Comment" [ref=e488] [cursor=pointer]: more_vert
+                        - paragraph [ref=e492]: Yes, it's a good change, but wowee I spent a lot of time on stuff that is now useless 🫠
+                      - generic [ref=e497]:
+                        - link "Hafiz Atif Ali's profile" [ref=e498] [cursor=pointer]:
+                          - /url: /dingolingo
+                          - generic "Hafiz Atif Ali" [ref=e499]
+                          - img [ref=e500]
+                        - generic [ref=e505]:
+                          - link "Hafiz Atif Ali" [ref=e507] [cursor=pointer]:
+                            - /url: /dingolingo
+                            - heading "Hafiz Atif Ali" [level=3] [ref=e508]
+                          - paragraph [ref=e510]: Posted 3 days ago
+                        - generic [ref=e512]:
+                          - generic [ref=e513]:
+                            - button "Upvote" [ref=e514] [cursor=pointer]:
+                              - generic [ref=e515]: arrow_drop_up
+                            - button "0 votes" [ref=e516] [cursor=pointer]: "0"
+                          - button "More Options for this Comment" [ref=e517] [cursor=pointer]: more_vert
+                        - paragraph [ref=e521]: relatable
+                  - generic [ref=e526]:
+                    - link "Hafiz Atif Ali's profile" [ref=e527] [cursor=pointer]:
+                      - /url: /dingolingo
+                      - generic "Hafiz Atif Ali" [ref=e528]
+                      - img [ref=e529]
+                    - generic [ref=e534]:
+                      - link "Hafiz Atif Ali" [ref=e536] [cursor=pointer]:
+                        - /url: /dingolingo
+                        - heading "Hafiz Atif Ali" [level=3] [ref=e537]
+                      - paragraph [ref=e539]: Posted 20 hours ago
+                    - generic [ref=e541]:
+                      - generic [ref=e542]:
+                        - button "Upvote" [ref=e543] [cursor=pointer]:
+                          - generic [ref=e544]: arrow_drop_up
+                        - button "0 votes" [ref=e545] [cursor=pointer]: "0"
+                      - button "More Options for this Comment" [ref=e546] [cursor=pointer]: more_vert
+                    - paragraph [ref=e550]: Wher I find that instructions
+              - separator [ref=e551]
+            - generic [ref=e552]:
+              - generic [ref=e556]:
+                - link "Tarek Ziad's profile" [ref=e557] [cursor=pointer]:
+                  - /url: /tarekziad
+                  - generic "Tarek Ziad" [ref=e558]
+                  - img [ref=e559]
+                - generic [ref=e564]:
+                  - link "Tarek Ziad" [ref=e566] [cursor=pointer]:
+                    - /url: /tarekziad
+                    - heading "Tarek Ziad" [level=3] [ref=e567]
+                  - generic [ref=e568]:
+                    - paragraph [ref=e569]: Posted 19 days ago
+                    - paragraph [ref=e571]: 2531st in this Competition
+                - generic [ref=e573]:
+                  - generic [ref=e574]:
+                    - button "Upvote" [ref=e575] [cursor=pointer]:
+                      - generic [ref=e576]: arrow_drop_up
+                    - button "11 votes" [ref=e577] [cursor=pointer]: "11"
+                  - button "More Options for this Comment" [ref=e578] [cursor=pointer]: more_vert
+                - generic [ref=e581]:
+                  - paragraph [ref=e582]: Honestly ,am really frustrated. I’ve been working on many patterns (like […-Suffix] and several others). Now with every dataset update, these patterns are gone or changed. My work on them is basically useless ,it feels like all my time was wasted.
+                  - paragraph [ref=e583]: This cannot keep happening. If the dataset isn’t stable, the competition should start only when it’s ready. Also, are you planning to update the data one day before the competition ends? We need a stable dataset so our work actually counts.
+                - generic [ref=e584]:
+                  - generic [ref=e589]:
+                    - link "Jack's profile" [ref=e590] [cursor=pointer]:
+                      - /url: /jackvd
+                      - generic "Jack" [ref=e591]
+                      - img [ref=e592]
+                    - generic [ref=e597]:
+                      - link "Jack" [ref=e599] [cursor=pointer]:
+                        - /url: /jackvd
+                        - heading "Jack" [level=3] [ref=e600]
+                      - generic [ref=e601]:
+                        - paragraph [ref=e602]: Posted 19 days ago
+                        - paragraph [ref=e604]: 8th in this Competition
+                    - generic [ref=e606]:
+                      - generic [ref=e607]:
+                        - button "Upvote" [ref=e608] [cursor=pointer]:
+                          - generic [ref=e609]: arrow_drop_up
+                        - button "1 votes" [ref=e610] [cursor=pointer]: "1"
+                      - button "More Options for this Comment" [ref=e611] [cursor=pointer]: more_vert
+                    - paragraph [ref=e615]: Having more complaints than submissions is craaaaaaaazy
+                  - generic [ref=e620]:
+                    - link "Hafiz Atif Ali's profile" [ref=e621] [cursor=pointer]:
+                      - /url: /dingolingo
+                      - generic "Hafiz Atif Ali" [ref=e622]
+                      - img [ref=e623]
+                    - generic [ref=e628]:
+                      - link "Hafiz Atif Ali" [ref=e630] [cursor=pointer]:
+                        - /url: /dingolingo
+                        - heading "Hafiz Atif Ali" [level=3] [ref=e631]
+                      - paragraph [ref=e633]: Posted 7 days ago
+                    - generic [ref=e635]:
+                      - generic [ref=e636]:
+                        - button "Upvote" [ref=e637] [cursor=pointer]:
+                          - generic [ref=e638]: arrow_drop_up
+                        - button "0 votes" [ref=e639] [cursor=pointer]: "0"
+                      - button "More Options for this Comment" [ref=e640] [cursor=pointer]: more_vert
+                    - paragraph [ref=e644]: Then how the things flow
+              - separator [ref=e645]
+            - generic [ref=e646]:
+              - generic [ref=e650]:
+                - link "MPWARE's profile" [ref=e651] [cursor=pointer]:
+                  - /url: /mpware
+                  - generic "MPWARE" [ref=e652]
+                  - img [ref=e653]
+                - generic [ref=e658]:
+                  - link "MPWARE" [ref=e660] [cursor=pointer]:
+                    - /url: /mpware
+                    - heading "MPWARE" [level=3] [ref=e661]
+                  - generic [ref=e662]:
+                    - paragraph [ref=e663]: Posted 18 days ago
+                    - paragraph [ref=e665]: 290th in this Competition
+                - generic [ref=e667]:
+                  - generic [ref=e668]:
+                    - button "Upvote" [ref=e669] [cursor=pointer]:
+                      - generic [ref=e670]: arrow_drop_up
+                    - button "7 votes" [ref=e671] [cursor=pointer]: "7"
+                  - button "More Options for this Comment" [ref=e672] [cursor=pointer]: more_vert
+                - generic [ref=e675]:
+                  - paragraph [ref=e676]: "While waiting the update of update, I've reviewed the update and I'm getting lost now:"
+                  - list [ref=e677]:
+                    - listitem [ref=e678]:
+                      - text: "What is the final policy for fraction? I see some fractions in translation and also just float numbers (rounded or not rounded): 2 minas 13.5, 1.8333300000000001,"
+                      - link "@deeppast (opens in a new tab)" [ref=e679] [cursor=pointer]:
+                        - /url: https://www.kaggle.com/deeppast
+                        - text: "@deeppast"
+                      - text: You was saying in another post that we should convert all floating number to fraction, right? Why it's not normalized now?
+                    - listitem [ref=e680]:
+                      - text: "Some transliteration in english: 9a208f3b-1cbb-43a6-b870-566abe5ea9a1 (noticed by"
+                      - link "@yaroshevskiy (opens in a new tab)" [ref=e681] [cursor=pointer]:
+                        - /url: https://www.kaggle.com/yaroshevskiy
+                        - text: "@yaroshevskiy"
+                      - text: )
+                    - listitem [ref=e682]: ד still here (009fb838-8038-42bc-ad34-5f795b3840ee)
+                    - listitem [ref=e683]: "Many x that shoud be < gap >: 04dd324f-120e-44fd-9dbd-93a144906902 (Um-x took), 1b89399d-d4f8-4347-b88b-94f5eec0886f (shekels for x shekels; 15 grain), 476e6eef-f0a4-44fd-b3f8-65e6337a9a51 (When Ana-xs son and Ili-pi-usurs)"
+                    - listitem [ref=e684]: "Random possessive usage: 054fdba4-0cff-4153-969d-c77e42413e1c (to our own Amur-Ištar's sons)"
+                    - listitem [ref=e685]: "What should we do with /: 1252b18d-4b89-4af9-b6b9-199b40c13848 (qí-bi-ma um-ma SIG5-pí-/i-a-/šur-ma). Why it's not normalized now?"
+                    - listitem [ref=e686]: "brackets: 19052127-2c2e-479d-b666-f1ea0ed27cb2, their right on a share < by giving them > a house-plot. Is that normal we still have them in the cleaned translation?"
+                    - listitem [ref=e687]: A lot of not allowed chars in translation (according to the previous list that was provided)
+                    - listitem [ref=e688]: fem. pl. sing. a44f089e-2645-4aa2-b5e4-ba75e70fdf78, 7e525e12-c226-4c00-9c6e-de303e676771 (I shall return your grain to you fem. pl.. Send me), b64a5273-3e7c-4fe9-9824-bc5cd5e67586 (the cannot give in! As soon as youpl. have heard), 26ebe582-a312-4b63-8138-b7a19b12f277 (I have written to you fem. sing. five times)
+                    - listitem [ref=e689]: "Orphans curly bracket: 8c1f39b5-5b71-4171-b0ef-d4db031a5802 (as follows: Of the 57 skekels of silver} that are available)"
+                    - listitem [ref=e690]: "Roman numbers: c84fb0b6-45c9-4e6d-8923-51eddf50c2d7 (dated to the IVth month of the eponymy), Do we have to convert them to just number?"
+                    - listitem [ref=e691]: "Parenthesis removed: e76705fe-094c-4fa3-8506-2bca4d4e7b7c ==> to your representatives (with) Aluwa, then I shall act in"
+                - generic [ref=e692]:
+                  - generic [ref=e697]:
+                    - link "Yurnero's profile" [ref=e698] [cursor=pointer]:
+                      - /url: /samson8
+                      - generic "Yurnero" [ref=e699]
+                      - img [ref=e700]
+                    - generic [ref=e705]:
+                      - link "Yurnero" [ref=e707] [cursor=pointer]:
+                        - /url: /samson8
+                        - heading "Yurnero" [level=3] [ref=e708]
+                      - generic [ref=e709]:
+                        - paragraph [ref=e710]: Posted 18 days ago
+                        - paragraph [ref=e712]: 5th in this Competition
+                    - generic [ref=e714]:
+                      - generic [ref=e715]:
+                        - button "Upvote" [ref=e716] [cursor=pointer]:
+                          - generic [ref=e717]: arrow_drop_up
+                        - button "1 votes" [ref=e718] [cursor=pointer]: "1"
+                      - button "More Options for this Comment" [ref=e719] [cursor=pointer]: more_vert
+                    - paragraph [ref=e723]:
+                      - link "@mpware (opens in a new tab)" [ref=e724] [cursor=pointer]:
+                        - /url: https://www.kaggle.com/mpware
+                        - text: "@mpware"
+                      - text: by fractions he meant 1 / 3 or 1 / 6. stuff like this. So these fractions are substituted with floats now. I have already lost a sub thinking about unicode fractions. Policy for fractions is unchanged
+                    - generic [ref=e725]:
+                      - generic [ref=e730]:
+                        - link "MPWARE's profile" [ref=e731] [cursor=pointer]:
+                          - /url: /mpware
+                          - generic "MPWARE" [ref=e732]
+                          - img [ref=e733]
+                        - generic [ref=e738]:
+                          - link "MPWARE" [ref=e740] [cursor=pointer]:
+                            - /url: /mpware
+                            - heading "MPWARE" [level=3] [ref=e741]
+                          - generic [ref=e742]:
+                            - paragraph [ref=e743]: Posted 18 days ago
+                            - paragraph [ref=e745]: 290th in this Competition
+                        - generic [ref=e747]:
+                          - generic [ref=e748]:
+                            - button "Upvote" [ref=e749] [cursor=pointer]:
+                              - generic [ref=e750]: arrow_drop_up
+                            - button "2 votes" [ref=e751] [cursor=pointer]: "2"
+                          - button "More Options for this Comment" [ref=e752] [cursor=pointer]: more_vert
+                        - generic [ref=e755]:
+                          - paragraph [ref=e756]:
+                            - text: Hi
+                            - link "@samson8 (opens in a new tab)" [ref=e757] [cursor=pointer]:
+                              - /url: https://www.kaggle.com/samson8
+                              - text: "@samson8"
+                            - text: ", so we should not try to convert 0.3333 to ⅓ and but only for 1 / 3 ? Look at the 2 examples below, sometimes we've to convert, sometimes not. It makes no sense to me. The instructions and the examples are not going in the same direction."
+                          - paragraph [ref=e758]: "Look at this one:"
+                          - blockquote [ref=e759]:
+                            - paragraph [ref=e760]: 0b84671a-8753-49d9-859d-b42c3d8944ae
+                          - paragraph [ref=e761]:
+                            - strong [ref=e762]: Transliteration
+                            - text: ": 2 né-pí-šu 15 ma-na.TA ú iš-tí-in né-pí-šu-um 10 ma-na ni-is-ha-sú DIRI ša-du-a-sú ša-bu-ú ŠU.NÍGIN 42.3333 ma-na KÙ.BABBAR ṣa-ru-pá-am ku-nu-ki-a a-na a-lu-wa ù e-ni-ša-ri-im áp-qí-id-ma a-na a-lim{ki} a ma-lá tí-ir-tí-šu a-ṣé-er ša-lim-a-šùr ú-šé-bi-il5-šu-nu a-ha-ma 13.3333 ma-na URUDU SIG5 a-na ga-am-ri-šu-nu ù 5 GÍN KÙ.BABBAR a-na ú-ku-ul-tí-šu-nu a-dí-in IGI ili5-ba-ni DUMU ba-ší-lam IGI a-hu-qar DUMU zu-ur-zu-ur IGI tù-ra-am-ì-lí DUMU e-dí-na-a-šùr a-ha-ma"
+                            - strong [ref=e763]: "10.3333"
+                            - text: ma-na
+                            - strong [ref=e764]: "3.5"
+                            - text: GÍN KÙ.BABBAR ṣa-ru-pá-am tum ni
+                            - strong [ref=e765]: "0.5"
+                            - text: GÍN ṣí-ba-tim ša i-na ṣé-ri-a il5-qé-ú-ni a-na hu-bu-li-šu a-na kà-ri-im wa-ah-šu-ša-na áš-qúl ṣí-ba-at KÙ.GI ša ší-ip-kà-at a-šur-bé-el-a-wa-tim i-ší-tù
+                          - paragraph [ref=e766]:
+                            - strong [ref=e767]: Translation
+                            - text: ": \"2 packages of 15 minas each plus a single package of 10 minas, its import duty added, its transport tariff paid - in all 42 ⅓ minas of refined silver under my seal, I entrusted to Aluwa and Enišārum, and I sent them to the City to Šalim-Aššur in accordance with his orders. Furthermore, I paid 13 ⅓ minas of good copper for their expenses and 5 shekels of silver for their food. Witnessed by Ilī-bāni son of Baši-ilum, by Ahu-qar son of Zurzur, by Tūram-ilī son of Eddin-Aššur. Furthermore,"
+                            - strong [ref=e768]: 10 ⅓
+                            - text: minas
+                            - strong [ref=e769]: 3 ½
+                            - text: shekels of refined silver
+                            - strong [ref=e770]: ½
+                            - text: shekel interest that they took on my account, I paid for his debt to the Wahšušana colony. The interest on the gold that remained of Aššur-bēl-awātims investment.
+                          - paragraph [ref=e771]: "And then this one: Some are kept as floating number, some are fraction. 0.3333 ==> 0.3333, 0.16666 ==> ⅙, 0.5 ==> 0.5,"
+                          - blockquote [ref=e772]:
+                            - paragraph [ref=e773]: "0faa50f7-b86c-466c-a8ab-3a6f48fcb00a:"
+                          - paragraph [ref=e774]:
+                            - strong [ref=e775]: Transliteration
+                            - text: ": 4 GÍN a-na ší-iṭ-ri-im ša pu-ki-im"
+                            - strong [ref=e776]: "1.3333"
+                            - text: GÍN a-na e-re-qí-im qá-nu-e áš-qúl 1.6666 GÍN a sú-ba-ri-im áš-qúl
+                            - strong [ref=e777]: "0.3333"
+                            - text: ma-na KÙ.BABBAR a-na a-bar-ni-im áš-qúl
+                            - strong [ref=e778]: "0.16666"
+                            - text: GÍN a-na um-ṣí-im 0.25 GÍN a šu-um-ki na-ru-uq GIG GÍN a-na ha-áš-lá-tim a-wa-ar-nu-a-lim 0.6666 GÍN a-na e-ṣé áš-qúl 0.6666 GÍN a pá-e ú-ša-qí-il5 1 bi-il5-té-en 0.5 GÍN áš-qúl 0.25 GÍN a-na na-pá-hi-im 95 ki-ra-tim a-na 0.25 GÍN.TA ù 7.5 ŠE.TA
+                            - strong [ref=e779]: "0.5"
+                            - text: GÍN a-na 0.16666 GÍN a-na a-na
+                          - paragraph [ref=e780]:
+                            - strong [ref=e781]: Translation
+                            - text: ": \"I paid 4 shekels for a scarf of -weave,"
+                            - strong [ref=e782]: "1.3333"
+                            - text: shekel for a wagonload of reed; I paid 1.6666 shekel for ; I paid
+                            - strong [ref=e783]: "0.3333"
+                            - text: mina of silver for an Abarnian textile,
+                            - strong [ref=e784]: ⅙
+                            - text: shekel for a piece of dried meat, ¼ shekel for onions, x shekels for bags of wheat ;I paid shekels for ? , for a ; I paid 0.6666 shekel for firewood; 0.6666 shekels I paid for chaff, for a double load I paid 0.5 shekel; ¼ shekel for the blacksmith. I supplied 95 drinks to at 52.5 grains of silver each,
+                            - strong [ref=e785]: "0.5"
+                            - text: shekel for ⅙ shekel for for
+                      - generic [ref=e786]:
+                        - button "5 more replies" [ref=e787] [cursor=pointer]:
+                          - generic [ref=e788]: 5 more replies
+                          - generic [ref=e789]: arrow_drop_down
+                        - generic [ref=e790]:
+                          - img "Profile picture for vinpro" [ref=e792]
+                          - img "Profile picture for Yurnero" [ref=e794]
+                          - img "Profile picture for MPWARE" [ref=e796]
+                          - img "Profile picture for Angantyr" [ref=e798]
+                        - generic [ref=e799]: "+1"
+                  - generic [ref=e804]:
+                    - link "tucking_fired's profile" [ref=e805] [cursor=pointer]:
+                      - /url: /skathaitrooney
+                      - generic "tucking_fired" [ref=e806]
+                      - img [ref=e807]
+                    - generic [ref=e812]:
+                      - link "tucking_fired" [ref=e814] [cursor=pointer]:
+                        - /url: /skathaitrooney
+                        - heading "tucking_fired" [level=3] [ref=e815]
+                      - generic [ref=e816]:
+                        - paragraph [ref=e817]: Posted 16 days ago
+                        - paragraph [ref=e819]: 1421st in this Competition
+                    - generic [ref=e821]:
+                      - generic [ref=e822]:
+                        - button "Upvote" [ref=e823] [cursor=pointer]:
+                          - generic [ref=e824]: arrow_drop_up
+                        - button "1 votes" [ref=e825] [cursor=pointer]: "1"
+                      - button "More Options for this Comment" [ref=e826] [cursor=pointer]: more_vert
+                    - paragraph [ref=e830]:
+                      - text: Have the same question. Does the private test set now have decimals (0.333 for example) versus fractions ?
+                      - link "@deeppast (opens in a new tab)" [ref=e831] [cursor=pointer]:
+                        - /url: https://www.kaggle.com/deeppast
+                        - text: "@deeppast"
+              - separator [ref=e832]
+            - generic [ref=e833]:
+              - generic [ref=e837]:
+                - link "esprit's profile" [ref=e838] [cursor=pointer]:
+                  - /url: /takuji
+                  - generic "esprit" [ref=e839]
+                  - img [ref=e840]
+                - generic [ref=e845]:
+                  - link "esprit" [ref=e847] [cursor=pointer]:
+                    - /url: /takuji
+                    - heading "esprit" [level=3] [ref=e848]
+                  - generic [ref=e849]:
+                    - paragraph [ref=e850]: Posted 20 days ago
+                    - paragraph [ref=e852]: 464th in this Competition
+                - generic [ref=e854]:
+                  - generic [ref=e855]:
+                    - button "Upvote" [ref=e856] [cursor=pointer]:
+                      - generic [ref=e857]: arrow_drop_up
+                    - button "4 votes" [ref=e858] [cursor=pointer]: "4"
+                  - button "More Options for this Comment" [ref=e859] [cursor=pointer]: more_vert
+                - generic [ref=e862]:
+                  - paragraph [ref=e863]:
+                    - text: It looks like there are still some
+                    - code [ref=e864]: "-x"
+                    - text: left.
+                  - paragraph [ref=e865]:
+                    - text: Also, although the translation of
+                    - code [ref=e866]: c97bb594-a5a1-4674-9496-48496e91c2ee
+                    - text: was originally correct, it has now been completely incorrect.
+                - generic [ref=e872]:
+                  - link "Adam Anderson's profile" [ref=e873] [cursor=pointer]:
+                    - /url: /deeppast
+                    - generic "Adam Anderson" [ref=e874]
+                    - img [ref=e875]
+                  - generic [ref=e880]:
+                    - generic [ref=e881]:
+                      - link "Adam Anderson" [ref=e882] [cursor=pointer]:
+                        - /url: /deeppast
+                        - heading "Adam Anderson" [level=3] [ref=e883]
+                      - generic [ref=e885]: Competition Host
+                    - paragraph [ref=e887]: Posted 20 days ago
+                  - generic [ref=e889]:
+                    - generic [ref=e890]:
+                      - button "Upvote" [ref=e891] [cursor=pointer]:
+                        - generic [ref=e892]: arrow_drop_up
+                      - button "3 votes" [ref=e893] [cursor=pointer]: "3"
+                    - button "More Options for this Comment" [ref=e894] [cursor=pointer]: more_vert
+                  - paragraph [ref=e898]: Thanks for pointing this out. I'll fix it and share a new update shortly.
+              - separator [ref=e899]
+            - generic [ref=e900]:
+              - generic [ref=e904]:
+                - link "Oleg Yaroshevskiy's profile" [ref=e905] [cursor=pointer]:
+                  - /url: /yaroshevskiy
+                  - generic "Oleg Yaroshevskiy" [ref=e906]
+                  - img [ref=e907]
+                - generic [ref=e912]:
+                  - link "Oleg Yaroshevskiy" [ref=e914] [cursor=pointer]:
+                    - /url: /yaroshevskiy
+                    - heading "Oleg Yaroshevskiy" [level=3] [ref=e915]
+                  - generic [ref=e916]:
+                    - paragraph [ref=e917]: Posted 20 days ago
+                    - paragraph [ref=e919]: 53rd in this Competition
+                - generic [ref=e921]:
+                  - generic [ref=e922]:
+                    - button "Upvote" [ref=e923] [cursor=pointer]:
+                      - generic [ref=e924]: arrow_drop_up
+                    - button "4 votes" [ref=e925] [cursor=pointer]: "4"
+                  - button "More Options for this Comment" [ref=e926] [cursor=pointer]: more_vert
+                - generic [ref=e929]:
+                  - paragraph [ref=e930]: "I've spent just a few minutes on this:"
+                  - paragraph [ref=e931]:
+                    - text: 1)
+                    - code [ref=e932]: Why is that you fem. plur. have written me, saying
+                    - text: this one is confusing, same
+                    - code [ref=e933]: that I acquired for myself(?)
+                    - text: "->"
+                    - code [ref=e934]: that I acquired for myself?
+                    - text: etc
+                  - paragraph [ref=e935]: "2) (ki) -> {ki}"
+                  - paragraph [ref=e936]:
+                    - text: 3)
+                    - code [ref=e937]: is in Iddin-Aššur's possession
+                    - text: "->"
+                    - code [ref=e938]: is in Iddin-Aššurs possession
+                  - paragraph [ref=e939]: 4) subscripts
+                  - paragraph [ref=e940]: 5) ḫ
+                  - paragraph [ref=e941]: 6) some texts were extended (?)
+                  - paragraph [ref=e942]: 7) quotations dropped
+                  - paragraph [ref=e943]: 8) many digits normalized (?)
+                - generic [ref=e949]:
+                  - link "Oleg Yaroshevskiy's profile" [ref=e950] [cursor=pointer]:
+                    - /url: /yaroshevskiy
+                    - generic "Oleg Yaroshevskiy" [ref=e951]
+                    - img [ref=e952]
+                  - generic [ref=e957]:
+                    - link "Oleg Yaroshevskiy" [ref=e959] [cursor=pointer]:
+                      - /url: /yaroshevskiy
+                      - heading "Oleg Yaroshevskiy" [level=3] [ref=e960]
+                    - generic [ref=e961]:
+                      - paragraph [ref=e962]: Posted 20 days ago
+                      - paragraph [ref=e964]: 53rd in this Competition
+                  - generic [ref=e966]:
+                    - generic [ref=e967]:
+                      - button "Upvote" [ref=e968] [cursor=pointer]:
+                        - generic [ref=e969]: arrow_drop_up
+                      - button "3 votes" [ref=e970] [cursor=pointer]: "3"
+                    - button "More Options for this Comment" [ref=e971] [cursor=pointer]: more_vert
+                  - generic [ref=e974]:
+                    - code [ref=e976]: "9a208f3b-1cbb-43a6-b870-566abe5ea9a1,\" <gap> talents of wool, <gap> 5 hides, <gap> 22 sacks, 4 black donkeys, 3 saddle-rugs for each, plus their harness - all this I gave to Ewarimuša.\",\"From Ikūn-pīya to Ali-ahum: Earlier I gave a slave-girl to Buziya son of Asaya and he brought her to you. He did not give you the slave-girl, but returned and here I wrote his tablet about the price of the slave-girl, 0.5 mina 5 shekels of silver. My dear brother, there <gap> \""
+                    - paragraph [ref=e977]: both english
+                  - generic [ref=e978]:
+                    - generic [ref=e983]:
+                      - link "Adam Anderson's profile" [ref=e984] [cursor=pointer]:
+                        - /url: /deeppast
+                        - generic "Adam Anderson" [ref=e985]
+                        - img [ref=e986]
+                      - generic [ref=e991]:
+                        - generic [ref=e992]:
+                          - link "Adam Anderson" [ref=e993] [cursor=pointer]:
+                            - /url: /deeppast
+                            - heading "Adam Anderson" [level=3] [ref=e994]
+                          - generic [ref=e996]: Competition Host
+                        - paragraph [ref=e998]: Posted 20 days ago
+                      - generic [ref=e1000]:
+                        - generic [ref=e1001]:
+                          - button "Upvote" [ref=e1002] [cursor=pointer]:
+                            - generic [ref=e1003]: arrow_drop_up
+                          - button "0 votes" [ref=e1004] [cursor=pointer]: "0"
+                        - button "More Options for this Comment" [ref=e1005] [cursor=pointer]: more_vert
+                      - paragraph [ref=e1009]: Thanks Oleg, yes your observations are correct. Thanks for catching that, I will make the update for the training data this week and post another update shortly.
+                    - generic [ref=e1010]:
+                      - button "3 more replies" [ref=e1011] [cursor=pointer]:
+                        - generic [ref=e1012]: 3 more replies
+                        - generic [ref=e1013]: arrow_drop_down
+                      - generic [ref=e1014]:
+                        - img "Profile picture for Adam Anderson" [ref=e1016]
+                        - img "Profile picture for AK" [ref=e1018]
+              - separator [ref=e1019]
+            - generic [ref=e1020]:
+              - generic [ref=e1024]:
+                - link "FabienDaniel's profile" [ref=e1025] [cursor=pointer]:
+                  - /url: /fabiendaniel
+                  - generic "FabienDaniel" [ref=e1026]
+                  - img [ref=e1027]
+                - generic [ref=e1032]:
+                  - link "FabienDaniel" [ref=e1034] [cursor=pointer]:
+                    - /url: /fabiendaniel
+                    - heading "FabienDaniel" [level=3] [ref=e1035]
+                  - generic [ref=e1036]:
+                    - paragraph [ref=e1037]: Posted 19 days ago
+                    - paragraph [ref=e1039]: 312th in this Competition
+                - generic [ref=e1041]:
+                  - generic [ref=e1042]:
+                    - button "Upvote" [ref=e1043] [cursor=pointer]:
+                      - generic [ref=e1044]: arrow_drop_up
+                    - button "1 votes" [ref=e1045] [cursor=pointer]: "1"
+                  - button "More Options for this Comment" [ref=e1046] [cursor=pointer]: more_vert
+                - paragraph [ref=e1050]:
+                  - text: Concerning the removal of the quotes in translations, (many, all ?) possessive english structures as
+                  - code [ref=e1051]: brother's
+                  - text: ","
+                  - code [ref=e1052]: father's
+                  - text: ","
+                  - code [ref=e1053]: Šalim-Aššur's
+                  - text: …became
+                  - code [ref=e1054]: brothers
+                  - text: ","
+                  - code [ref=e1055]: fathers
+                  - text: ","
+                  - code [ref=e1056]: Šalim-Aššurs
+                  - text: … Was it intended and will we have the same in the hiddent test set ?
+              - separator [ref=e1057]
+            - generic [ref=e1058]:
+              - generic [ref=e1062]:
+                - link "Wisdom Aduah's profile" [ref=e1063] [cursor=pointer]:
+                  - /url: /anaphase21
+                  - generic "Wisdom Aduah" [ref=e1064]
+                  - img [ref=e1065]
+                - generic [ref=e1070]:
+                  - link "Wisdom Aduah" [ref=e1072] [cursor=pointer]:
+                    - /url: /anaphase21
+                    - heading "Wisdom Aduah" [level=3] [ref=e1073]
+                  - generic [ref=e1074]:
+                    - paragraph [ref=e1075]: Posted 20 days ago
+                    - paragraph [ref=e1077]: 20th in this Competition
+                - generic [ref=e1079]:
+                  - generic [ref=e1080]:
+                    - button "Upvote" [ref=e1081] [cursor=pointer]:
+                      - generic [ref=e1082]: arrow_drop_up
+                    - button "1 votes" [ref=e1083] [cursor=pointer]: "1"
+                  - button "More Options for this Comment" [ref=e1084] [cursor=pointer]: more_vert
+                - paragraph [ref=e1088]:
+                  - text: Does this mean
+                  - code [ref=e1089]: <big_gap>
+                  - text: will no longer be part of the hidden test.csv? I can see that they are not in the updated train.csv.
+                - generic [ref=e1095]:
+                  - link "Adam Anderson's profile" [ref=e1096] [cursor=pointer]:
+                    - /url: /deeppast
+                    - generic "Adam Anderson" [ref=e1097]
+                    - img [ref=e1098]
+                  - generic [ref=e1103]:
+                    - generic [ref=e1104]:
+                      - link "Adam Anderson" [ref=e1105] [cursor=pointer]:
+                        - /url: /deeppast
+                        - heading "Adam Anderson" [level=3] [ref=e1106]
+                      - generic [ref=e1108]: Competition Host
+                    - paragraph [ref=e1110]: Posted 20 days ago
+                  - generic [ref=e1112]:
+                    - generic [ref=e1113]:
+                      - button "Upvote" [ref=e1114] [cursor=pointer]:
+                        - generic [ref=e1115]: arrow_drop_up
+                      - button "3 votes" [ref=e1116] [cursor=pointer]: "3"
+                    - button "More Options for this Comment" [ref=e1117] [cursor=pointer]: more_vert
+                  - paragraph [ref=e1121]:
+                    - text: Yes, exactly, the test set was updated as well, no longer
+                    - code [ref=e1122]: <big_gap>
+                    - text: ". You can see an updated post about that here:"
+                    - link "https://www.kaggle.com/competitions/deep-past-initiative-machine-translation/discussion/665209 (opens in a new tab)" [ref=e1123] [cursor=pointer]:
+                      - /url: https://www.kaggle.com/competitions/deep-past-initiative-machine-translation/discussion/665209
+                      - text: https://www.kaggle.com/competitions/deep-past-initiative-machine-translation/discussion/665209
+              - separator [ref=e1124]
+            - generic [ref=e1125]:
+              - generic [ref=e1129]:
+                - link "SHREYAS's profile" [ref=e1130] [cursor=pointer]:
+                  - /url: /shreyasadhari123
+                  - generic "SHREYAS" [ref=e1131]
+                  - img [ref=e1132]
+                  - generic [ref=e1136]: emoji_people
+                - generic [ref=e1139]:
+                  - link "SHREYAS" [ref=e1141] [cursor=pointer]:
+                    - /url: /shreyasadhari123
+                    - heading "SHREYAS" [level=3] [ref=e1142]
+                  - generic [ref=e1143]:
+                    - paragraph [ref=e1144]: Posted 20 days ago
+                    - paragraph [ref=e1146]: 45th in this Competition
+                - generic [ref=e1148]:
+                  - generic [ref=e1149]:
+                    - button "Upvote" [ref=e1150] [cursor=pointer]:
+                      - generic [ref=e1151]: arrow_drop_up
+                    - button "2 votes" [ref=e1152] [cursor=pointer]: "2"
+                  - button "More Options for this Comment" [ref=e1153] [cursor=pointer]: more_vert
+                - generic [ref=e1156]:
+                  - paragraph [ref=e1157]:
+                    - link "@ryanholbrook (opens in a new tab)" [ref=e1158] [cursor=pointer]:
+                      - /url: https://www.kaggle.com/ryanholbrook
+                      - text: "@ryanholbrook"
+                    - text: "certain questions regarding new data:"
+                  - list [ref=e1159]:
+                    - listitem [ref=e1160]:
+                      - text: are
+                      - code [ref=e1161]: <big_gap>
+                      - text: eliminated.
+                    - listitem [ref=e1162]:
+                      - text: should we merge multiple
+                      - code [ref=e1163]: <gap>
+                      - text: into one
+                      - code [ref=e1164]: <big_gap>
+                      - text: just in case they appear
+                    - listitem [ref=e1165]: are …(epilses) also removed.
+                - generic [ref=e1171]:
+                  - link "Adam Anderson's profile" [ref=e1172] [cursor=pointer]:
+                    - /url: /deeppast
+                    - generic "Adam Anderson" [ref=e1173]
+                    - img [ref=e1174]
+                  - generic [ref=e1179]:
+                    - generic [ref=e1180]:
+                      - link "Adam Anderson" [ref=e1181] [cursor=pointer]:
+                        - /url: /deeppast
+                        - heading "Adam Anderson" [level=3] [ref=e1182]
+                      - generic [ref=e1184]: Competition Host
+                    - paragraph [ref=e1186]: Posted 20 days ago
+                  - generic [ref=e1188]:
+                    - generic [ref=e1189]:
+                      - button "Upvote" [ref=e1190] [cursor=pointer]:
+                        - generic [ref=e1191]: arrow_drop_up
+                      - button "1 votes" [ref=e1192] [cursor=pointer]: "1"
+                    - button "More Options for this Comment" [ref=e1193] [cursor=pointer]: more_vert
+                  - paragraph [ref=e1197]:
+                    - text: Yes, that's right.
+                    - code [ref=e1198]: <big_gap>
+                    - text: has been replaced with
+                    - code [ref=e1199]: <gap>
+                    - text: and then deduplicated, so you should merge multiples. All ellipses should be removed as well and replaced with
+                    - code [ref=e1200]: <gap
+                    - text: ". I updated the guidance for that here:"
+                    - link "https://www.kaggle.com/competitions/deep-past-initiative-machine-translation/discussion/665209 (opens in a new tab)" [ref=e1201] [cursor=pointer]:
+                      - /url: https://www.kaggle.com/competitions/deep-past-initiative-machine-translation/discussion/665209
+                      - text: https://www.kaggle.com/competitions/deep-past-initiative-machine-translation/discussion/665209
+                  - generic [ref=e1207]:
+                    - link "steubk's profile" [ref=e1208] [cursor=pointer]:
+                      - /url: /steubk
+                      - generic "steubk" [ref=e1209]
+                      - img [ref=e1210]
+                    - generic [ref=e1215]:
+                      - link "steubk" [ref=e1217] [cursor=pointer]:
+                        - /url: /steubk
+                        - heading "steubk" [level=3] [ref=e1218]
+                      - generic [ref=e1219]:
+                        - paragraph [ref=e1220]: Posted 19 days ago
+                        - paragraph [ref=e1222]: 177th in this Competition
+                    - generic [ref=e1224]:
+                      - generic [ref=e1225]:
+                        - button "Upvote" [ref=e1226] [cursor=pointer]:
+                          - generic [ref=e1227]: arrow_drop_up
+                        - button "5 votes" [ref=e1228] [cursor=pointer]: "5"
+                      - button "More Options for this Comment" [ref=e1229] [cursor=pointer]: more_vert
+                    - paragraph [ref=e1233]:
+                      - link "@deeppast (opens in a new tab)" [ref=e1234] [cursor=pointer]:
+                        - /url: https://www.kaggle.com/deeppast
+                        - text: "@deeppast"
+                      - text: Perhaps the new guidance would be clearer if presented in a new post rather than updating a month-old thread whose replies are no longer valid.
+              - separator [ref=e1235]
+            - generic [ref=e1236]:
+              - generic [ref=e1240]:
+                - link "Hafiz Atif Ali's profile" [ref=e1241] [cursor=pointer]:
+                  - /url: /dingolingo
+                  - generic "Hafiz Atif Ali" [ref=e1242]
+                  - img [ref=e1243]
+                - generic [ref=e1248]:
+                  - link "Hafiz Atif Ali" [ref=e1250] [cursor=pointer]:
+                    - /url: /dingolingo
+                    - heading "Hafiz Atif Ali" [level=3] [ref=e1251]
+                  - paragraph [ref=e1253]: Posted 16 days ago
+                - generic [ref=e1255]:
+                  - generic [ref=e1256]:
+                    - button "Upvote" [ref=e1257] [cursor=pointer]:
+                      - generic [ref=e1258]: arrow_drop_up
+                    - button "-4 votes" [ref=e1259] [cursor=pointer]: "-4"
+                  - button "More Options for this Comment" [ref=e1260] [cursor=pointer]: more_vert
+                - paragraph [ref=e1264]: That remarkable contribution.
+              - separator [ref=e1265]
+            - generic [ref=e1266]:
+              - generic [ref=e1270]:
+                - link "Jack's profile" [ref=e1271] [cursor=pointer]:
+                  - /url: /jackvd
+                  - generic "Jack" [ref=e1272]
+                  - img [ref=e1273]
+                - generic [ref=e1278]:
+                  - link "Jack" [ref=e1280] [cursor=pointer]:
+                    - /url: /jackvd
+                    - heading "Jack" [level=3] [ref=e1281]
+                  - generic [ref=e1282]:
+                    - paragraph [ref=e1283]: Posted 19 days ago
+                    - paragraph [ref=e1285]: 8th in this Competition
+                - generic [ref=e1287]:
+                  - generic [ref=e1288]:
+                    - button "Upvote" [ref=e1289] [cursor=pointer]:
+                      - generic [ref=e1290]: arrow_drop_up
+                    - button "0 votes" [ref=e1291] [cursor=pointer]: "0"
+                  - button "More Options for this Comment" [ref=e1292] [cursor=pointer]: more_vert
+                - paragraph [ref=e1296]:
+                  - link "@ryanholbrook (opens in a new tab)" [ref=e1297] [cursor=pointer]:
+                    - /url: https://www.kaggle.com/ryanholbrook
+                    - text: "@ryanholbrook"
+                  - text: any update on rescoring? Also, will this wipe the leaderboard as well?
+                - generic [ref=e1303]:
+                  - link "Ryan Holbrook's profile" [ref=e1304] [cursor=pointer]:
+                    - /url: /ryanholbrook
+                    - generic "Ryan Holbrook" [ref=e1305]
+                    - img [ref=e1306]
+                  - generic [ref=e1311]:
+                    - generic [ref=e1312]:
+                      - link "Ryan Holbrook" [ref=e1313] [cursor=pointer]:
+                        - /url: /ryanholbrook
+                        - heading "Ryan Holbrook" [level=3] [ref=e1314]
+                      - generic [ref=e1316]: Kaggle Staff
+                    - paragraph [ref=e1318]: Posted 19 days ago
+                  - generic [ref=e1320]:
+                    - generic [ref=e1321]:
+                      - button "Upvote" [ref=e1322] [cursor=pointer]:
+                        - generic [ref=e1323]: arrow_drop_up
+                      - button "5 votes" [ref=e1324] [cursor=pointer]: "5"
+                    - button "More Options for this Comment" [ref=e1325] [cursor=pointer]: more_vert
+                  - paragraph [ref=e1329]: There's another update incoming to address a couple other things pointed out here. I'll start the rescore once it's up. All of the submissions will be rescored, and the new scores will be reflected on the leaderboard. The new scores are posted as they are available, so while the rescore is ongoing the leaderboard will be a mix of old and new -- I don't think it should take more than an hour or two to complete, though.
+                  - generic [ref=e1330]:
+                    - generic [ref=e1335]:
+                      - link "AK's profile" [ref=e1336] [cursor=pointer]:
+                        - /url: /aman1391
+                        - generic "AK" [ref=e1337]
+                        - img [ref=e1338]
+                      - generic [ref=e1343]:
+                        - link "AK" [ref=e1345] [cursor=pointer]:
+                          - /url: /aman1391
+                          - heading "AK" [level=3] [ref=e1346]
+                        - generic [ref=e1347]:
+                          - paragraph [ref=e1348]: Posted 19 days ago
+                          - paragraph [ref=e1350]: 7th in this Competition
+                      - generic [ref=e1352]:
+                        - generic [ref=e1353]:
+                          - button "Upvote" [ref=e1354] [cursor=pointer]:
+                            - generic [ref=e1355]: arrow_drop_up
+                          - button "0 votes" [ref=e1356] [cursor=pointer]: "0"
+                        - button "More Options for this Comment" [ref=e1357] [cursor=pointer]: more_vert
+                      - paragraph [ref=e1361]:
+                        - link "@ryanholbrook (opens in a new tab)" [ref=e1362] [cursor=pointer]:
+                          - /url: https://www.kaggle.com/ryanholbrook
+                          - text: "@ryanholbrook"
+                        - text: ": is there a possiblity for extension or a possiblity of increasing the submssion per day , given the data is updated after 2 months of running .."
+                    - generic [ref=e1363]:
+                      - button "6 more replies" [ref=e1364] [cursor=pointer]:
+                        - generic [ref=e1365]: 6 more replies
+                        - generic [ref=e1366]: arrow_drop_down
+                      - generic [ref=e1367]:
+                        - img "Profile picture for Yurnero" [ref=e1369]
+                        - img "Profile picture for AK" [ref=e1371]
+                        - img "Profile picture for steubk" [ref=e1373]
+                        - img "Profile picture for Cody_Null" [ref=e1375]
+                      - generic [ref=e1376]: "+1"
+              - separator [ref=e1377]
+            - paragraph [ref=e1384]: This comment has been deleted.
+  - alert [ref=e1387]

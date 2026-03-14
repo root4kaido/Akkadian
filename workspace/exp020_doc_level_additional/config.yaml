@@ -1,0 +1,12 @@
+experiment_name: exp020_doc_level_additional
+description: "元doc-levelデータ + 開始位置ずらしdoc-levelデータ追加（2文目以降から末尾まで結合）"
+base_experiment: exp016_byt5_base
+model_name: google/byt5-base
+max_length: 512
+epochs: 20
+learning_rate: 2e-4
+batch_size: 4
+gradient_accumulation_steps: 2
+bf16: true
+seed: 42
+data: train.csv (doc-level) + sentence_aligned.csv (各開始位置からdoc-levelで追加)

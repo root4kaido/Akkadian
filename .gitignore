@@ -12,6 +12,9 @@ output/
 *.pt
 *.ckpt
 *.onnx
+*.safetensors
+*.bin
+!requirements*.txt
 *.pkl
 *.npy
 *.npz
@@ -58,6 +61,7 @@ CLAUDE.local.md
 *.log
 lightning_logs/
 mlruns/
+wandb/
 *events.*
 
 # === OS ===

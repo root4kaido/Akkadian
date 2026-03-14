@@ -1,0 +1,26 @@
+experiment:
+  name: exp023_full_preprocessing
+  description: "eda022で洗い出した全前処理改善をexp022に適用。月名→月番号、小数近似マッチ、ローマ数字regex修正、gap重複、(ki)対応等"
+
+lineage:
+  parent: exp022_train_cleaning
+  status: active
+  diff_summary: |
+    - 小数→分数: 完全一致→近似マッチ(±0.002)に変更。long float(5桁以上)も吸収
+    - ローマ数字月: regex修正(\b→lookahead)で34件の取りこぼし解消
+    - 月名→月番号: OA月名辞書を追加（Kuzallu→11等）
+    - <gap>重複: <gap> <gap>→<gap>に統合
+    - (ki)→{ki}: submit.pyの入力前処理に追加
+    - (m)→{m}: translation内のdeterminative対応
+
+model:
+  name: google/byt5-base
+  max_length: 512
+
+training:
+  seed: 42
+  epochs: 20
+  lr: 2e-4
+  bf16: true
+  optimizer: adafactor
+  run_name: exp023_full_preprocessing

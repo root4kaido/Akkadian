@@ -1,0 +1,21 @@
+experiment:
+  name: exp030_decode_strategy
+  description: "デコード戦略のグリッドサーチ。beam/MBR/repetition_penalty/length_penaltyの比較"
+
+lineage:
+  parent: exp023
+  status: active
+  diff_summary: "学習なし。推論パラメータのみ変更。exp023 fold3 last_modelで評価"
+
+model:
+  name: google/byt5-base
+  params: {}
+
+inference:
+  strategies:
+    - greedy
+    - beam4, beam8
+    - beam + repetition_penalty=1.2
+    - beam + length_penalty=1.3
+    - MBR (beam4+sample2, chrF++ consensus)
+    - MBR multi-temperature (0.6/0.8/1.05)

@@ -76,9 +76,12 @@ tmux capture-pane -t dev0 -p | tail -50
 ## 禁止事項
 
 - テストデータでfit/学習しない
+- 今回、testデータはサンプルなので分析に使用しないこと
+- CUDA_VISIBLE_DEVICES=1はつけないでください
 - `datasets/raw/` の中身を直接加工・変更しない
 - `myMemo.md` をClaude側で編集しない
 - 実験フォルダ外にモデルや中間ファイルを散らかさない
+- /tmpにファイルを作らない
 
 ## 変更の作法
 

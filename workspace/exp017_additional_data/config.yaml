@@ -1,0 +1,22 @@
+experiment:
+  name: exp017_additional_data
+  description: "exp014(v6設定) + 追加データのみ。ByT5-small、タグなし"
+
+lineage:
+  parent: exp014_starter_v6
+  status: active
+  diff_summary: "追加データ(Sentences_Oare + published_texts)をtrain splitに追加"
+
+model:
+  name: google/byt5-small
+  max_length: 512
+
+training:
+  seed: 42
+  val_ratio: 0.1
+  epochs: 20
+  batch_size: 4
+  gradient_accumulation_steps: 2
+  lr: 2e-4
+  optim: adafactor
+  fp32: true

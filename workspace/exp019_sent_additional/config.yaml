@@ -1,0 +1,12 @@
+experiment_name: exp019_sent_additional
+description: "元doc-levelデータ + 文レベル分割データ(2文目以降)を追加"
+base_experiment: exp016_byt5_base
+model_name: google/byt5-base
+max_length: 512
+epochs: 20
+learning_rate: 2e-4
+batch_size: 4
+gradient_accumulation_steps: 2
+bf16: true
+seed: 42
+data: train.csv (doc-level) + sentence_aligned.csv (sent_idx >= 1のみ追加)

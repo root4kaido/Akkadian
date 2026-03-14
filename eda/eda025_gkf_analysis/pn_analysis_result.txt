@@ -1,0 +1,75 @@
+GKF fold0 sent predictions: 650
+
+=== 固有名詞統計 ===
+Train固有名詞: 1765 unique
+Val(AKT 8)固有名詞: 840 unique
+  共通: 383
+  AKT 8のみ: 457 (54.4%)
+
+AKT 8固有の名前TOP20:
+  Iram-Aššur: 26回
+  Lamassutum: 24回
+  Kūn-ilum: 15回
+  Āl-ṭāb: 15回
+  Dān-Aššur: 14回
+  Idnāya: 12回
+  Aššur-mūtappil: 12回
+  Ēnah-ilī: 10回
+  Elammas: 10回
+  Aššur-dān: 10回
+  Burušhattum: 9回
+  Idi-bāni: 8回
+  III: 8回
+  IV: 7回
+  Anīnum: 7回
+  Galdaya: 7回
+  Šu-Labān: 6回
+  Ilī-dān: 6回
+  VII: 6回
+  Timilkiya: 6回
+
+=== sent-CV予測での固有名詞分析 ===
+
+全PN既知 or PNなし: 367件
+  corpus chrF++=38.60, BLEU=16.08, geo=24.91
+  sentence chrF++ mean=38.28, median=36.78
+
+未見PN含む: 283件
+  corpus chrF++=40.01, BLEU=15.83, geo=25.17
+  sentence chrF++ mean=40.80, median=39.97
+
+=== 固有名詞の予測内一致率 ===
+Train既知PN: 640/1174 一致 (54.5%)
+Train未見PN: 80/469 一致 (17.1%)
+
+=== 未見PN含む低スコア例 ===
+  chrF++=4.3 | unseen=1/2 PNs
+    Ref:  Witnessed by Išme-Adad, by Buzāzu.
+    Pred: IGI bu-za-zu
+  chrF++=4.5 | unseen=1/3 PNs
+    Ref:  1 jar Ahuni 1 jar and a<gap> Šu-Anum, 1 jar Šusāya.
+    Pred: 1 kirum: our brother;
+  chrF++=4.5 | unseen=1/2 PNs
+    Ref:  of Happuaša, the wool-trader, and of Puzur-Ištar."
+    Pred: <gap> his blood-money.
+  chrF++=7.3 | unseen=1/1 PNs
+    Ref:  When the tablet was handed over Bizala took responsibility for her share.
+    Pred: Bring it to her account.
+  chrF++=9.0 | unseen=2/3 PNs
+    Ref:  All the silver you have already available you must retain .' 6.3333 heavy textiles, of good quality, of Šubarean make, K
+    Pred: I bring you good <gap> concerning Šu-Bērum.
+  chrF++=9.1 | unseen=1/2 PNs
+    Ref:  Over there, stand up for my case and let me enjoy (your) favor!' The tablet you must give to a scribe who understands Šu
+    Pred: I assist my witnesses there and I shall be angry.
+  chrF++=9.4 | unseen=4/7 PNs
+    Ref:  I gave <gap> minas of -copper as wage of a porter until Šaladuwar, 20 minas of -copper I paid in Šaladuwar, 3 minas I ga
+    Pred: I sold 3 minas to the house of the house; I sold 10 minas of copper to the paddock; I sold 7 minas of copper Atarkuwa;
+  chrF++=9.5 | unseen=1/1 PNs
+    Ref:  Suhurpiyala (!) will make a business trip and if there is profit, he will take it (the silver) from the profit.
+    Pred: <gap> he will receive in Ennam-ilum.
+  chrF++=10.8 | unseen=1/3 PNs
+    Ref:  After the sons of Kūn-ilum had died, (when) our brothers arrived for bewailing them and for removing the chair of their 
+    Pred: Kunilum died. Either for their food or for the room with their investors and
+  chrF++=11.0 | unseen=4/6 PNs
+    Ref:  3 shekels of tin, when I left hanaknak I gave to our inn, while we searched for goods lost; 3 shekels of tin I gave in t
+    Pred: 3 shekels of tin from hanaknak I gave to our guest-house until we settled the house until we settled the loans.

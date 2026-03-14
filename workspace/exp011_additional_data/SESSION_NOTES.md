@@ -22,7 +22,7 @@
 
 | アプローチ | 変更点 | CV | LB | 備考 |
 |-----------|--------|-----|-----|------|
-| 追加データ+1,165件 | Sentences_Oare+published_textsでdoc-levelペア追加 | greedy=33.13, MBR=31.54, greedy_clean=**33.45** | - | **全指標で大幅改善。繰り返しも30.6%に低減** |
+| 追加データ+1,165件 | Sentences_Oare+published_textsでdoc-levelペア追加 | greedy=33.13, MBR=31.54, greedy_clean=**33.45** | greedy=20.0, MBR=23.8 | **CV大幅改善だがLBは低い。CV/LB比1.45-1.67と乖離大** |
 
 ## ファイル構成
 - `src/build_lexicon.py` — OA_Lexiconからform→type辞書構築（exp010と同一）
@@ -62,5 +62,19 @@ python workspace/exp011_additional_data/src/train.py
 # 文レベル評価
 python workspace/exp011_additional_data/src/eval_sentence_level.py
 ```
+
+## サブミット結果（2026/03/10）
+
+| 推論方法 | CV | LB | CV/LB比 | 備考 |
+|----------|-----|-----|---------|------|
+| greedy (rp=1.2) + repeat_cleanup | 33.45 | **20.0** | 1.67 | タグあり |
+| MBR 13候補 chrF++ | 34.47 | **23.8** | 1.45 | タグあり |
+
+**参考**: starter (byt5-small) はCV=32.04, LB=26.0 (CV/LB比=1.23)
+
+### 考察
+- CVではstarterを上回るが、LBではstarterに大幅に劣る
+- CV/LB乖離が大きい原因: CV評価が「最初の1文」限定のため、テスト分布を正しく反映していない可能性
+- MBRはLBでも+3.8ptの効果あり
 
 ## 次のステップ

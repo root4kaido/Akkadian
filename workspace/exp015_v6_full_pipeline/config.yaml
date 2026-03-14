@@ -1,0 +1,51 @@
+experiment:
+  name: exp015_v6_full_pipeline
+  description: "exp014(v6設定) + exp011(ByT5-base, PN/GNタグ, 追加データ, cosine, BF16)の統合"
+
+lineage:
+  parent: exp014_starter_v6
+  status: active
+  diff_summary: "exp014のv6学習設定(lr=2e-4, LS=0)にexp011の全改善を統合: ByT5-base, PN/GNタグ, 追加データ, cosine scheduler, BF16"
+
+model:
+  name: google/byt5-base
+  max_length: 512
+  reverse_encoder_max_length: 1024
+  prefix: "translate Akkadian to English: "
+  prefix_reverse: "translate English to Akkadian: "
+
+training:
+  epochs: 20
+  learning_rate: 2.0e-4    # v6設定 (exp011は5e-5)
+  optimizer: adafactor
+  scheduler: cosine
+  warmup_ratio: 0.1
+  label_smoothing: 0.0     # v6設定 (exp011は0.2)
+  batch_size: 2
+  gradient_accumulation_steps: 4   # effective batch = 8
+  weight_decay: 0.01
+  fp16: false
+  bf16: true
+  seed: 42
+  val_ratio: 0.1
+
+tagging:
+  lexicon_path: ../../datasets/raw/OA_Lexicon_eBL.csv
+  tag_types: ["PN", "GN"]
+  ambiguous_strategy: "skip"
+
+additional_data:
+  sentences_oare_path: ../../datasets/raw/Sentences_Oare_FirstWord_LinNum.csv
+  published_texts_path: ../../datasets/raw/published_texts.csv
+  use_additional: true
+
+inference:
+  num_beams: 1
+  max_length: 512
+  early_stopping: true
+  batch_size: 2
+
+data:
+  train_path: ../../datasets/raw/train.csv
+  test_path: ../../datasets/raw/test.csv
+  use_bidirectional: true

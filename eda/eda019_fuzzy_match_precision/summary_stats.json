@@ -1,0 +1,8 @@
+{
+  "n_docs_analyzed": 100,
+  "order_preservation_rate": 0.74,
+  "mean_coverage": 0.7603368957522639,
+  "mean_match_chrf": 75.53029265537984,
+  "n_long_docs_total": 603,
+  "estimated_sents_from_long": 4479
+}

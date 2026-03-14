@@ -1,0 +1,266 @@
+Train: 1561 rows
+Additional: 1165 rows
+Test: 4 rows
+
+======================================================================
+1. テキスト長分布
+======================================================================
+=== Train - transliteration ===
+  char len: mean=428.8, median=371.0, min=21, max=966, std=270.4
+  word len: mean=56.2, median=49.0, min=3, max=150, std=35.5
+  byte len: mean=489.5, median=421.0, min=23, max=1056, std=309.3
+=== Additional - transliteration ===
+  char len: mean=566.5, median=424.0, min=21, max=4510, std=428.5
+  word len: mean=73.4, median=54.0, min=2, max=576, std=56.4
+  byte len: mean=643.0, median=483.0, min=23, max=5159, std=486.3
+=== Test - transliteration ===
+  char len: mean=168.8, median=139.5, min=129, max=267, std=65.9
+  word len: mean=21.2, median=17.5, min=16, max=34, std=8.6
+  byte len: mean=187.0, median=154.0, min=141, max=299, std=75.3
+
+=== Train - translation ===
+  char len: mean=500.4, median=383.0, min=6, max=3995, std=467.5
+  word len: mean=90.0, median=68.0, min=1, max=739, std=85.0
+  byte len: mean=511.4, median=392.0, min=6, max=4061, std=475.7
+=== Additional - translation ===
+  char len: mean=459.8, median=316.0, min=2, max=2728, std=407.1
+  word len: mean=81.1, median=54.0, min=1, max=524, std=73.4
+  byte len: mean=477.8, median=334.0, min=2, max=2758, std=418.7
+
+======================================================================
+2. Akkadian transliteration 単語数分布
+======================================================================
+
+Train:
+      0-    5:    11 (  0.7%) 
+      5-   10:    81 (  5.2%) #####
+     10-   20:   156 ( 10.0%) #########
+     20-   30:   189 ( 12.1%) ############
+     30-   50:   359 ( 23.0%) ######################
+     50-  100:   498 ( 31.9%) ###############################
+    100-  200:   267 ( 17.1%) #################
+    200-  500:     0 (  0.0%) 
+    500-10000:     0 (  0.0%) 
+
+Additional:
+      0-    5:     7 (  0.6%) 
+      5-   10:     4 (  0.3%) 
+     10-   20:    32 (  2.7%) ##
+     20-   30:    79 (  6.8%) ######
+     30-   50:   387 ( 33.2%) #################################
+     50-  100:   405 ( 34.8%) ##################################
+    100-  200:   212 ( 18.2%) ##################
+    200-  500:    37 (  3.2%) ###
+    500-10000:     2 (  0.2%) 
+
+Test:
+      0-    5:     0 (  0.0%) 
+      5-   10:     0 (  0.0%) 
+     10-   20:     3 ( 75.0%) ###########################################################################
+     20-   30:     0 (  0.0%) 
+     30-   50:     1 ( 25.0%) #########################
+     50-  100:     0 (  0.0%) 
+    100-  200:     0 (  0.0%) 
+    200-  500:     0 (  0.0%) 
+    500-10000:     0 (  0.0%) 
+
+======================================================================
+3. English translation 単語数分布
+======================================================================
+
+Train:
+      0-    5:     7 (  0.4%) 
+      5-   10:    88 (  5.6%) #####
+     10-   20:   172 ( 11.0%) ###########
+     20-   30:   118 (  7.6%) #######
+     30-   50:   219 ( 14.0%) ##############
+     50-  100:   429 ( 27.5%) ###########################
+    100-  200:   390 ( 25.0%) ########################
+    200-  500:   129 (  8.3%) ########
+    500-10000:     9 (  0.6%) 
+
+Additional:
+      0-    5:    38 (  3.3%) ###
+      5-   10:    49 (  4.2%) ####
+     10-   20:    91 (  7.8%) #######
+     20-   30:    82 (  7.0%) #######
+     30-   50:   257 ( 22.1%) ######################
+     50-  100:   314 ( 27.0%) ##########################
+    100-  200:   240 ( 20.6%) ####################
+    200-  500:    93 (  8.0%) #######
+    500-10000:     1 (  0.1%) 
+
+======================================================================
+4. Akkadian 語彙オーバーラップ
+======================================================================
+Train unique tokens: 11532
+Additional unique tokens: 10906
+Test unique tokens: 59
+
+Train ∩ Additional: 4023 (34.9% of train, 36.9% of additional)
+Train ∩ Test: 31 (52.5% of test covered by train)
+Additional ∩ Test: 26 (44.1% of test covered by additional)
+(Train ∪ Additional) ∩ Test: 31 (52.5% of test)
+
+AdditionalのみにあるTest語彙: 0
+Train+Additionalにないtest語彙: 28
+  例: ['aa-qí-il…', 'ni-bi„-it', 'ia-tù', 'ta-áa-me-a-ni', 'mup-pu-um', 'na-áa-ú', 'au-um-au', 'kà-ni-ia-ma', 'au-mì', 'a-aí-im', 'a-bi„-au', 'a-lim(ki)', 'aé-bi„-lá-nim', 'aí-ip-ri-ni', 'aé-bi„-lá', 'aí-mì-im', 'ia-tí', 'mup-pì-im', 'u„-mì-im', 'kà-ni-ia']
+
+======================================================================
+5. English 語彙分析
+======================================================================
+Train eng unique tokens: 9712
+Additional eng unique tokens: 9912
+
+Additionalにしかない英語語彙: 6700
+  上位30: [('1/2', 663), ('...', 449), ('ḫamuštum', 382), ('1/3', 192), ('des', 188), ('said,', 184), ('2/3', 146), ('month:', 133), ('eponymate:', 113), ('pūšu-kēn:', 112), ('seals:', 105), ('und', 85), ('eponymate', 80), ('šalim-aḫum', 72), ('der', 68), ('dem', 65), ('ich', 65), ('5/6', 60), ('seqel', 59), ('šū-ištar', 59), ('silber', 57), ('die', 54), ('ša', 51), ('kutānum', 49), ('ennum-aššur', 47), ('minen', 45), ('zu', 45), ('den', 42), ('du', 41), ('kutānum-textiles', 41)]
+
+======================================================================
+6. ノイズ・品質指標
+======================================================================
+
+--- Train (1561 rows) ---
+  短いAkk (<5char): 0 (0.0%)
+  短いEng (<5char): 0 (0.0%)
+  長いAkk (>100words): 257 (16.5%)
+  長いEng (>100words): 521 (33.4%)
+  空/NaN Akk: 0
+  空/NaN Eng: 0
+  Non-ASCII Eng: 1375 (88.1%)
+  省略記号 '...': 0 (0.0%)
+  角括弧欠損 [...]: 0 (0.0%)
+  数字のみAkk: 0
+  極端な長さ比(>5x or <0.1x): 13 (0.8%)
+
+--- Additional (1165 rows) ---
+  短いAkk (<5char): 0 (0.0%)
+  短いEng (<5char): 1 (0.1%)
+  長いAkk (>100words): 244 (20.9%)
+  長いEng (>100words): 329 (28.2%)
+  空/NaN Akk: 0
+  空/NaN Eng: 0
+  Non-ASCII Eng: 1136 (97.5%)
+  省略記号 '...': 219 (18.8%)
+  角括弧欠損 [...]: 8 (0.7%)
+  数字のみAkk: 0
+  極端な長さ比(>5x or <0.1x): 56 (4.8%)
+
+======================================================================
+7. サンプル比較
+======================================================================
+
+--- Train: ランダム5件 ---
+  AKK: 10 ma-na KÙ.BABBAR ṣa-ru-pu-um ni-is-ḫa-sú DIRI ša-du-a-sú ša-bu ša tám-kà-ri-im a-na i-li-a ù ša ki
+  ENG: 10 minas of refined silver, its excise added, his transport fee paid, belonging to the merchant, for
+
+  AKK: 2-ší-ta na-áš-pé-ra-tum lá pá-tí-a-tum ša a-ta-ta DUMU ma-num-ba-lum-a-šùr a-ṣé-ri-a ú a-ṣé-er a-šùr
+  ENG: 2 (unopened) letters of Atata, son of Mannum-balum-Assur, addressed to me and to Assur-ennam, son of
+
+  AKK: KIŠIB en-na-nim DUMU a-lá-bi₄-im KIŠIB a-gi-a DUMU PUZUR₄-a-šùr {d}IM.GAL DUMU bu-zi tap-pá-i-ni a-n
+  ENG: Sealed by Ennānum son of Ali-abum, by Agiya son of Puzur-Aššur; Adad-rabi son of Buzi was our (absen
+
+  AKK: a-na ma-nu-ki-a-šùr na-áb-sú-in a-na-na ù da-ra-áš qí-bi-ma um-ma en-nam-a-šur-ma 1 ma-na KÙ.BABBAR 
+  ENG: To Mannum-kī-Aššur, Nab-Suen, Anna-anna and Daraš from Ennam-Aššur: As to the 1 mina of refined silv
+
+  AKK: a-na ša-lim-a-šur qí-bi-ma um-ma ša-lim-a-šur-ma a-šu-mì ili₅-ba-ni DUMU i-a-a a-dí ší-ni-šu tí-ir-t
+  ENG: To Šalim-Aššur from Šalim-Aššur: I sent you word twice about Ilī-bāni son of Yaya. Since he keeps be
+
+
+--- Additional: ランダム5件 ---
+  AKK: a-na ša-zu-a ša-lim-ma ú bi-ta-a qí-bi4-ma um-ma en-um-a-šur-ma i ḫa-ra-nim a-na MAN-a-šur ú ku-zi-i
+  ENG: To Šazua, Šalimma and Bitāya from Ennam-Aššur:
+
+  AKK: um-ma šu-mì-a-bi4-a-ma a-na a-pì-lá-ma ù en-nam-be-lim qí-bi4-ma 1 ma-na 1 GÍN KÙ.GI pá-ša-lam ku-nu
+  ENG: From  Šūmī-abiya to Abela and Ennam-Bēlum: Imdī-ilum is bringing you 1 mina and 1 shekel  I owe 9 5/
+
+  AKK: KIŠIB pè-ru-a DUMU na-aḫ-<gap>-ša-nu KIŠIB ḫa-šu-i DUMU <gap>-pì-ip-ra KIŠIB kà-ra-šu-na-<gap> KIŠIB
+  ENG: Al-aḫim, Ilališka, and Ennam-Ištar owe Peruwa 3 1/2 minas silver. They will pay 1/2 mina silver. He 
+
+  AKK: a-na DAM.GÀR-ri-im qí-bi-ma um-ma šu-ku-bu-um ù ì-lí-a-ma a-na DAM.GÀR-ri-im qí-bi-ma 17 ma-na KÙ.BA
+  ENG: To the merchant from Šū-Kūbum and Ilīya:
+
+  AKK: KIŠIB PUZUR4-a-bé-eḫ DUMU en-na-nim KIŠIB sú-kà-lí-a DUMU a-mur-a-šùr KIŠIB a-šùr-ba-ni DUMU ša-lim-
+  ENG: Seals: Puzur-Abiḫ s. Ennanum, Sukkallīya s. Amur-Aššur, Aššur-bāni s. Šalim-Aššur, Aššur-imittī s. A
+
+
+--- Test: 全件 ---
+  AKK: um-ma kà-ru-um kà-ni-ia-ma a-na aa-qí-il… da-tim aí-ip-ri-ni kà-ar kà-ar-ma ú wa-bar-ra-tim qí-bi„-ma mup-pu-um aa a-lim(ki) i-li-kam
+
+  AKK: i-na mup-pì-im aa a-lim(ki) ia-tù u„-mì-im a-nim ma-ma-an KÙ.AN i-aa-ú-mu-ni i-na né-mì-lim da-aùr ú-lá e-WA ia-ra-tí-au kà-ru-um kà-ni-ia i-lá-qé
+
+  AKK: ki-ma mup-pì-ni ta-áa-me-a-ni a-ma-kam lu a-na aí-mì-im a-na É.GAL-lim i-dí-in lu té-ra-at É.GAL-lim ú-kà-lim lu na-aí-ma a-dí-ni lá i-dí-in ma-lá KÙ.
+
+  AKK: me-+e-er mup-pì-ni a-na kà-ar kà-ar-ma ú wa-bar-ra-tim aé-bi„-lá KÙ.AN lu a-na DAM.GÀR-ru-tim i-dí-in au-mì a-wi-lim lu-up-ta-nim
+
+
+======================================================================
+8. Akk/Eng 長さ比（word数ベース）
+======================================================================
+
+Train:
+  Eng/Akk ratio: mean=1.49, median=1.48, std=0.68, min=0.01, max=11.00
+      0-    0:    85 (  5.4%) #####
+      0-    1:   107 (  6.9%) ######
+      1-    2:   615 ( 39.4%) #######################################
+      2-    2:   625 ( 40.0%) ########################################
+      2-    3:    98 (  6.3%) ######
+      3-    5:    25 (  1.6%) #
+      5-  100:     6 (  0.4%) 
+
+Additional:
+  Eng/Akk ratio: mean=1.13, median=1.22, std=0.52, min=0.01, max=3.70
+      0-    0:   189 ( 16.2%) ################
+      0-    1:   179 ( 15.4%) ###############
+      1-    2:   486 ( 41.7%) #########################################
+      2-    2:   300 ( 25.8%) #########################
+      2-    3:    10 (  0.9%) 
+      3-    5:     1 (  0.1%) 
+      5-  100:     0 (  0.0%) 
+
+======================================================================
+9. 英訳の文数分布（ピリオドで分割）
+======================================================================
+
+Train:
+      0-    1:     0 (  0.0%) 
+      1-    2:   254 ( 16.3%) ################
+      2-    3:   212 ( 13.6%) #############
+      3-    4:   164 ( 10.5%) ##########
+      4-    5:   128 (  8.2%) ########
+      5-   10:   527 ( 33.8%) #################################
+     10-   50:   273 ( 17.5%) #################
+
+Additional:
+      0-    1:     0 (  0.0%) 
+      1-    2:   121 ( 10.4%) ##########
+      2-    3:   110 (  9.4%) #########
+      3-    4:   132 ( 11.3%) ###########
+      4-    5:   132 ( 11.3%) ###########
+      5-   10:   396 ( 34.0%) #################################
+     10-   50:   271 ( 23.3%) #######################
+
+======================================================================
+10. Akkadian特殊記号・パターン
+======================================================================
+
+Train (1561 rows):
+  ハイフン含む: 1561 (100.0%)
+  大文字含む: 1519 (97.3%)
+  破損記号[...]: 0 (0.0%)
+  数字含む: 1249 (80.0%)
+
+Additional (1165 rows):
+  ハイフン含む: 1165 (100.0%)
+  大文字含む: 1156 (99.2%)
+  破損記号[...]: 0 (0.0%)
+  数字含む: 1149 (98.6%)
+
+Test (4 rows):
+  ハイフン含む: 4 (100.0%)
+  大文字含む: 3 (75.0%)
+  破損記号[...]: 0 (0.0%)
+  数字含む: 0 (0.0%)
+
+======================================================================
+分析完了
+======================================================================

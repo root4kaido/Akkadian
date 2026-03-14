@@ -1,0 +1,22 @@
+experiment:
+  name: exp016_byt5_base
+  description: "exp014(v6設定) + ByT5-baseのみ。タグ・追加データなし"
+
+lineage:
+  parent: exp014_starter_v6
+  status: active
+  diff_summary: "MODEL_NAME: byt5-small → byt5-base, FP32 → BF16"
+
+model:
+  name: google/byt5-base
+  max_length: 512
+
+training:
+  seed: 42
+  val_ratio: 0.1
+  epochs: 20
+  batch_size: 4
+  gradient_accumulation_steps: 2
+  lr: 2e-4
+  optim: adafactor
+  bf16: true

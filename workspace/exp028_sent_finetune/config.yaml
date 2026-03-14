@@ -1,0 +1,22 @@
+experiment:
+  name: exp028_sent_finetune
+  description: "exp023 fold3 last_modelからsentence_aligned.csvで2段階目fine-tune。E層(geo 10-30)の底上げを狙う"
+
+lineage:
+  parent: exp023
+  status: active
+  diff_summary: "Stage2: sentence-level fine-tuning on exp023 fold3 last_model"
+
+model:
+  name: google/byt5-base
+  params: {}
+
+training:
+  seed: 42
+  n_folds: 5
+  epochs: 5
+  batch_size: 4
+  grad_accumulation_steps: 2
+  lr: 5e-5
+  amp: true
+  resume_from: workspace/exp023_full_preprocessing/results/fold3/last_model

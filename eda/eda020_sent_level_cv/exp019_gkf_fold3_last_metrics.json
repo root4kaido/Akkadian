@@ -1,0 +1,19 @@
+{
+  "exp_name": "exp019_gkf_fold3_last",
+  "preprocess": "none",
+  "fold": 3,
+  "sent_cv": {
+    "chrf": 48.56,
+    "bleu": 27.75,
+    "geo": 36.71,
+    "rep": 13.3,
+    "n": 481
+  },
+  "doc_cv": {
+    "chrf": 37.29,
+    "bleu": 15.29,
+    "geo": 23.88,
+    "rep": 63.6,
+    "n": 297
+  }
+}

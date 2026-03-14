@@ -1,0 +1,9 @@
+{
+  "total_samples": 2311,
+  "geo_mean": 34.21,
+  "geo_median": 29.51,
+  "geo_zero_pct": 2.3,
+  "repetition_pct": 0.0,
+  "short_pred_pct": 2.8,
+  "long_pred_pct": 0.5
+}

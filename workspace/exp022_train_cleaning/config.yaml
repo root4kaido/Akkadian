@@ -1,0 +1,8 @@
+experiment:
+  name: exp022_train_cleaning
+  description: "Host推奨のtrain前処理を適用（fem./pl.除去、PN→<gap>、小数→分数、ローマ数字→整数等）"
+
+lineage:
+  parent: exp016_byt5_base
+  status: active
+  diff_summary: "exp016にHost推奨のtrain translation前処理を追加。モデル・ハイパラは同一"

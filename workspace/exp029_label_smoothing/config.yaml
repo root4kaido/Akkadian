@@ -1,0 +1,22 @@
+experiment:
+  name: exp029_label_smoothing
+  description: "exp023 + label_smoothing_factor=0.1で汎化力向上"
+
+lineage:
+  parent: exp023
+  status: active
+  diff_summary: "label_smoothing_factor=0.1を追加。それ以外はexp023 GKFと同一"
+
+model:
+  name: google/byt5-base
+  params: {}
+
+training:
+  seed: 42
+  n_folds: 5
+  epochs: 20
+  batch_size: 4
+  grad_accumulation_steps: 2
+  lr: 2e-4
+  label_smoothing_factor: 0.1
+  amp: true

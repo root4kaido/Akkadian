@@ -1,0 +1,321 @@
+================================================================================
+1. AKTグループ別基本統計
+================================================================================
+
+AKT 5 (77件):
+  翻訳 word数: mean=149.6, median=125, max=585
+  翻字 bytes: mean=651, median=661, max=1028
+
+AKT 6a (300件):
+  翻訳 word数: mean=122.1, median=90, max=625
+  翻字 bytes: mean=592, median=551, max=1051
+
+AKT 6b (220件):
+  翻訳 word数: mean=104.8, median=93, max=739
+  翻字 bytes: mean=573, median=578, max=1044
+
+AKT 6c (200件):
+  翻訳 word数: mean=95.7, median=88, max=356
+  翻字 bytes: mean=526, median=504, max=1046
+
+AKT 6d (135件):
+  翻訳 word数: mean=71.4, median=62, max=257
+  翻字 bytes: mean=424, median=385, max=1056
+
+AKT 6e (251件):
+  翻訳 word数: mean=30.9, median=17, max=584
+  翻字 bytes: mean=298, median=216, max=1024
+
+AKT 8 (363件):
+  翻訳 word数: mean=89.8, median=73, max=508
+  翻字 bytes: mean=475, median=419, max=1047
+
+None (15件):
+  翻訳 word数: mean=9.5, median=9, max=20
+  翻字 bytes: mean=76, median=69, max=139
+
+================================================================================
+2. AKTグループ別 genre_label分布
+================================================================================
+
+AKT 5:
+  letter: 30 (39.0%)
+  memo: 11 (14.3%)
+  administrative regulation: 9 (11.7%)
+  note: 8 (10.4%)
+  unknown: 5 (6.5%)
+  list: 3 (3.9%)
+  legal writing(s): 3 (3.9%)
+  debt note: 3 (3.9%)
+  agreement (contract) | final communique: 2 (2.6%)
+  administrative regulation | testimony: 1 (1.3%)
+  settlement of accounts: 1 (1.3%)
+  judgement | agreement: 1 (1.3%)
+
+AKT 6a:
+  unknown: 182 (60.7%)
+  letter: 117 (39.0%)
+  agreement (contract): 1 (0.3%)
+
+AKT 6b:
+  unknown: 218 (99.1%)
+  letter: 2 (0.9%)
+
+AKT 6c:
+  unknown: 199 (99.5%)
+  debt note: 1 (0.5%)
+
+AKT 6d:
+  unknown: 134 (99.3%)
+  letter: 1 (0.7%)
+
+AKT 6e:
+  unknown: 250 (99.6%)
+  note: 1 (0.4%)
+
+AKT 8:
+  unknown: 360 (99.2%)
+  agreement (contract): 1 (0.3%)
+  note: 1 (0.3%)
+  debt note: 1 (0.3%)
+
+None:
+  note for the file: 8 (53.3%)
+  unknown: 7 (46.7%)
+
+================================================================================
+3. 定型フレーズの出現率（グループ別）
+================================================================================
+
+Pattern                       AKT 5    AKT 6a    AKT 6b    AKT 6c    AKT 6d    AKT 6e     AKT 8      None
+---------------------------------------------------------------------------------------------------------
+Seal of                       16.9%      6.7%      6.4%     11.0%     18.5%      3.2%     17.9%     33.3%
+Witnessed by                   2.6%     37.3%     19.5%     10.5%     20.7%      4.4%      5.5%      0.0%
+son of                        63.6%     45.0%     35.5%     35.5%     40.7%     25.9%     42.1%     33.3%
+daughter of                    2.6%      1.0%      0.5%      0.0%      0.0%      0.4%      1.9%      0.0%
+shekels of silver             48.1%     18.3%     35.0%     42.5%     31.1%     35.9%     36.9%      0.0%
+minas of silver               41.6%     28.0%     27.7%     32.5%     23.0%     15.1%     29.5%      6.7%
+he will pay                    9.1%      2.0%      3.6%      4.5%      5.2%      1.6%      7.4%      0.0%
+If he has not paid             0.0%      5.3%      3.6%      3.5%      8.9%      1.2%      0.0%      0.0%
+interest                      19.5%     15.7%     14.5%     14.5%     14.8%      4.4%     17.6%      0.0%
+eponymy                       15.6%      4.3%      6.4%      6.0%     14.1%      2.0%     15.7%      0.0%
+From X to Y                   10.4%     31.0%     44.1%     44.5%     32.6%      0.8%      4.4%      0.0%
+Say to                        20.8%      0.0%      1.8%      0.5%      0.0%      0.0%     22.3%      0.0%
+thus                          37.7%      1.3%      1.8%      0.5%      0.0%      0.0%     25.3%      0.0%
+tablet                        33.8%     37.0%     24.5%     26.5%     13.3%      5.6%     12.9%      6.7%
+witness                       10.4%     50.0%     28.6%     18.0%     23.0%      7.2%     10.5%     13.3%
+textile                       16.9%     19.3%     22.7%     22.5%     16.3%     15.1%     31.1%      0.0%
+caravan                        1.3%      5.3%      4.1%      4.0%      4.4%      1.2%      7.2%      0.0%
+donkey                         6.5%      3.3%      1.4%      4.5%      3.7%      0.4%      6.6%      0.0%
+gold                          11.7%     10.0%      3.6%      5.0%      2.2%      3.6%      7.4%      0.0%
+copper                        18.2%     17.3%     22.3%     17.0%     17.0%     11.2%     13.8%      0.0%
+tin                           11.7%     13.0%     15.0%     19.0%     14.1%      7.2%     20.4%      0.0%
+
+================================================================================
+4. グループ間 bigram Jaccard類似度
+================================================================================
+
+               AKT 5    AKT 6a    AKT 6b    AKT 6c    AKT 6d    AKT 6e     AKT 8      None
+     AKT 5     1.000     0.076     0.082     0.088     0.081     0.106     0.091     0.003
+    AKT 6a     0.076     1.000     0.147     0.134     0.105     0.093     0.101     0.004
+    AKT 6b     0.082     0.147     1.000     0.152     0.122     0.104     0.098     0.005
+    AKT 6c     0.088     0.134     0.152     1.000     0.119     0.103     0.093     0.005
+    AKT 6d     0.081     0.105     0.122     0.119     1.000     0.108     0.079     0.008
+    AKT 6e     0.106     0.093     0.104     0.103     0.108     1.000     0.067     0.008
+     AKT 8     0.091     0.101     0.098     0.093     0.079     0.067     1.000     0.003
+      None     0.003     0.004     0.005     0.005     0.008     0.008     0.003     1.000
+
+================================================================================
+5. グループ固有の高頻度語（TF-IDF的）
+================================================================================
+
+AKT 5 特徴語 TOP10:
+  karum: 16回 (全体16回, 特異度20.27)
+  kapsiya: 8回 (全体8回, 特異度20.27)
+  belum-bani: 8回 (全体8回, 特異度20.27)
+  assur-tab: 8回 (全体8回, 特異度20.27)
+  asanum: 7回 (全体7回, 特異度20.27)
+  meteoric: 13回 (全体13回, 特異度20.27)
+  assur-taklaku: 14回 (全体14回, 特異度20.27)
+  hanana: 7回 (全体7回, 特異度20.27)
+  assur-malik: 15回 (全体15回, 特異度20.27)
+  mannum-balum-assur: 7回 (全体7回, 特異度20.27)
+
+AKT 6a 特徴語 TOP10:
+  extradite: 7回 (全体7回, 特異度5.20)
+  yesterday: 7回 (全体7回, 特異度5.20)
+  issu-ariks: 7回 (全体7回, 特異度5.20)
+  inheritors: 7回 (全体7回, 特異度5.20)
+  -documents: 8回 (全体8回, 特異度5.20)
+  burušhaddum: 34回 (全体34回, 特異度5.20)
+  ibayas: 10回 (全体10回, 特異度5.20)
+  extradition: 5回 (全体5回, 特異度5.20)
+  raised: 6回 (全体6回, 特異度5.20)
+  obstruct: 23回 (全体23回, 特異度5.20)
+
+AKT 6b 特徴語 TOP10:
+  eddin-aššur: 5回 (全体5回, 特異度7.10)
+  mula: 5回 (全体5回, 特異度7.10)
+  eništārum: 5回 (全体5回, 特異度7.10)
+  daraš: 8回 (全体8回, 特異度7.10)
+  aššur-rēʾī: 5回 (全体5回, 特異度7.10)
+  mannum-kī-iliya: 17回 (全体17回, 特異度7.10)
+  mannum-kī-aššurs: 5回 (全体5回, 特異度7.10)
+  -stone: 5回 (全体5回, 特異度7.10)
+  aššur-massuʾī: 6回 (全体6回, 特異度7.10)
+  enišārum: 6回 (全体6回, 特異度7.10)
+
+AKT 6c 特徴語 TOP10:
+  split: 8回 (全体8回, 特異度7.81)
+  recieved: 7回 (全体7回, 特異度7.81)
+  blood-money: 12回 (全体14回, 特異度6.69)
+  enah-ilīs: 6回 (全体7回, 特異度6.69)
+  harvest: 6回 (全体8回, 特異度5.85)
+  zukuwa: 23回 (全体31回, 特異度5.79)
+  uku: 19回 (全体26回, 特異度5.70)
+  aššur-pilah: 5回 (全体7回, 特異度5.58)
+  waldi-ilum: 9回 (全体13回, 特異度5.40)
+  šalim-bēlī: 11回 (全体16回, 特異度5.37)
+
+AKT 6d 特徴語 TOP10:
+  ilī-uṣrannī: 6回 (全体6回, 特異度11.56)
+  feed: 5回 (全体5回, 特異度11.56)
+  šamaš-ṭāb: 5回 (全体5回, 特異度11.56)
+  luzi: 10回 (全体11回, 特異度10.51)
+  akiya: 6回 (全体7回, 特異度9.91)
+  ṭāb-pī-aššur: 5回 (全体6回, 特異度9.64)
+  containers: 8回 (全体11回, 特異度8.41)
+  aššur-muttabbil: 6回 (全体9回, 特異度7.71)
+  irišum: 20回 (全体33回, 特異度7.01)
+  kuzallu: 5回 (全体9回, 特異度6.42)
+
+AKT 6e 特徴語 TOP10:
+  kutānus: 13回 (全体15回, 特異度5.39)
+  pots: 7回 (全体9回, 特異度4.84)
+  litu-silver: 6回 (全体12回, 特異度3.11)
+  timelkiya: 5回 (全体11回, 特異度2.83)
+  kutānu-textiles: 8回 (全体18回, 特異度2.76)
+  pirikannus: 5回 (全体12回, 特異度2.59)
+  owed: 126回 (全体343回, 特異度2.28)
+  sacks: 19回 (全体64回, 特異度1.85)
+  offerings: 7回 (全体25回, 特異度1.74)
+  08333: 9回 (全体33回, 特異度1.70)
+
+AKT 8 特徴語 TOP10:
+  dark: 32回 (全体32回, 特異度4.30)
+  burušhattum: 13回 (全体13回, 特異度4.30)
+  loose: 8回 (全体8回, 特異度4.30)
+  timilkiya: 8回 (全体8回, 特異度4.30)
+  regulation: 11回 (全体11回, 特異度4.30)
+  galdaya: 13回 (全体13回, 特異度4.30)
+  iii: 8回 (全体8回, 特異度4.30)
+  week-eponymy: 11回 (全体11回, 特異度4.30)
+  hinnāya: 48回 (全体48回, 特異度4.30)
+  lamassutum: 30回 (全体30回, 特異度4.30)
+
+None 特徴語 TOP10:
+  concerning: 7回 (全体256回, 特異度2.85)
+  tablets: 5回 (全体200回, 特異度2.60)
+  seal: 8回 (全体786回, 特異度1.06)
+  son: 8回 (全体1957回, 特異度0.43)
+  and: 5回 (全体4765回, 特異度0.11)
+
+================================================================================
+6. 文頭パターン（翻訳の最初の3語）
+================================================================================
+
+AKT 5 TOP10文頭:
+  To Kuliya, thus: 5回 (6.5%)
+  Say to Kuliya,: 4回 (5.2%)
+  A tablet about: 3回 (3.9%)
+  To Kuliya, son: 2回 (2.6%)
+  Thus Kaniš, say: 2回 (2.6%)
+  To Ilī-bāni and: 2回 (2.6%)
+  Thus Kanesh, say: 2回 (2.6%)
+  17 shekels of: 1回 (1.3%)
+  To Kuliya, say,: 1回 (1.3%)
+  Say to Atata: 1回 (1.3%)
+
+AKT 6a TOP10文頭:
+  From Šalim-Aššur to: 21回 (7.0%)
+  To Šalim-Aššur from: 13回 (4.3%)
+  The colony has: 4回 (1.3%)
+  To Amurrum-bāni, Aššur-imittī,: 4回 (1.3%)
+  Šalim-Aššur seized us: 4回 (1.3%)
+  From Itūr-ilī to: 3回 (1.0%)
+  Ennam-Aššur son of: 3回 (1.0%)
+  Ennam-Aššur seized us: 3回 (1.0%)
+  The attorney of: 3回 (1.0%)
+  Representing the sons: 3回 (1.0%)
+
+AKT 6b TOP10文頭:
+  To Ennam-Aššur from: 15回 (6.8%)
+  From Ikūn-pīya to: 10回 (4.5%)
+  To Ennam-Aššur and: 8回 (3.6%)
+  From Ennam-Aššur to: 6回 (2.7%)
+  To Iddin-abum, Itūr-ilī,: 3回 (1.4%)
+  From Kuziziya to: 3回 (1.4%)
+  41 minas 11.5: 3回 (1.4%)
+  Ennam-Aššur son of: 3回 (1.4%)
+  From Pilah-Ištar to: 3回 (1.4%)
+  40 minas of: 3回 (1.4%)
+
+AKT 6c TOP10文頭:
+  To Ali-ahum from: 37回 (18.5%)
+  To Ali-ahum and: 11回 (5.5%)
+  To Adida and: 8回 (4.0%)
+  To Ennānum and: 5回 (2.5%)
+  To Adida, Ali-ahum: 5回 (2.5%)
+  To Ali-ahum son: 5回 (2.5%)
+  From Aššur-šamšī and: 3回 (1.5%)
+  From <gap> to: 3回 (1.5%)
+  From Ali-ahum to: 3回 (1.5%)
+  As to the: 3回 (1.5%)
+
+AKT 6d TOP10文頭:
+  To the merchant: 5回 (3.7%)
+  Seal of Šu-Nūnu: 3回 (2.2%)
+  Ennam-Aššur son of: 3回 (2.2%)
+  From Šukkutum to: 2回 (1.5%)
+  To Dan-Aššur and: 2回 (1.5%)
+  To Aššur-nimrī from: 2回 (1.5%)
+  From Innaya to: 2回 (1.5%)
+  To Aššur-damiq from: 2回 (1.5%)
+  From <gap> to: 2回 (1.5%)
+  To Puzur-Aššur from: 2回 (1.5%)
+
+AKT 6e TOP10文頭:
+  10 shekels of: 4回 (1.6%)
+  12 shekels of: 4回 (1.6%)
+  1.5 shekel of: 4回 (1.6%)
+  3 shekels of: 4回 (1.6%)
+  I gave 2: 3回 (1.2%)
+  <gap> shekels of: 3回 (1.2%)
+  1 mina of: 3回 (1.2%)
+  2 minas of: 3回 (1.2%)
+  9 shekels of: 2回 (0.8%)
+  Of the 48: 2回 (0.8%)
+
+AKT 8 TOP10文頭:
+  Say to Elamma,: 15回 (4.1%)
+  15 shekels of: 6回 (1.7%)
+  Say to Elamma: 3回 (0.8%)
+  Seal of Šu-Kūbum,: 3回 (0.8%)
+  Thus Ennam-Aššur and: 3回 (0.8%)
+  1 mina of: 3回 (0.8%)
+  Thus Ali-ahum, Aššur-rēṣī,: 3回 (0.8%)
+  4 shekels of: 2回 (0.6%)
+  30 minas of: 2回 (0.6%)
+  Seal of Zuba,: 2回 (0.6%)
+
+None TOP10文頭:
+  Certified tablets with: 1回 (6.7%)
+  Seal of Baziya,: 1回 (6.7%)
+  Memoranda concerning customers.: 1回 (6.7%)
+  To Ali-ahum son: 1回 (6.7%)
+  My certified tablets,: 1回 (6.7%)
+  Certified tablets concerning: 1回 (6.7%)
+  Tablets with oaths: 1回 (6.7%)
+  Seal of Iddin-Adad: 1回 (6.7%)
+  <gap>na seized Aššur's: 1回 (6.7%)
+  To my representatives: 1回 (6.7%)

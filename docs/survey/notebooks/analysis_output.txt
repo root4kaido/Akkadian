@@ -1,0 +1,137 @@
+================================================================================
+NOTEBOOK ANALYSIS: Training Links & Model References
+================================================================================
+
+────────────────────────────────────────────────────────────
+📓 anthonytherrien__byt-ensemble-script
+  📂 Input paths: ['/kaggle/input/final-byt5/byt5-akkadian-optimized-34x', '/kaggle/input/deep-past-initiative-machine-translation/test.csv']
+
+────────────────────────────────────────────────────────────
+📓 assiaben__akkadian-english-inference-byt5-optimized-34x
+  📂 Input paths: ['/kaggle/input/final-byt5/byt5-akkadian-optimized-34x', '/kaggle/input/deep-past-initiative-machine-translation/test.csv']
+
+────────────────────────────────────────────────────────────
+📓 baidalinadilzhan__lb-35-2-ensemble
+  📂 Input paths: ['/kaggle/input/final-byt5/byt5-akkadian-optimized-34x', '/kaggle/input/deep-past-initiative-machine-translation/test.csv', '/kaggle/input/models/mattiaangeli/byt5-akkadian-mbr/pytorch/default/6']
+  🏆 Score mentions:
+     score = 0
+     score1 = score_text(text1)
+     score2 = score_text(text2)
+     weighted_score1 = score1 * weight1
+     weighted_score2 = score2 * weight2
+
+────────────────────────────────────────────────────────────
+📓 giovannyrodrguez__lb-35-9-ensembling-post-processing-baseline
+  📂 Input paths: ['/kaggle/input/datasets/giovannyrodrguez/modelofinalbyt5/byt5-akkadian-model_final', '/kaggle/input/competitions/deep-past-initiative-machine-translation/test.csv', '/kaggle/input/datasets/giovannyrodrguez/nomarl36/byt5-akkadian-model_final']
+
+────────────────────────────────────────────────────────────
+📓 jackcerion__byt5-seq2seq-infer
+  📂 Input paths: ['/kaggle/input/dcp-train/byt5-base-akkadian-gap/', '/kaggle/input/byt5-akkadian-model', '/kaggle/input/byt5-base-big-data2', '/kaggle/input/deep-past-initiative-machine-translation/test.csv', '/kaggle/input/train-gap-all-2/byt5-base-akkadian_gap_setence2']
+  🤖 Model paths: ['/kaggle/input/dcp-train/byt5-base-akkadian-gap/']
+
+────────────────────────────────────────────────────────────
+📓 jiexusheng20bz__byt-ensemble
+  📂 Input paths: ['/kaggle/input/final-byt5/byt5-akkadian-optimized-34x', '/kaggle/input/byt5-akkadian-model', '/kaggle/input/deep-past-initiative-machine-translation/test.csv']
+
+────────────────────────────────────────────────────────────
+📓 kkashyap14__akkadian2eng-v1
+  📂 Input paths: ['/kaggle/input/byt5-akkadian-en-v7/pytorch/default/1/byt5-akkadian-en-V7', '/kaggle/input/byt5-akkadian-en-v5/pytorch/default/1/byt5-akkadian-en-v5', '/kaggle/input/deep-past-initiative-machine-translation/test.csv', '/kaggle/input/byt5-akkadian-en-v6/pytorch/default/1/byt5-akkadian-en-V6']
+
+────────────────────────────────────────────────────────────
+📓 lgregory__akkadiam-exemple
+  📂 Input paths: ['/kaggle/input/deep-past-initiative-machine-translation/test.csv', '/kaggle/input/models/mattiaangeli/byt5-akkadian-mbr/pytorch/default/6']
+
+────────────────────────────────────────────────────────────
+📓 llkh0a__dpc-baseline-train-infer
+  🎯 TRAINING LINKS: ['https://www.kaggle.com/code/takamichitoda/dpc-starter-train,']
+  📂 Input paths: ['/kaggle/input/deep-past-initiative-machine-translation', '/kaggle/input/byt5-akkadian-model']
+  📦 Model/Dataset links: ['https://www.kaggle.com/datasets/jeanjean111/byt5-base-big-data2', 'https://www.kaggle.com/datasets/llkh0a/byt5-akkadian-model']
+  📝 Training mentions:
+     # Deep Past Initiative – Machine Translation (Training Notebook)
+
+────────────────────────────────────────────────────────────
+📓 loopassembly__score-35-3-byt5-mbr-pipeline
+  📂 Input paths: ['/kaggle/input/deep-past-initiative-machine-translation/test.csv', '/kaggle/input/models/mattiaangeli/byt5-akkadian-mbr/pytorch/default/6']
+
+────────────────────────────────────────────────────────────
+📓 mattiaangeli__deep-pasta-mbr
+  📂 Input paths: ['/kaggle/input/models/mattiaangeli/byt5-akkadian-mbr-v2/pytorch/default/1', '/kaggle/input/deep-past-initiative-machine-translation/test.csv']
+
+────────────────────────────────────────────────────────────
+📓 mattiaangeli__deep-pasta-mbr-v2
+  📂 Input paths: ['/kaggle/input/models/mattiaangeli/byt5-akkadian-mbr-v2/pytorch/default/1', '/kaggle/input/deep-past-initiative-machine-translation/test.csv']
+
+────────────────────────────────────────────────────────────
+📓 meenalsinha__hybrid-best-akkadian
+  📂 Input paths: ['/kaggle/input/models/mattiaangeli/byt5-akkadian-mbr-v2/pytorch/default/1', '/kaggle/input/final-byt5/byt5-akkadian-optimized-34x', '/kaggle/input/deep-past-initiative-machine-translation/test.csv']
+
+────────────────────────────────────────────────────────────
+📓 ngyzly__lb-35-1-ensembling-post-processing-baseline
+  📂 Input paths: ['/kaggle/input/datasets/assiaben/final-byt5/byt5-akkadian-optimized-34x', '/kaggle/input/models/mattiaangeli/byt5-akkadian-mbr-v2/pytorch/default/1', '/kaggle/input/competitions/deep-past-initiative-machine-translation/test.csv']
+
+────────────────────────────────────────────────────────────
+📓 nikitagajbhiye30__deep-past000
+  📂 Input paths: ['/kaggle/input/final-byt5/byt5-akkadian-optimized-34x', '/kaggle/input/deep-past-initiative-machine-translation/test.csv', '/kaggle/input/deep-past-initiative-machine-translation/train.csv']
+
+────────────────────────────────────────────────────────────
+📓 prayagp1__adaptive-beams-test-v1
+  📂 Input paths: ['/kaggle/input/final-byt5/byt5-akkadian-optimized-34x', '/kaggle/input/deep-past-initiative-machine-translation/test.csv']
+
+────────────────────────────────────────────────────────────
+📓 qifeihhh666__deep-past-challenge-byt5-base-inference
+  📂 Input paths: ['/kaggle/input/deep-past-challenge-training-gap/byt5-base-akkadian_666/', '/kaggle/input/deep-past-initiative-machine-translation/test.csv', '/kaggle/input/deep-past-initiative-machine-translation/train.csv']
+  🤖 Model paths: ['/kaggle/input/deep-past-challenge-training-gap/byt5-base-akkadian_666/']
+
+────────────────────────────────────────────────────────────
+📓 qifeihhh666__dpc-starter-infer-add-sentencealign
+  🎯 TRAINING LINKS: ['https://www.kaggle.com/code/takamichitoda/dpc-starter-train']
+  🔗 Other code links: ['https://www.kaggle.com/code/jackcerion/tr-try']
+  📂 Input paths: ['/kaggle/input/k/qifeihhh666/dpc-starter-train/byt5-akkadian-model/', '/kaggle/input/epoch30-seed42/byt5-akkadian-model', '/kaggle/input/dpc-starter-train/byt5-akkadian-model/', '/kaggle/input/deep-past-initiative-machine-translation/train.csv', '/kaggle/input/deep-past-initiative-machine-translation/test.csv']
+  🤖 Model paths: ['/kaggle/input/epoch30-seed42/byt5-akkadian-model', '/kaggle/input/dpc-starter-train/byt5-akkadian-model/', '/kaggle/input/k/qifeihhh666/dpc-starter-train/byt5-akkadian-model/']
+  📝 Training mentions:
+     Training Code is [here](https://www.kaggle.com/code/takamichitoda/dpc-starter-train).
+  🏆 Score mentions:
+     # MIN_ACCEPT_SCORE = 0.14
+     #         score = 2 * c / (src_cnt[sw] + tgt_cnt[tw])
+
+────────────────────────────────────────────────────────────
+📓 serariagomes__akkadian-english-byt5-optimized-again
+  📂 Input paths: ['/kaggle/input/final-byt5/byt5-akkadian-optimized-34x', '/kaggle/input/deep-past-initiative-machine-translation/test.csv']
+
+────────────────────────────────────────────────────────────
+📓 takamichitoda__dpc-infer-with-post-processing-by-llm
+  🔗 Other code links: ['https://www.kaggle.com/code/takamichitoda/dpc-infer-with-post-processing-by-llm?scriptVersionId=290148346', 'https://www.kaggle.com/code/takamichitoda/dpc-infer-with-post-processing-by-llm?scriptVersionId=292147659', 'https://www.kaggle.com/code/takamichitoda/dpc-infer-with-post-processing-by-llm?scriptVersionId=290075269', 'https://www.kaggle.com/code/takamichitoda/dpc-infer-with-post-processing-by-llm?scriptVersionId=287804751', 'https://www.kaggle.com/code/takamichitoda/dpc-starter-infer', 'https://www.kaggle.com/code/yongsukprasertsuk/deep-past-challenge-weight-averaging']
+  📂 Input paths: ['/kaggle/input/deep-past-initiative-machine-translation/OA_Lexicon_eBL.csv', '/kaggle/input/byt5-akkadian-model', '/kaggle/input/deep-past-initiative-machine-translation/train.csv', '/kaggle/input/byt5-base-big-data2', '/kaggle/input/gemma-3/transformers/gemma-3-4b-it/1', '/kaggle/input/deep-past-initiative-machine-translation/test.csv', '/kaggle/input/train-gap-all-2/byt5-base-akkadian_gap_setence2']
+  🤖 Model paths: ['/kaggle/input/gemma-3/transformers/gemma-3-4b-it/1']
+  📦 Model/Dataset links: ['https://www.kaggle.com/datasets/jeanjean111/byt5-base-big-data2', 'https://www.kaggle.com/datasets/qifeihhh666/train-gap-all-2', 'https://www.kaggle.com/datasets/llkh0a/byt5-akkadian-model']
+  🏆 Score mentions:
+     - Public Score: 26.6
+     - Public Score: 28.9
+     - Public Score: 30.3
+     - Public Score: 32.6
+     prev_punct_score = 0
+
+────────────────────────────────────────────────────────────
+📓 takamichitoda__dpc-starter-infer
+  🎯 TRAINING LINKS: ['https://www.kaggle.com/code/takamichitoda/dpc-starter-train']
+  📂 Input paths: ['/kaggle/input/dpc-starter-train/byt5-akkadian-model/', '/kaggle/input/deep-past-initiative-machine-translation/test.csv']
+  🤖 Model paths: ['/kaggle/input/dpc-starter-train/byt5-akkadian-model/']
+  📝 Training mentions:
+     Training Code is [here](https://www.kaggle.com/code/takamichitoda/dpc-starter-train).
+
+────────────────────────────────────────────────────────────
+📓 takamichitoda__dpc-starter-train
+  🔗 Other code links: ['https://www.kaggle.com/code/takamichitoda/dpc-starter-infer']
+  📂 Input paths: ['/kaggle/input/deep-past-initiative-machine-translation']
+  📝 Training mentions:
+     # Deep Past Initiative – Machine Translation (Training Notebook)
+
+────────────────────────────────────────────────────────────
+📓 vitorhugobarbedo__lb-35-9-with-regex-corrections-public-model
+  📂 Input paths: ['/kaggle/input/datasets/assiaben/final-byt5/byt5-akkadian-optimized-34x', '/kaggle/input/datasets/vitorhugobarbedo/newmodelf0/kaggle/working/byt5_finetune_v1/final_model_ema', '/kaggle/input/competitions/deep-past-initiative-machine-translation/test.csv']
+  🏆 Score mentions:
+     # In my current public LB 34.9 configuration:
+
+────────────────────────────────────────────────────────────
+📓 yongsukprasertsuk__deep-past-challenge-byt5-optimized
+  📂 Input paths: ['/kaggle/input/final-byt5/byt5-akkadian-optimized-34x', '/kaggle/input/deep-past-initiative-machine-translation/test.csv']

@@ -1,0 +1,18 @@
+experiment:
+  name: exp034_st_pretrain
+  description: "Self-Training (pretrain): pseudo dataで事前学習→real dataでfine-tune（2段階学習）"
+
+lineage:
+  parent: exp032
+  status: active
+  diff_summary: "exp032のpseudo_labels.csvを流用。Stage1: pseudoでpretrain → Stage2: realでfine-tune"
+
+training:
+  seed: 42
+  n_folds: 5
+  stage1_epochs: 5
+  stage2_epochs: 20
+  batch_size: 4
+  grad_accum: 2
+  lr: 2e-4
+  bf16: true

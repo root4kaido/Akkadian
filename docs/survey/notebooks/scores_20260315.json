@@ -1,0 +1,197 @@
+[
+  {
+    "ref": "takamichitoda/dpc-starter-infer",
+    "public_score": "26.9",
+    "best_score": "26.9",
+    "train_links": [],
+    "input_info": []
+  },
+  {
+    "ref": "qifeihhh666/dpc-starter-infer-add-sentencealign",
+    "public_score": "27.2",
+    "best_score": "27.2",
+    "train_links": [],
+    "input_info": [
+      "DATASETS\n\nepoch30_seed42"
+    ]
+  },
+  {
+    "ref": "jiexusheng20bz/byt-ensemble",
+    "public_score": "32.4",
+    "best_score": "32.4",
+    "train_links": [],
+    "input_info": [
+      "DATASETS\n\nbyt5-akkadian-model",
+      "MODELS\nwarning"
+    ]
+  },
+  {
+    "ref": "vitorhugobarbedo/lb-35-9-with-regex-corrections-public-model",
+    "public_score": "35.6",
+    "best_score": "35.9",
+    "train_links": [],
+    "input_info": [
+      "DATASETS\n\n[Private",
+      "MODELS\n\nbyt5"
+    ]
+  },
+  {
+    "ref": "mattiaangeli/deep-pasta-mbr",
+    "public_score": "32.8",
+    "best_score": "33.2",
+    "train_links": [],
+    "input_info": [
+      "MODELS\n\nbyt5"
+    ]
+  },
+  {
+    "ref": "lgregory/akkadiam-exemple",
+    "public_score": "32.9",
+    "best_score": "33.0",
+    "train_links": [],
+    "input_info": [
+      "MODELS\n\nbyt5"
+    ]
+  },
+  {
+    "ref": "anthonytherrien/byt-ensemble-script",
+    "public_score": "33.5",
+    "best_score": "33.5",
+    "train_links": [],
+    "input_info": [
+      "DATASETS\n\nbyt5-akkadian-model",
+      "MODELS\nwarning"
+    ]
+  },
+  {
+    "ref": "giovannyrodrguez/lb-35-9-ensembling-post-processing-baseline",
+    "public_score": "35.9",
+    "best_score": "35.9",
+    "train_links": [],
+    "input_info": [
+      "DATASETS\n\n[Private",
+      "[Private Dataset]"
+    ]
+  },
+  {
+    "ref": "prayagp1/adaptive-beams-test-v1",
+    "public_score": "33.5",
+    "best_score": "33.5",
+    "train_links": [],
+    "input_info": [
+      "DATASETS\n\nByT5"
+    ]
+  },
+  {
+    "ref": "baidalinadilzhan/lb-35-2-ensemble",
+    "public_score": "33.5",
+    "best_score": "33.5",
+    "train_links": [],
+    "input_info": [
+      "DATASETS\n\nbyt5-akkadian-model",
+      "MODELS\nwarning"
+    ]
+  },
+  {
+    "ref": "takamichitoda/dpc-infer-with-post-processing-by-llm",
+    "public_score": "32.0",
+    "best_score": "32.0",
+    "train_links": [],
+    "input_info": [
+      "DATASETS\n\nbyt5-akkadian-model",
+      "MODELS\nwarning"
+    ]
+  },
+  {
+    "ref": "meenalsinha/hybrid-best-akkadian",
+    "public_score": "35.3",
+    "best_score": "35.3",
+    "train_links": [],
+    "input_info": [
+      "DATASETS\n\nfinal-byt5",
+      "MODELS\n\nbyt5"
+    ]
+  },
+  {
+    "ref": "assiaben/akkadian-english-inference-byt5-optimized-34x",
+    "public_score": "33.5",
+    "best_score": "33.5",
+    "train_links": [],
+    "input_info": [
+      "DATASETS\n\nfinal-byt5"
+    ]
+  },
+  {
+    "ref": "loopassembly/score-35-3-byt5-mbr-pipeline",
+    "public_score": "32.7",
+    "best_score": "32.8",
+    "train_links": [],
+    "input_info": [
+      "MODELS\n\nbyt5"
+    ]
+  },
+  {
+    "ref": "llkh0a/dpc-baseline-train-infer",
+    "public_score": null,
+    "best_score": null,
+    "train_links": [
+      "https://www.kaggle.com/code/llkh0a/dpc-baseline-train-infer#site-content",
+      "https://www.kaggle.com/code/llkh0a/dpc-baseline-train-infer#",
+      "https://www.kaggle.com/code/llkh0a/dpc-baseline-train-infer#site-content",
+      "https://www.kaggle.com/code/llkh0a/dpc-baseline-train-infer/notebook",
+      "https://www.kaggle.com/code/llkh0a/dpc-baseline-train-infer/input",
+      "https://www.kaggle.com/code/llkh0a/dpc-baseline-train-infer/output",
+      "https://www.kaggle.com/code/llkh0a/dpc-baseline-train-infer/log",
+      "https://www.kaggle.com/code/llkh0a/dpc-baseline-train-infer/comments",
+      "https://www.kaggle.com/code/llkh0a/dpc-baseline-train-infer#Deep-Past-Initiative-%E2%80%93-Machine-Translation-(Training-Notebook)",
+      "https://www.kaggle.com/code/llkh0a/dpc-baseline-train-infer#Configuration",
+      "https://www.kaggle.com/code/llkh0a/dpc-baseline-train-infer#Load-Pretrained-Model-(Optional)",
+      "https://www.kaggle.com/code/llkh0a/dpc-baseline-train-infer#Upload-Model-via-Kaggle-API",
+      "https://www.kaggle.com/code/llkh0a/dpc-baseline-train-infer#Inference"
+    ],
+    "input_info": [
+      "DATASETS\n\nbyt5-akkadian-model"
+    ]
+  },
+  {
+    "ref": "jackcerion/byt5-seq2seq-infer",
+    "public_score": "31.8",
+    "best_score": "31.8",
+    "train_links": [],
+    "input_info": [
+      "DATASETS\n\nbyt5-akkadian-model"
+    ]
+  },
+  {
+    "ref": "ngyzly/lb-35-1-ensembling-post-processing-baseline",
+    "public_score": null,
+    "best_score": null,
+    "train_links": [],
+    "input_info": []
+  },
+  {
+    "ref": "qifeihhh666/deep-past-challenge-byt5-base-inference",
+    "public_score": "31.8",
+    "best_score": "31.8",
+    "train_links": [],
+    "input_info": []
+  },
+  {
+    "ref": "mattiaangeli/deep-pasta-mbr-v2",
+    "public_score": "34.1",
+    "best_score": "34.1",
+    "train_links": [],
+    "input_info": [
+      "MODELS\n\nbyt5"
+    ]
+  },
+  {
+    "ref": "kkashyap14/akkadian2eng-v1",
+    "public_score": "34.2",
+    "best_score": "34.4",
+    "train_links": [],
+    "input_info": [
+      "MODELS\n\n[Model"
+    ]
+  }
+]

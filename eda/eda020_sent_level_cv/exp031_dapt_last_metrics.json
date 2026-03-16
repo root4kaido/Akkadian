@@ -1,0 +1,19 @@
+{
+  "exp_name": "exp031_dapt_last",
+  "preprocess": "exp023",
+  "fold": 3,
+  "sent_cv": {
+    "chrf": 44.83,
+    "bleu": 23.93,
+    "geo": 32.75,
+    "rep": 15.0,
+    "n": 481
+  },
+  "doc_cv": {
+    "chrf": 33.9,
+    "bleu": 12.51,
+    "geo": 20.59,
+    "rep": 67.3,
+    "n": 297
+  }
+}

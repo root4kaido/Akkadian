@@ -1,0 +1,26 @@
+experiment:
+  name: exp035_mrt
+  description: "Minimum Risk Training (SCST) — コンペ指標√(BLEU×chrF++)を直接最適化"
+
+lineage:
+  parent: exp034_st_pretrain
+  status: active
+  diff_summary: "exp034のlast_modelからSCST (Self-Critical Sequence Training)でRL fine-tune"
+
+model:
+  name: google/byt5-base (via exp034 last_model)
+
+training:
+  seed: 42
+  n_folds: 5
+  epochs: 3
+  batch_size: 2
+  lr: 5e-6
+  amp: true
+  optimizer: AdamW
+  grad_accum: 4
+  grad_clip: 1.0
+  alpha: 0.5        # MRT loss weight
+  num_samples: 4    # K samples per input
+  temperature: 1.0
+  eval_steps: 50

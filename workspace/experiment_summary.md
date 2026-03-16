@@ -35,6 +35,10 @@ graph TD
     exp023 --> exp028[exp028_sent_finetune]
     exp023 --> exp029[exp029_label_smoothing]
     exp023 --> exp030[exp030_decode_strategy]
+    exp023 --> exp031[exp031_dapt]
+    exp023 --> exp032[exp032_self_training]
+    exp032 --> exp033[exp033_st_filtered]
+    exp032 --> exp034[exp034_st_pretrain]
 ```
 
 ## 実験一覧
@@ -71,6 +75,10 @@ graph TD
 | exp028_sent_finetune | exp023 fold3 last_model → sentence_aligned.csv(2311行)で2段階fine-tune。lr=5e-5, 5epochs | 39.76 | sent-geo=35.40, doc-geo=19.37 (fold3) | - | **棄却**。doc-geo -6.15pt、rep=56.2%。短文fine-tuneで長文生成能力崩壊 |
 | exp029_label_smoothing | exp023 + label_smoothing_factor=0.1 | 43.63 | sent-geo=34.88, doc-geo=23.84 (fold3) | - | **棄却**。sent -0.56pt, doc -1.68pt。rep=70%。ByT5でlabel smoothingは逆効果 |
 | exp030_decode_strategy | デコード戦略グリッドサーチ（greedy/beam/rp/lp/MBR）。exp023 fold3 last_model | - | **MBR multi-temp geo=35.51**, greedy=35.35, beam4=34.05 (fold3 sent-CV) | - | **MBR multi-temp(0.6/0.8/1.05)がベスト**。greedyがbeam全設定を上回る。MBRのみgreedy超え(+0.16pt) |
+| exp031_dapt | DAPT: published_texts 7,953件でByT5-base span corruption事前学習 → exp023相当fine-tune | - | sent-geo=32.75, doc-geo=20.59 (fold3) | - | **棄却**。sent -2.69pt, doc -4.93pt。span corruptionは翻訳能力を損傷 |
+| exp032_self_training | Self-training: exp023 fold3 last_modelでpublished_texts英訳 → real+pseudo混合学習 | 45.08 | sent-geo=35.71, doc-geo=23.75 (fold3) | - | sent微増(+0.27), doc悪化(-1.77)。pseudo:real=4:1で偏りすぎ |
+| exp033_st_filtered | exp032 + 品質フィルタ(>=20文字) + 1:1ダウンサンプリング | 44.65 | sent-geo=35.22, doc-geo=23.38 (fold3) | - | **棄却**。フィルタしてもexp023を超えられず |
+| exp034_st_pretrain | 2段階: pseudo 5ep pretrain → real 5ep finetune (lr=5e-5) | 44.93 | sent-geo=**36.71**, doc-geo=24.31 (fold3) | **31.7** | **LBベスト更新(+1.67pt)**。2段階学習が混合より有効 |
 
 **注意**: training eval CVはByT5の512バイトtruncationにより参照テキストが切り詰められ水増しされる。inference greedyまたはbeam4 sentが正確なCV。また`evaluate.load("chrf")`はデフォルトword_order=0(chrF)でありコンペのchrF++(word_order=2)とは異なる。
 
@@ -143,10 +151,17 @@ fold別val分布:
 | exp023 | ベースライン(前処理のみ) | 0.157 | 0.508 | 43.73 | 35.44 | 25.52 |
 | exp026 | +Denoising(文字ノイズp=0.1) | 0.170 | 0.515 | 42.92 | 33.55 | 23.21 |
 | exp027 | +フィルタ済み追加データ(778件) | 0.161 | 0.491 | 43.96 | 35.45 | 24.06 |
+| exp031 | DAPT(span corruption pretrain) | - | - | - | 32.75 | 20.59 |
+| exp032 | +pseudo 6,360件(混合学習) | - | - | 45.08 | 35.71 | 23.75 |
+| exp033 | +pseudo filtered 1:1(混合学習) | - | 0.587 | 44.65 | 35.22 | 23.38 |
+| **exp034** | **pseudo pretrain→real finetune** | - | **0.436** | **44.93** | **36.71** | 24.31 |
 
 - exp026: 文字ノイズで全指標悪化。train_lossも上がり学習自体が妨害されている
 - exp027: 学習eval_geoは微改善(+0.23pt)だがeval_full sent-geoは横ばい、doc-geoは-1.46pt悪化
 - exp019: sent-geoは最良(37.80)だがdoc-geoはexp023より低い。LBも-1.3pt悪い
+- exp031: DAPT(span corruption)はByT5の翻訳能力を損傷。sent -2.69pt, doc -4.93pt
+- exp032-033: self-training混合学習はpseudo dataのノイズでdoc品質悪化
+- **exp034: 2段階学習(pseudo pretrain→real finetune)でsent-CV +1.27pt改善。混合より2段階が有効**
 
 #### 知見
 - **ランダム分割にリークあり**: GKFでsent-CVが10pt以上低下

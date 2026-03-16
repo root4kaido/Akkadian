@@ -1,0 +1,25 @@
+experiment:
+  name: exp032_self_training
+  description: "Self-Training: exp023の5-foldモデルでpublished_textsを英訳→擬似並列データ作成→real+pseudoで再学習"
+
+lineage:
+  parent: exp023
+  status: active
+  diff_summary: "published_texts ~6,400件の擬似ラベルを追加学習データとして統合"
+
+pseudo_generation:
+  source_models: exp023 fold0-4 best_model
+  data: published_texts.csv (transliteration, ~6,400 after dedup)
+  ensemble: majority_vote (5 models)
+  beam: 4
+  max_length: 512
+
+finetune:
+  base: exp023 train_gkf.py
+  data: train.csv (1,561) + pseudo_labels.csv (~6,400)
+  fold: 3
+  epochs: 20
+  lr: 2e-4
+  batch_size: 4
+  grad_accum: 2
+  bf16: true

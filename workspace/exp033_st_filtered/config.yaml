@@ -1,0 +1,17 @@
+experiment:
+  name: exp033_st_filtered
+  description: "Self-Training (filtered): pseudo dataを品質フィルタ+1:1ダウンサンプリングで再学習"
+
+lineage:
+  parent: exp032
+  status: active
+  diff_summary: "exp032のpseudo_labels.csvを流用。短文除外+real:pseudo=1:1比率に制限"
+
+training:
+  seed: 42
+  n_folds: 5
+  epochs: 20
+  batch_size: 4
+  grad_accum: 2
+  lr: 2e-4
+  bf16: true

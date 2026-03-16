@@ -1,0 +1,31 @@
+experiment:
+  name: exp031_dapt
+  description: "Domain-Adaptive Pre-Training: published_textsの翻字7,953件でByT5-baseをspan corruptionで継続事前学習し、その後exp023相当のfine-tuneを行う"
+
+lineage:
+  parent: exp023
+  status: active
+  diff_summary: "fine-tune前にDAPT（教師なし事前学習）ステップを追加"
+
+dapt:
+  data: published_texts.csv (transliteration, 7953 docs)
+  noise_density: 0.15
+  mean_noise_span_length: 20
+  lr: 5e-4
+  epochs: 10
+  batch_size: 4
+  grad_accum: 2
+  bf16: true
+  max_length: 512
+  min_text_length: 50
+  val_ratio: 0.1
+
+finetune:
+  base: exp023 train_gkf.py
+  model: dapt_model (from above)
+  fold: 3
+  epochs: 20
+  lr: 2e-4
+  batch_size: 4
+  grad_accum: 2
+  bf16: true

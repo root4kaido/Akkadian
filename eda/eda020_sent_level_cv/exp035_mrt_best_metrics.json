@@ -1,0 +1,19 @@
+{
+  "exp_name": "exp035_mrt_best",
+  "preprocess": "exp023",
+  "fold": 3,
+  "sent_cv": {
+    "chrf": 48.47,
+    "bleu": 27.05,
+    "geo": 36.21,
+    "rep": 10.4,
+    "n": 481
+  },
+  "doc_cv": {
+    "chrf": 36.85,
+    "bleu": 14.76,
+    "geo": 23.32,
+    "rep": 59.9,
+    "n": 297
+  }
+}

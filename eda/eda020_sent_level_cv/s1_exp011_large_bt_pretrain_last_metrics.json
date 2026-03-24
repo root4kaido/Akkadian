@@ -1,0 +1,19 @@
+{
+  "exp_name": "s1_exp011_large_bt_pretrain_last",
+  "preprocess": "exp023",
+  "fold": 3,
+  "sent_cv": {
+    "chrf": 53.04,
+    "bleu": 32.85,
+    "geo": 41.74,
+    "rep": 7.1,
+    "n": 481
+  },
+  "doc_cv": {
+    "chrf": 42.41,
+    "bleu": 20.91,
+    "geo": 29.78,
+    "rep": 61.3,
+    "n": 297
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "exp_name": "s1_exp001_byt5_large_fold3_gated_best",
+  "preprocess": "exp023",
+  "fold": 3,
+  "sent_cv": {
+    "chrf": 47.64,
+    "bleu": 27.46,
+    "geo": 36.17,
+    "rep": 11.2,
+    "n": 481
+  },
+  "doc_cv": {
+    "chrf": 36.93,
+    "bleu": 15.44,
+    "geo": 23.88,
+    "rep": 59.3,
+    "n": 297
+  }
+}

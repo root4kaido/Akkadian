@@ -1,0 +1,8 @@
+experiment:
+  name: exp042_bt_mixed_v2
+  description: "generate_v2 BT(23k) + real train 混合学習 10ep"
+
+lineage:
+  parent: exp038
+  status: active
+  diff_summary: "exp038と同手法だがgenerate_v2(23k件)に拡大。BT+real混合10ep"

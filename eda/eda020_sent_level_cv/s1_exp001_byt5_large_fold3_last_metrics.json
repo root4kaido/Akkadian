@@ -1,0 +1,19 @@
+{
+  "exp_name": "s1_exp001_byt5_large_fold3_last",
+  "preprocess": "exp023",
+  "fold": 3,
+  "sent_cv": {
+    "chrf": 48.37,
+    "bleu": 28.22,
+    "geo": 36.95,
+    "rep": 13.5,
+    "n": 481
+  },
+  "doc_cv": {
+    "chrf": 38.07,
+    "bleu": 16.47,
+    "geo": 25.04,
+    "rep": 64.6,
+    "n": 297
+  }
+}

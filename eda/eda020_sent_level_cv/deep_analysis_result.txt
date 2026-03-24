@@ -1,0 +1,280 @@
+================================================================================
+A. BYTE-LEVEL LENGTH ANALYSIS (ByT5 uses bytes, not tokens)
+================================================================================
+
+--- Large SENT ---
+  Pred bytes: mean=106.7, max=511, 95th=311, 99th=458
+  Ref bytes:  mean=132.7, max=1573, 95th=318, 99th=612
+  At byte limit ~128 (within 5): 127
+  At byte limit ~256 (within 5): 45
+  At byte limit ~384 (within 5): 11
+  At byte limit ~512 (within 5): 2
+
+--- Base036 SENT ---
+  Pred bytes: mean=106.7, max=510, 95th=312, 99th=476
+  Ref bytes:  mean=132.7, max=1573, 95th=318, 99th=612
+  At byte limit ~128 (within 5): 128
+  At byte limit ~256 (within 5): 41
+  At byte limit ~384 (within 5): 11
+  At byte limit ~512 (within 5): 1
+
+--- Raw prediction bytes ---
+  Large SENT: max=511, 95th=317, 99th=472
+  Base036 SENT: max=511, 95th=328, 99th=504
+
+================================================================================
+B. PER-SAMPLE QUALITY COMPARISON
+================================================================================
+Matched: 501 samples
+
+Overall sent-level scores:
+  Large: BLEU=27.18, chrF++=46.85, geo=34.83
+  Base:  BLEU=26.02, chrF++=45.79, geo=33.65
+
+--- Cases where Large is MUCH WORSE (geo_diff < -10): 59 ---
+
+  geo_diff=-50.5 (L=49.5, B=100.0)
+  Input:  translate Akkadian to English: 5 ma-na KÙ.BABBAR KI a-šur-ta-ak-lá-ku...
+  Ref:    5 minas of silver is owed by Aššur-taklāku....
+  Large:  5 minas of silver due from Aššur-taklāku....
+  Base:   5 minas of silver is owed by Aššur-taklāku....
+
+  geo_diff=-47.0 (L=19.3, B=66.3)
+  Input:  translate Akkadian to English: IGI šu-ma-bi-a DUMU a-mu-ra-a IGI...
+  Ref:    Witnessed by Šumi-abiya son of Amuraya, by Lā-qēp son of Šu-Aššur....
+  Large:  Witnessed by Šu-Mabiya son of Amurraya....
+  Base:   Witnessed by Šumi-abiya son of Amuraya, by Dumqaya son of Kasiya....
+
+  geo_diff=-46.3 (L=36.4, B=82.7)
+  Input:  translate Akkadian to English: KIŠIB a-šur-i-mì-tí DUMU du-dí-ki KIŠIB ú-ṣur-ša-a-šur DUMU a-ku-a KI...
+  Ref:    Seal of Aššur-imittī son of Dudiki, seal of Uṣur-ša-Aššur son of Akuwa, seal of Aššur-bāni, the dog"....
+  Large:  Sealed by Aššur-imittī son of Dudiki, by Uṣur-ša-Aššur son of Akua, by Aššur-bāni....
+  Base:   Seal of Aššur-imittī son of Dudiki, seal of Uṣur-ša-Aššur son of Akuwa, seal of Aššur-bāni....
+
+  geo_diff=-46.1 (L=43.6, B=89.6)
+  Input:  translate Akkadian to English: IGI i-dí-{d}IM DUMU a-šùr-DU10 IGI tù-ur-a-a DUMU me-na-a IGI kur-ub-...
+  Ref:    Witnessed by Iddin-Adad son of Ašsur-ṭāb, by Tūraya son of Menaya, by Kurub-Aššur son of Ṣilliya....
+  Large:  Iddin-Adad son of Aššur-ṭāb, Iddin-Tūraya son of Menaya, Iddin-Kūbum son of Ṣilliya....
+  Base:   Witnessed by Iddin-Adad son of Aššur-ṭāb, by Tūraya son of Menaya, by Kurub-Aššur son of Ṣilliya....
+
+  geo_diff=-41.1 (L=15.6, B=56.7)
+  Input:  translate Akkadian to English: tí-ir-ta-kà li-li-kam-ma a-šar ta-ša-pá-ra-ni KÙ.BABBAR lá-áš-qú-ul...
+  Ref:    If you are delayed, send word and I shall pay the silver where you write....
+  Large:  Send me word so I can pay the silver....
+  Base:   <gap> send me word and I shall pay the silver where you wrote....
+
+  geo_diff=-35.9 (L=42.9, B=78.7)
+  Input:  translate Akkadian to English: DUMU a-mur-a-šùr IGI a-hu-wa-qar DUMU šu-IŠTAR tù-ra-mì-ili5 DUMU e-d...
+  Ref:    Witnessed by Ilī-bāni son of Amur-Aššur, by Ahu-waqar son of Šu-Ištar; Tūram-ilī son of Eddin-Aššur was our (absent) par...
+  Large:  The son of Amur-Aššur. Witnessed by Ahu-waqar son of Šu-Ištar, Tūram-ilī son of Eddin-Aššur....
+  Base:   The son of Amur-Aššur. Witnessed by Ahu-waqar son of Šu-Ištar; Tūram-ilī son of Eddin-Aššur was our (absent) partner....
+
+  geo_diff=-34.8 (L=65.2, B=100.0)
+  Input:  translate Akkadian to English: IGI ma-nu-ki-a-šur IGI ku-zi-zi-a...
+  Ref:    Witnessed by Mannum-kī-Aššur, by Kuziziya....
+  Large:  Witnessed by Mannu-kī-Aššur, by Kuziziya....
+  Base:   Witnessed by Mannum-kī-Aššur, by Kuziziya....
+
+  geo_diff=-33.2 (L=21.1, B=54.3)
+  Input:  translate Akkadian to English: 10 GÍN KÙ.BABBAR SAHAR.BA i-ṣé-er a-šùr-na-da DAM.GÀR i-šu...
+  Ref:    10 shekels of 'dust silver' Assur-nada owes to the creditor....
+  Large:  10 shekels of silver owed by Aššur-nādā;...
+  Base:   10 shekels of silver Aššur-nādā owes to the creditor....
+
+  geo_diff=-31.8 (L=15.4, B=47.2)
+  Input:  translate Akkadian to English: a-hi a-ta i-hi-id Ì.GIŠ ú URUDU lá té-zi-ba-am...
+  Ref:    Please, my brother, take care not to leave the oil and the copper behind for me!...
+  Large:  My dear brother, pay attention! Do not let me leave oil and copper....
+  Base:   Please, my brother, take care to do not leave me oil and copper....
+
+  geo_diff=-30.9 (L=1.3, B=32.2)
+  Input:  translate Akkadian to English: a-na ku-zi-zi-a IŠTAR-lá-ma-sí na-áb-sú-in a-na-na a-mur-IŠTAR ša-lim...
+  Ref:    To Kuziziya, Ištar-lamassī, Nāb-Suen, Anna-anna, Amur-Ištar, Šalim-wardī (and) Mannum-kī-iliya from Ennam-Aššur: 1 ½ min...
+  Large:  To Kuziziya, Ištar-lamassī, Nab-Suen,...
+  Base:   To Kuziziya, Ištar-lamassī, Nabi-Suen, Anna-anna, Amur-Ištar, Šalim-wardī, Mannu-kī-ilum from Ennam-Aššur: 1 ½ mina 5 sh...
+
+--- Cases where Large is MUCH BETTER (geo_diff > 10): 84 ---
+
+  geo_diff=45.8 (L=53.0, B=7.2)
+  Input:  translate Akkadian to English: 15 GÍN KÙ.BABBAR ša ku-nu-ku-kà i-ba-ší-ú-ni le-qé-a-ma ù 15 GÍN KÙ.B...
+  Ref:    Open the containers on my behalf, take 15 shekels of silver that is under your seal and then Irma-Aššur will add 15 shek...
+  Large:  15 shekels of silver that are under your seal, then let Ir'am-Aššur add 15 shekels of silver and in accordance with your...
+  Base:   Take 15 shekels of silver with your seal and let Ir'am-Aššur add 15 shekels of silver...
+
+  geo_diff=43.8 (L=76.0, B=32.1)
+  Input:  translate Akkadian to English: 40 ma-na KÙ.BABBAR ni-is-ha-sú DIRI ša-du-a-sú ša-bu-ú en-um-a-šùr a-...
+  Ref:    40 minas of silver, its import duty added, its transport tariff paid for, Ennam-Aššur entrusted to Aluwa and Enišārum in...
+  Large:  Ennam-Aššur entrusted 40 minas of silver, its import duty added, its transport tariff paid for, to Aluwa and Enišarum in...
+  Base:   Ennam-Aššur entrusted 40 minas of silver its excise added, his transport fee paid, to Aluwa and Enišarum in Šalatuwar....
+
+  geo_diff=42.2 (L=72.2, B=30.0)
+  Input:  translate Akkadian to English: 40 ma-na KÙ.BABBAR ni-is-ha-sú DIRI ša-du-a-sú ša-bu en-um-a-šùr a-na...
+  Ref:    40 minas of silver, its import duty added, its transport tariff paid for, Ennam-Aššur has entrusted to Aluwa and Enišāru...
+  Large:  Ennam-Aššur entrusted 40 minas of silver, its import duty added, its transport tariff paid for, to Aluwa and Enišarum in...
+  Base:   Ennam-Aššur entrusted 40 minas of silver its excise added, his transport fee paid, to Aluwa and Enišarum in Šalatuwar....
+
+  geo_diff=42.2 (L=72.2, B=30.0)
+  Input:  translate Akkadian to English: 40 ma-na KÙ.BABBAR ni-is-ha-sú DIRI ša-du-a-sú ša-bu en-um-a-šùr a-na...
+  Ref:    40 minas of silver, its import duty added, its transport tariff paid for, Ennam-Aššur has entrusted to Aluwa and Enišāru...
+  Large:  Ennam-Aššur entrusted 40 minas of silver, its import duty added, its transport tariff paid for, to Aluwa and Enišarum in...
+  Base:   Ennam-Aššur entrusted 40 minas of silver its excise added, his transport fee paid, to Aluwa and Enišarum in Šalatuwar....
+
+  geo_diff=42.2 (L=72.2, B=30.0)
+  Input:  translate Akkadian to English: 40 ma-na KÙ.BABBAR ni-is-ha-sú DIRI ša-du-a-sú ša-bu en-um-a-šùr a-na...
+  Ref:    40 minas of silver, its import duty added, its transport tariff paid for, Ennam-Aššur has entrusted to Aluwa and Enišāru...
+  Large:  Ennam-Aššur entrusted 40 minas of silver, its import duty added, its transport tariff paid for, to Aluwa and Enišarum in...
+  Base:   Ennam-Aššur entrusted 40 minas of silver its excise added, his transport fee paid, to Aluwa and Enišarum in Šalatuwar....
+
+--- Score by reference length bucket ---
+         <50 (n=104): Large geo=27.82, Base geo=26.27, diff=1.55
+      50-100 (n=153): Large geo=37.00, Base geo=36.33, diff=0.67
+     100-200 (n=168): Large geo=36.98, Base geo=35.08, diff=1.90
+     200-500 (n= 69): Large geo=36.17, Base geo=36.79, diff=-0.63
+        >500 (n=  7): Large geo=27.14, Base geo=19.08, diff=8.06
+
+--- Score by INPUT length bucket ---
+        <100 (n=262): Large geo=28.12, Base geo=27.06, diff=1.06
+     100-200 (n=174): Large geo=42.88, Base geo=41.37, diff=1.51
+     200-400 (n= 59): Large geo=40.60, Base geo=40.59, diff=0.01
+     400-800 (n=  6): Large geo=38.19, Base geo=28.98, diff=9.21
+
+================================================================================
+C. HALLUCINATION / UNTRANSLATED TEXT DETECTION
+================================================================================
+
+--- Large SENT ---
+  Predictions with untranslated Akkadian syllables: 3 (0.6%)
+    [45] Matches: ['šu-ul-hi', 'ša-lim-be-li', 'ša-lim-be-li']
+         Text: <gap> šu-ul-hi <gap> a-na <gap> qí-bi-ma <gap> ša-lim-be-li <gap> ša-lim-be-li...
+    [165] Matches: ['a-šur-ma-lik', 'ku-zi-zi-a']
+         Text: <gap> ṣí-ib-tám i-ṣé-er DAM.GÀR-ri-im <gap> a-šur-ma-lik DUMU ku-zi-zi-a...
+    [197] Matches: ['a-wa-tim', 'a-ni-a-tim', 'ku-zi-zi-a']
+         Text: <gap> a-na a-wa-tim a-ni-a-tim kà-ru-um kà-ni-iš i-dí-ni-a-tí-ma IGI šu-IŠTAR DUMU ku-zi-zi-a...
+
+--- Base036 SENT ---
+  Predictions with untranslated Akkadian syllables: 6 (1.2%)
+    [45] Matches: ['a-šur-dan']
+         Text: <gap> and a-šur-dan daughter(!) of Kasiya....
+    [104] Matches: ['ah-a-šur']
+         Text: 2 ma-na 2 ½ hi-dim a-na pì-lá-ah-a-šur a-dí-in...
+    [165] Matches: ['ṣilli-a-šur']
+         Text: Ṣilli-a-šur <gap> and...
+    [187] Matches: ['ša-ap-li-a']
+         Text: <gap> i-na ša-ap-li-a <gap> a-na <gap> zi-a...
+    [197] Matches: ['ah-bu-ul-šu-um', 'na-ra-am-zu']
+         Text: <gap> a-šur <gap> a-na <gap> 2 ½-GÍN KÙ.BABBAR ah-bu-ul-šu-um IGI ku-ra DUMU na-ra-am-ZU IGI a-šùr-DU10 DUMU lu-lu-ú...
+
+================================================================================
+D. <gap> HANDLING COMPARISON
+================================================================================
+Inputs with <gap>: 90
+Inputs without <gap>: 411
+
+  With <gap> input (90 samples):
+    Large has <gap> in output: 84 (93.3%)
+    Base has <gap> in output:  86 (95.6%)
+
+  Without <gap> input (411 samples):
+    Large has <gap> in output: 54 (13.1%)
+    Base has <gap> in output:  93 (22.6%)
+
+================================================================================
+E. STYLE DIFFERENCE ANALYSIS
+================================================================================
+
+--- Large SENT ---
+  Semicolons per pred: 0.12 (ref: 0.21)
+  Quotes per pred: 0.22 (ref: 0.23)
+  Commas per pred: 0.90 (ref: 1.40)
+
+--- Base036 SENT ---
+  Semicolons per pred: 0.10 (ref: 0.21)
+  Quotes per pred: 0.17 (ref: 0.23)
+  Commas per pred: 0.80 (ref: 1.40)
+
+================================================================================
+F. MAX_NEW_TOKENS TRUNCATION CHECK (ByT5 byte-level)
+================================================================================
+
+--- Large SENT RAW prediction byte lengths ---
+  mean=108.0, max=511, std=96.1
+  Near 128 bytes (±3): 9 predictions
+  Near 256 bytes (±3): 4 predictions
+  Near 512 bytes (±3): 4 predictions
+  Top 20 byte lengths: [np.int64(511), np.int64(511), np.int64(511), np.int64(511), np.int64(480), np.int64(470), np.int64(468), np.int64(456), np.int64(451), np.int64(446), np.int64(434), np.int64(418), np.int64(389), np.int64(381), np.int64(374), np.int64(371), np.int64(370), np.int64(367), np.int64(353), np.int64(352)]
+
+--- Base036 SENT RAW prediction byte lengths ---
+  mean=111.1, max=511, std=101.7
+  Near 128 bytes (±3): 9 predictions
+  Near 512 bytes (±3): 5 predictions
+  Top 20 byte lengths: [np.int64(511), np.int64(511), np.int64(511), np.int64(510), np.int64(510), np.int64(502), np.int64(498), np.int64(485), np.int64(482), np.int64(478), np.int64(475), np.int64(448), np.int64(444), np.int64(434), np.int64(433), np.int64(425), np.int64(404), np.int64(385), np.int64(375), np.int64(365)]
+
+================================================================================
+G. MAX_LENGTH INVESTIGATION
+================================================================================
+
+--- Large SENT - Top 10 longest predictions ---
+  [129] chars=500, bytes=511, ref_chars=640
+       Ends with: ...let concerning 13 ⅙ shekels of silver of Šu-Ištar; also, a t
+       Ends properly: False
+  [142] chars=497, bytes=511, ref_chars=437
+       Ends with: ...erest, and then produce the tablet concerning 3 minas of sil
+       Ends properly: False
+  [224] chars=457, bytes=480, ref_chars=500
+       Ends with: ...representing Aššur-ṭāb son of Abu-šalim have been satisfied.
+       Ends properly: True
+  [229] chars=470, bytes=470, ref_chars=456
+       Ends with: ...andise, Ennam-Suen said: "If you are truly my lord, then let
+       Ends properly: False
+  [321] chars=447, bytes=468, ref_chars=1573
+       Ends with: ...g 1 mina of silver, of the working capital of Aššur-taklāku.
+       Ends properly: True
+  [356] chars=445, bytes=456, ref_chars=419
+       Ends with: ... tariff for the silver; 30 minas were paid for two bewailing
+       Ends properly: False
+  [156] chars=444, bytes=451, ref_chars=484
+       Ends with: ...ity, from the merchant he gave to the merchant and for the r
+       Ends properly: False
+  [164] chars=437, bytes=446, ref_chars=433
+       Ends with: ... <gap> I shall pay the silver and the <gap> of 1 ⅔ mina 5 sh
+       Ends properly: False
+  [166] chars=411, bytes=434, ref_chars=593
+       Ends with: ...m son of Aššur-imittī, who has been released to Puzur-Aššur.
+       Ends properly: True
+  [306] chars=406, bytes=418, ref_chars=514
+       Ends with: ...hall pay you." Witnessed by Annina son of Aššur-bēl-awātim."
+       Ends properly: True
+
+--- Large DOC - Top 10 longest predictions ---
+  [2] chars=487, bytes=511, ref_chars=1098
+       Ends with: ...r within 15 days." Ikūn-pīya said: "If the terms have expire
+       Ends properly: False
+  [15] chars=511, bytes=511, ref_chars=793
+       Ends with: ...struct me as follows: 'Send me <gap> the very day you hear m
+       Ends properly: False
+  [21] chars=500, bytes=511, ref_chars=1082
+       Ends with: ... wait until your letter." <gap> do not wait until your lette
+       Ends properly: False
+  [29] chars=493, bytes=511, ref_chars=882
+       Ends with: ...n of Aššur-malik and Šu-Išhara, son of Ennam-Suen. Why do yo
+       Ends properly: False
+  [41] chars=490, bytes=511, ref_chars=746
+       Ends with: .... If you do not owe him anything, I shall retain it." Ennam-
+       Ends properly: False
+  [43] chars=495, bytes=511, ref_chars=686
+       Ends with: ...eal 1 textile of good quality, and then seal 1 textile of go
+       Ends properly: False
+  [47] chars=501, bytes=511, ref_chars=682
+       Ends with: ... ⅓ mina 5 shekels of silver owed by the merchant. Reckoned f
+       Ends properly: False
+  [59] chars=501, bytes=511, ref_chars=586
+       Ends with: ...e city, so he may not delay a single day. One must hear both
+       Ends properly: False
+  [66] chars=504, bytes=511, ref_chars=1219
+       Ends with: ...e from Tarhišan; <gap> ½ mina 5 shekels of silver and its in
+       Ends properly: False
+  [80] chars=490, bytes=511, ref_chars=1338
+       Ends with: ...lver to you in the presence of Aššur-lamassī, son of Aššur-m
+       Ends properly: False
+
+=== DEEP ANALYSIS COMPLETE ===

@@ -1,0 +1,22 @@
+experiment:
+  name: exp038_backtranslation_augment
+  description: "generated_english.csvをs1_exp007(byt5-large)で逆翻訳し、追加データとしてbyt5-baseをスクラッチ学習"
+
+lineage:
+  parent: exp023
+  status: active
+  diff_summary: "generated_english.csv→Akkadian逆翻訳データ(~2120件)を追加。exp034の2段階ではなく混合学習"
+
+model:
+  name: google/byt5-base
+  backtranslation_model: s1_exp007_large_lr1e4/results/fold3/last_model
+
+training:
+  seed: 42
+  n_folds: 5
+  epochs: 20
+  batch_size: 4
+  gradient_accumulation_steps: 2
+  lr: 2e-4
+  amp: true
+  resume_from: null

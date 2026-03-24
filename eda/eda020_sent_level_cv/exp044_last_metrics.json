@@ -1,0 +1,19 @@
+{
+  "exp_name": "exp044_last",
+  "preprocess": "exp023",
+  "fold": 3,
+  "sent_cv": {
+    "chrf": 51.95,
+    "bleu": 31.71,
+    "geo": 40.59,
+    "rep": 7.3,
+    "n": 481
+  },
+  "doc_cv": {
+    "chrf": 42.27,
+    "bleu": 20.67,
+    "geo": 29.56,
+    "rep": 57.9,
+    "n": 297
+  }
+}

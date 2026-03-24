@@ -1,0 +1,19 @@
+experiment:
+  name: exp044_bt_augment_v3
+  description: "generate_v3 (62k件マージ) をs1_exp007で逆翻訳し、BT augmentでbyt5-base 2段階学習"
+
+lineage:
+  parent: exp041
+  status: active
+  diff_summary: "exp041と同手法だがgenerate_v3(38k新規)を追加。v2+v3マージで62k件のBTデータ"
+
+# model:
+#   name: google/byt5-base
+#   params: {}
+#
+# training:
+#   seed: 42
+#   n_folds: 5
+#   epochs: 10 (pretrain 5 + finetune 5)
+#   lr: 2e-4 (pretrain) / 5e-5 (finetune)
+#   amp: true

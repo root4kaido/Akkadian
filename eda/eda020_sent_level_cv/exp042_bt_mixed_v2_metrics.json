@@ -1,0 +1,19 @@
+{
+  "exp_name": "exp042_bt_mixed_v2",
+  "preprocess": "exp023",
+  "fold": 3,
+  "sent_cv": {
+    "chrf": 51.06,
+    "bleu": 31.17,
+    "geo": 39.89,
+    "rep": 6.7,
+    "n": 481
+  },
+  "doc_cv": {
+    "chrf": 41.31,
+    "bleu": 19.69,
+    "geo": 28.52,
+    "rep": 57.9,
+    "n": 297
+  }
+}

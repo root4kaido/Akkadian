@@ -1,0 +1,19 @@
+{
+  "exp_name": "exp041_bt_augment_v2",
+  "preprocess": "exp023",
+  "fold": 3,
+  "sent_cv": {
+    "chrf": 52.17,
+    "bleu": 31.77,
+    "geo": 40.71,
+    "rep": 8.5,
+    "n": 481
+  },
+  "doc_cv": {
+    "chrf": 41.23,
+    "bleu": 19.4,
+    "geo": 28.28,
+    "rep": 59.3,
+    "n": 297
+  }
+}

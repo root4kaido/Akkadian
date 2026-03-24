@@ -1,0 +1,820 @@
+=== Cell 0 (markdown) ===
+# Deep Past Challenge Public Baseline (LB 35.5)
+**Two-model candidate pooling + competition-aligned MBR reranking**
+
+
+## What we changed to improve the earlier starter
+- Kept the same two public ByT5 checkpoints, but pooled their candidates together before selection.
+- Switched the final reranker from `chrF++`-only MBR to a competition-aligned utility: `sqrt(sentence_BLEU * sentence_chrF++)`.
+- Increased stochastic candidates from `2` to `3` to widen the reranking pool.
+- Added a small agreement bonus so duplicate candidates from different decoding paths are preferred.
+
+## Provenance and thanks
+- The notebook is highly inspired by the one published by `@meenalsinha`
+- The ensemble uses public checkpoints credited in this repo to `@assiaben` (`byt5-akkadian-optimized-34x`) and `@mattiaangeli` (`byt5-akkadian-mbr-v2`).
+
+
+=== Cell 1 (markdown) ===
+## 1. Imports and runtime helpers
+This section loads the dependencies, seeds the run, and defines the BF16/autocast helpers used later during generation.
+
+
+=== Cell 2 (code) ===
+from __future__ import annotations
+
+import gc
+import json
+import logging
+import math
+import os
+import random
+import re
+from contextlib import nullcontext
+from dataclasses import dataclass
+from pathlib import Path
+from typing import Dict, List, Tuple
+
+import numpy as np
+import pandas as pd
+import torch
+from torch.utils.data import DataLoader, Dataset, Sampler
+from tqdm.auto import tqdm
+from transformers import AutoModelForSeq2SeqLM, AutoTokenizer
+
+
+def set_seed(seed: int) -> None:
+    random.seed(seed)
+    np.random.seed(seed)
+    torch.manual_seed(seed)
+    if torch.cuda.is_available():
+        torch.cuda.manual_seed_all(seed)
+
+
+def cuda_bf16_supported() -> bool:
+    if not torch.cuda.is_available():
+        return False
+    try:
+        return bool(getattr(torch.cuda, "is_bf16_supported", lambda: False)())
+    except Exception:
+        return False
+
+
+def bf16_ctx(device: torch.device, enabled: bool):
+    if enabled and device.type == "cuda" and cuda_bf16_supported():
+        return torch.autocast(device_type="cuda", dtype=torch.bfloat16)
+    return nullcontext()
+
+
+=== Cell 3 (markdown) ===
+## 2. Configuration and logging
+All Kaggle paths, decoding parameters, and reranking knobs live in one config object so people can tweak the baseline without hunting through the notebook.
+
+
+=== Cell 4 (code) ===
+@dataclass
+class EnsembleConfig:
+    test_data_path: str = "/kaggle/input/deep-past-initiative-machine-translation/test.csv"
+    output_dir: str = "/kaggle/working/"
+    # Public checkpoint credited in this repo to Kaggle user @assiaben.
+    model_a_path: str = "/kaggle/input/final-byt5/byt5-akkadian-optimized-34x"
+    # Public checkpoint by Kaggle user @mattiaangeli.
+    model_b_path: str = "/kaggle/input/models/mattiaangeli/byt5-akkadian-mbr-v2/pytorch/default/1"
+    # Optional additional model paths for larger ensembles (set manually in notebook/script).
+    extra_model_paths: Tuple[str, ...] = ()
+
+    max_input_length: int = 512
+    max_new_tokens: int = 384
+    batch_size: int = 2
+    num_workers: int = 2
+    num_buckets: int = 6
+
+    num_beam_cands: int = 4
+    num_beams: int = 8
+    length_penalty: float = 1.3
+    early_stopping: bool = True
+    repetition_penalty: float = 1.2
+
+    # Main 35.5 gain: increase stochastic diversity from 2 to 3 candidates.
+    num_sample_cands: int = 3
+    mbr_top_p: float = 0.92
+    mbr_temperature: float = 0.75
+    mbr_pool_cap: int = 36
+
+    # Reward candidates that recur across beams, samples, or models.
+    agreement_bonus: float = 0.035
+    # Use the competition-style reranking utility instead of chrF-only MBR.
+    use_competition_utility: bool = True
+
+    use_mixed_precision: bool = True
+    use_better_transformer: bool = True
+    use_bucket_batching: bool = True
+    use_adaptive_beams: bool = True
+    checkpoint_freq: int = 200
+    seed: int = 42
+
+    def __post_init__(self):
+        self.device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
+        Path(self.output_dir).mkdir(parents=True, exist_ok=True)
+        if not torch.cuda.is_available():
+            self.use_mixed_precision = False
+            self.use_better_transformer = False
+        self.use_bf16_amp = bool(
+            self.use_mixed_precision
+            and self.device.type == "cuda"
+            and cuda_bf16_supported()
+        )
+        if self.num_beams < self.num_beam_cands:
+            raise ValueError("num_beams must be >= num_beam_cands")
+
+
+def resolve_test_data_path(path: str) -> str:
+    if os.path.exists(path):
+        return path
+    alternates = [
+        "/kaggle/input/competitions/deep-past-initiative-machine-translation/test.csv",
+        "/kaggle/input/deep-past-initiative-machine-translation/test.csv",
+    ]
+    for alt in alternates:
+        if os.path.exists(alt):
+            return alt
+    raise FileNotFoundError(
+        "Could not find test.csv. Attach the competition dataset and set cfg.test_data_path accordingly."
+    )
+
+
+def setup_logging(output_dir: str) -> logging.Logger:
+    Path(output_dir).mkdir(parents=True, exist_ok=True)
+    for h in logging.root.handlers[:]:
+        logging.root.removeHandler(h)
+    logging.basicConfig(
+        level=logging.INFO,
+        format="%(asctime)s | %(levelname)s | %(message)s",
+        handlers=[
+            logging.StreamHandler(),
+            logging.FileHandler(Path(output_dir) / "ensemble_mbr_plus.log"),
+        ],
+    )
+    return logging.getLogger("ensemble_mbr_plus")
+
+
+=== Cell 5 (markdown) ===
+## 3. Preprocessing
+The transliteration cleanup is intentionally light: normalize gap markers, clean determinatives, canonicalize decimals, and make the encoder input more consistent before tokenization.
+
+
+=== Cell 6 (code) ===
+# ---------------------------
+# Text preprocess / postprocess
+# ---------------------------
+V2_RE = re.compile(r"([aAeEiIuU])(?:2|\u2082)")
+V3_RE = re.compile(r"([aAeEiIuU])(?:3|\u2083)")
+ACUTE = str.maketrans({"a": "a", "e": "e", "i": "i", "u": "u", "A": "A", "E": "E", "I": "I", "U": "U"})
+GRAVE = str.maketrans({"a": "a", "e": "e", "i": "i", "u": "u", "A": "A", "E": "E", "I": "I", "U": "U"})
+
+
+def ascii_to_diacritics(text: str) -> str:
+    s = str(text or "")
+    s = s.replace("sz", "sh").replace("SZ", "Sh")
+    s = s.replace("s,", "s").replace("S,", "S")
+    s = s.replace("t,", "t").replace("T,", "T")
+    s = V2_RE.sub(lambda m: m.group(1).translate(ACUTE), s)
+    s = V3_RE.sub(lambda m: m.group(1).translate(GRAVE), s)
+    return s
+
+
+ALLOWED_FRACS = [
+    (1 / 6, "0.16666"),
+    (1 / 4, "0.25"),
+    (1 / 3, "0.33333"),
+    (1 / 2, "0.5"),
+    (2 / 3, "0.66666"),
+    (3 / 4, "0.75"),
+    (5 / 6, "0.83333"),
+]
+FRAC_TOL = 2e-3
+FLOAT_RE = re.compile(r"(?<![\w/])(\d+\.\d{4,})(?![\w/])")
+WS_RE = re.compile(r"\s+")
+
+
+def canon_decimal(x: float) -> str:
+    ip = int(math.floor(x + 1e-12))
+    frac = x - ip
+    best = min(ALLOWED_FRACS, key=lambda t: abs(frac - t[0]))
+    if abs(frac - best[0]) <= FRAC_TOL:
+        dec = best[1]
+        if ip == 0:
+            return dec
+        return f"{ip}{dec[1:]}" if dec.startswith("0.") else f"{ip}+{dec}"
+    return f"{x:.5f}".rstrip("0").rstrip(".")
+
+
+GAP_UNIFIED_RE = re.compile(
+    r"<\s*big[\s_\-]*gap\s*>"
+    r"|<\s*gap\s*>"
+    r"|\bbig[\s_\-]*gap\b"
+    r"|\bx(?:\s+x)+\b"
+    r"|\.{3,}|\u2026+|\[\.+\]"
+    r"|\[\s*x\s*\]|\(\s*x\s*\)"
+    r"|(?<!\w)x{2,}(?!\w)"
+    r"|(?<!\w)x(?!\w)"
+    r"|\(\s*large\s+break\s*\)"
+    r"|\(\s*break\s*\)"
+    r"|\(\s*\d+\s+broken\s+lines?\s*\)",
+    re.I,
+)
+
+CHAR_TRANS = str.maketrans({
+    "\u1e2b": "h",
+    "\u1e2a": "H",
+    "\u02be": "",
+    "\u2080": "0",
+    "\u2081": "1",
+    "\u2082": "2",
+    "\u2083": "3",
+    "\u2084": "4",
+    "\u2085": "5",
+    "\u2086": "6",
+    "\u2087": "7",
+    "\u2088": "8",
+    "\u2089": "9",
+    "\u2014": "-",
+    "\u2013": "-",
+})
+SUB_X = "\u2093"
+
+DET_UPPER_RE = re.compile(r"\(([A-Z0-9]{1,6})\)")
+DET_LOWER_RE = re.compile(r"\(([a-z]{1,4})\)")
+PN_RE = re.compile(r"\bPN\b")
+SOFT_GRAM_RE = re.compile(
+    r"\(\s*(?:fem|plur|pl|sing|singular|plural|\?|\!)(?:\.\s*(?:plur|plural|sing|singular))?\.?\s*[^)]*\)",
+    re.I,
+)
+BARE_GRAM_RE = re.compile(r"(?<!\w)(?:fem|sing|pl|plural)\.?(?!\w)\s*", re.I)
+REPEAT_WORD_RE = re.compile(r"\b(\w+)(?:\s+\1\b)+", re.I)
+REPEAT_PUNCT_RE = re.compile(r"([.,])\1+")
+PUNCT_SPACE_RE = re.compile(r"\s+([.,:])")
+FORBIDDEN_TRANS = str.maketrans("", "", "()<>[]+;")
+MULTI_GAP_RE = re.compile(r"(?:<gap>\s*){2,}")
+
+
+class OptimizedPreprocessor:
+    def preprocess_batch(self, texts: List[str]) -> List[str]:
+        ser = pd.Series(texts, dtype="object").fillna("").astype(str)
+        ser = ser.apply(ascii_to_diacritics)
+        ser = ser.str.replace(DET_UPPER_RE, r"\1", regex=True)
+        ser = ser.str.replace(DET_LOWER_RE, r"{\1}", regex=True)
+        ser = ser.str.replace(GAP_UNIFIED_RE, "<gap>", regex=True)
+        ser = ser.str.translate(CHAR_TRANS)
+        ser = ser.str.replace(SUB_X, "", regex=False)
+        ser = ser.str.replace(FLOAT_RE, lambda m: canon_decimal(float(m.group(1))), regex=True)
+        ser = ser.str.replace(WS_RE, " ", regex=True).str.strip()
+        return ser.tolist()
+
+
+=== Cell 7 (markdown) ===
+## 4. Postprocessing
+After decoding, we standardize the candidate pool before reranking so equivalent outputs compare cleanly.
+
+
+=== Cell 8 (code) ===
+class VectorizedPostprocessor:
+    def postprocess_batch(self, translations: List[str]) -> List[str]:
+        ser = pd.Series(translations, dtype="object").fillna("").astype(str)
+        ser = ser.str.replace(GAP_UNIFIED_RE, "<gap>", regex=True)
+        ser = ser.str.replace(PN_RE, "<gap>", regex=True)
+        ser = ser.str.replace(SOFT_GRAM_RE, " ", regex=True)
+        ser = ser.str.replace(BARE_GRAM_RE, " ", regex=True)
+        ser = ser.str.replace(FLOAT_RE, lambda m: canon_decimal(float(m.group(1))), regex=True)
+        ser = ser.str.replace(MULTI_GAP_RE, "<gap>", regex=True)
+        ser = ser.str.replace("<gap>", "\uFFF0", regex=False)
+        ser = ser.str.translate(FORBIDDEN_TRANS)
+        ser = ser.str.replace("\uFFF0", " <gap> ", regex=False)
+        ser = ser.str.replace(REPEAT_WORD_RE, r"\1", regex=True)
+        for n in range(4, 1, -1):
+            pat = r"\b((?:\w+\s+){" + str(n - 1) + r"}\w+)(?:\s+\1\b)+"
+            ser = ser.str.replace(pat, r"\1", regex=True)
+        ser = ser.str.replace(PUNCT_SPACE_RE, r"\1", regex=True)
+        ser = ser.str.replace(REPEAT_PUNCT_RE, r"\1", regex=True)
+        ser = ser.str.replace(WS_RE, " ", regex=True).str.strip()
+        return ser.tolist()
+
+
+=== Cell 9 (markdown) ===
+## 5. Dataset and bucketed batching
+We preprocess once, prepend the translation instruction, and group similar lengths together to reduce padding waste on Kaggle GPUs.
+
+
+=== Cell 10 (code) ===
+class AkkadianDataset(Dataset):
+    def __init__(self, df: pd.DataFrame, preprocessor: OptimizedPreprocessor):
+        self.sample_ids = df["id"].tolist()
+        proc = preprocessor.preprocess_batch(df["transliteration"].tolist())
+        self.input_texts = ["translate Akkadian to English: " + t for t in proc]
+
+    def __len__(self) -> int:
+        return len(self.sample_ids)
+
+    def __getitem__(self, idx: int):
+        return self.sample_ids[idx], self.input_texts[idx]
+
+
+class BucketBatchSampler(Sampler[List[int]]):
+    def __init__(self, dataset: AkkadianDataset, batch_size: int, num_buckets: int, shuffle: bool = False):
+        self.batch_size = batch_size
+        self.shuffle = shuffle
+
+        lengths = [len(t.split()) for t in dataset.input_texts]
+        sorted_idx = sorted(range(len(lengths)), key=lambda i: lengths[i])
+        bucket_size = max(1, len(sorted_idx) // max(1, num_buckets))
+        self.buckets = [
+            sorted_idx[i * bucket_size:None if i == num_buckets - 1 else (i + 1) * bucket_size]
+            for i in range(num_buckets)
+        ]
+
+    def __iter__(self):
+        for bucket in self.buckets:
+            b = list(bucket)
+            if self.shuffle:
+                random.shuffle(b)
+            for i in range(0, len(b), self.batch_size):
+                yield b[i:i + self.batch_size]
+
+    def __len__(self):
+        return sum(math.ceil(len(b) / self.batch_size) for b in self.buckets)
+
+
+=== Cell 11 (markdown) ===
+## 6. Model loading and candidate generation
+Each model contributes beam-search candidates plus stochastic samples. Models are loaded one at a time to keep VRAM usage manageable.
+
+
+=== Cell 12 (code) ===
+class ModelWrapper:
+    def __init__(self, model_path: str, cfg: EnsembleConfig, logger: logging.Logger, label: str):
+        self.cfg = cfg
+        self.logger = logger
+        self.label = label
+        self.tokenizer = AutoTokenizer.from_pretrained(model_path, local_files_only=True)
+        self.model = AutoModelForSeq2SeqLM.from_pretrained(model_path, local_files_only=True).to(cfg.device).eval()
+        self.logger.info(f"[{label}] loaded: {model_path}")
+
+        if cfg.use_better_transformer and cfg.device.type == "cuda":
+            try:
+                from optimum.bettertransformer import BetterTransformer
+
+                self.model = BetterTransformer.transform(self.model)
+                self.logger.info(f"[{label}] BetterTransformer enabled")
+            except Exception as e:
+                self.logger.info(f"[{label}] BetterTransformer skipped: {e}")
+
+    def collate(self, batch_samples):
+        ids = [s[0] for s in batch_samples]
+        texts = [s[1] for s in batch_samples]
+        enc = self.tokenizer(
+            texts,
+            max_length=self.cfg.max_input_length,
+            padding=True,
+            truncation=True,
+            return_tensors="pt",
+        )
+        return ids, enc
+
+    def generate_candidates(self, input_ids, attention_mask, beam_size: int) -> List[List[str]]:
+        cfg = self.cfg
+        bsz = int(input_ids.shape[0])
+        ctx = bf16_ctx(cfg.device, cfg.use_bf16_amp)
+        with ctx:
+            nb = max(beam_size, cfg.num_beam_cands)
+            beam_out = self.model.generate(
+                input_ids=input_ids,
+                attention_mask=attention_mask,
+                do_sample=False,
+                num_beams=nb,
+                num_return_sequences=cfg.num_beam_cands,
+                max_new_tokens=cfg.max_new_tokens,
+                length_penalty=cfg.length_penalty,
+                early_stopping=cfg.early_stopping,
+                repetition_penalty=cfg.repetition_penalty,
+                use_cache=True,
+            )
+            beam_texts = self.tokenizer.batch_decode(beam_out, skip_special_tokens=True)
+
+            sample_texts: List[str] = []
+            if cfg.num_sample_cands > 0:
+                sample_out = self.model.generate(
+                    input_ids=input_ids,
+                    attention_mask=attention_mask,
+                    do_sample=True,
+                    num_beams=1,
+                    top_p=cfg.mbr_top_p,
+                    temperature=cfg.mbr_temperature,
+                    num_return_sequences=cfg.num_sample_cands,
+                    max_new_tokens=cfg.max_new_tokens,
+                    repetition_penalty=cfg.repetition_penalty,
+                    use_cache=True,
+                )
+                sample_texts = self.tokenizer.batch_decode(sample_out, skip_special_tokens=True)
+
+        rb = int(cfg.num_beam_cands)
+        rs = int(cfg.num_sample_cands)
+        pools: List[List[str]] = []
+        for i in range(bsz):
+            p = list(beam_texts[i * rb:(i + 1) * rb])
+            if rs > 0:
+                p.extend(sample_texts[i * rs:(i + 1) * rs])
+            pools.append(p)
+        return pools
+
+    def unload(self):
+        label = self.label
+        try:
+            from optimum.bettertransformer import BetterTransformer
+
+            self.model = BetterTransformer.reverse(self.model)
+        except Exception:
+            pass
+
+        del self.model
+        del self.tokenizer
+        gc.collect()
+        if torch.cuda.is_available():
+            torch.cuda.empty_cache()
+            self.logger.info(f"[{label}] unloaded")
+
+
+=== Cell 13 (markdown) ===
+## 7. Competition-aligned MBR selector
+The key `35.5` change is here: we score pairwise agreement with a utility closer to the competition metric and add a small consensus bonus for repeated candidates.
+
+
+=== Cell 14 (code) ===
+# ---------------------------
+# Competition-aware MBR selector
+# ---------------------------
+def get_ngrams(tokens: List[str], n: int) -> Dict[Tuple[str, ...], int]:
+    counts: Dict[Tuple[str, ...], int] = {}
+    for i in range(len(tokens) - n + 1):
+        ng = tuple(tokens[i:i + n])
+        counts[ng] = counts.get(ng, 0) + 1
+    return counts
+
+
+def sentence_bleu_smoothed(hypothesis: str, reference: str, max_n: int = 4) -> float:
+    hyp_tok = hypothesis.strip().split()
+    ref_tok = reference.strip().split()
+    if not hyp_tok or not ref_tok:
+        return 0.0
+
+    bp = min(1.0, math.exp(1.0 - len(ref_tok) / max(len(hyp_tok), 1)))
+    log_avg = 0.0
+    for n in range(1, max_n + 1):
+        hyp_ng = get_ngrams(hyp_tok, n)
+        ref_ng = get_ngrams(ref_tok, n)
+        clipped = 0
+        total = 0
+        for ng, cnt in hyp_ng.items():
+            clipped += min(cnt, ref_ng.get(ng, 0))
+            total += cnt
+        if total == 0:
+            return 0.0
+        p_n = (clipped / total) if n == 1 else ((clipped + 1.0) / (total + 1.0))
+        if p_n <= 0:
+            return 0.0
+        log_avg += math.log(p_n)
+    return float(bp * math.exp(log_avg / max_n))
+
+
+def char_ngrams(text: str, n: int) -> Dict[str, int]:
+    s = text
+    if len(s) < n:
+        return {}
+    counts: Dict[str, int] = {}
+    for i in range(len(s) - n + 1):
+        ng = s[i:i + n]
+        counts[ng] = counts.get(ng, 0) + 1
+    return counts
+
+
+def sentence_chrfpp(hypothesis: str, reference: str, char_order: int = 6, word_order: int = 2, beta: float = 2.0) -> float:
+    hyp = hypothesis.strip()
+    ref = reference.strip()
+    if not hyp or not ref:
+        return 0.0
+
+    precisions: List[float] = []
+    recalls: List[float] = []
+
+    for n in range(1, char_order + 1):
+        hyp_ng = char_ngrams(hyp, n)
+        ref_ng = char_ngrams(ref, n)
+        if not hyp_ng or not ref_ng:
+            continue
+        overlap = 0
+        hyp_total = 0
+        ref_total = 0
+        for ng, cnt in hyp_ng.items():
+            overlap += min(cnt, ref_ng.get(ng, 0))
+            hyp_total += cnt
+        for cnt in ref_ng.values():
+            ref_total += cnt
+        if hyp_total > 0:
+            precisions.append(overlap / hyp_total)
+        if ref_total > 0:
+            recalls.append(overlap / ref_total)
+
+    hyp_w = hyp.split()
+    ref_w = ref.split()
+    for n in range(1, word_order + 1):
+        hyp_ng = get_ngrams(hyp_w, n)
+        ref_ng = get_ngrams(ref_w, n)
+        if not hyp_ng or not ref_ng:
+            continue
+        overlap = 0
+        hyp_total = 0
+        ref_total = 0
+        for ng, cnt in hyp_ng.items():
+            overlap += min(cnt, ref_ng.get(ng, 0))
+            hyp_total += cnt
+        for cnt in ref_ng.values():
+            ref_total += cnt
+        if hyp_total > 0:
+            precisions.append(overlap / hyp_total)
+        if ref_total > 0:
+            recalls.append(overlap / ref_total)
+
+    if not precisions or not recalls:
+        return 0.0
+    p = sum(precisions) / len(precisions)
+    r = sum(recalls) / len(recalls)
+    if p <= 0 or r <= 0:
+        return 0.0
+    beta2 = beta * beta
+    return float((1 + beta2) * p * r / (beta2 * p + r))
+
+
+class MBRSelector:
+    def __init__(self, pool_cap: int, use_competition_utility: bool, agreement_bonus: float):
+        self.pool_cap = int(pool_cap)
+        self.use_competition_utility = bool(use_competition_utility)
+        self.agreement_bonus = float(agreement_bonus)
+
+    @staticmethod
+    def dedup_with_counts(xs: List[str]) -> Tuple[List[str], Dict[str, int]]:
+        counts: Dict[str, int] = {}
+        order: List[str] = []
+        for x in xs:
+            t = str(x or "").strip()
+            if not t:
+                continue
+            if t not in counts:
+                order.append(t)
+                counts[t] = 0
+            counts[t] += 1
+        return order, counts
+
+    def utility(self, a: str, b: str) -> float:
+        if self.use_competition_utility:
+            bleu = sentence_bleu_smoothed(a, b)
+            chrf = sentence_chrfpp(a, b)
+            if bleu <= 0 or chrf <= 0:
+                return 0.0
+            return float(math.sqrt(bleu * chrf))
+        return sentence_chrfpp(a, b)
+
+    def pick(self, candidates: List[str]) -> str:
+        uniq, counts = self.dedup_with_counts(candidates)
+        if self.pool_cap > 0:
+            uniq = uniq[: self.pool_cap]
+        if not uniq:
+            return ""
+        if len(uniq) == 1:
+            return uniq[0]
+
+        total_count = sum(counts.get(c, 0) for c in uniq)
+        best_text = uniq[0]
+        best_score = -1e9
+        for cand in uniq:
+            support = 0.0
+            denom = 0
+            for other in uniq:
+                if other == cand:
+                    continue
+                w = counts.get(other, 1)
+                support += self.utility(cand, other) * w
+                denom += w
+            if denom > 0:
+                support /= denom
+            support += self.agreement_bonus * max(0, counts.get(cand, 1) - 1)
+            if support > best_score:
+                best_score = support
+                best_text = cand
+        return best_text
+
+
+=== Cell 15 (markdown) ===
+## 8. End-to-end ensemble engine
+This engine runs the full pipeline: preprocess the test set, decode with each model, merge candidate pools, rerank with MBR, and write checkpoints during inference.
+
+
+=== Cell 16 (code) ===
+class EnsembleMBREngine:
+    def __init__(self, cfg: EnsembleConfig, logger: logging.Logger):
+        self.cfg = cfg
+        self.logger = logger
+        self.preprocessor = OptimizedPreprocessor()
+        self.postprocessor = VectorizedPostprocessor()
+        self.mbr = MBRSelector(
+            pool_cap=cfg.mbr_pool_cap,
+            use_competition_utility=cfg.use_competition_utility,
+            agreement_bonus=cfg.agreement_bonus,
+        )
+
+    def adaptive_beams(self, attn: torch.Tensor) -> int:
+        if not self.cfg.use_adaptive_beams:
+            return self.cfg.num_beams
+        med = float(attn.sum(dim=1).float().median().item())
+        short = max(self.cfg.num_beam_cands, self.cfg.num_beams // 2)
+        return short if med < 100 else self.cfg.num_beams
+
+    def build_dataloader(self, dataset: AkkadianDataset, wrapper: ModelWrapper) -> DataLoader:
+        if self.cfg.use_bucket_batching:
+            sampler = BucketBatchSampler(
+                dataset=dataset,
+                batch_size=self.cfg.batch_size,
+                num_buckets=self.cfg.num_buckets,
+                shuffle=False,
+            )
+            return DataLoader(
+                dataset,
+                batch_sampler=sampler,
+                num_workers=self.cfg.num_workers,
+                pin_memory=(self.cfg.device.type == "cuda"),
+                collate_fn=wrapper.collate,
+            )
+        return DataLoader(
+            dataset,
+            batch_size=self.cfg.batch_size,
+            shuffle=False,
+            num_workers=self.cfg.num_workers,
+            pin_memory=(self.cfg.device.type == "cuda"),
+            collate_fn=wrapper.collate,
+        )
+
+    def run_one_model(self, wrapper: ModelWrapper, dataset: AkkadianDataset) -> Dict[str, List[str]]:
+        dl = self.build_dataloader(dataset, wrapper)
+        pools_by_id: Dict[str, List[str]] = {}
+        with torch.inference_mode():
+            for batch_ids, enc in tqdm(dl, desc=f"[{wrapper.label}]"):
+                input_ids = enc.input_ids.to(self.cfg.device, non_blocking=True)
+                attn = enc.attention_mask.to(self.cfg.device, non_blocking=True)
+                beams = self.adaptive_beams(attn)
+                try:
+                    batch_pools = wrapper.generate_candidates(input_ids, attn, beams)
+                    for sid, pool in zip(batch_ids, batch_pools):
+                        pools_by_id[str(sid)] = pool
+                except RuntimeError as e:
+                    if "out of memory" in str(e).lower():
+                        self.logger.error(f"[{wrapper.label}] OOM batch skipped")
+                        if torch.cuda.is_available():
+                            torch.cuda.empty_cache()
+                    else:
+                        raise
+                if torch.cuda.is_available():
+                    torch.cuda.empty_cache()
+        return pools_by_id
+
+    def run(self, test_df: pd.DataFrame) -> pd.DataFrame:
+        cfg = self.cfg
+        model_paths = [cfg.model_a_path, cfg.model_b_path] + [p for p in cfg.extra_model_paths if str(p).strip()]
+        self.logger.info("=" * 60)
+        self.logger.info("LB35+ | Multi-model ensemble + competition-MBR")
+        for i, p in enumerate(model_paths, start=1):
+            self.logger.info(f"Model {i}: {p}")
+        self.logger.info(
+            f"Pools/model: beam x {cfg.num_beam_cands} + sample x {cfg.num_sample_cands}"
+        )
+        self.logger.info(f"MBR utility: {'competition' if cfg.use_competition_utility else 'chrF-only'}")
+        self.logger.info(f"Agreement bonus: {cfg.agreement_bonus}")
+        self.logger.info("=" * 60)
+
+        dataset = AkkadianDataset(test_df, self.preprocessor)
+        sample_ids = [str(s) for s in dataset.sample_ids]
+
+        all_pools: Dict[str, List[str]] = {}
+        for i, model_path in enumerate(model_paths, start=1):
+            label = f"Model-{i}"
+            wrapper = ModelWrapper(model_path, cfg, self.logger, label)
+            pools = self.run_one_model(wrapper, dataset)
+            wrapper.unload()
+            del wrapper
+            for sid, cand_pool in pools.items():
+                all_pools.setdefault(sid, []).extend(cand_pool)
+
+        results: List[Tuple[str, str]] = []
+        for sid in tqdm(sample_ids, desc="MBR"):
+            combined = all_pools.get(sid, [])
+            post = self.postprocessor.postprocess_batch(combined) if combined else []
+            chosen = self.mbr.pick(post)
+            if not chosen or not chosen.strip():
+                chosen = "The tablet is too damaged to translate."
+            results.append((sid, chosen))
+            if cfg.checkpoint_freq > 0 and len(results) % cfg.checkpoint_freq == 0:
+                ckpt = Path(cfg.output_dir) / f"checkpoint_{len(results)}.csv"
+                pd.DataFrame(results, columns=["id", "translation"]).to_csv(ckpt, index=False)
+                self.logger.info(f"checkpoint saved: {ckpt}")
+
+        out = pd.DataFrame(results, columns=["id", "translation"])
+        self.validate(out)
+        return out
+
+    def validate(self, df: pd.DataFrame):
+        empty = df["translation"].astype(str).str.strip().eq("").sum()
+        lens = df["translation"].astype(str).str.len()
+        self.logger.info(f"Empty translations: {empty}")
+        self.logger.info(
+            f"Length mean={lens.mean():.1f} median={lens.median():.1f} min={lens.min()} max={lens.max()}"
+        )
+
+
+=== Cell 17 (markdown) ===
+## 9. Run inference and export `submission.csv`
+Before running this cell on Kaggle, attach:
+
+- the competition dataset containing `test.csv`
+- `final-byt5/byt5-akkadian-optimized-34x`
+- `mattiaangeli/byt5-akkadian-mbr-v2`
+
+
+=== Cell 18 (code) ===
+def print_env(cfg: EnsembleConfig):
+    print(f"PyTorch : {torch.__version__}")
+    print(f"CUDA    : {torch.cuda.is_available()}")
+    if torch.cuda.is_available():
+        print(f"GPU     : {torch.cuda.get_device_name(0)}")
+        total = torch.cuda.get_device_properties(0).total_memory / 1e9
+        print(f"GPU Mem : {total:.2f} GB")
+        print(f"BF16    : {cuda_bf16_supported()}")
+    print(f"BF16 AMP: {cfg.use_bf16_amp}")
+
+
+def main():
+    cfg = EnsembleConfig()
+    set_seed(cfg.seed)
+    logger = setup_logging(cfg.output_dir)
+    cfg.test_data_path = resolve_test_data_path(cfg.test_data_path)
+
+    print_env(cfg)
+    logger.info(f"Loading test data: {cfg.test_data_path}")
+    test_df = pd.read_csv(cfg.test_data_path, encoding="utf-8")
+    logger.info(f"Test rows: {len(test_df)}")
+
+    engine = EnsembleMBREngine(cfg, logger)
+    results_df = engine.run(test_df)
+
+    out_path = Path(cfg.output_dir) / "submission.csv"
+    results_df.to_csv(out_path, index=False)
+    logger.info(f"Saved submission: {out_path}")
+
+    cfg_snapshot = {
+        "model_a": cfg.model_a_path,
+        "model_b": cfg.model_b_path,
+        "extra_model_paths": list(cfg.extra_model_paths),
+        "num_beam_cands": cfg.num_beam_cands,
+        "num_sample_cands": cfg.num_sample_cands,
+        "num_beams": cfg.num_beams,
+        "length_penalty": cfg.length_penalty,
+        "repetition_penalty": cfg.repetition_penalty,
+        "mbr_top_p": cfg.mbr_top_p,
+        "mbr_temperature": cfg.mbr_temperature,
+        "mbr_pool_cap": cfg.mbr_pool_cap,
+        "agreement_bonus": cfg.agreement_bonus,
+        "use_competition_utility": cfg.use_competition_utility,
+        "max_new_tokens": cfg.max_new_tokens,
+        "batch_size": cfg.batch_size,
+        "use_bf16_amp": cfg.use_bf16_amp,
+    }
+    with open(Path(cfg.output_dir) / "ensemble_mbr_plus_config.json", "w", encoding="utf-8") as f:
+        json.dump(cfg_snapshot, f, indent=2)
+
+    print("\n" + "=" * 60)
+    print("LB35+ ensemble complete")
+    print(f"Submission: {out_path}")
+    print(f"Rows      : {len(results_df)}")
+    print("=" * 60)
+
+
+if __name__ == "__main__":
+    main()
+
+
+=== Cell 19 (markdown) ===
+## Acknowledgements
+Thanks to the Deep Past Challenge organizers and to the community work this baseline builds on.
+
+- Starter notebook lineage credited here to Kaggle user `@meenalsinha`
+- Public checkpoint `byt5-akkadian-optimized-34x`, credited in this repo to `@assiaben`
+- Public checkpoint `byt5-akkadian-mbr-v2` by `@mattiaangeli`
+
+The notebook is reorganized for readability, but the inference logic follows the original `35.5` submission notebook.
+
+

@@ -64,3 +64,17 @@ exp034_st_pretrain_best_loss(prep=exp023)	sent-CV	geo=36.40	chrF++=48.49	BLEU=27
 exp034_st_pretrain_best_loss(prep=exp023)	doc-CV	geo=24.27	chrF++=37.71	BLEU=15.62	rep=64.6%
 exp035_mrt_best(prep=exp023)	sent-CV	geo=36.21	chrF++=48.47	BLEU=27.05	rep=10.4%
 exp035_mrt_best(prep=exp023)	doc-CV	geo=23.32	chrF++=36.85	BLEU=14.76	rep=59.9%
+exp036_last(prep=exp023)	sent-CV	geo=35.99	chrF++=47.22	BLEU=27.44	rep=13.9%
+exp036_last(prep=exp023)	doc-CV	geo=25.32	chrF++=38.28	BLEU=16.75	rep=69.4%
+exp038_bt_augment(prep=exp023)	sent-CV	geo=37.22	chrF++=48.84	BLEU=28.37	rep=10.2%
+exp038_bt_augment(prep=exp023)	doc-CV	geo=26.64	chrF++=39.65	BLEU=17.90	rep=60.9%
+exp039_all_data(prep=exp023)	sent-CV	geo=37.37	chrF++=49.48	BLEU=28.22	rep=11.0%
+exp039_all_data(prep=exp023)	doc-CV	geo=25.42	chrF++=38.74	BLEU=16.69	rep=62.3%
+exp042_bt_mixed_v2(prep=exp023)	sent-CV	geo=39.89	chrF++=51.06	BLEU=31.17	rep=6.7%
+exp042_bt_mixed_v2(prep=exp023)	doc-CV	geo=28.52	chrF++=41.31	BLEU=19.69	rep=57.9%
+exp041_bt_augment_v2(prep=exp023)	sent-CV	geo=40.71	chrF++=52.17	BLEU=31.77	rep=8.5%
+exp041_bt_augment_v2(prep=exp023)	doc-CV	geo=28.28	chrF++=41.23	BLEU=19.40	rep=59.3%
+exp044_last(prep=exp023)	sent-CV	geo=40.59	chrF++=51.95	BLEU=31.71	rep=7.3%
+exp044_last(prep=exp023)	doc-CV	geo=29.56	chrF++=42.27	BLEU=20.67	rep=57.9%
+exp045_last(prep=exp023)	sent-CV	geo=40.03	chrF++=51.57	BLEU=31.07	rep=8.3%
+exp045_last(prep=exp023)	doc-CV	geo=27.87	chrF++=40.74	BLEU=19.07	rep=56.9%

@@ -39,6 +39,15 @@ graph TD
     exp023 --> exp032[exp032_self_training]
     exp032 --> exp033[exp033_st_filtered]
     exp032 --> exp034[exp034_st_pretrain]
+    exp034 --> exp035[exp035_mrt]
+    exp034 --> exp037[exp037_mbr_exp034]
+    exp023 --> exp036[exp036_long_train]
+    exp023 --> exp038[exp038_backtranslation_augment]
+    exp038 --> exp039[exp039_all_data_mix]
+    exp040[exp040_qwen3.5_9b]
+    exp038 --> exp041[exp041_bt_augment_v2]
+    exp038 --> exp042[exp042_bt_mixed_v2]
+    exp041 --> exp044[exp044_bt_augment_v3]
 ```
 
 ## 実験一覧
@@ -79,6 +88,12 @@ graph TD
 | exp032_self_training | Self-training: exp023 fold3 last_modelでpublished_texts英訳 → real+pseudo混合学習 | 45.08 | sent-geo=35.71, doc-geo=23.75 (fold3) | - | sent微増(+0.27), doc悪化(-1.77)。pseudo:real=4:1で偏りすぎ |
 | exp033_st_filtered | exp032 + 品質フィルタ(>=20文字) + 1:1ダウンサンプリング | 44.65 | sent-geo=35.22, doc-geo=23.38 (fold3) | - | **棄却**。フィルタしてもexp023を超えられず |
 | exp034_st_pretrain | 2段階: pseudo 5ep pretrain → real 5ep finetune (lr=5e-5) | 44.93 | sent-geo=**36.71**, doc-geo=24.31 (fold3) | **31.7** | **LBベスト更新(+1.67pt)**。2段階学習が混合より有効 |
+| exp035_mrt | exp034→SCST/MBR-FT（コンペ指標直接最適化） | - | sent-geo=36.21, doc-geo=23.32 (fold3, MBR-FT) | - | **棄却**。SCST: byte-levelでREINFORCE勾配信号なし。MBR-FT: sent -0.50, doc -0.99。MRT系は不向き |
+| exp036_long_train | exp023 + epoch 20→100 | 44.55 | sent-geo=35.99, doc-geo=25.32 (fold3) | - | **棄却**。sent +0.55, doc -0.20。20epochで十分収束済み |
+| exp037_mbr_exp034 | exp034モデルでデコーディング戦略最適化（MBR/温度/weighted/kNN/round-trip/2モデルアンサンブル） | - | sent-geo=**38.38(RT_chrf)**, doc-geo=**26.32(ensemble RT_weighted)** (fold3) | MBR:29.4, RT_chrf:30.8, RT_weighted:31.2, **ensemble RT_weighted:32.6**, ensemble eng_MBR:31.4 | 単モデルRT rerankはLB悪化（30.8-31.2）。**2モデルアンサンブル+rt_weighted→LB 32.6（+0.9pt）がLBベスト**。eng_MBR_chrf=31.4でbeam4以下→不採用 |
+| exp038_backtranslation_augment | generated_english.csv→s1_exp007(byt5-large)逆翻訳2,014件+byt5-base混合学習 | - | sent-geo=**37.22**, doc-geo=**26.64** (fold3) | - | **sent+1.78, doc+1.12 vs exp023**。rep=10.2%。BT混合でsent/doc両軸改善 |
+| exp041_bt_augment_v2 | generate_v2 BT(23k)+pseudo(6k) pretrain 5ep → real finetune 5ep (lr=5e-5) | - | sent-geo=**40.71**, doc-geo=**28.28** (fold3) | **33.4** | **LBベスト更新（単体）**。前回の2モデルアンサンブル(32.6)を単体で超えた。pretrain→ftが汎化性能高い |
+| exp042_bt_mixed_v2 | generate_v2 BT(23k) + real train 混合学習 10ep | - | sent-geo=**39.89**, doc-geo=**28.52** (fold3) | 30.9 | CV同等だがLBはexp041に大きく劣る。**混合学習はpretrain→ftより汎化しにくい** |
 
 **注意**: training eval CVはByT5の512バイトtruncationにより参照テキストが切り詰められ水増しされる。inference greedyまたはbeam4 sentが正確なCV。また`evaluate.load("chrf")`はデフォルトword_order=0(chrF)でありコンペのchrF++(word_order=2)とは異なる。
 
@@ -155,6 +170,11 @@ fold別val分布:
 | exp032 | +pseudo 6,360件(混合学習) | - | - | 45.08 | 35.71 | 23.75 |
 | exp033 | +pseudo filtered 1:1(混合学習) | - | 0.587 | 44.65 | 35.22 | 23.38 |
 | **exp034** | **pseudo pretrain→real finetune** | - | **0.436** | **44.93** | **36.71** | 24.31 |
+| exp035 | SCST/MBR-FT(指標直接最適化) | - | - | - | 36.21 | 23.32 |
+| exp036 | epoch 20→100(長時間学習) | - | - | 44.55 | 35.99 | 25.32 |
+| **exp038** | **BT混合(generated_english 2,014件)** | - | - | - | **37.22** | **26.64** |
+| exp039 | 全データ混合(10,462件, 5ep, lr=1e-4) | - | sent-geo=37.37, doc-geo=25.42 (fold3) | - | sent微増(+0.15 vs exp038)だがdoc悪化(-1.22)。pseudo/additional追加はdoc品質に悪影響 |
+| exp040_qwen3.5_9b | Qwen3.5-9B ゼロショット翻訳 | - | sent-geo=10.63, doc-geo=8.26 (fold3) | - | ゼロショットではbyt5比大幅に低い。rep=1.0%(sent)と繰り返しはほぼなし。fine-tune必要 |
 
 - exp026: 文字ノイズで全指標悪化。train_lossも上がり学習自体が妨害されている
 - exp027: 学習eval_geoは微改善(+0.23pt)だがeval_full sent-geoは横ばい、doc-geoは-1.46pt悪化
@@ -162,6 +182,8 @@ fold別val分布:
 - exp031: DAPT(span corruption)はByT5の翻訳能力を損傷。sent -2.69pt, doc -4.93pt
 - exp032-033: self-training混合学習はpseudo dataのノイズでdoc品質悪化
 - **exp034: 2段階学習(pseudo pretrain→real finetune)でsent-CV +1.27pt改善。混合より2段階が有効**
+- exp035: SCST(REINFORCE)はbyte-levelモデルでは勾配信号が弱すぎ失敗。MBR-FTもMBRターゲットの改善幅が+0.73pt chrF++と小さく、fine-tuneで悪化
+- exp036: 100epochでもsent +0.55pt, doc -0.20ptと微差。20epochで十分収束
 
 #### 知見
 - **ランダム分割にリークあり**: GKFでsent-CVが10pt以上低下
@@ -199,6 +221,13 @@ fold別val分布:
 - **繰り返し問題が最大の課題**: greedy 80.9%→50.3%（exp010）、MBR 61.8%→41.4%（exp010）。PN/GNタグで大幅改善
 - **候補プール拡張が最重要**: beam4+multi-temp sampling×3=13候補がスイートスポット（34.47）。6→10→13と単調増加、16で頭打ち
 - **beam数増加は逆効果**: beam8(33.06) < beam4(34.10)。beam候補は類似しすぎて多様性が低い
+- **MBRはCV改善するがLBで悪化**: sampling MBR 6候補でsent-CV +1.10ptだがLB -2.3pt。原因はchrF++ recallバイアスによるrep%増加（13.9→17.3%）がLBで拡大
+- **MBRの構造的問題**: chrF++のrecallが繰り返し候補を優遇。候補数が増えるほどrep%悪化。weighted MBR(Jaccard等)は3候補以上で改善するが2候補では無効
+- **kNN pseudo-reference rerank**: train文の近傍翻訳を疑似参照としてスコアリング。MBRと違いrep%が単体以下になることも。geoはMBRより0.1-0.7pt低いがLB安定性は高い見込み
+- **Round-trip rerank（逆翻訳リランキング）**: 候補を逆翻訳（Eng→Akk）し元ソースとの類似度で選択。MBRのrep問題を完全回避。kNNよりrep%がさらに低い（rt_bleu 11.9% < kNN_chrf 13.9%）。geoもkNN同等（38.38 vs 38.36）。Direct系（rt_chrf/rt_weighted）が最良。BT側のMBR consensus（rt_mbr_chrf）はrep問題が残る
+- **単モデル内RT rerankはLB悪化**: rt_chrf LB 30.8, rt_weighted LB 31.2（beam4 LB 31.7以下）。CVでは+1.6pt改善してもLBで-0.5〜-0.9pt悪化。同一モデル候補からの選択はCV過適合しやすい
+- **2モデルアンサンブル+RT rerankはLB改善**: exp034(base)+s1_exp007(large)のbeam4 1-best各1候補→逆翻訳beam4→rt_weighted選択で**LB 32.6（+0.9pt）**。異モデル候補は分布が異なりLBでも汎化。doc-CVでも26.32（B単体26.05を上回る）
+- **t=0.4が単体ベスト**: greedy比+0.15pt、rep%最低(12.7%)。確定的ではないが安定
 - **weighted MBR（chrF+++BLEU+Jaccard）はchrF++単体より劣る**: 出力が短くなりすぎる（132 vs ref 166）
 - **repetition_penalty上げはスコア低下**: rp1.2(33.45) > rp1.3(32.91) > rp1.5(29.13)
 - **MBRではrepeat_cleanupの効果ほぼゼロ**（MBR自体が繰り返しを選ばない）。greedy専用
@@ -273,3 +302,7 @@ fold別val分布:
 | 2026-03-11 | exp021_all_spans完了: **sent-CV=40.51（全実験最良）**, doc-CV=26.89。全連続部分列追加が文レベル評価で最も有効 |
 | 2026-03-11 | eda021: additional_train.csv品質分析。省略記号18.8%、ドイツ語混入、長さ比不均衡がexp017 LB悪化の原因 |
 | 2026-03-12 | exp022_train_cleaning作成: Host推奨前処理をexp016に適用。(?)/PN/小数/ローマ数字/Ḫ/下付き数字の正規化 |
+| 2026-03-15 | exp035_mrt完了: SCST(REINFORCE)失敗→MBR-FTも悪化(sent=36.21, doc=23.32)。MRT系アプローチは断念 |
+| 2026-03-16 | exp036_long_train完了: 100epoch学習でsent=35.99(+0.55), doc=25.32(-0.20)。20epochで十分収束済み |
+| 2026-03-18 | exp037_mbr_exp034: MBR/温度/weighted/kNN/round-trip rerank包括検証。**Round-trip rerank**が最良: rt_chrf sent=38.38/doc=25.67, rt_weighted sent=38.31/doc=25.61（beam4比sent+1.67,doc+1.27）。MBRはCV+1.10ptだがLB-2.3pt（rep%増加）。eval_fullでdoc-CVでもRT優位を確認 |
+| 2026-03-20 | exp037 Phase 8: 2モデルアンサンブル(exp034+s1_exp007)+RT rerank。LB提出結果: 単モデルRT_chrf=30.8, RT_weighted=31.2（beam4以下）、**アンサンブルRT_weighted=32.6（LBベスト更新+0.9pt）**。アンサンブルeng_MBR_chrf=31.4（beam4以下→不採用）。**rt_weightedのみLB改善** |

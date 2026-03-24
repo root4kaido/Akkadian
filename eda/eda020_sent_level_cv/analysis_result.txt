@@ -1,0 +1,608 @@
+================================================================================
+DATASET SIZES
+================================================================================
+Large doc: 297 rows, Large sent: 481 rows
+Base036 doc: 297 rows, Base036 sent: 481 rows
+Base023 doc: 297 rows, Base023 sent: 481 rows
+
+================================================================================
+1. PREDICTION LENGTH ANALYSIS
+================================================================================
+
+--- Large DOC ---
+  Pred length:  mean=357.8, med=423.0, min=29, max=511, std=146.5
+  Ref length:   mean=647.7, med=545.0, min=34, max=3995, std=530.4
+  Ratio (pred/ref): mean=0.720, med=0.735, min=0.095, max=1.771
+  Very short (<0.5x ref): 73 (24.6%)
+  Very long (>2x ref): 0 (0.0%)
+
+--- Base036 DOC ---
+  Pred length:  mean=369.5, med=444.0, min=28, max=511, std=149.7
+  Ref length:   mean=647.7, med=545.0, min=34, max=3995, std=530.4
+  Ratio (pred/ref): mean=0.743, med=0.760, min=0.118, max=2.182
+  Very short (<0.5x ref): 66 (22.2%)
+  Very long (>2x ref): 1 (0.3%)
+
+--- Large SENT ---
+  Pred length:  mean=103.5, med=73.0, min=12, max=500, std=90.6
+  Ref length:   mean=129.8, med=100.0, min=6, max=1573, std=122.2
+  Ratio (pred/ref): mean=0.850, med=0.838, min=0.103, max=4.455
+  Very short (<0.5x ref): 64 (13.3%)
+  Very long (>2x ref): 8 (1.7%)
+
+--- Base036 SENT ---
+  Pred length:  mean=103.6, med=72.0, min=8, max=485, std=90.7
+  Ref length:   mean=129.8, med=100.0, min=6, max=1573, std=122.2
+  Ratio (pred/ref): mean=0.858, med=0.838, min=0.050, max=5.833
+  Very short (<0.5x ref): 63 (13.1%)
+  Very long (>2x ref): 8 (1.7%)
+
+================================================================================
+2. TRUNCATION / CUT-OFF ANALYSIS
+================================================================================
+
+--- Large DOC ---
+  Total predictions: 297
+  No proper ending (no .!?;"'): 136 (45.8%)
+  Long predictions (>95th percentile, len>=502): 15
+  Long + no proper ending: 15 (100.0%)
+
+  Examples of potentially truncated predictions:
+    [5] Pred (last 80 chars): ...e first transport. <gap> As to the 2 minas 12 ½ shekels of silver that I gave to
+         Ref  (last 80 chars): ...h I promised you, have him sell the textiles and the tin and send (the silver). 
+         Pred len: 503, Ref len: 284
+    [7] Pred (last 80 chars): ...ords of the kanesh colony. If the kanesh colony raises a claim against Anah-ilī,
+         Ref  (last 80 chars): ...o settle the affair, hold him in play until I arrive, do not settle the affair!"
+         Pred len: 504, Ref len: 997
+    [15] Pred (last 80 chars): ...rvant? Why do you instruct me as follows: 'Send me <gap> the very day you hear m
+         Ref  (last 80 chars): ...ve below. I have spent 4 talents of copper <gap> your youngsters have not died!"
+         Pred len: 511, Ref len: 793
+
+--- Base036 DOC ---
+  Total predictions: 297
+  No proper ending (no .!?;"'): 168 (56.6%)
+  Long predictions (>95th percentile, len>=505): 20
+  Long + no proper ending: 18 (90.0%)
+
+  Examples of potentially truncated predictions:
+    [7] Pred (last 80 chars): ...ter of Kanesh. If Kanesh raises claim against Anah-ilī (and) Ali-abum will instr
+         Ref  (last 80 chars): ...o settle the affair, hold him in play until I arrive, do not settle the affair!"
+         Pred len: 507, Ref len: 997
+    [10] Pred (last 80 chars): ... the matter of the palace is still available for them. Seize the palace and send
+         Ref  (last 80 chars): ...oods. Take care so I am not delayed and indeed, why is that there you have<gap>"
+         Pred len: 507, Ref len: 860
+    [15] Pred (last 80 chars): ... servant? Why do you not know that your servant does not give it to your servant
+         Ref  (last 80 chars): ...ve below. I have spent 4 talents of copper <gap> your youngsters have not died!"
+         Pred len: 511, Ref len: 793
+
+--- Large SENT ---
+  Total predictions: 481
+  No proper ending (no .!?;"'): 78 (16.2%)
+  Long predictions (>95th percentile, len>=305): 25
+  Long + no proper ending: 9 (36.0%)
+
+  Examples of potentially truncated predictions:
+    [13] Pred (last 80 chars): ...er, with respect to the merchandise belonging to our father, with respect to the
+         Ref  (last 80 chars): ...entatives and to you about how to deal with our father's goods in a safe manner.
+         Pred len: 349, Ref len: 201
+    [114] Pred (last 80 chars): ...ver) as the price of 5 minas of tin that <gap> were deducted and 9 shekels <gap>
+         Ref  (last 80 chars): ...> Ennam-Aššur set down 1 mina 7.5 shekels of refined silver as owed by Ali-ahum.
+         Pred len: 365, Ref len: 600
+    [129] Pred (last 80 chars): ...capital; also, a tablet concerning 13 ⅙ shekels of silver of Šu-Ištar; also, a t
+         Ref  (last 80 chars): ...r of Ali-ahum and the son of Kuziziya; a tablet of 0.5 mina of silver of Šumaya.
+         Pred len: 500, Ref len: 640
+
+--- Base036 SENT ---
+  Total predictions: 481
+  No proper ending (no .!?;"'): 81 (16.8%)
+  Long predictions (>95th percentile, len>=299): 25
+  Long + no proper ending: 14 (56.0%)
+
+  Examples of potentially truncated predictions:
+    [13] Pred (last 80 chars): ... and (send to him) to Ali-ahum: Concerning our father's merchandise - concerning
+         Ref  (last 80 chars): ...entatives and to you about how to deal with our father's goods in a safe manner.
+         Pred len: 329, Ref len: 201
+    [81] Pred (last 80 chars): ...to you for the proceeds from it and give it to the servants so they may bring it
+         Ref  (last 80 chars): ... and then give it together with the silver to the servants so they may bring it.
+         Pred len: 324, Ref len: 308
+    [142] Pred (last 80 chars): ...ut the tablet concerning 3 minas of silver and the interest on it and give it to
+         Ref  (last 80 chars): ...s interest, and seal this tablet and the -stone and entrust it to Ištar-lamassī.
+         Pred len: 485, Ref len: 437
+
+--- Character length distribution at top end ---
+  Large DOC: 90th=499, 95th=502, 99th=507, max=511
+  Base036 DOC: 90th=501, 95th=505, 99th=509, max=511
+  Large SENT: 90th=229, 95th=305, 99th=445, max=500
+  Base036 SENT: 90th=234, 95th=299, 99th=466, max=485
+
+================================================================================
+3. REPETITION ANALYSIS
+================================================================================
+
+--- Large DOC ---
+  Any repetition: 185 (62.3%)
+  Heavy repetition (>5 patterns): 87 (29.3%)
+  Mean rep count: 6.03
+
+  Examples of heavy repetition:
+    [0] Tablet concerning 10 minas of silver of Puzur-Aššur and Puzur-Adad; tablet concerning 4 minas of silver of Puzur-Aššur; tablet concerning 10 minas of silver of Asānum; tablet concerning 10 minas of si...
+         Repeated 4x: 'concerning 10 minas'
+         Repeated 4x: '10 minas of'
+         Repeated 6x: 'minas of silver'
+    [2] Ikūn-pīya and Ennam-Aššur seized us and Ikūn-pīya said to Ennam-Aššur: Huble 5 talents of washed copper and let Puzur-Šamaš appeal to you." Ennam-Aššur owed 5 talents of washed copper to Ikūn-pīya and...
+         Repeated 2x: 'Ikūn-pīya and Ennam-Aššur'
+         Repeated 4x: '5 talents of'
+         Repeated 2x: 'talents of washed'
+    [5] To Ennam-Aššur from Šāt-Anna: As to the 2 minas 12 ½ shekels of silver that I gave to you, my dear brother and lord, act for the purchases and send them with the first transport. <gap> not for all tha...
+         Repeated 3x: 'As to the'
+         Repeated 3x: 'to the 2'
+         Repeated 3x: 'the 2 minas'
+
+--- Base036 DOC ---
+  Any repetition: 199 (67.0%)
+  Heavy repetition (>5 patterns): 104 (35.0%)
+  Mean rep count: 6.90
+
+  Examples of heavy repetition:
+    [0] Tablet concerning 10 minas of silver belonging to Puzur-Aššur and Puzur-Adad, tablet concerning 4 minas of silver belonging to Puzur-Aššur, tablet concerning 10 minas of silver belonging to Asānum, ta...
+         Repeated 4x: 'concerning 10 minas'
+         Repeated 4x: '10 minas of'
+         Repeated 6x: 'minas of silver'
+    [2] Ikūn-pīya and Ennam-Aššur seized us and Ikūn-pīya said to Ennam-Aššur: Hublam 5 talents of washed copper for me and Puzur-Šamaš should answer you." Ennam-Aššur owed 5 talents of washed copper for me a...
+         Repeated 3x: '5 talents of'
+         Repeated 2x: 'talents of washed'
+         Repeated 2x: 'of washed copper'
+    [7] Say to Atata and Kanesh, thus Anah-ilī: ½ mina of gold and 1 ½ mina of silver belonging to Kanesh that I entrusted to me on behalf of Kanesh, on behalf of Kanesh Ali-abum has taken silver here and he ...
+         Repeated 2x: '½ mina of'
+         Repeated 2x: 'on behalf of'
+         Repeated 2x: 'the silver and'
+
+--- Large SENT ---
+  Any repetition: 60 (12.5%)
+  Heavy repetition (>5 patterns): 24 (5.0%)
+  Mean rep count: 1.60
+
+  Examples of heavy repetition:
+    [13] Iddin-abum, Itūr-ilī, Kukuwa, Adida and Ali-ahum from Ennam-Aššur: Concerning the merchandise belonging to our father, with respect to the goods belonging to our father. Concerning the merchandise bel...
+         Repeated 2x: 'Concerning the merchandise'
+         Repeated 3x: 'the merchandise belonging'
+         Repeated 3x: 'merchandise belonging to'
+    [17] The silver that I wrote to you before, but he did not leave me. My dear fathers and lords, the silver that I wrote to you twice but he did not leave me. Please, my fathers and lords, the silver that I...
+         Repeated 4x: 'silver that I'
+         Repeated 4x: 'that I wrote'
+         Repeated 4x: 'I wrote to'
+    [48] If Anah-ilī does not accept the tablet under your seal Anah-ilī will send 1 mina of silver to your father in the City, and from that silver Abu-šalim will send 1 mina of silver to your father Abu-šali...
+         Repeated 2x: 'will send 1'
+         Repeated 2x: 'send 1 mina'
+         Repeated 2x: '1 mina of'
+
+--- Base036 SENT ---
+  Any repetition: 66 (13.7%)
+  Heavy repetition (>5 patterns): 25 (5.2%)
+  Mean rep count: 1.35
+
+  Examples of heavy repetition:
+    [13] Iddin-abum, Itūr-ilī, Kukuwa, Adida and Ali-ahum from Ennam-Aššur: Concerning our father's merchandise - concerning our father's merchandise - and (send to him) to Ali-ahum: Concerning our father's me...
+         Repeated 3x: 'Concerning our father's'
+         Repeated 5x: 'our father's merchandise'
+         Repeated 5x: 'father's merchandise -'
+    [85] Atata seized us against Enna-Suen son of Šu-Anum, and Atata said: Here is what Šu-Anum brings you as witness: "I seized you in his case against Enna-Suen son of Šu-Anum." Atata said: "It is he who bri...
+         Repeated 2x: 'against Enna-Suen son'
+         Repeated 2x: 'Enna-Suen son of'
+         Repeated 2x: 'you in his'
+    [94] Thus Ṣilli-Adad, say to Ennam-Aššur: I seized Bēlum-bāni here because of the silver, and he said: I will go to Kanesh together with me." I seized him concerning small goods, and he said: "I shall go t...
+         Repeated 2x: 'and he said:'
+         Repeated 2x: 'go to Kanesh'
+         Repeated 2x: 'to Kanesh together'
+
+--- Large DOC Consecutive word repeats ---
+  Stuttering (3+ same word in row): 0 (0.0%)
+
+--- Base036 DOC Consecutive word repeats ---
+  Stuttering (3+ same word in row): 0 (0.0%)
+
+--- Large SENT Consecutive word repeats ---
+  Stuttering (3+ same word in row): 0 (0.0%)
+
+--- Base036 SENT Consecutive word repeats ---
+  Stuttering (3+ same word in row): 1 (0.2%)
+    [224] Match: 'indeed indeed indeed' in: 1 ⅓ mina of silver from the silver of Abu-šalim son of Enna-Suen that hut<gap> had given to Anah-ilī...
+
+================================================================================
+4. SPECIAL CHARACTER / ENCODING ANALYSIS
+================================================================================
+
+--- Large DOC ---
+  Predictions with unusual characters: 105 (35.4%)
+    [5] Chars: [('½', '0xbd', 'U+00BD')]
+         Text: To Ennam-Aššur from Šāt-Anna: As to the 2 minas 12 ½ shekels of silver that I gave to you, my dear b...
+    [7] Chars: [('½', '0xbd', 'U+00BD')]
+         Text: To Atata and Kanesh from Anah-ilī: As to the ½ mina of gold and 1 ½ mina of silver belonging to Kane...
+    [13] Chars: [('½', '0xbd', 'U+00BD'), ('⅓', '0x2153', 'U+2153')]
+         Text: We made Pūšu-kēn son of Buzāzu a blessing of 1 ½ mina of silver under our seals in Kuburnat, and of ...
+  Predictions with <gap>: 111 (37.4%)
+  Empty predictions: 0
+  Raw != Clean: 11 (3.7%)
+
+--- Base036 DOC ---
+  Predictions with unusual characters: 101 (34.0%)
+    [5] Chars: [('½', '0xbd', 'U+00BD')]
+         Text: To Ennam-Aššur from Šāt-Anna: As to the 2 minas 12 ½ shekels of silver that I gave to you Please, my...
+    [7] Chars: [('½', '0xbd', 'U+00BD')]
+         Text: Say to Atata and Kanesh, thus Anah-ilī: ½ mina of gold and 1 ½ mina of silver belonging to Kanesh th...
+    [13] Chars: [('½', '0xbd', 'U+00BD'), ('⅓', '0x2153', 'U+2153')]
+         Text: We gave 1 ½ mina of silver as transport fee paid for Pūšu-kēn son of Buzāzu in Kuburnat, and of that...
+  Predictions with <gap>: 109 (36.7%)
+  Empty predictions: 0
+  Raw != Clean: 15 (5.1%)
+
+--- Large SENT ---
+  Predictions with unusual characters: 62 (12.9%)
+    [5] Chars: [('½', '0xbd', 'U+00BD')]
+         Text: Ennam-Aššur said to Šāt-Anna: As to the 2 minas 12 ½ shekels of silver that I gave to you, my dear b...
+    [26] Chars: [('⅓', '0x2153', 'U+2153')]
+         Text: 2 packages of 15 minas each, and one package of 10 minas, its import duty added, its transport tarif...
+    [27] Chars: [('⅓', '0x2153', 'U+2153')]
+         Text: Further, 13 ⅓ minas of good copper for their expenses and 5 shekels of silver for their food....
+  Predictions with <gap>: 128 (26.6%)
+  Empty predictions: 0
+  Raw != Clean: 6 (1.2%)
+
+--- Base036 SENT ---
+  Predictions with unusual characters: 63 (13.1%)
+    [5] Chars: [('½', '0xbd', 'U+00BD')]
+         Text: Ennam-Aššur said to Šāt-Anna: As for the 2 minas 12 ½ shekels of silver I gave you, my dear brother ...
+    [26] Chars: [('⅓', '0x2153', 'U+2153')]
+         Text: 2 packets of 15 minas each, and a second packet of 10 minas, its import duty added, its transport ta...
+    [27] Chars: [('⅓', '0x2153', 'U+2153')]
+         Text: Further, 13 ⅓ minas of good copper for their expenses and 5 shekels of silver for their food....
+  Predictions with <gap>: 169 (35.1%)
+  Empty predictions: 0
+  Raw != Clean: 11 (2.3%)
+
+================================================================================
+5. SENT vs DOC LEVEL ANALYSIS (Large model)
+================================================================================
+
+Large model:
+  Sent pred length: mean=103.5
+  Doc pred length:  mean=357.8
+  Doc ref length:   mean=647.7
+
+Base036 model:
+  Sent pred length: mean=103.6
+  Doc pred length:  mean=369.5
+  Doc ref length:   mean=647.7
+
+================================================================================
+6. SIDE-BY-SIDE COMPARISON (Large vs Base036)
+================================================================================
+
+--- SENT-level comparison ---
+Matched sent predictions: 501
+
+Length ratio (pred/ref):
+  Large: mean=0.862
+  Base:  mean=0.877
+
+--- Cases where Large is much LONGER than Base (top 5) ---
+
+  Input: translate Akkadian to English: um-ma a-ta-ma <gap>...
+  Ref:   You said: "<gap> Ennam-<gap>""...
+  Large: From Ayat to <gap>: <gap> and from <gap> the very day you hear my letter you must send me word.""... (len=97, ratio=3.23)
+  Base:  Thus Ataya: <gap> say.... (len=22, ratio=0.73)
+
+  Input: translate Akkadian to English: KIŠIB kà-ri-im kà-ni-iš...
+  Ref:   Seal of Kanesh....
+  Large: Seal of the Kanesh colony; testament of the Kanesh colony.... (len=58, ratio=3.87)
+  Base:  Seal of the Kanesh colony.... (len=26, ratio=1.73)
+
+  Input: translate Akkadian to English: a-lu-wa...
+  Ref:   Send Aluwa....
+  Large: Aluwa brings you 1 GÚ 20 minas of refined silver.... (len=49, ratio=4.45)
+  Base:  Aluwa brings you the belts.... (len=27, ratio=2.45)
+
+  Input: translate Akkadian to English: ṣí-i...
+  Ref:   The interest must not increase....
+  Large: <gap> ṣí-ib-tám i-ṣé-er DAM.GÀR-ri-im <gap> a-šur-ma-lik DUMU ku-zi-zi-a... (len=72, ratio=2.32)
+  Base:  Ṣilli-a-šur <gap> and... (len=21, ratio=0.68)
+
+  Input: translate Akkadian to English: <gap> ú-ul...
+  Ref:   <gap> or sacks of grain....
+  Large: <gap> šu-ul-hi <gap> a-na <gap> qí-bi-ma <gap> ša-lim-be-li <gap> ša-lim-be-li... (len=78, ratio=3.25)
+  Base:  <gap> and a-šur-dan daughter(!) of Kasiya.... (len=42, ratio=1.75)
+
+--- Cases where Large is much SHORTER than Base (top 5) ---
+
+  Input: translate Akkadian to English: <gap> a-na <gap>...
+  Ref:   <gap>"...
+  Large: <gap> to <gap>... (len=14, ratio=2.33)
+  Base:  <gap> to <gap> and <gap> a-na <gap>... (len=35, ratio=5.83)
+
+  Input: translate Akkadian to English: <gap> a-na <gap>...
+  Ref:   <gap>"...
+  Large: <gap> to <gap>... (len=14, ratio=2.33)
+  Base:  <gap> to <gap> and <gap> a-na <gap>... (len=35, ratio=5.83)
+
+  Input: translate Akkadian to English: qí-bi-ma um-ma IŠTAR-ra-bi4-at-ma a-dí KÙ.BABBAR-pí-kà ša ha-bu-lá-ku...
+  Ref:   To Ennam-Aššur from Ištar-rabiʾat: With respect to your silver that I owe you, my dear son, do not worry!...
+  Large: From Ištar-rabiya to Ali-ahum: With respect to your silver that I owe to you I shall not obstruct your case.""... (len=110, ratio=1.05)
+  Base:  From Ištar-rabi: Concerning your silver that I owe to you the son of Kuzuzarum <gap> and with respect to your silver tha... (len=401, ratio=3.82)
+
+  Input: translate Akkadian to English: 3 ⅓...
+  Ref:   3.3333 textiles have been sealed for you....
+  Large: 3 ⅓ minas 2 ⅓ shekels <gap>... (len=27, ratio=0.66)
+  Base:  3 ⅓ ma-na 2 GÍN KÙ.BABBAR ší-im tí-sà-pì-im 14 ma-na URUDU SIG5 ší-im pí-ri-kà-ni 1 ⅓ ma-na KÙ.BABBAR il5-qé... (len=108, ratio=2.63)
+
+  Input: translate Akkadian to English: IGI...
+  Ref:   Witnessed by Aššur-bāni....
+  Large: Witnessed by Amurrum-bāni.... (len=26, ratio=1.08)
+  Base:  Witnessed by A-šur-en-nam ša be-lúm-ba-ni ša a-šur-ma-lik a-dí-in... (len=65, ratio=2.71)
+
+--- DOC-level comparison ---
+Matched doc predictions: 299
+
+Doc length ratio (pred/ref):
+  Large: mean=0.722
+  Base:  mean=0.745
+
+--- Most divergent DOC predictions (top 5) ---
+
+  Input: translate Akkadian to English: 2 ½ ma-na ṣí-ba-ra-tum qá-dum ša a-bi4-e-dim 1 ⅓ ma-na a-na ú-ra-ha-z...
+  Ref:   2.5 minas of <gap> including those of Abi-wedum. 1.3333 mina for <gap> For 1 mina <gap> zigan-sarru, 6 minas alulitum worth 3.5 shekels of silver, for...
+  Large: 2 ½ minas including (those) of Abī-edum; 1 ⅓ mina for Urahazi; 1... (len=64, ratio=0.20)
+  Base:  2 ½ minas of interest, including the one who belongs to the priest; 1 ⅓ mina for Urahazi for 1 mina of feast; Zigan-rugal; 6 minas of acorns worth 3 ½... (len=361, ratio=1.10)
+
+  Input: translate Akkadian to English: 1 ma-na KÙ.BABBAR ṣa-ru-pá-am en-um-a-šur DUMU šál-ma-a-šur a-na be-a...
+  Ref:   Ennam-Aššur son of Šalim-Aššur has given 1 mina of refined silver as a working-capital to Itūr-ilī and Elāli, sons of Puzur-Anna. They will pay the co...
+  Large: Ennam-Aššur son of Šalim-Aššur gave 1 mina of refined silver to Itūr-ilī and Elāli sons of Puzur-Anna.... (len=102, ratio=0.25)
+  Base:  Ennam-Aššur son of Šalim-Aššur gave 1 mina of refined silver to Itūr-ilī and Elāli sons of Puzur-Anna for a working capital to Itūr-ilī and Elāli sons... (len=459, ratio=1.12)
+
+  Input: translate Akkadian to English: a-na en-nam-a-šur qí-bi-ma um-ma ša-ta-na-ma 2 ma-na 12 ½ GÍN KÙ.BABB...
+  Ref:   To Ennam-Aššur from Šāt-Anna: As to the 2 minas 12.5 shekels of silver that I gave you, my dear brother, my dear lord, carry out the purchase yourself...
+  Large: To Ennam-Aššur from Šāt-Anna: As to the 2 minas 12 ½ shekels of silver that I gave to you, my dear brother and lord, act for the purchases and send th... (len=503, ratio=1.77)
+  Base:  To Ennam-Aššur from Šāt-Anna: As to the 2 minas 12 ½ shekels of silver that I gave to you Please, my brother and lord, cheat me for purchases and send... (len=267, ratio=0.94)
+
+  Input: translate Akkadian to English: 18 GÍN KÙ.BABBAR ša en-um-a-šur i li-bi a-šur-ba-ni 13 ½ ma-na URUDU ...
+  Ref:   18 shekels of silver belonging to Ennam-Aššur is owed by Aššur-bāni. 13 ½ minas of -copper belonging to Ennam-Aššur is owed by Ennam-rēṣum. Concerning...
+  Large: 18 shekels of silver belonging to Ennam-Aššur is owed by Aššur-bāni;... (len=68, ratio=0.27)
+  Base:  18 shekels of silver belonging to Ennam-Aššur is owed by Aššur-bāni; 13 ½ minas of -copper belonging to Ennam-Aššur, is owed by Enna-rēṣum. Concerning... (len=247, ratio=0.98)
+
+  Input: translate Akkadian to English: um-ma ì-lí-dan-ma a-na en-nam-a-šur qí-bi4-ma a-hi a-ta be-lí a-ta <g...
+  Ref:   From Ilī-dan to Ennam-Aššur: My dear brother and lord, <gap> you came <gap> let (the tablets) be invalid. As long as the tablets have not been invalid...
+  Large: From Ilī-dan to Ennam-Aššur: My dear brother and lord, <gap> you came here and <gap> you <gap>... (len=94, ratio=0.37)
+  Base:  From Ilī-dan to Ennam-Aššur: My dear brother and lord, you have come and <gap> you sue <gap> what ? <gap> you have <gap> do not feel anger <gap> I sha... (len=258, ratio=1.01)
+
+================================================================================
+7. DETAILED TRUNCATION CHECK - Max length cutoff detection
+================================================================================
+
+Large DOC: max_len=511, near_max (within 5 chars): 7
+  [15] len=511, ref_len=793, ends: ...as follows: 'Send me <gap> the very day you hear m
+  [95] len=510, ref_len=1505, ends: ...e good goods belonging to Alpili, that I have been
+  [236] len=509, ref_len=653, ends: ...ll not add 1 shekel of silver to the expenses of t
+  [26] len=507, ref_len=1408, ends: ...d and Kuliya should be paid within a year. Send me
+  [187] len=507, ref_len=459, ends: ... have not seen the man and he does not see him, th
+
+Base036 DOC: max_len=511, near_max (within 5 chars): 11
+  [15] len=511, ref_len=793, ends: ...that your servant does not give it to your servant
+  [72] len=511, ref_len=856, ends: ... My dear brothers, instruct (him) about my orders.
+  [95] len=510, ref_len=1505, ends: ...o the City. I too became upset as you should be so
+  [26] len=509, ref_len=1408, ends: .... As for the silver, its transport tariff paid and
+  [220] len=509, ref_len=1217, ends: ...tariff paid and let Kuliya make him pay the person
+
+Large SENT: max_len=500, near_max (within 5 chars): 2
+  [129] len=500, ref_len=640, ends: ...ning 13 ⅙ shekels of silver of Šu-Ištar; also, a t
+  [142] len=497, ref_len=437, ends: ... then produce the tablet concerning 3 minas of sil
+  [229] len=470, ref_len=456, ends: ...nam-Suen said: "If you are truly my lord, then let
+  [224] len=457, ref_len=500, ends: ...ng Aššur-ṭāb son of Abu-šalim have been satisfied.
+  [321] len=447, ref_len=1573, ends: ...f silver, of the working capital of Aššur-taklāku.
+
+Base036 SENT: max_len=485, near_max (within 5 chars): 2
+  [142] len=485, ref_len=437, ends: ...as of silver and the interest on it and give it to
+  [166] len=485, ref_len=593, ends: ..., that he will not raise claim against Puzur-Aššur
+  [224] len=475, ref_len=500, ends: ...r-ṭāb son of Abu-šalim have been satisfied as repr
+  [306] len=470, ref_len=514, ends: ...ou." Witnessed by Annina son of Aššur-bēl-awātim."
+  [356] len=468, ref_len=419, ends: ...of silver for two packers; 36 shekels of silver fo
+
+================================================================================
+8. WORD-LEVEL ANALYSIS
+================================================================================
+
+--- Large SENT ---
+  Pred words: mean=18.5, med=13.0
+  Ref words:  mean=23.3, med=18.0
+  Word ratio: mean=0.852, med=0.836
+  Pred vocab size: 1451
+  Ref vocab size: 1994
+  Pred-only words: 566
+  Ref-only words: 1109
+  Top pred-only words: [('merchandise', 7), ('attention', 6), ('enišarum', 4), ('mannu-kī-aššur', 4), ('transfer', 4), ('"it', 4), ('donkey;', 3), ('fathers', 3), ('excess.', 3), ('silver.""', 3)]
+
+--- Base036 SENT ---
+  Pred words: mean=18.5, med=13.0
+  Ref words:  mean=23.3, med=18.0
+  Word ratio: mean=0.855, med=0.838
+  Pred vocab size: 1463
+  Ref vocab size: 1994
+  Pred-only words: 580
+  Ref-only words: 1111
+  Top pred-only words: [('merchandise', 10), ('account.', 6), ('kasiya.', 6), ('mannu-kī-aššur', 6), ('(of', 6), ('kù.babbar', 6), ('message.', 5), ('attention', 5), ('a-na', 5), ('enišarum', 4)]
+
+--- Large DOC ---
+  Pred words: mean=64.5, med=74.0
+  Ref words:  mean=116.4, med=99.0
+  Word ratio: mean=0.727, med=0.746
+  Pred vocab size: 2146
+  Ref vocab size: 4096
+  Pred-only words: 708
+  Ref-only words: 2658
+  Top pred-only words: [("aššur-massu'ī", 5), ('enišarum', 5), ('security.', 5), ('thereof:', 5), ('t', 5), ('ennam-', 4), ('eništarum', 4), ('consider', 4), ('bēlānum', 4), ('obstruct', 4)]
+
+--- Base036 DOC ---
+  Pred words: mean=67.0, med=79.0
+  Ref words:  mean=116.4, med=99.0
+  Word ratio: mean=0.754, med=0.781
+  Pred vocab size: 2190
+  Ref vocab size: 4096
+  Pred-only words: 757
+  Ref-only words: 2663
+  Top pred-only words: [('mannu-kī-aššur', 8), ('mannu-kī-iliya', 8), ('10,', 6), ('boxes', 5), ("aššur-massu'ī", 5), ('want', 5), ('bēlānum', 5), ('eništarum', 5), ('fee', 4), ('enišarum', 4)]
+
+================================================================================
+9. RAW vs CLEAN PREDICTION DIFFERENCES
+================================================================================
+
+--- Large DOC ---
+  Differs: 11 (3.7%)
+    [23] Raw:   To Aššur-massu'ī, Šu-Kūbum and Aluwa; specifically to Aššur-massu'ī from Ennam-Aššur: You have written me here, saying: ...
+         Clean: To Aššur-massu'ī, Šu-Kūbum and Aluwa; specifically to Aššur-massu'ī from Ennam-Aššur: You have written me here, saying: ...
+    [63] Raw:   From Aššur-šadilī and Ababa to Kuliya: Concerning your tablets that Šu-Suen son of Innāya holds, when their case was con...
+         Clean: From Aššur-šadilī and Ababa to Kuliya: Concerning your tablets that Šu-Suen son of Innāya holds, when their case was con...
+    [74] Raw:   To <gap> and Ali-ahum from Ennam-Aššur; specifically to Ali-ahum: Concerning the investors of our father I have sent wor...
+         Clean: To <gap> and Ali-ahum from Ennam-Aššur; specifically to Ali-ahum: Concerning the investors of our father I have sent wor...
+
+--- Base036 DOC ---
+  Differs: 15 (5.1%)
+    [9] Raw:   From Kuziziya to Ennam-Aššur: In accordance with your instructions Pilah-Ištar gave me your strong room concerning the t...
+         Clean: From Kuziziya to Ennam-Aššur: In accordance with your instructions Pilah-Ištar gave me your strong room concerning the t...
+    [23] Raw:   To Aššur-massu'ī, Šu-Kūbum and Aluwa; specifically to Aššur-massu'ī from Ennam-Aššur: You have spoken here, saying: I sh...
+         Clean: To Aššur-massu'ī, Šu-Kūbum and Aluwa; specifically to Aššur-massu'ī from Ennam-Aššur: You have spoken here, saying: I sh...
+    [59] Raw:   To Ennam-Aššur and Ali-ahum from Damiq-pī-Aššur: Eništarum brought you 10 minas of tin under my seal. Aluwa brought you ...
+         Clean: To Ennam-Aššur and Ali-ahum from Damiq-pī-Aššur: Eništarum brought you 10 minas of tin under my seal. Aluwa brought you ...
+
+--- Large SENT ---
+  Differs: 6 (1.2%)
+    [45] Raw:   <gap> šu-ul-hi <gap> a-na <gap> qí-bi-ma <gap> ša-lim-be-li <gap> ša-lim-be-li <gap> ša-lim-be-li <gap> ša-lim-be-li <ga...
+         Clean: <gap> šu-ul-hi <gap> a-na <gap> qí-bi-ma <gap> ša-lim-be-li <gap> ša-lim-be-li...
+    [81] Raw:   Open for my undergarment and seal in the container ½ mina of silver plus 1 mina of good copper, and then seal 1 -textile...
+         Clean: Open for my undergarment and seal in the container ½ mina of silver plus 1 mina of good copper, and then seal 1 -textile...
+    [220] Raw:   Man-mahir and Šu-Bēlum; specifically to Man-mahir from Ennam-Aššur: When the god detained me for a loss of 1 mina of sil...
+         Clean: Man-mahir and Šu-Bēlum; specifically to Man-mahir from Ennam-Aššur: When the god detained me for a loss of 1 mina of sil...
+
+--- Base036 SENT ---
+  Differs: 11 (2.3%)
+    [13] Raw:   Iddin-abum, Itūr-ilī, Kukuwa, Adida and Ali-ahum from Ennam-Aššur: Concerning our father's merchandise - concerning our ...
+         Clean: Iddin-abum, Itūr-ilī, Kukuwa, Adida and Ali-ahum from Ennam-Aššur: Concerning our father's merchandise - concerning our ...
+    [37] Raw:   <gap> sell them as well as you can, take the silver and seal the silver and seal it again....
+         Clean: <gap> sell them as well as you can, take the silver and seal...
+    [91] Raw:   <gap> Pay attention to my instructions so that the silver gives to you, and send the silver under your seals with the fi...
+         Clean: <gap> Pay attention to my instructions so that the silver gives to you, and send the silver under your seals with the fi...
+
+================================================================================
+10. LENGTH RATIO HISTOGRAM (pred_len / ref_len)
+================================================================================
+
+--- Large SENT ---
+      <0.3:    9 (  1.9%) #
+   0.3-0.5:   55 ( 11.4%) ###########
+   0.5-0.7:   99 ( 20.6%) ####################
+   0.7-0.9:  124 ( 25.8%) #########################
+   0.9-1.1:  140 ( 29.1%) #############################
+   1.1-1.3:   26 (  5.4%) #####
+   1.3-1.5:   12 (  2.5%) ##
+   1.5-2.0:    8 (  1.7%) #
+   2.0-3.0:    4 (  0.8%) 
+      >3.0:    4 (  0.8%) 
+
+--- Base036 SENT ---
+      <0.3:   12 (  2.5%) ##
+   0.3-0.5:   51 ( 10.6%) ##########
+   0.5-0.7:  109 ( 22.7%) ######################
+   0.7-0.9:  113 ( 23.5%) #######################
+   0.9-1.1:  124 ( 25.8%) #########################
+   1.1-1.3:   36 (  7.5%) #######
+   1.3-1.5:   14 (  2.9%) ##
+   1.5-2.0:   14 (  2.9%) ##
+   2.0-3.0:    6 (  1.2%) #
+      >3.0:    2 (  0.4%) 
+
+--- Large DOC ---
+      <0.3:   22 (  7.4%) #######
+   0.3-0.5:   51 ( 17.2%) #################
+   0.5-0.7:   62 ( 20.9%) ####################
+   0.7-0.9:   69 ( 23.2%) #######################
+   0.9-1.1:   77 ( 25.9%) #########################
+   1.1-1.3:   11 (  3.7%) ###
+   1.3-1.5:    2 (  0.7%) 
+   1.5-2.0:    3 (  1.0%) #
+   2.0-3.0:    0 (  0.0%) 
+      >3.0:    0 (  0.0%) 
+
+--- Base036 DOC ---
+      <0.3:   20 (  6.7%) ######
+   0.3-0.5:   46 ( 15.5%) ###############
+   0.5-0.7:   58 ( 19.5%) ###################
+   0.7-0.9:   67 ( 22.6%) ######################
+   0.9-1.1:   85 ( 28.6%) ############################
+   1.1-1.3:   18 (  6.1%) ######
+   1.3-1.5:    2 (  0.7%) 
+   1.5-2.0:    0 (  0.0%) 
+   2.0-3.0:    1 (  0.3%) 
+      >3.0:    0 (  0.0%) 
+
+================================================================================
+11. SENTENCE ENDING PATTERNS (Critical for test set)
+================================================================================
+
+--- Large SENT ---
+  Last character distribution:
+    '.': 356 (74.0%)
+    '>': 52 (10.8%)
+    '"': 39 (8.1%)
+    ',': 5 (1.0%)
+    ';': 5 (1.0%)
+    'r': 5 (1.0%)
+    't': 2 (0.4%)
+    '?': 2 (0.4%)
+    'a': 2 (0.4%)
+    's': 2 (0.4%)
+
+  Last 5 chars (sample):
+    ...this.
+    ...ittī.
+    ...es.""
+    ...avan.
+    ...ššur.
+    ...rt.""
+    ...o me.
+    ...bāni.
+    ...ššur.
+    ...laya.
+
+--- Base036 SENT ---
+  Last character distribution:
+    '.': 367 (76.3%)
+    '>': 49 (10.2%)
+    '"': 29 (6.0%)
+    'r': 6 (1.2%)
+    'o': 4 (0.8%)
+    ';': 4 (0.8%)
+    'n': 3 (0.6%)
+    'a': 3 (0.6%)
+    's': 2 (0.4%)
+    'e': 2 (0.4%)
+
+  Last 5 chars (sample):
+    ... this
+    ...ittī.
+    ...ases.
+    ...rney.
+    ...ššur.
+    ...rt.""
+    ...d me.
+    ...bāni.
+    ...ššur.
+    ...laya.
+
+================================================================================
+12. KEY FINDINGS SUMMARY
+================================================================================
+
+                    Large           Base036
+SENT len ratio:     0.850          0.858
+DOC len ratio:      0.720          0.743
+SENT trunc%:        16.2%           16.8%
+DOC trunc%:         45.8%           56.6%
+
+=== ANALYSIS COMPLETE ===

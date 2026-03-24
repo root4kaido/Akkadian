@@ -1,0 +1,31 @@
+experiment:
+  name: exp043_bolmo_1b
+  description: "Bolmo-1B (byte-level decoder-only CausalLM) for Akkadian translation"
+
+lineage:
+  parent: exp023
+  status: closed
+  diff_summary: "ByT5 (enc-dec) → Bolmo-1B (CausalLM decoder-only). Same preprocessing as exp023."
+
+model:
+  name: allenai/Bolmo-1B
+  type: CausalLM
+  params:
+    max_length: 1024
+    trust_remote_code: true
+    torch_dtype: bfloat16
+    gradient_checkpointing: true
+
+training:
+  seed: 42
+  n_folds: 5
+  epochs: 10
+  batch_size: 2
+  gradient_accumulation_steps: 4
+  lr: 1e-4
+  lr_scheduler: cosine
+  warmup_ratio: 0.05
+  weight_decay: 0.01
+  amp: bf16
+  bidirectional: true
+  resume_from: null

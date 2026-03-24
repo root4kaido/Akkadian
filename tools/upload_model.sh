@@ -81,8 +81,8 @@ if [ -z "$KAGGLE_USERNAME" ]; then
 fi
 echo "Kaggle username: ${KAGGLE_USERNAME}"
 
-# Create temp directory
-TEMP_DIR="/tmp/kaggle-model-upload-${MODEL_NAME}-${VARIATION_NAME}"
+# Create temp directory (within project to comply with no-/tmp rule)
+TEMP_DIR="${PROJECT_ROOT}/.tmp/kaggle-model-upload-${MODEL_NAME}-${VARIATION_NAME}"
 rm -rf "${TEMP_DIR}"
 MODEL_META_DIR="${TEMP_DIR}/model"
 VARIATION_DIR="${TEMP_DIR}/variation"

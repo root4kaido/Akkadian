@@ -1,0 +1,21 @@
+experiment:
+  name: exp041_bt_augment_v2
+  description: "generate_v2 (25k件) をs1_exp007で逆翻訳し、BT augmentでbyt5-base学習"
+
+lineage:
+  parent: exp038
+  status: active
+  diff_summary: "exp038と同手法だがgenerate_v2(25k件)に拡大。generated_english + generated_english_2を結合"
+
+# model:
+#   name: google/byt5-base
+#   params: {}
+#
+# training:
+#   seed: 42
+#   n_folds: 5
+#   epochs: 20
+#   batch_size: 32
+#   lr: 5e-5
+#   amp: true
+#   resume_from: null

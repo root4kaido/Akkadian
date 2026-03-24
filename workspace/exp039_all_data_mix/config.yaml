@@ -1,0 +1,21 @@
+experiment:
+  name: exp039_all_data_mix
+  description: "全データ混合学習: train + additional_train_filtered + pseudo_labels_v2 + backtranslated"
+
+lineage:
+  parent: exp038
+  status: active
+  diff_summary: "exp038のBTデータに加え、additional_train_filtered(778件)とpseudo_labels_v2(6,109件)を追加。計10,462件。epochs=5"
+
+model:
+  name: google/byt5-base
+
+training:
+  seed: 42
+  n_folds: 5
+  epochs: 5
+  batch_size: 4
+  gradient_accumulation_steps: 2
+  lr: 1e-4
+  amp: true
+  resume_from: null

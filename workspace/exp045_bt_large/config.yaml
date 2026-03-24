@@ -1,0 +1,19 @@
+experiment:
+  name: exp045_bt_large
+  description: "byt5-large + BT 1/4サンプリング(~15k) + pseudo(6k) pretrain → real finetune"
+
+lineage:
+  parent: exp044
+  status: active
+  diff_summary: "exp044のlarge版。BT 1/4サンプリング、lr調整(pretrain 1e-4, finetune 2e-5)"
+
+# model:
+#   name: google/byt5-large
+#   params: {}
+#
+# training:
+#   seed: 42
+#   n_folds: 5
+#   epochs: 10 (pretrain 5 + finetune 5)
+#   lr: 1e-4 (pretrain) / 2e-5 (finetune)
+#   amp: true

@@ -1,0 +1,16 @@
+experiment:
+  name: exp040_qwen3.5_9b
+  description: "Qwen3.5-9Bでアッカド語→英語翻訳。ゼロショット→fine-tuneの2段階で検証"
+
+lineage:
+  parent: null
+  status: active
+  diff_summary: "byt5からLLMベースに転換。Qwen3.5-9Bでゼロショット推論→LoRA fine-tune"
+
+model:
+  name: Qwen/Qwen3.5-9B
+  quantization: int4
+
+training:
+  seed: 42
+  n_folds: 5

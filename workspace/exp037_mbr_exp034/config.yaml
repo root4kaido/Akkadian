@@ -1,0 +1,18 @@
+experiment:
+  name: exp037_mbr_exp034
+  description: "exp034モデルでの単純MBR（3候補）デコーディング評価"
+
+lineage:
+  parent: exp034
+  status: active
+  diff_summary: "推論方法の変更: beam4 greedy → beam4 MBR 3候補 (chrF++ consensus)"
+
+inference:
+  model_path: workspace/exp034_st_pretrain/results/fold3/last_model
+  num_beams: 4
+  num_return_sequences: 3
+  mbr_scoring: chrf++
+  penalties: none
+  postprocess: repeat_cleanup
+  dynamic_padding: true
+  length_sort: true

@@ -1,0 +1,24 @@
+experiment:
+  name: exp036_long_train
+  description: "exp023と同一設定でepoch数のみ100に変更し、学習時間増加の効果を検証"
+
+lineage:
+  parent: exp023_full_preprocessing
+  status: active
+  diff_summary: "epoch数を20→100に変更。スクラッチから学習。それ以外はexp023 train_gkf.pyと同一"
+
+model:
+  name: google/byt5-base
+  params:
+    max_length: 512
+
+training:
+  seed: 42
+  n_folds: 5
+  epochs: 100
+  batch_size: 4
+  gradient_accumulation_steps: 2
+  lr: 2e-4
+  optim: adafactor
+  amp: true
+  resume_from: null

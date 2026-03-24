@@ -1,3 +1,6 @@
+# === Temp files ===
+.tmp/
+
 # === Data & Model artifacts (git管理外) ===
 datasets/
 dataset/

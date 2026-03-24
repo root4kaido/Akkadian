@@ -1,0 +1,25 @@
+experiment:
+  name: s1_exp004_large_lora
+  description: "byt5-large + LoRA(r=16, alpha=32)でパラメータ効率的fine-tune"
+
+lineage:
+  parent: s1_exp002_large_lowlr
+  status: active
+  diff_summary: |
+    - LoRA追加: r=16, alpha=32, dropout=0.05, target=q,v
+    - その他はs1_exp002と同一(epoch=5, lr=5e-5)
+
+model:
+  name: google/byt5-large
+  max_length: 512
+
+training:
+  seed: 42
+  epochs: 10
+  lr: 5e-5
+  bf16: true
+  optimizer: adafactor
+  lora_r: 16
+  lora_alpha: 32
+  lora_dropout: 0.05
+  run_name: s1_exp004_large_lora

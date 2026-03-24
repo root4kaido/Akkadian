@@ -233,6 +233,18 @@ model = AutoModelForSeq2SeqLM.from_pretrained(MODEL_PATH).to(device)
 model.eval()
 logger.info(f"[{EXP_NAME}] Model loaded")
 
+# Pre-cache special token IDs to avoid slow repeated property lookups in batch_decode
+_special_ids = set(tokenizer.all_special_ids)
+
+
+def _fast_batch_decode(ids_tensor):
+    """batch_decode without skip_special_tokens to avoid O(n*m) property rebuild."""
+    results = []
+    for ids in ids_tensor:
+        filtered = [int(i) for i in ids if int(i) not in _special_ids]
+        results.append(tokenizer.decode(filtered, skip_special_tokens=False))
+    return results
+
 
 class InferenceDataset(TorchDataset):
     def __init__(self, texts, tokenizer, max_length):
@@ -258,7 +270,7 @@ def run_inference(inputs, desc):
                 input_ids=ids, attention_mask=mask,
                 max_length=MAX_LENGTH, num_beams=4, early_stopping=True,
             )
-            preds.extend([d.strip() for d in tokenizer.batch_decode(out, skip_special_tokens=True)])
+            preds.extend([d.strip() for d in _fast_batch_decode(out)])
     return preds
 
 

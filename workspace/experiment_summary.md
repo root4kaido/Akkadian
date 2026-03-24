@@ -48,6 +48,7 @@ graph TD
     exp038 --> exp041[exp041_bt_augment_v2]
     exp038 --> exp042[exp042_bt_mixed_v2]
     exp041 --> exp044[exp044_bt_augment_v3]
+    s1_exp007[s1_exp007_large_lr1e4] --> s1_exp010[s1_exp010_xl_lr5e5]
 ```
 
 ## 実験一覧
@@ -94,6 +95,16 @@ graph TD
 | exp038_backtranslation_augment | generated_english.csv→s1_exp007(byt5-large)逆翻訳2,014件+byt5-base混合学習 | - | sent-geo=**37.22**, doc-geo=**26.64** (fold3) | - | **sent+1.78, doc+1.12 vs exp023**。rep=10.2%。BT混合でsent/doc両軸改善 |
 | exp041_bt_augment_v2 | generate_v2 BT(23k)+pseudo(6k) pretrain 5ep → real finetune 5ep (lr=5e-5) | - | sent-geo=**40.71**, doc-geo=**28.28** (fold3) | **33.4** | **LBベスト更新（単体）**。前回の2モデルアンサンブル(32.6)を単体で超えた。pretrain→ftが汎化性能高い |
 | exp042_bt_mixed_v2 | generate_v2 BT(23k) + real train 混合学習 10ep | - | sent-geo=**39.89**, doc-geo=**28.52** (fold3) | 30.9 | CV同等だがLBはexp041に大きく劣る。**混合学習はpretrain→ftより汎化しにくい** |
+| **s1_exp001_byt5_large_fold3** | byt5-large(1.2B), exp023設定そのまま, fold3 | - | sent-geo=36.95, doc-geo=25.04 (fold3) | **25.3** | sent-CV +1.51pt vs base fold3だが**LB -5.1pt**。過学習でCV-LB乖離 |
+| s1_exp002_large_lowlr | byt5-large, epoch=5, lr=5e-5 | - | - | - | 過学習対策: epoch削減+lr低下 |
+| s1_exp003_large_wd | byt5-large, epoch=5, lr=5e-5, wd=0.1 | - | - | - | 過学習対策: +weight_decay強化 |
+| s1_exp004_large_lora | byt5-large + LoRA(r=16, alpha=32) | - | - | - | 過学習対策: パラメータ効率的fine-tune |
+| s1_exp005_large_freeze | byt5-large, encoder+decoder下12層凍結 | - | - | - | 過学習対策: pretrained表現保持 |
+| s1_exp006_large_mixout | byt5-large + Mixout(p=0.5) | - | - | - | 過学習対策: pretrained weightsへ確率的リセット |
+| **s1_exp007_large_lr1e4** | **byt5-large, lr=1e-4, ep20** | 46.61 | sent-geo=**38.01**, doc-geo=26.05 (fold3) | **31.9** | **LBベスト更新**。lr半減で過学適抑制。sent-CV=s1シリーズベスト |
+| **s1_exp008_large_st_pretrain** | **byt5-large + pseudo pretrain→real finetune** | - | - | **32.5** | **⚠️ミス**: s1_exp007のlast_modelからpretrainしており実質3段階学習（HF→real 20ep→pseudo 5ep→real 5ep）。意図した2段階学習ではない。LB 32.5は参考値 |
+| s1_exp010_xl_lr5e5 | byt5-xl(3.7B), lr=5e-5, grad_ckpt | - | sent-geo=37.34, doc-geo=25.63 (fold3) | - | largeより悪化。xlスケーリング効果なし |
+| **s1_exp011_large_bt_pretrain** | **byt5-large, pseudo_v2+bt_v3 pretrain(lr=1e-4,5ep)→real finetune(lr=2e-5,5ep)** | - | sent-geo=**41.74**, doc-geo=**29.78** (fold3) | - | **sent-CVベスト更新(+3.73pt)**。bt augmentが非常に有効 |
 
 **注意**: training eval CVはByT5の512バイトtruncationにより参照テキストが切り詰められ水増しされる。inference greedyまたはbeam4 sentが正確なCV。また`evaluate.load("chrf")`はデフォルトword_order=0(chrF)でありコンペのchrF++(word_order=2)とは異なる。
 
@@ -175,6 +186,10 @@ fold別val分布:
 | **exp038** | **BT混合(generated_english 2,014件)** | - | - | - | **37.22** | **26.64** |
 | exp039 | 全データ混合(10,462件, 5ep, lr=1e-4) | - | sent-geo=37.37, doc-geo=25.42 (fold3) | - | sent微増(+0.15 vs exp038)だがdoc悪化(-1.22)。pseudo/additional追加はdoc品質に悪影響 |
 | exp040_qwen3.5_9b | Qwen3.5-9B ゼロショット翻訳 | - | sent-geo=10.63, doc-geo=8.26 (fold3) | - | ゼロショットではbyt5比大幅に低い。rep=1.0%(sent)と繰り返しはほぼなし。fine-tune必要 |
+| s1_exp001 gated_best | byt5-large(1.2B), lr=2e-4, ep13 | - | 0.467 | 44.34 | 36.17 | 23.88 |
+| s1_exp001 last | byt5-large(1.2B), lr=2e-4, ep20 | - | 0.467 | 44.34 | 36.97 | 24.62 |
+| **s1_exp007 last** | **byt5-large, lr=1e-4, ep20** | - | **0.428** | **46.61** | **38.01** | **26.05** |
+| s1_exp010 last | byt5-xl(3.7B), lr=5e-5, ep20 | - | - | - | 37.34 | 25.63 |
 
 - exp026: 文字ノイズで全指標悪化。train_lossも上がり学習自体が妨害されている
 - exp027: 学習eval_geoは微改善(+0.23pt)だがeval_full sent-geoは横ばい、doc-geoは-1.46pt悪化
@@ -184,6 +199,9 @@ fold別val分布:
 - **exp034: 2段階学習(pseudo pretrain→real finetune)でsent-CV +1.27pt改善。混合より2段階が有効**
 - exp035: SCST(REINFORCE)はbyte-levelモデルでは勾配信号が弱すぎ失敗。MBR-FTもMBRターゲットの改善幅が+0.73pt chrF++と小さく、fine-tuneで悪化
 - exp036: 100epochでもsent +0.55pt, doc -0.20ptと微差。20epochで十分収束
+- s1_exp001: byt5-large lr=2e-4は激しく過学習。sent-CV微改善だがLB=25.3（base 30.4から-5.1pt）
+- **s1_exp007: lr=1e-4でloss過学習を大幅抑制。sent-CV=38.01（s1シリーズベスト）。gated_best=last（lossが閾値内で推移）**
+- **s1_exp008: ⚠️ミス。s1_exp007のlast_modelからpseudo pretrainしており実質3段階学習。意図した2段階学習ではない**
 
 #### 知見
 - **ランダム分割にリークあり**: GKFでsent-CVが10pt以上低下
@@ -209,6 +227,10 @@ fold別val分布:
 - **PN/GNタグ付加: greedy_clean=29.92（全実験ベスト）**。繰り返し率41%に改善。固有名詞マーキングが有効
 - Adafactor + lr=1e-4 (small) / 5e-5 (base) + label_smoothing=0.2 は安定
 - **BF16はRTX4090で安定動作**（FP16はByT5でNaN）
+- **byt5-largeはlr=2e-4で過学習、lr=1e-4で安定**: largeモデルはbase比でlrを半減が目安
+- **largeのgeo_meanはloss悪化中も改善し続ける**: teacher-forcing lossと生成品質が乖離する現象。GatedBestModelCallbackで制御
+- **largeのCV-LB乖離が深刻**: s1_exp001でsent-CV +1.53ptなのにLB -5.1pt。val分布内のargmaxは正しいが未知パターンで破綻
+- **batch_decode(skip_special_tokens=True)がbyt5-largeで極端に遅い**: _fast_batch_decodeで回避が必須
 - epoch 17-19 で収束（双方向学習の場合）
 - **最終epochが必ずしもベストではない**: epoch 19(24.22) > epoch 20(23.55)
 

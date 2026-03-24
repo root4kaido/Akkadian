@@ -1,0 +1,23 @@
+experiment:
+  name: s1_exp003_large_wd
+  description: "byt5-large過学習対策: weight_decay強化(0.01→0.1) + epoch5 + lr=5e-5"
+
+lineage:
+  parent: s1_exp002_large_lowlr
+  status: active
+  diff_summary: |
+    - weight_decay: 0.01 → 0.1
+    - その他はs1_exp002と同一(epoch=5, lr=5e-5)
+
+model:
+  name: google/byt5-large
+  max_length: 512
+
+training:
+  seed: 42
+  epochs: 10
+  lr: 5e-5
+  bf16: true
+  optimizer: adafactor
+  weight_decay: 0.1
+  run_name: s1_exp003_large_wd

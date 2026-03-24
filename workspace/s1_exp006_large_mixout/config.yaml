@@ -1,0 +1,23 @@
+experiment:
+  name: s1_exp006_large_mixout
+  description: "byt5-large + Mixout(p=0.5): pretrained weightsへの確率的リセットで過学習抑制"
+
+lineage:
+  parent: s1_exp002_large_lowlr
+  status: active
+  diff_summary: |
+    - Mixout(p=0.5): 全Linearレイヤーに適用
+    - その他はs1_exp002と同一(epoch=5, lr=5e-5)
+
+model:
+  name: google/byt5-large
+  max_length: 512
+
+training:
+  seed: 42
+  epochs: 10
+  lr: 5e-5
+  bf16: true
+  optimizer: adafactor
+  mixout_prob: 0.5
+  run_name: s1_exp006_large_mixout

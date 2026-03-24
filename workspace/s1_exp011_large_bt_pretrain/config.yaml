@@ -1,0 +1,30 @@
+experiment:
+  name: s1_exp011_large_bt_pretrain
+  description: "byt5-large 2段階学習: pseudo_labels_v2 + backtranslated_v3でpretrain → real finetune"
+
+lineage:
+  parent: null  # google/byt5-large pretrained weightsから開始
+  status: active
+  diff_summary: "s1_exp008と同様の2段階学習だが、ベースモデルをHF pretrainedから開始。pseudo dataにbt_v3(62K件)追加"
+
+model:
+  name: google/byt5-large
+
+training:
+  stage1_pretrain:
+    data: "pseudo_labels_v2 (6,109) + backtranslated_v3 (62,655)"
+    lr: 1e-4
+    epochs: 5
+    batch_size: 4
+    gradient_accumulation_steps: 2
+    optim: adafactor
+  stage2_finetune:
+    data: "real train data (bidirectional)"
+    lr: 2e-5
+    epochs: 5
+    batch_size: 4
+    gradient_accumulation_steps: 2
+    optim: adafactor
+  seed: 42
+  amp: bf16
+  max_length: 512

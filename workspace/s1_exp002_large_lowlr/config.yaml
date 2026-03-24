@@ -1,0 +1,26 @@
+experiment:
+  name: s1_exp002_large_lowlr
+  description: "byt5-large過学習対策: epoch削減(20→5) + lr低下(2e-4→5e-5)"
+
+lineage:
+  parent: s1_exp001_byt5_large_fold3
+  status: active
+  diff_summary: |
+    - epochs: 20 → 5
+    - lr: 2e-4 → 5e-5
+    - その他はs1_exp001と同一
+
+model:
+  name: google/byt5-large
+  max_length: 512
+
+training:
+  seed: 42
+  epochs: 10
+  lr: 5e-5
+  bf16: true
+  optimizer: adafactor
+  weight_decay: 0.01
+  per_device_train_batch_size: 4
+  gradient_accumulation_steps: 2
+  run_name: s1_exp002_large_lowlr

@@ -101,7 +101,13 @@ copy_model_files() {
     echo "Copying ${name}..."
     mkdir -p "${dst_dir}"
     cp -v "${src_dir}"/config.json "${dst_dir}/"
-    cp -v "${src_dir}"/model.safetensors "${dst_dir}/"
+    # シャード分割対応: model-*.safetensors + index、または単体model.safetensors
+    if [ -f "${src_dir}/model.safetensors.index.json" ]; then
+        cp -v "${src_dir}"/model-*.safetensors "${dst_dir}/"
+        cp -v "${src_dir}"/model.safetensors.index.json "${dst_dir}/"
+    else
+        cp -v "${src_dir}"/model.safetensors "${dst_dir}/"
+    fi
     cp -v "${src_dir}"/tokenizer_config.json "${dst_dir}/"
     cp -v "${src_dir}"/special_tokens_map.json "${dst_dir}/"
     cp -v "${src_dir}"/added_tokens.json "${dst_dir}/"

@@ -1,0 +1,32 @@
+experiment:
+  name: s1_exp010_xl_lr5e5
+  description: "byt5-xl(3.7B)でスケーリング効果を検証。lr=5e-5（large比1/2）"
+
+lineage:
+  parent: s1_exp007_large_lr1e4
+  status: active
+  diff_summary: "モデルをbyt5-large→byt5-xlに変更、lr=1e-4→5e-5、batch=2×grad_accum=4、gradient_checkpointing有効化"
+
+model:
+  name: google/byt5-xl
+  params:
+    d_model: 2048
+    num_layers: 36
+    num_decoder_layers: 12
+    num_heads: 32
+    vocab_size: 384
+
+training:
+  seed: 42
+  n_folds: 5
+  epochs: 20
+  batch_size: 2
+  gradient_accumulation_steps: 4
+  effective_batch_size: 8
+  lr: 5e-5
+  optim: adafactor
+  weight_decay: 0.01
+  amp: bf16
+  gradient_checkpointing: true
+  max_length: 512
+  resume_from: null

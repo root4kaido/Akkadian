@@ -1,0 +1,21 @@
+experiment:
+  name: s1_exp009_qwen_sft
+  description: "Qwen3.5-27BをtrainデータのEnglish翻訳でSFT → ドメイン英語生成モデル作成"
+
+lineage:
+  parent: null
+  status: active
+  diff_summary: "新規。byt5学習データ拡張パイプラインの第1段階（ドメイン英語生成）"
+
+model:
+  name: Qwen/Qwen3.5-27B
+  method: QLoRA (4-bit)
+
+training:
+  seed: 42
+  epochs: 3
+  batch_size: 4
+  grad_accum: 4
+  lr: 2e-4
+  lora_r: 64
+  lora_alpha: 128
